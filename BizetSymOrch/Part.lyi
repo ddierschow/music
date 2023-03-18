@@ -1,0 +1,53 @@
+\version "2.13.5"
+
+\include "defs.lyi"
+
+\paper
+{
+  ragged-last-bottom = ##f
+  #(set-paper-size "letter")
+  top-margin = 15\mm
+  left-margin = 18\mm
+  right-margin = 18\mm
+  bottom-margin = 15\mm
+}
+
+\book
+{
+
+  \header
+  {
+    title = \markup{Symphony No. 1}
+    subtitle = "Movement III: Minuetto"
+    opus = ""
+    composer = "Georges Bizet (1838-1875)"
+    copyright = ""
+    instrument = \instrument
+
+    mutopiatitle = "Symphony No. 1 Movement III"
+    mutopiacomposer = "Bizet"
+    mutopiaopus = ""
+    mutopiainstrument = "Orchestra"
+    date = "1855"
+    source = ""
+    style = "Classical"
+    maintainer = ""
+    maintainerEmail = ""
+    lastupdated = ""
+
+    footer = ""
+    tagline = ""
+  }
+
+  \score
+  {
+    \new Staff
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      << \keepWithTag #'part \notesMvtIII \outlineMvtIII >>
+    }
+    \header { piece = \MvtIII }
+  }
+}
+

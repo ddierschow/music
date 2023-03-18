@@ -1,0 +1,546 @@
+\version "2.13.5"
+
+\include "defs.lyi"
+
+\include "CelloMvtIII.lyi"
+\addQuote "cello" { \relative c \celloMvtIIINotes }
+
+clarinetOneMvtIIIDynamics = 
+{
+  \time 3/4
+
+  \partial 4 s4\f |
+  \repeat volta 2
+  {
+    s2.*6 |
+    s2.^\tenuto |
+    s2.\ff |
+    s2.*4 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2 s4\f |
+    }
+    {
+      s2. |
+    }
+  }
+
+  \repeat volta 2
+  {
+    s2.*12 |
+    \crescHairpin
+    s4\f\< s s |
+    s s s\! |
+    s\ff s s |
+    s^\leggiero s s\pp |
+    s2.*2 |
+    \crescTextCrescMolto 
+    s4\< s s\! |
+    s2. |
+
+    % 38
+    s2.\f |
+    s2.*2 |
+    s2 s4\pp |
+    s2. |
+    s2 s4\< |
+    s2. |
+    s2 s4\! |
+    s2.\f |
+    s2.*2 |
+    s2  s4\f |
+    s2.*3 |
+    s2 s4\pp |
+
+    % 54
+    s2.*5 |
+    \crescTextPocoAPocoCrescMolto
+    s2.\< |
+    s2.*17 |
+    s2 s4\! |
+    s2.\f |
+    s2.*3 |
+    s4 s\ff s |
+    s2.*3 |
+
+    % 86
+    s2.*8 |
+    s2.\pp |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*10 |
+    s2.\!\< |
+    s2.*3 |
+    s2.\p\> |
+    s2.*9
+    s2.\! |
+    s2. |
+    s4 s s\f |
+    s2.*3 |
+
+    % 130
+    s4\ff s s |
+    s2.*2 |
+    s4 s s\ff |
+    s2.*4 |
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s s s\ff |
+    s2.*3 |
+    s4\ff s s |
+    s2.*2 |
+    s4 s s\f |
+    s2.*3 |
+    s4 s s\f |
+    s2.*3 |
+
+    % 157
+    s4 s s\f |
+    s2.\fp |
+    s2. |
+    \crescTextCrescMolto 
+    s2.\< |
+    s2.*3 |
+    s2.\! |
+    \crescHairpin
+    s2.\< |
+    s4\!\ff s s |
+  }
+  \alternative
+  {
+    {
+      s4\ff-\secco s s |
+      s2.*2 |
+    }
+    {
+      s4\ff-\secco s s |
+      s2.*2 |
+    }
+  }
+
+  % 173
+  \repeat volta 2
+  {
+    s2.*7 |
+    s4 s s\pp |
+
+    % 181
+    s2. |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*2 |
+    s2.\! |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*4 |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 205
+    s2.\< |
+    s2.*3 |
+    s2.\!\> |
+    s2.*3 |
+    \repeat unfold 2
+    {
+      s2.\!\< |
+      s2.*3 |
+      s2.\!\> |
+      s2.*3 |
+    }
+
+    % 229
+    s2.\!\ppp |
+    s2.*21 |
+    \crescTextCresc
+    s2.\< |
+    s4\! s s\p |
+
+    % 253
+    s2. |
+    \crescTextCrescMolto 
+    s4 s s\< |
+    s2.*6 |
+    s4\! s s |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*3 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s4 s s\f |
+    }
+  }
+}
+
+
+clarinetOneMvtIIICues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*20 |
+
+  \cueDuring #"cello" #UP { \clef bass R4*3^\markup { "Vlc." } | R4*3*2 \clef treble }
+
+  s2.*40 |
+  \break
+  s2.*98 |
+  \break
+  s2.*11 |
+
+  \key c \major
+
+  s2.*95 |
+}
+
+
+clarinetOneMvtIIINotCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*20 |
+
+  R4*3 | R4*3*2 |
+
+  s2.*149 |
+
+  \key c \major
+
+  s2.*95 |
+}
+
+
+clarinetOneMvtIIINotes = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 d4 |
+  \repeat volta 2
+  {
+    g2 b4-. |
+    g-. d-. g-. |
+    a2 c4-. |
+    a-. d,-. a'-. |
+    b( d-.) g,-. |
+    g2 b4-. |
+    e,2. |
+    b'2. |
+    ais2. |
+    d2. |
+    e4-. fis-. g-. |
+    a2. |
+    fis2 d4 |
+    d2.~ |
+    d2.( |
+  }
+  \alternative
+  {
+    {
+      d4) r d,-. |
+    }
+    {
+      d'4\repeatTie r r |
+    }
+  }
+
+  % 18
+  \repeat volta 2
+  {
+    R4*3*3 |
+    s2.*3 | %\cueDuring #"cello" #UP { \clef bass R4*3^\markup { "Vlc." } | R4*3*2 \clef treble }
+    R4*3*6 |
+    a4-. a-. a-. |
+    a-. a-. a-. |
+    b-. r r |
+    r r b-. |
+    b-. r a-. |
+    a-. r g-. |
+    g-. d-. e-. |
+    d-. d-. d-. |
+
+    % 38
+    a'2.~ |
+    a2. |
+    g4-. r r |
+    r r d'-. |
+    d-. r d-. |
+    d-. r b-. |
+    b-. b-. b-. |
+    a-. g-. fis-. |
+    e'2.~ |
+    e2. |
+    d4-. r r |
+    r r a-. |
+    e'2.~ |
+    e2. |
+    d4-. r r |
+    r r a,-. |
+
+    % 54
+    a'2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a4 r r |
+    r d-. cis-. |
+    b-. a-. g-. |
+    fis-. e-. d-. |
+    cis-. b-. a-. |
+
+    % 86
+    d4-. r r |
+    R4*3*7 |
+    a'2.~ |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2. |
+    b2.~ |
+    b2.~ |
+    b2. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2. |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2. |
+    b2.~ |
+    b2 r4 |
+    R2. |
+    r4 r g( |
+    e'-.) e-. g-. |
+    e-. r r |
+    R4*3 |
+
+    % 130
+    d4-. r r |
+    R4*3*2 |
+    r4 r g,-. |
+    d'2.~ |
+    d2.~ |
+    d2 a4-. |
+    \grace b8( a4)( g-.) a-. |
+    b4-. r d-. |
+    d-. r b-. |
+    b-. r g-. |
+    g-. r g-. |
+    g-. r g( |
+    e'-.) e-. g-. |
+    e-. r r |
+    R4*3 |
+    d4-. r r |
+    R4*3*2 |
+    r4 r g,-.
+    d'2.~ |
+    d2.( |
+    b4-.) r r |
+    r4 r g-. |
+    d'2.~ |
+    d2.( |
+    b4-.) r r |
+
+    % 157
+    r r g-. |
+    d'2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    fis2.~\startTrillSpan |
+    fis2.~ |
+    fis2.~ |
+    fis2.\stopTrillSpan \grace {e16[( fis]} |
+    g4-.) r r |
+  }
+  \alternative
+  {
+    {
+      g,4-. r r |
+      R4*3*2 |
+    }
+    {
+      g4-. r r |
+      R4*3*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    R4*3*7 |
+    r4 r g(
+
+    % 181
+    c2 e4 |
+    c g c |
+    d2 f4 | 
+    d g, d' |
+    e2 g4 |
+    e g, e' |
+    d2 f4 |
+    d g, d' |
+    c-.) r r |
+    R4*3*2 |
+    r4 r d-. |
+    d( e)-. e-. |
+    e-. r d-. |
+    d-. r c-. |
+    c-. r r |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    R4*3*7 |
+    r4 r c,4( |
+
+    % 205
+    f2 a4 |
+    c, f a |
+    g2 bes4 |
+    c, g' bes |
+    a c c, |
+    f a c, |
+    d f c |
+    f a c, |
+    e2 g4 |
+    g, e' g |
+    d2 f4 |
+    g, d' f |
+    c2 g'4 |
+    e g g, |
+    d' f g, |
+    c e c |
+    f2 a4 |
+    c, f a |
+    g2 bes4 |
+    c, g' bes |
+    a c c, |
+    f a c, |
+    d f c |
+    f a c, |
+
+    % 229
+    gis'2 b,4 |
+    e gis e |
+    fis2 b,4 |
+    fis' a fis |
+    gis2 b,4 |
+    gis' b gis |
+    fis2 b,4 |
+    fis' a fis |
+    e2 b4 |
+    e gis e |
+    fis2 b,4 |
+    fis' a fis |
+    gis2 b,4 |
+    gis' b gis |
+    fis2 b,4 |
+    fis' a fis |
+    e2 b4 |
+    e b' gis |
+    e2 b4 |
+    e b' gis |
+    e2 b4 |
+    e b' g |
+    e2 b4 |
+    e b' g)( |
+
+    % 253
+    c2 e4 |
+    c g c |
+    d2 f4 | 
+    d g, d' |
+    e2 g4 |
+    e g, e' |
+    d2 f4 | 
+    d g, d' |
+    c-.) r r |
+    R4*3*2 |
+    r4 r d-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r c-. |
+  }
+  \alternative
+  {
+    {
+      c-. r r |
+    }
+    {
+      c-. r d,-. |
+    }
+  }
+}
+
+clarinetOneMvtIIIScore = \relative c'' { << \clarinetOneMvtIIINotes \clarinetOneMvtIIINotCues \clarinetOneMvtIIIDynamics >> }
+clarinetOneMvtIIIPart  = \relative c'' { << \clarinetOneMvtIIINotes \clarinetOneMvtIIICues    \clarinetOneMvtIIIDynamics >> }
+clarinetBesOneMvtIIIScore = \transpose bes c \clarinetOneMvtIIIScore
+clarinetBesOneMvtIIIPart  = \transpose bes c \clarinetOneMvtIIIPart
+clarinetAOneMvtIIIScore = \transpose a c \clarinetOneMvtIIIScore
+clarinetAOneMvtIIIPart  = \transpose a c \clarinetOneMvtIIIPart

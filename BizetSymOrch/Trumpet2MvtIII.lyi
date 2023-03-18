@@ -1,0 +1,400 @@
+\version "2.13.5"
+
+\include "defs.lyi"
+
+\include "Flute1MvtIII.lyi"
+\addQuote "flut1" { \relative c' \fluteOneMvtIIINotes }
+
+\include "Violin1MvtIII.lyi"
+\addQuote "viol1" { \relative c' \violinOneMvtIIINotes }
+
+\include "CelloMvtIII.lyi"
+\addQuote "cello" { \relative c' \celloMvtIIINotes }
+
+\include "Horn1MvtIII.lyi"
+\addQuote "horn1" { \relative c' \hornOneMvtIIINotes }
+
+\include "Trumpet1MvtIII.lyi"
+\addQuote "trum1" { \relative c' \trumpetOneMvtIIINotes }
+
+trumpetTwoMvtIIIDynamics = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+  \repeat volta 2
+  {
+    s2.*12 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2. |
+    }
+  }
+
+  \repeat volta 2
+  {
+    s2.*12 |
+    \crescHairpin
+    s4\f\< s s |
+    s s s\! |
+    s\ff s s |
+    s2.*5 |
+
+    % 38
+    s2.\f |
+    s2.*7 |
+    s2.\f |
+    s2.*3 |
+    s4\f s s |
+    s2.*3 |
+
+    % 54
+    s2.*32 |
+
+    % 86
+    s4\ff s s |
+    s2.*39 |
+    s4\f s s |
+    s2.*3 |
+
+    % 130
+    s4\ff s s |
+    s2.*3 |
+    s4\ff s s |
+    s2.*3 |
+    s4\ff s s |
+    s2.*3 |
+    s4\f s s |
+    s2.*3 |
+    s4\ff s s |
+    s2.*3 |
+    s4\f s s |
+    s2.*3 |
+    s4\f s s |
+    s2.*2 |
+
+    % 157
+    s2.*5 |
+    \crescTextCrescMolto 
+    s2.\p\< |
+    s2. |
+    s2. |
+    \crescHairpin
+    s4\!\f\< s s |
+    s4\ff s s |
+  }
+  \alternative
+  {
+    {
+      s4\ff-\secco s s |
+      s2.*2 |
+    }
+    {
+      s4\ff-\secco s s |
+      s2.*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 181
+    s2.*11 |
+    s4 s s\pp |
+    s2.*4 |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 205
+    \crescHairpin
+    s4\pp\< s s |
+    s2.*3 |
+    s4\!\> s s |
+    s2. |
+    s4 s\! s |
+    s2.*9 |
+    s4\pp\< s s |
+    s2.*3 |
+    s4\!\> s s |
+    s2. |
+    s4 s\! s |
+    s2. |
+
+
+    % 229
+    s2.*24 |
+
+    % 253
+    s2.*11 |
+    s4 s s\pp |
+    s2.*3 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s4 s s |
+    }
+  }
+}
+
+
+trumpetTwoMvtIIICues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*7 |
+  \cueDuring #"viol1" #UP { R4*3^\markup { "Vl.1" } | R4*3*4 | r4 r } s
+  s2.*7 |
+  r4 r
+  \cueDuring #"cello" #UP { \clef bass r^\markup { "Vlc." } | R4*3*4 \clef treble }
+  \cueDuring #"trum1" #UP { R4*3^\markup { "Tr.1" } | R4*3*3 }
+  s2.*52 |
+  \cueDuring #"flut1" #UP { R4*3^\markup { "Fl.1" } | R4*3*3 }
+  s2.*35 |
+  \cueDuring #"horn1" #UP { R4*3^\markup { "Hn.1" } | R4*3*4 }
+  s2.*47 |
+
+  \key c \major
+
+  s2.*16 |
+
+  \cueDuring #"viol1" #UP { R4*3^\markup { "Vl.1" } | R4*3*2 | r4 }
+  s s |
+
+  s2.*56 |
+
+  \cueDuring #"viol1" #UP { R4*3^\markup { "Vl.1" } | R4*3*3 | }
+  s2.*8 |
+  \cueDuring #"viol1" #UP { R4*3^\markup { "Vl.1" } | R4*3*2 | r4 }
+  s s |
+
+  s2.*5 |
+}
+
+
+trumpetTwoMvtIIINotCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*7 |
+  R4*3*5 | r4 r s
+  s2.*7 |
+  R4*3*5 |
+  R4*3 | R4*3*3 |
+  s2.*52 |
+  R4*3 | R4*3*3 |
+  s2.*35 |
+  R4*3 | R4*3*4 |
+  s2.*47 |
+
+  \key c \major
+
+  s2.*16 |
+
+  R4*3 | R4*3*2 | r4 s s |
+
+  s2.*56 |
+
+  R4*3 | R4*3*3 |
+  s2.*8 |
+  R4*3 | R4*3*2 | r4 s s |
+
+  s2.*5 |
+}
+
+
+trumpetTwoMvtIIINotes = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 r4 |
+  \repeat volta 2
+  {
+    R4*3*7 |
+    s2.*5 |
+    s2 d'4 |
+    d2.~ |
+    d2.( |
+  }
+  \alternative
+  {
+    {
+      d4) r r |
+    }
+    {
+      d4\repeatTie r r |
+    }
+  }
+
+  \repeat volta 2
+  {
+    R4*3*3 |
+    s2.*9 |
+    d2. |
+    d4-. d-. d-. |
+    g,4-. r r |
+    R4*3*5 |
+
+    % 38
+    d'2.~ |
+    d4-. d-. d-. |
+    g,4-. r r |
+    R4*3*5 |
+    e'2.~ |
+    e4-. e-. e-. |
+    d4-. r r |
+    R4*3 |
+    e2.~ |
+    e4-. e-. e-. |
+    d4-. r r |
+    R4*3 |
+
+    % 54
+    R4*3*28 |
+    s2.*4 |
+
+    % 86
+    d4-. r r |
+    R4*3*34 |
+    s2.*5 |
+    c,2.~ |
+    c2.~ |
+    c4 r r |
+    R4*3 |
+
+    % 130
+    g'4-. r r |
+    R4*3*3 |
+    c,2.~ |
+    c2.~ |
+    c4 r r |
+    R4*3 |
+    g4-. r r |
+    R4*3*3 |
+    c2.~ |
+    c2.~ |
+    c4 r r |
+    R4*3 |
+    g'4-. r r |
+    R4*3*3 |
+    d'2.~ |
+    d2. |
+    g,4-. r r |
+    R4*3 |
+    d'2.~ |
+    d2. |
+    g,4-. r r |
+
+    % 157
+    R4*3*5 |
+    d'2.~ |
+    d2.~ |
+    d2. |
+    d4-. d-. d-. |
+    g,4-. r r |
+  }
+  \alternative
+  {
+    {
+      g,4-. r r |
+      R4*3*2 |
+    }
+    {
+      g4-. r r |
+      R4*3*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    R4*3*8 |
+
+    % 181
+    R4*3*8 |
+    s2.*3 |
+    s4 r g'-. |
+    g( g-.) g-. |
+    g-. r g-. |
+    g-. r c,-. |
+    c-. r r |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    R4*3*8 |
+
+    % 205
+    c2.-^~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2 r4 |
+    R4*3*9 |
+    c2.-^~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2 r4 |
+    R4*3 |
+
+    % 229
+    R4*3*20 |
+    s2.*4 |
+
+    % 253
+    R4*3*8 |
+    s2.*3 |
+    s4 r g'-. |
+    g-. g-. g-. |
+    g-. r g-. |
+    g-. r c,-. |
+  }
+  \alternative
+  {
+    {
+      c-. r r |
+    }
+    {
+      c-. r r |
+    }
+  }
+}
+
+trumpetTwoMvtIIIScore = \relative c' { << \trumpetTwoMvtIIINotes \trumpetTwoMvtIIINotCues \trumpetTwoMvtIIIDynamics >> }
+trumpetTwoMvtIIIPart  = \relative c' { << \trumpetTwoMvtIIINotes \trumpetTwoMvtIIICues    \trumpetTwoMvtIIIDynamics >> }
+trumpetBesTwoMvtIIIScore = \transpose bes c \trumpetTwoMvtIIIScore
+trumpetBesTwoMvtIIIPart  = \transpose bes c \trumpetTwoMvtIIIPart

@@ -1,0 +1,233 @@
+\version "2.13.5"
+
+%define movement names.
+MvtIII = "Allegro vivace"
+
+pizz = \markup { \italic pizz. }
+arco = \markup { \italic arco }
+FFsec = \markup { \dynamic ff \italic secco }
+ffsecco = \markup { \dynamic ff \italic secco }
+secco = \markup { \italic "secco" }
+tenuto = \markup { \italic ten. }
+leggiero = \markup { \italic leggiero }
+estinto = \markup { \italic estinto }
+conmoltoespr = \markup { \italic "con molto espr." }
+
+crescTextPocoAPocoCresc = {
+    \set crescendoText = \markup { \italic {poco a poco cresc.} }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextPocoAPoco = {
+    \set crescendoText = \markup { \italic "poco a poco" }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextPocoAPocoCrescMolto = {
+    \set crescendoText = \markup { \italic "poco a poco cresc. molto" }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextCrescMolto = {
+    \set crescendoText = \markup { \italic {cresc. molto} }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextMolto = {
+    \set crescendoText = \markup { \italic "molto" }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextCresc = {
+    \set crescendoText = \markup { \italic "cresc." }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+dimTextDimMolto = {
+    \set decrescendoText = \markup { \italic {dim. molto} }
+    \set decrescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score . RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \smaller \bold $markp }
+#})
+
+rMark = #(define-music-function (parser location markp) (string?)
+#{
+  \mark \markup { \box \bold $markp }
+#})
+
+
+rehearsalMarksMvtIII =
+{
+  \partial 4 s4 |
+  \repeat volta 2
+  {
+    s2.*15 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2. |
+    }
+  }
+
+  \repeat volta 2
+  {
+    \rMark "A"
+    s2.*20 |
+
+    \rMark "B"
+    s2.*16 |
+
+    \rMark "C"
+    s2.*32 |
+
+    \rMark "D"
+    s2.*44 |
+
+    \rMark "E"
+    s2.*27 |
+
+    \rMark "F"
+    s2.*10 |
+  }
+  \alternative
+  {
+    {
+      s2.*3 |
+    }
+    {
+      s2.*3 |
+    }
+  }
+
+  %Trio
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    \rMark "G"
+    s2.*16 |
+  }
+
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    \rMark "H"
+    s2.*24 |
+
+    \rMark "I"
+    s2.*24 |
+
+    \rMark "J"
+    s2.*15 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2. |
+    }
+  }
+}
+
+outlineMvtIII =
+<< \rehearsalMarksMvtIII
+{
+  \override Score.PaperColumn #'keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
+  \time 3/4
+
+  \partial 4 s4 |
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \repeat volta 2
+  {
+    s2.*15 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2. |
+    }
+  }
+
+  \repeat volta 2
+  {
+    s2.*20 |
+
+    s2.*16 |
+
+    s2.*32 |
+
+    s2.*44 |
+
+    s2.*27 |
+
+    s2.*10 |
+  }
+  \alternative
+  {
+    {
+      s2.*3 |
+    }
+    {
+      s2.*2 |
+      s2.^\markup { Fin. } | \bar "||"
+    }
+  }
+
+  \break
+  \tempoMark "Trio"
+  \repeat volta 2
+  {
+    s2.*8|
+
+    s2.*16 |
+  }
+
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    s2.*24 |
+
+    s2.*24 |
+
+    s2.*15 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2_\markup { \italic "Da capo il Minuetto" }
+      s4 %\mark \markup { \musicglyph #"scripts.segno" }
+      \bar "||"
+    }
+  }
+  \stopStaff
+  s4 \mark \markup { \musicglyph #"scripts.segno" } s s
+}
+>>
+
