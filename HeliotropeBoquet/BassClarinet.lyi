@@ -1,0 +1,136 @@
+\version "2.22.2"
+
+\include "defs.lyi"
+
+bassclarinetDynamics = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+
+bassclarinetCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87 |
+}
+
+
+bassclarinetNotCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87 |
+}
+
+
+bassclarinetNotes = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+bassclarinetScore = \relative c { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDynamics >> }
+bassclarinetBesScore = \transpose bes c \relative c { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDynamics >> }
+bassclarinetBesPart  = \transpose bes c \relative c { << \bassclarinetNotes \bassclarinetCues    \bassclarinetDynamics >> }

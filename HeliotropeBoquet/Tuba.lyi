@@ -1,0 +1,139 @@
+\version "2.22.2"
+
+\include "defs.lyi"
+
+tubaDynamics = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+
+tubaCues = 
+{
+  \time 2/4
+  \key g \major
+  \clef bass
+
+  s2*87 |
+}
+
+
+tubaNotCues = 
+{
+  \time 2/4
+  \key g \major
+  \clef bass
+
+  s2*87 |
+}
+
+
+tubaNotes = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+tubaScore = \relative c, { << \tubaNotes \tubaNotCues \tubaDynamics >> }
+tubaPart  = \relative c, { << \tubaNotes \tubaCues    \tubaDynamics >> }
+stringbassScore = \relative c { << \tubaNotes \tubaNotCues \tubaDynamics >> }
+stringbassPart  = \relative c { << \tubaNotes \tubaCues    \tubaDynamics >> }

@@ -1,0 +1,136 @@
+\version "2.22.2"
+
+\include "defs.lyi"
+
+clarinetOneDynamics = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+clarinetOneCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87
+}
+
+
+clarinetOneNotCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87 |
+}
+
+
+clarinetOneNotes = 
+{
+  s2*4 |
+
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+clarinetOneScore = \relative c' { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDynamics >> }
+clarinetBesOneScore = \transpose bes c' \relative c' { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDynamics >> }
+clarinetBesOnePart  = \transpose bes c' \relative c' { << \clarinetOneNotes \clarinetOneCues    \clarinetOneDynamics >> }

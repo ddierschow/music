@@ -1,0 +1,137 @@
+\version "2.22.2"
+
+\include "defs.lyi"
+
+percussionDynamics = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+
+percussionCues = 
+{
+  \time 2/4
+  \key g \major
+  \clef percussion
+
+  s2*87 |
+}
+
+
+percussionNotCues = 
+{
+  \time 2/4
+  \key g \major
+  \clef percussion
+
+  s2*87 |
+}
+
+
+percussionNotes = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+percussionScore = \relative c { << \percussionNotes \percussionNotCues \percussionDynamics >> }
+percussionPart  = \relative c { << \percussionNotes \percussionCues    \percussionDynamics >> }

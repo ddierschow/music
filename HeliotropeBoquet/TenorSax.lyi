@@ -1,0 +1,136 @@
+\version "2.22.2"
+
+\include "defs.lyi"
+
+tenorsaxDynamics = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+
+tenorsaxCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87 |
+}
+
+
+tenorsaxNotCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87 |
+}
+
+
+tenorsaxNotes = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+tenorsaxScore = \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDynamics >> }
+tenorsaxBesScore = \transpose bes c \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDynamics >> }
+tenorsaxBesPart  = \transpose bes c \relative c' { << \tenorsaxNotes \tenorsaxCues    \tenorsaxDynamics >> }

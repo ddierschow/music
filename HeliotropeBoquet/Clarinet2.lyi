@@ -1,0 +1,136 @@
+\version "2.22.2"
+
+\include "defs.lyi"
+
+clarinetTwoDynamics = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+
+clarinetTwoCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87 |
+}
+
+
+clarinetTwoNotCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87 |
+}
+
+
+clarinetTwoNotes = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+clarinetTwoScore = \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDynamics >> }
+clarinetBesTwoScore = \transpose bes c' \relative c { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDynamics >> }
+clarinetBesTwoPart  = \transpose bes c' \relative c { << \clarinetTwoNotes \clarinetTwoCues    \clarinetTwoDynamics >> }

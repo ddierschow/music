@@ -1,0 +1,66 @@
+\version "2.22.2"
+
+pizz = \markup { \italic pizz. }
+arco = \markup { \italic arco }
+FFsec = \markup { \dynamic ff \italic secco }
+ffsecco = \markup { \dynamic ff \italic secco }
+secco = \markup { \italic "secco" }
+tenuto = \markup { \italic ten. }
+leggiero = \markup { \italic leggiero }
+estinto = \markup { \italic estinto }
+conmoltoespr = \markup { \italic "con molto espr." }
+
+crescTextPocoAPocoCresc = {
+    \set crescendoText = \markup { \italic {poco a poco cresc.} }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextPocoAPoco = {
+    \set crescendoText = \markup { \italic "poco a poco" }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextPocoAPocoCrescMolto = {
+    \set crescendoText = \markup { \italic "poco a poco cresc. molto" }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextCrescMolto = {
+    \set crescendoText = \markup { \italic {cresc. molto} }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextMolto = {
+    \set crescendoText = \markup { \italic "molto" }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+crescTextCresc = {
+    \set crescendoText = \markup { \italic "cresc." }
+    \set crescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+dimTextDimMolto = {
+    \set decrescendoText = \markup { \italic {dim. molto} }
+    \set decrescendoSpanner = #'text
+    \override DynamicTextSpanner #'style = #'dashed-line
+}
+
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score . RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \smaller \bold $markp }
+#})
+
+rMark = #(define-music-function (parser location markp) (string?)
+#{
+  \mark \markup { \box \bold $markp }
+#})
+

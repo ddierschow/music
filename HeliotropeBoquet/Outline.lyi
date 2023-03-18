@@ -1,0 +1,113 @@
+headerPiece = "Allegro vivace"
+
+rehearsalMarks =
+{
+  s2*4 | 
+  \rMark "5"
+  s2*16 |
+
+  \repeat volta 2
+  {
+    \rMark "21"
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \rMark "38"
+  s2*16 |
+
+  \repeat volta 2
+  {
+    \rMark "54"
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    \rMark "71"
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+pageMarks =
+{
+  \override Score.PaperColumn #'keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
+  \time 2/4
+
+  s2*4 | 
+  s2*16 |
+
+  \repeat volta 2
+  {
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  s2*16 |
+
+  \break
+  \repeat volta 2
+  {
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+outline = << \rehearsalMarks \pageMarks >>

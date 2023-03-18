@@ -1,0 +1,157 @@
+\version "2.22.2"
+
+\include "defs.lyi"
+
+baritoneDynamics = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+
+baritoneCues = 
+{
+  \time 2/4
+  \key g \major
+  \clef bass
+
+  s2*87 |
+}
+
+
+baritonetcCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87 |
+}
+
+
+baritoneNotCues = 
+{
+  \time 2/4
+  \key g \major
+  \clef bass
+
+  s2*87 |
+}
+
+
+baritonetcNotCues = 
+{
+  \time 2/4
+  \key g \major
+
+  s2*87 |
+}
+
+
+baritoneNotes = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+baritoneScore = \relative c { << \baritoneNotes \baritoneNotCues \baritoneDynamics >> }
+baritonePart  = \relative c { << \baritoneNotes \baritoneCues    \baritoneDynamics >> }
+baritonetcScore = \transpose bes c \relative c'' { << \baritoneNotes \baritonetcNotCues \baritoneDynamics >> }
+baritonetcPart  = \transpose bes c \relative c'' { << \baritoneNotes \baritonetcCues    \baritoneDynamics >> }

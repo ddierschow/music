@@ -1,0 +1,137 @@
+\version "2.22.2"
+
+\include "defs.lyi"
+
+tromboneOneDynamics = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+
+tromboneOneCues = 
+{
+  \time 2/4
+  \key g \major
+  \clef bass
+
+  s2*87 |
+}
+
+
+tromboneOneNotCues = 
+{
+  \time 2/4
+  \key g \major
+  \clef bass
+
+  s2*87 |
+}
+
+
+tromboneOneNotes = 
+{
+  s2*4 | 
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+tromboneOneScore = \relative c' { << \tromboneOneNotes \tromboneOneNotCues \tromboneOneDynamics >> }
+tromboneOnePart  = \relative c' { << \tromboneOneNotes \tromboneOneCues    \tromboneOneDynamics >> }
