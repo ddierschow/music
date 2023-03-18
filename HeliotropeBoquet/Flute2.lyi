@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-fluteTwoDynamics = 
+fluteTwoDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ fluteTwoDynamics =
 }
 
 
-fluteTwoCues = 
+fluteTwoCues =
 {
   \time 2/4
   \key g \major
@@ -67,7 +67,7 @@ fluteTwoCues =
 }
 
 
-fluteTwoNotCues = 
+fluteTwoNotCues =
 {
   \time 2/4
   \key g \major
@@ -76,9 +76,13 @@ fluteTwoNotCues =
 }
 
 
-fluteTwoNotes = 
+fluteTwoNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -131,6 +135,5 @@ fluteTwoNotes =
   }
 }
 
-
-fluteTwoScore = \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDynamics >> }
-fluteTwoPart  = \relative c' { << \fluteTwoNotes \fluteTwoCues    \fluteTwoDynamics >> }
+fluteTwoScore = \transpose c bes \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDynamics >> }
+fluteTwoPart  = \transpose c bes \relative c' { << \fluteTwoNotes \fluteTwoCues    \fluteTwoDynamics >> }

@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-altosaxTwoDynamics = 
+altosaxTwoDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ altosaxTwoDynamics =
 }
 
 
-altosaxTwoCues = 
+altosaxTwoCues =
 {
   \time 2/4
   \key g \major
@@ -67,7 +67,7 @@ altosaxTwoCues =
 }
 
 
-altosaxTwoNotCues = 
+altosaxTwoNotCues =
 {
   \time 2/4
   \key g \major
@@ -76,9 +76,13 @@ altosaxTwoNotCues =
 }
 
 
-altosaxTwoNotes = 
+altosaxTwoNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -131,6 +135,6 @@ altosaxTwoNotes =
   }
 }
 
-altosaxTwoScore = \relative c { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDynamics >> }
-altosaxEesTwoScore = \transpose ees c \relative c { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDynamics >> }
-altosaxEesTwoPart  = \transpose ees c \relative c { << \altosaxTwoNotes \altosaxTwoCues    \altosaxTwoDynamics >> }
+altosaxTwoScore = \transpose c bes \relative c { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDynamics >> }
+altosaxEesTwoScore = \transpose ees bes \relative c { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDynamics >> }
+altosaxEesTwoPart  = \transpose ees bes \relative c { << \altosaxTwoNotes \altosaxTwoCues    \altosaxTwoDynamics >> }

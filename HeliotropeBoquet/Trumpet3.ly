@@ -1,7 +1,7 @@
 \version "2.22.2"
 
-\include "defs.lyi" 
-\include "Trumpet3.lyi" 
+\include "defs.lyi"
+\include "Trumpet3.lyi"
 
 instrument = "Trumpet III"
 

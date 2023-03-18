@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-bassoonDynamics = 
+bassoonDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ bassoonDynamics =
 }
 
 
-bassoonCues = 
+bassoonCues =
 {
   \time 2/4
   \key g \major
@@ -68,7 +68,7 @@ bassoonCues =
 }
 
 
-bassoonNotCues = 
+bassoonNotCues =
 {
   \time 2/4
   \key g \major
@@ -78,9 +78,13 @@ bassoonNotCues =
 }
 
 
-bassoonNotes = 
+bassoonNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -133,5 +137,5 @@ bassoonNotes =
   }
 }
 
-bassoonScore = \relative c { << \bassoonNotes \bassoonNotCues \bassoonDynamics >> }
-bassoonPart  = \relative c { << \bassoonNotes \bassoonCues    \bassoonDynamics >> }
+bassoonScore = \transpose c bes \relative c { << \bassoonNotes \bassoonNotCues \bassoonDynamics >> }
+bassoonPart  = \transpose c bes \relative c { << \bassoonNotes \bassoonCues    \bassoonDynamics >> }

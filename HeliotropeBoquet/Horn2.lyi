@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-hornTwoDynamics = 
+hornTwoDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ hornTwoDynamics =
 }
 
 
-hornTwoCues = 
+hornTwoCues =
 {
   \time 2/4
   \key g \major
@@ -67,7 +67,7 @@ hornTwoCues =
 }
 
 
-hornTwoNotCues = 
+hornTwoNotCues =
 {
   \time 2/4
   \key g \major
@@ -76,9 +76,13 @@ hornTwoNotCues =
 }
 
 
-hornTwoNotes = 
+hornTwoNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -131,6 +135,6 @@ hornTwoNotes =
   }
 }
 
-hornTwoScore = \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDynamics >> }
-hornFTwoScore = \transpose f c \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDynamics >> }
-hornFTwoPart  = \transpose f c \relative c' { << \hornTwoNotes \hornTwoCues    \hornTwoDynamics >> }
+hornTwoScore = \transpose c bes \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDynamics >> }
+hornFTwoScore = \transpose f bes \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDynamics >> }
+hornFTwoPart  = \transpose f bes \relative c' { << \hornTwoNotes \hornTwoCues    \hornTwoDynamics >> }

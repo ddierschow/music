@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-barisaxDynamics = 
+barisaxDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ barisaxDynamics =
 }
 
 
-barisaxCues = 
+barisaxCues =
 {
   \time 2/4
   \key g \major
@@ -67,7 +67,7 @@ barisaxCues =
 }
 
 
-barisaxNotCues = 
+barisaxNotCues =
 {
   \time 2/4
   \key g \major
@@ -76,9 +76,13 @@ barisaxNotCues =
 }
 
 
-barisaxNotes = 
+barisaxNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -131,6 +135,6 @@ barisaxNotes =
   }
 }
 
-barisaxScore = \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
-barisaxEesScore = \transpose ees c \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
-barisaxEesPart  = \transpose ees c \relative c' { << \barisaxNotes \barisaxCues    \barisaxDynamics >> }
+barisaxScore = \transpose c bes \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
+barisaxEesScore = \transpose ees bes \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
+barisaxEesPart  = \transpose ees bes \relative c' { << \barisaxNotes \barisaxCues    \barisaxDynamics >> }

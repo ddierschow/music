@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-clarinetThreeDynamics = 
+clarinetThreeDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ clarinetThreeDynamics =
 }
 
 
-clarinetThreeCues = 
+clarinetThreeCues =
 {
   \time 2/4
   \key g \major
@@ -67,7 +67,7 @@ clarinetThreeCues =
 }
 
 
-clarinetThreeNotCues = 
+clarinetThreeNotCues =
 {
   \time 2/4
   \key g \major
@@ -76,9 +76,13 @@ clarinetThreeNotCues =
 }
 
 
-clarinetThreeNotes = 
+clarinetThreeNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -131,6 +135,6 @@ clarinetThreeNotes =
   }
 }
 
-clarinetThreeScore = \relative c' { << \clarinetThreeNotes \clarinetThreeNotCues \clarinetThreeDynamics >> }
-clarinetBesThreeScore = \transpose bes c' \relative c { << \clarinetThreeNotes \clarinetThreeNotCues \clarinetThreeDynamics >> }
-clarinetBesThreePart  = \transpose bes c' \relative c { << \clarinetThreeNotes \clarinetThreeCues    \clarinetThreeDynamics >> }
+clarinetThreeScore = \transpose c bes \relative c' { << \clarinetThreeNotes \clarinetThreeNotCues \clarinetThreeDynamics >> }
+clarinetBesThreeScore = \transpose bes bes \relative c' { << \clarinetThreeNotes \clarinetThreeNotCues \clarinetThreeDynamics >> }
+clarinetBesThreePart  = \transpose bes bes \relative c' { << \clarinetThreeNotes \clarinetThreeCues    \clarinetThreeDynamics >> }

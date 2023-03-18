@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-timpaniDynamics = 
+timpaniDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ timpaniDynamics =
 }
 
 
-timpaniCues = 
+timpaniCues =
 {
   \time 2/4
   \key g \major
@@ -68,7 +68,7 @@ timpaniCues =
 }
 
 
-timpaniNotCues = 
+timpaniNotCues =
 {
   \time 2/4
   \key g \major
@@ -78,9 +78,9 @@ timpaniNotCues =
 }
 
 
-timpaniNotes = 
+timpaniNotes =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -133,5 +133,5 @@ timpaniNotes =
   }
 }
 
-timpaniScore = \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDynamics >> }
-timpaniPart  = \relative c, { << \timpaniNotes \timpaniCues    \timpaniDynamics >> }
+timpaniScore = \transpose c bes \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDynamics >> }
+timpaniPart  = \transpose c bes \relative c, { << \timpaniNotes \timpaniCues    \timpaniDynamics >> }

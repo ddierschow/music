@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-trumpetOneDynamics = 
+trumpetOneDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ trumpetOneDynamics =
 }
 
 
-trumpetOneCues = 
+trumpetOneCues =
 {
   \time 2/4
   \key g \major
@@ -67,7 +67,7 @@ trumpetOneCues =
 }
 
 
-trumpetOneNotCues = 
+trumpetOneNotCues =
 {
   \time 2/4
   \key g \major
@@ -76,9 +76,13 @@ trumpetOneNotCues =
 }
 
 
-trumpetOneNotes = 
+trumpetOneNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -131,6 +135,6 @@ trumpetOneNotes =
   }
 }
 
-trumpetOneScore = \relative c' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDynamics >> }
-trumpetBesOneScore = \transpose bes c \relative c'' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDynamics >> }
-trumpetBesOnePart  = \transpose bes c \relative c'' { << \trumpetOneNotes \trumpetOneCues    \trumpetOneDynamics >> }
+trumpetOneScore = \transpose c bes \relative c' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDynamics >> }
+trumpetBesOneScore = \transpose bes bes \relative c'' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDynamics >> }
+trumpetBesOnePart  = \transpose bes bes \relative c'' { << \trumpetOneNotes \trumpetOneCues    \trumpetOneDynamics >> }

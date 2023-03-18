@@ -241,6 +241,13 @@ instrument = "Concert Band"
 	  \new Staff
 	  {
 	    #(set-accidental-style 'modern)
+	    \set Staff.instrumentName = \markup "Tuba"
+	    \set Staff.shortInstrumentName = "Tuba"
+	    \new Voice {\voiceOne \keepWithTag #'score \relative c \tubaScore }
+	  }
+	  \new Staff
+	  {
+	    #(set-accidental-style 'modern)
 	    \set Staff.instrumentName = \markup "String Bass"
 	    \set Staff.shortInstrumentName = "Bass"
 	    \new Voice {\voiceOne \keepWithTag #'score \relative c \stringbassScore }
@@ -274,79 +281,77 @@ instrument = "Concert Band"
   }
 
 %{
-  \score
-  {
-    %\unfoldTremolos
-    \unfoldRepeats
-    {
-    <<
-      \new Staff
-      {
-	\set Score.tempoHideNote = ##t
-	\tempo 2. = 132
-        \set Staff.midiInstrument = "flute"
-        <<
-          \relative c' \fluteOneScore
-          \relative c' \fluteTwoScore
-        >>
-      }
-      \new Staff
-      {
-        \set Staff.midiInstrument = "oboe"
-        <<
-          \relative c' \oboeOneScore
-          \relative c' \oboeTwoScore
-        >>
-      }
-      \new Staff
-      {
-        \set Staff.midiInstrument = "clarinet"
-        <<
-          \relative c'' \clarinetOneScore
-          \relative c'' \clarinetTwoScore
-        >>
-      }
-      \new Staff
-      {
-        \set Staff.midiInstrument = "bassoon"
-        <<
-          \relative c \bassoonOneScore
-          \relative c \bassoonTwoScore
-        >>
-      }
-      \new Staff
-      {
-        \set Staff.midiInstrument = "french horn"
-        <<
-          \relative c' \hornOneScore
-          \relative c' \hornTwoScore
-          \relative c' \hornThreeScore
-          \relative c' \hornFourScore
-        >>
-      }
-      \new Staff
-      {
-        \set Staff.midiInstrument = "trumpet"
-        <<
-          \relative c' \trumpetOneScore
-          \relative c' \trumpetTwoScore
-        >>
-      }
-      \new Staff
-      {
-        \set Staff.midiInstrument = "timpani"
-        \relative c, \timpaniScore
-      }
-    >>
-    }
-    \midi
-    {
-      \context
-      {
-        \Voice
-        \remove "Dynamic_performer"
-      }
-    }
-  }
+%  \score
+%  {
+%    %\unfoldTremolos
+%    \unfoldRepeats
+%    {
+%    <<
+%      \new Staff
+%      {
+%	\set Score.tempoHideNote = ##t
+%	\tempo 2. = 132
+%        \set Staff.midiInstrument = "flute"
+%        <<
+%          \relative c' \fluteOneScore
+%          \relative c' \fluteTwoScore
+%        >>
+%      }
+%      \new Staff
+%      {
+%        \set Staff.midiInstrument = "oboe"
+%        <<
+%          \relative c' \oboeOneScore
+%        >>
+%      }
+%      \new Staff
+%      {
+%        \set Staff.midiInstrument = "clarinet"
+%        <<
+%          \relative c'' \clarinetOneScore
+%          \relative c'' \clarinetTwoScore
+%          \relative c'' \clarinetThreeScore
+%        >>
+%      }
+%      \new Staff
+%      {
+%        \set Staff.midiInstrument = "bassoon"
+%        <<
+%          \relative c \bassoonOneScore
+%        >>
+%      }
+%      \new Staff
+%      {
+%        \set Staff.midiInstrument = "french horn"
+%        <<
+%          \relative c' \hornOneScore
+%          \relative c' \hornTwoScore
+%        >>
+%      }
+%      \new Staff
+%      {
+%        \set Staff.midiInstrument = "trumpet"
+%        <<
+%          \relative c' \trumpetOneScore
+%          \relative c' \trumpetTwoScore
+%          \relative c' \trumpetThreeScore
+%        >>
+%      }
+%      \new Staff
+%      {
+%        \set Staff.midiInstrument = "timpani"
+%        \relative c, \timpaniScore
+%      }
+%    >>
+%    }
+%    \midi
+%    {
+%      \context
+%      {
+%        \Voice
+%        \remove "Dynamic_performer"
+%      }
+%    }
+%  }
 %}
 }

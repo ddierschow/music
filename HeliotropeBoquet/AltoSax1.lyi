@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-altosaxOneDynamics = 
+altosaxOneDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ altosaxOneDynamics =
 }
 
 
-altosaxOneCues = 
+altosaxOneCues =
 {
   \time 2/4
   \key g \major
@@ -67,7 +67,7 @@ altosaxOneCues =
 }
 
 
-altosaxOneNotCues = 
+altosaxOneNotCues =
 {
   \time 2/4
   \key g \major
@@ -76,9 +76,13 @@ altosaxOneNotCues =
 }
 
 
-altosaxOneNotes = 
+altosaxOneNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -131,6 +135,6 @@ altosaxOneNotes =
   }
 }
 
-altosaxOneScore = \relative c' { << \altosaxOneNotes \altosaxOneNotCues \altosaxOneDynamics >> }
-altosaxEesOneScore = \transpose ees c \relative c' { << \altosaxOneNotes \altosaxOneNotCues \altosaxOneDynamics >> }
-altosaxEesOnePart  = \transpose ees c \relative c' { << \altosaxOneNotes \altosaxOneCues    \altosaxOneDynamics >> }
+altosaxOneScore = \transpose c bes \relative c' { << \altosaxOneNotes \altosaxOneNotCues \altosaxOneDynamics >> }
+altosaxEesOneScore = \transpose ees bes \relative c' { << \altosaxOneNotes \altosaxOneNotCues \altosaxOneDynamics >> }
+altosaxEesOnePart  = \transpose ees bes \relative c' { << \altosaxOneNotes \altosaxOneCues    \altosaxOneDynamics >> }

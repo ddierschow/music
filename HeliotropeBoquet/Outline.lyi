@@ -2,7 +2,7 @@ headerPiece = "Allegro vivace"
 
 rehearsalMarks =
 {
-  s2*4 | 
+  s2*4 |
   \rMark "5"
   s2*16 |
 
@@ -61,8 +61,8 @@ pageMarks =
   \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
   \time 2/4
 
-  s2*4 | 
-  s2*16 |
+  s2*4 \bar "||"
+  s2*16 \bar "||"
 
   \repeat volta 2
   {
@@ -74,7 +74,7 @@ pageMarks =
       s2 |
     }
     {
-      s2 |
+      s2 \bar "||"
     }
   }
 
@@ -108,6 +108,7 @@ pageMarks =
       s2 |
     }
   }
+  \bar "|."
 }
 
 outline = << \rehearsalMarks \pageMarks >>

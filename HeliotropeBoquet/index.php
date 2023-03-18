@@ -50,7 +50,7 @@ echo "<table border=1>\n";
 
 $scores = array();
 $scores[] = "";
-$scores[] = "ScoreMvtIII";
+$scores[] = "Score";
 $scores[] = "ScoreNT";
 
 $ftypes = array();
@@ -89,7 +89,7 @@ $insts[] = "Timpani";
 
 $fils = array();
 $fils[] = ".ly";
-$fils[] = "MvtIII.lyi";
+$fils[] = ".lyi";
 $fils[] = ".pdf";
 
 ShowGridV($insts, $fils);

@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-tromboneTwoDynamics = 
+tromboneTwoDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ tromboneTwoDynamics =
 }
 
 
-tromboneTwoCues = 
+tromboneTwoCues =
 {
   \time 2/4
   \key g \major
@@ -68,7 +68,7 @@ tromboneTwoCues =
 }
 
 
-tromboneTwoNotCues = 
+tromboneTwoNotCues =
 {
   \time 2/4
   \key g \major
@@ -78,9 +78,13 @@ tromboneTwoNotCues =
 }
 
 
-tromboneTwoNotes = 
+tromboneTwoNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -133,5 +137,5 @@ tromboneTwoNotes =
   }
 }
 
-tromboneTwoScore = \relative c' { << \tromboneTwoNotes \tromboneTwoNotCues \tromboneTwoDynamics >> }
-tromboneTwoPart  = \relative c' { << \tromboneTwoNotes \tromboneTwoCues    \tromboneTwoDynamics >> }
+tromboneTwoScore = \transpose c bes \relative c' { << \tromboneTwoNotes \tromboneTwoNotCues \tromboneTwoDynamics >> }
+tromboneTwoPart  = \transpose c bes \relative c' { << \tromboneTwoNotes \tromboneTwoCues    \tromboneTwoDynamics >> }

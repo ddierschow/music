@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-tubaDynamics = 
+tubaDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ tubaDynamics =
 }
 
 
-tubaCues = 
+tubaCues =
 {
   \time 2/4
   \key g \major
@@ -68,7 +68,7 @@ tubaCues =
 }
 
 
-tubaNotCues = 
+tubaNotCues =
 {
   \time 2/4
   \key g \major
@@ -78,9 +78,13 @@ tubaNotCues =
 }
 
 
-tubaNotes = 
+tubaNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -133,7 +137,7 @@ tubaNotes =
   }
 }
 
-tubaScore = \relative c, { << \tubaNotes \tubaNotCues \tubaDynamics >> }
-tubaPart  = \relative c, { << \tubaNotes \tubaCues    \tubaDynamics >> }
-stringbassScore = \relative c { << \tubaNotes \tubaNotCues \tubaDynamics >> }
-stringbassPart  = \relative c { << \tubaNotes \tubaCues    \tubaDynamics >> }
+tubaScore = \transpose c bes \relative c, { << \tubaNotes \tubaNotCues \tubaDynamics >> }
+tubaPart  = \transpose c bes \relative c, { << \tubaNotes \tubaCues    \tubaDynamics >> }
+stringbassScore = \transpose c bes \relative c { << \tubaNotes \tubaNotCues \tubaDynamics >> }
+stringbassPart  = \transpose c bes \relative c { << \tubaNotes \tubaCues    \tubaDynamics >> }

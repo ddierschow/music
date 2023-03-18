@@ -2,9 +2,9 @@
 
 \include "defs.lyi"
 
-baritoneDynamics = 
+baritoneDynamics =
 {
-  s2*4 | 
+  s2*4 |
   % 5
   s2*16 |
 
@@ -58,7 +58,7 @@ baritoneDynamics =
 }
 
 
-baritoneCues = 
+baritoneCues =
 {
   \time 2/4
   \key g \major
@@ -68,7 +68,7 @@ baritoneCues =
 }
 
 
-baritonetcCues = 
+baritonetcCues =
 {
   \time 2/4
   \key g \major
@@ -77,7 +77,7 @@ baritonetcCues =
 }
 
 
-baritoneNotCues = 
+baritoneNotCues =
 {
   \time 2/4
   \key g \major
@@ -87,7 +87,7 @@ baritoneNotCues =
 }
 
 
-baritonetcNotCues = 
+baritonetcNotCues =
 {
   \time 2/4
   \key g \major
@@ -96,9 +96,13 @@ baritonetcNotCues =
 }
 
 
-baritoneNotes = 
+baritoneNotes =
 {
-  s2*4 | 
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
   s2*16 |
 
@@ -151,7 +155,7 @@ baritoneNotes =
   }
 }
 
-baritoneScore = \relative c { << \baritoneNotes \baritoneNotCues \baritoneDynamics >> }
-baritonePart  = \relative c { << \baritoneNotes \baritoneCues    \baritoneDynamics >> }
-baritonetcScore = \transpose bes c \relative c'' { << \baritoneNotes \baritonetcNotCues \baritoneDynamics >> }
-baritonetcPart  = \transpose bes c \relative c'' { << \baritoneNotes \baritonetcCues    \baritoneDynamics >> }
+baritoneScore = \transpose c bes \relative c { << \baritoneNotes \baritoneNotCues \baritoneDynamics >> }
+baritonePart  = \transpose c bes \relative c { << \baritoneNotes \baritoneCues    \baritoneDynamics >> }
+baritonetcScore = \transpose bes bes \relative c'' { << \baritoneNotes \baritonetcNotCues \baritoneDynamics >> }
+baritonetcPart  = \transpose bes bes \relative c'' { << \baritoneNotes \baritonetcCues    \baritoneDynamics >> }
