@@ -1,0 +1,496 @@
+\version "2.13.5"
+
+\include "defs.lyi"
+
+fluteOneMvtIIIDynamics = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4\f |
+  \repeat volta 2
+  {
+    s2.*6 |
+    s2.^\tenuto |
+    s2. |
+    s2.*4 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2 s4\f |
+    }
+    {
+      s2. |
+    }
+  }
+
+  % 18
+%  \repeat volta 2
+%  {
+    \crescTextPocoAPocoCresc 
+    s4\pp s s\< |
+    s2.*7 |
+    \crescTextMolto 
+    s4 s\! s\< |
+    s2.*2 |
+    s4 s s\! |
+    \crescHairpin
+    s4\f\< s s |
+    s s s\! |
+    s\ff s s |
+    s-\leggiero s s\p |
+    s2.*2 |
+    \crescTextCrescMolto 
+    s4\< s s\! |
+    s2. |
+
+    % 38
+    s2.\f |
+    s2.*2 |
+    s2 s4\p |
+    s2. |
+    s2 s4\< |
+    s2. |
+    s2 s4\! |
+    s2.\f |
+    s2.*2 |
+    s2  s4 |
+    s2.*3 |
+    s2 s4\pp |
+
+    % 54
+    s2.*5 |
+    \crescTextPocoAPocoCrescMolto
+    s2.\< |
+    s2.*17 |
+    s2 s4\! |
+    s2.\f |
+    s2.*3 |
+    s4 s\ff s |
+    s2.*3 |
+
+    % 86
+    s2.\!\ff |
+    s2.*6 |
+    s4\p s_\conmoltoespr s |
+    s2. |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*8 |
+    s2.\! |
+    s2.\< |
+    s2.*3 |
+    s2.\! |
+    s2.\> |
+    s2.*8 |
+    s2.\! |
+    s2. |
+    s4\f s s |
+    s2.*4 |
+
+    % 130
+    s4\ff s s |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s s s\ff |
+    s2.*3 |
+    s4 s s |
+    s2.*2 |
+    s4 s s\f |
+    s2.*3 |
+    s4 s s |
+    s2.*3 |
+
+    % 157
+    s4 s s\f |
+    s2.\fp |
+    s2. |
+    \crescTextCrescMolto 
+    s2.\< |
+    s2.*3 |
+    s2.\! |
+    \crescHairpin
+    s2.\< |
+    s4\!\ff s s |
+%  }
+%  \alternative
+%  {
+%    {
+%      s4-\secco s s |
+%      s2.*2 |
+%    }
+%    {
+      s4-\secco s s |
+      s2.*2 |
+%    }
+%  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 181
+    s2.*11 |
+    s4 s s\pp |
+    s2.*4 |
+  }
+
+  % 197
+%  \repeat volta 2
+%  {
+    s2.*8 |
+
+    % 205
+    s2.*24 |
+
+    % 229
+    s2.\pp |
+    s2.*21 |
+    s2.\ppp |
+    s4 s s\p |
+
+    % 253
+    s2. |
+    \crescTextCrescMolto 
+    s4 s s\< |
+    s2.*6 |
+    s4\! s s |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*3 |
+%  }
+%  \alternative
+%  {
+%    {
+%      s2. |
+%    }
+%    {
+      s4 s s\f |
+%    }
+%  }
+}
+
+
+fluteOneMvtIIICues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*17 | \break
+  s2.*152 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+fluteOneMvtIIINotCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+fluteOneMvtIIINotes = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 d4 |
+  \repeat volta 2
+  {
+    g2 b4-. |
+    g-. d-. g-. |
+    a2 c4-. |
+    a-. d,-. a'-. |
+    b( d-.) g,-. |
+    g2 b4-. |
+    e,2. |
+    g'' |
+    fis |
+    d |
+    e4-. fis-. g-. |
+    a2. |
+    fis2 d4 |
+    d2.~ |
+    d2.~ |
+  }
+  \alternative
+  {
+    {
+      d4 r d,,-. |
+    }
+    {
+      d''4\repeatTie r r |
+    }
+  }
+
+  % 18
+%  \repeat volta 2
+%  {
+    \repeat unfold 3
+    {
+      a-. a-. a-. |
+      a-. a-. a-. |
+      b-. b-. b-. |
+      b-. b-. b-. |
+    }
+    a-. a-. a-. |
+    a-. a-. a-. |
+    b-. r r |
+    r r g'-. |
+    g-. r fis-. |
+    fis-. r e-. |
+    e-. d-. c-. |
+    b-. a-. g-. |
+
+    % 38
+    d'2.~ |
+    d2. |
+    b4-. r r |
+    r r b-. |
+    b-. r a-. |
+    a-. r g-. |
+    g'-. fis-. e-. |
+    d-. cis-. b-. |
+    a2.~ |
+    a2. |
+    fis4-. r r |
+    r r a,-. |
+    a'2.~ |
+    a2. |
+    fis4-. r r |
+    r r a-. |
+
+    % 54
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a4 r r |
+    r d-. cis-. |
+    b-. a-. g-. |
+    fis-. e-. d-. |
+    cis-. b-. a-. |
+
+    % 86
+    d-. r r |
+    R4*3*6 |
+    d'2.( |
+    fis2.~) |
+    fis2.~ |
+    fis2.( |
+    \grace g8 fis4 e fis |
+    g2. |
+    d2.)~ |
+    d4( d e |
+    d c b) |
+    d2.~ |
+    d2.~ |
+    d2.( |
+    c2. |
+    c2. |
+    b2.) |
+    R4*3 |
+    d2.( |
+    fis2. |
+    a2. |
+    c2 a4 |
+    a g fis |
+    a2. |
+    g2.~) |
+    g4( d d |
+    \grace e8 d4 c b |
+    d2.~) |
+    d2.~ |
+    d2.( |
+    c2. |
+    c2. |
+    b2.) |
+    R4*3 |
+    g2. |
+    g'2.~ |
+    g2.~ |
+    g2 a4-. |
+    g( fis-.) e-. |
+
+    % 130
+    g4-. r r |
+    R4*3*2 |
+    r4 r g,-. |
+    d'2.~ |
+    d2.~ |
+    d2 a4-. |
+    \acciaccatura b8 a4( g-.) a-. |
+    b-. r g-. |
+    g-. r d-. |
+    d-. r b-. |
+    b-. r g-. |
+    g-. r g'( |
+    e'-.) e-. g-. |
+    e-. r r |
+    R4*3 |
+    g4-. r r |
+    R4*3*2 |
+    r4 r g,-. |
+    d'2.~ |
+    d2.( |
+    b4-.) r r |
+    r4 r g-. |
+    d'2.~ |
+    d2.( |
+    b4-.) r r |
+
+    % 157
+    r r g-. |
+    d'2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    fis2.~\startTrillSpan |
+    fis2.~ |
+    fis2.~ |
+    fis2.\stopTrillSpan \grace {e16[( fis]} |
+    g4-.) r r |
+%  }
+%  \alternative
+%  {
+%    {
+%      g,4-. r r |
+%      R4*3*2 |
+%    }
+%    {
+      g,4-. r r |
+      R4*3*2 |
+%    }
+%  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    R4*3*8 |
+
+    % 181
+    R4*3*11 |
+    r4 r d'-. |
+    d( e)-. e-. |
+    e-. r d-. |
+    d-. r c-. |
+    c-. r r |
+  }
+
+  % 197
+%  \repeat volta 2
+%  {
+    R4*3*8 |
+
+    % 205
+    R4*3*24 |
+
+    % 229
+    gis2.~( |
+    gis2. |
+    a2.~ |
+    a2. |
+    b2.~ |
+    b2. |
+    a2.~ |
+    a2. |
+    gis2.~ |
+    gis2. |
+    a2.~ |
+    a2. |
+    b2.~ |
+    b2.) |
+    a2.~ |
+    a2. |
+    gis2.~ |
+    gis2.~ |
+    gis2.~ |
+    gis2. |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g4 r g( |
+
+    % 253
+    c2 e4 |
+    c g c |
+    d2 f4 | 
+    d g, d' |
+    e2 g4 |
+    e g, e' |
+    d2 f4 | 
+    d g, d' |
+    c-.) r r |
+    R4*3*2 |
+    r4 r d-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r c-. |
+%  }
+%  \alternative
+%  {
+%    {
+%      c-. r r |
+%    }
+%    {
+      c-. r d,,-. |
+%    }
+%  }
+}
+
+
+fluteOneMvtIIIScore = \relative c' { << \fluteOneMvtIIINotes \fluteOneMvtIIINotCues \fluteOneMvtIIIDynamics >> }
+fluteOneMvtIIIPart  = \relative c' { << \fluteOneMvtIIINotes \fluteOneMvtIIICues    \fluteOneMvtIIIDynamics >> }

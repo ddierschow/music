@@ -1,0 +1,586 @@
+\version "2.13.5"
+
+\include "defs.lyi"
+
+tenorsaxMvtIIIDynamics = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4\f |
+  \repeat volta 2
+  {
+    s2.*6 |
+    s2.^\tenuto |
+    s2. |
+    s2.*4 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2 s4\f |
+    }
+    {
+      s2 s4\p |
+    }
+  }
+
+  % 18
+%  \repeat volta 2
+%  {
+    \crescTextPocoAPocoCresc 
+    s4 s s\< |
+    s2.*7 |
+    \crescTextMolto 
+    s4\! s s\< |
+    s2.*2 |
+    s4 s s\! |
+    \crescHairpin
+    s4\f\< s s |
+    s2 s4\! |
+    s\ff s s |
+    s2.*4 |
+    s2 s4\f |
+
+    % 38
+    s2.*7 |
+    s2 s4\f |
+    s2.*3 |
+    s2 s4 |
+    s2.*3 |
+    s2 s4 |
+
+    % 54
+    s2.\pp |
+    s2.*4 |
+    \crescTextPocoAPocoCrescMolto
+    s2.\< |
+    s2.*17 |
+    s2 s4\! |
+    s4 s\f s |
+    s2.*3 |
+    \crescTextCrescMolto
+    s2.\< |
+    s2.*3 |
+
+    % 86
+    s2.\ff |
+    s2.*6 |
+    s2. |
+    s2.\pp |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*8 |
+    s2.\! |
+    s2.\< |
+    s2.*3 |
+    s2.\! |
+    s2.\> |
+    s2.*8 |
+    \crescTextCrescMolto
+    s2.\!\< |
+    s2.\! |
+    s2. |
+    s2.\f |
+    s2.*3 |
+
+    % 130
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s2.\ff |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s2. |
+    s2.*2 |
+
+    % 157
+    s2. |
+    s4\f s s\p |
+    \crescTextCrescMolto 
+    s2.\< |
+    s2.*5 |
+    \crescHairpin
+    s2.\!\< |
+    s4\!\ff s s |
+%  }
+%  \alternative
+%  {
+%    {
+%      s4-\secco s s |
+%      s2. |
+%      s4 s s\p |
+%    }
+%    {
+      s4-\secco s s |
+      s2.*2 |
+%    }
+%  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    s4\f s s |
+    s2.*3 |
+    \dimTextDimMolto
+    s4\> s s |
+    s2.*2 |
+    s2.\! |
+
+    % 181
+    s4\pp s s |
+    s2.*7 |
+    s4\pp s s |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*4 |
+  }
+
+  % 197
+%  \repeat volta 2
+%  {
+    s4\f s s |
+    s2.*3 |
+    \dimTextDimMolto
+    s4\> s s |
+    s2.*2 |
+    s4 s s\! |
+
+    % 205
+    \crescHairpin
+    s4\pp\< s s |
+    s2. |
+    s2. |
+    s2. |
+    \dimHairpin
+    s4\!\> s s |
+    s2. |
+    s2.\! |
+    s2. |
+    s4\pp\< s s |
+    s2. |
+    s2. |
+    s2. |
+    s4\!\> s s |
+    s2. |
+    s2.\! |
+    s2. |
+    s4\pp\< s s |
+    s2. |
+    s2. |
+    s2. |
+    s4\!\> s s |
+    s2. |
+    s2.\! |
+    s2. |
+
+    % 229
+    s4\pp s s |
+    s2.*21 |
+    s2.\ppp |
+    s2. |
+
+    % 253
+    s4\p s s |
+    \crescTextCrescMolto 
+    s4 s s\< |
+    s2.*6 |
+    s4\! s s |
+    s2.\f |
+    s2. |
+    s4 s s\pp |
+    s2.*3 |
+%  }
+%  \alternative
+%  {
+%    {
+%      s2. |
+%    }
+%    {
+      s4 s s\f |
+%    }
+%  }
+}
+
+
+tenorsaxMvtIIICues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*53 |
+
+    \set countPercentRepeats = ##t
+    \override PercentRepeat #'transparent = ##t
+    \override PercentRepeatCounter #'staff-padding = #2
+    \set repeatCountVisibility = #(every-nth-repeat-count-visible 2)
+
+    \repeat percent 24 { s2. | }
+
+  s2.*92 |
+
+  \key c \major
+
+  s2.*96 |
+}
+
+
+tenorsaxMvtIIINotCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*96 |
+}
+
+
+tenorsaxMvtIIINotes = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 d'4 |
+  \repeat volta 2
+  {
+    g2 b4-. |
+    g-. d-. g-. |
+    a2 c4-. |
+    a-. d,-. a'-. |
+    b( d-.) g,-. |
+    g2 b4-. |
+    e,2. |
+    b'2. |
+    ais2. |
+    fis2. |
+    b4-. b-. b-. |
+    a2. |
+    a2 d,4 |
+    d2.~ |
+    d2.( |
+  }
+  \alternative
+  {
+    {
+      d4) r d-. |
+    }
+    {
+      d4\repeatTie r d-. |
+    }
+  }
+
+  % 18
+%  \repeat volta 2
+%  {
+    c'2 a4-. |
+    fis-. d-. fis-. |
+    g2-> d'4-. |
+    \repeat unfold 2
+    {
+      b-. g-. b-. |
+      c2-> a4-. |
+      fis-. d-. fis-. |
+      g2-> d'4-. |
+    }
+    b-. g-. b-. |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g-. d'-. b-. |
+    g-. r r |
+    R4*3*3 |
+    r4 r d-. |
+
+    % 38
+    a'2 c4-. |
+    a-. d,-. a'-. |
+    b-. g-. d-. |
+    g-. r r |
+    R4*3*3 |
+    r4 r a-. |
+    e'2 g4-. |
+    e-. a,-. e'-. |
+    fis-. d-. a-. |
+    fis-. r a-. |
+    e'2 g4-. |
+    e-. a,-. e'-. |
+    fis-. d-. a-. |
+    fis-. r r |
+
+    % 54
+    a-. a-. a-. |
+    \repeat unfold 23 { a-. a-. a-. | }
+    a-. b'-. a-. |
+    g-. fis-. e-. |
+    d-. cis-. b-. |
+    a-. g-. fis-. |
+    e-. d'-. cis-. |
+    b-. a-. g-. |
+    fis-. e-. d-. |
+    cis-. b'-. a-. |
+
+    % 86
+    d,-. r r |
+    R4*3*7 |
+
+    c'4 r r |
+    d, r r |
+    c' r r |
+    d, r r |
+    b' r r |
+    d, r r |
+    b' r r |
+    d, r r |
+    fis r r |
+    d r r |
+    fis r r |
+    d r r |
+    b' r r |
+    d, r r |
+    b' r r |
+    d, r r |
+    c' r r |
+    d, r r |
+    fis r r |
+    d r r |
+    b' r r |
+    d, r r |
+    g r r |
+    d r r |
+    fis r r |
+    d r r |
+    fis r r |
+    d r r |
+    g r r |
+    d' r r |
+    b r r |
+    g r r |
+
+    c,2.~ |
+    c2.~ |
+    c2 r4 |
+    R4*3 |
+
+    % 130
+    b'4-. r b-. |
+%    <b d>-. r <b g'>-. | #MISSING NOTES
+    b-. r g-. |
+%    <b g'>-. r <g b>-. | #MISSING NOTES
+    g-. r b-. |
+%    <g b>-. r <b d>-. | #MISSING NOTES
+    b-. r e,-. |
+%    <b d>-. r <e, g>-. | #MISSING NOTES
+    d-. r d( |
+%    <d c'>-. r d'( | #MISSING NOTES
+    a'-.) a-. c-. |
+    a-. r r |
+    R4*3 |
+    d4-. r r |
+    R4*3*2 |
+    r4 r g |
+    e2.~ |
+%    <e' g>2.~ | #MISSING NOTES
+    e2.~ |
+%    <e g>2.~ | #MISSING NOTES
+    e4( e-.) e-. |
+%    <e g>4( <e c'>-.) <e g>-. | #MISSING NOTES
+    \grace fis8 e4( d-.) c-. |
+%    \grace <fis a>8 <e g>4( <d fis>-.) <c e>-. | #MISSING NOTES
+    b-. r b-. |
+%    <b d>-. r <b g'>-. | #MISSING NOTES
+    b-. r g-. |
+%    <b g'>-. r <g b>-. | #MISSING NOTES
+    g-. r b-. |
+%    <g b>-. r <b d>-. | #MISSING NOTES
+    b-. r e,-. |
+%    <b d>-. r <e, g>-. | #MISSING NOTES
+    d-. r d'-. |
+%    <d c'>-. r d'-. | #MISSING NOTES
+    a'( c-.) a-. |
+    b-. g-. d-. |
+    d,-. r r |
+    c'-. r d-. |
+    a'( c-.) a-. |
+    b-. g-. d-. |
+
+    % 157
+    d,-. r r |
+    c'-. r d,-. |
+    a'-. c-. a-. |
+    d,-. a'-. c-. |
+    a-. d,-. a'-. |
+    c-. d-. a-. |
+    c-. a-. d,-. |
+    a'-. c-. a-. |
+    d,-. a'-. c-. |
+    g-. r r |
+%    <g-. b-.> r r | #MISSING NOTES
+%  }
+%  \alternative
+%  {
+%    {
+%      g-. r r |
+%      R4*3 |
+%      r4 r b'-. |
+%    }
+%    {
+      g4-. r r |
+      R4*3 |
+      R4*3 |
+%    }
+%  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    g2.~-^ |
+    g2. |
+    g2.~-^ |
+    g2. |
+    g2.-^ |
+    g2.-^ |
+    g2.-^ |
+    g2.-^ |
+
+    % 181
+    g2.~-^ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g4 r r |
+    a4-. r f-. |
+    f-. r d-. |
+    d-. r f-. |
+%    d-. r <f g>-. | #MISSING NOTES
+    g-. f-. f-. |
+%    g-. <f g>-. <f g>-. | #MISSING NOTES
+    g-. r f-. |
+%    g-. r <f g>-. | #MISSING NOTES
+    g-. r e-. |
+%    g-. r <e g>-. | #MISSING NOTES
+    g-. r r |
+  }
+
+  % 197
+%  \repeat volta 2
+%  {
+    c2.~-^ |
+    c2. |
+    c2.~-^ |
+    c2. |
+    c2.-^ |
+    c2.-^ |
+    c2.-^ |
+    c2.-^ |
+
+    % 205
+    c2.~-^ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2 r4 |
+    R4*3 |
+    g2.~-^ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2 r4 |
+    R4*3 |
+    c2.~-^ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2 r4 |
+    R4*3 |
+
+    % 229
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2. |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2. |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2 r4 |
+    R4*3 |
+
+    % 253
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g4-. r r |
+    a4-. r f-. |
+    f-. r d-. |
+    d-. r f-. |
+    f-. f-. f-. |
+    f-. r f-. |
+    f-. r e-. |
+    %<f g>-. r <e g>-. | #MISSING NOTES
+%  }
+%  \alternative
+%  {
+%    {
+%      e-. r r |
+%      %<e g>-. r r | #MISSING NOTES
+%    }
+%    {
+      e-. r d-. |
+      %<e g>-. r d,-. | #MISSING NOTES
+%    }
+%  }
+}
+
+tenorsaxMvtIIIScore = \relative c' { << \tenorsaxMvtIIINotes \tenorsaxMvtIIINotCues \tenorsaxMvtIIIDynamics >> }
+tenorsaxBesMvtIIIScore = \transpose bes c \relative c' { << \tenorsaxMvtIIINotes \tenorsaxMvtIIINotCues \tenorsaxMvtIIIDynamics >> }
+tenorsaxBesMvtIIIPart  = \transpose bes c \relative c' { << \tenorsaxMvtIIINotes \tenorsaxMvtIIICues    \tenorsaxMvtIIIDynamics >> }

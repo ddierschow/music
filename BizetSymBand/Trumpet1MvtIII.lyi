@@ -1,0 +1,485 @@
+\version "2.13.5"
+
+\include "defs.lyi"
+
+trumpetOneMvtIIIDynamics = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+  \repeat volta 2
+  {
+    s2.*7 |
+    s2.\f |
+    s2.*4 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2. |
+    }
+  }
+
+%  \repeat volta 2
+%  {
+    s2.*8 |
+    \crescTextCrescMolto 
+    s4\p s\< s |
+    s2.*2 |
+    s4 s s\! |
+    \crescHairpin
+    s4\f\< s s |
+    s s s\! |
+    s\ff s s |
+    s2.*5 |
+
+    % 38
+    s2.\f |
+    s2.*7 |
+    s2.\f |
+    s2.*3 |
+    s4 s s |
+    s2.*3 |
+
+    % 54
+    s2.*15 |
+    s4 s s\mp |
+    \crescTextPocoAPocoCrescMolto
+    s2.\< |
+    s2.*6 |
+    s2 s4\! |
+    s4\f s s |
+    s2.*6 |
+    s4 s s |
+
+    % 86
+    s2.\!\ff |
+    s2.*6 |
+    s4\p s_\conmoltoespr s |
+    s2. |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*8 |
+    s2.\! |
+    s2.\< |
+    s2.*3 |
+    s2.\! |
+    s2.\> |
+    s2.*8 |
+    s2.\! |
+    s2. |
+    s4\f s s |
+    s2.*4 |
+
+    % 130
+    s4\ff s s |
+    s2.*3 |
+    s4\f s s |
+    s2.*3 |
+    s4\ff s s |
+    s2.*3 |
+    s4\f s s |
+    s2.*3 |
+    s4\ff s s |
+    s2.*3 |
+    s4\f s s |
+    s2.*3 |
+    s4 s s |
+    s2.*2 |
+
+    % 157
+    s2.*5 |
+    \crescTextCrescMolto 
+    s2.\p\< |
+    s2. |
+    s2. |
+    \crescHairpin
+    s4\!\f\< s s |
+    s4\ff s s |
+%  }
+%  \alternative
+%  {
+%    {
+%      s4-\secco s s |
+%      s2.*2 |
+%    }
+%    {
+      s4-\secco s s |
+      s2.*2 |
+%    }
+%  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 181
+    s2.\p\< |
+    s2.*3 |
+    s2.\! |
+    s2.\> |
+    s2.*2 |
+    s4\!\pp s s |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*4 |
+  }
+
+  % 197
+%  \repeat volta 2
+%  {
+    s2.*8 |
+
+    % 205
+    \crescHairpin
+    s4\pp\< s s |
+    s2.*3 |
+    s4\!\> s s |
+    s2.*1 |
+    s4 s\! s |
+    s2.*9 |
+    s4\pp\< s s |
+    s2.*3 |
+    s4\!\> s s |
+    s2.*1 |
+    s4 s\! s |
+    s2. |
+
+    % 229
+    s2.\pp |
+    s2.*23 |
+
+    % 253
+    s2.*11 |
+    s4 s s\pp |
+    s2.*3 |
+%  }
+%  \alternative
+%  {
+%    {
+%      s2. |
+%    }
+%    {
+      s4 s s |
+%    }
+%  }
+}
+
+
+trumpetOneMvtIIICues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+trumpetOneMvtIIINotCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+trumpetOneMvtIIINotes = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 r4 |
+  \repeat volta 2
+  {
+    R4*3*7 |
+    g''2. |
+    fis |
+    d |
+    e4-. fis-. g-. |
+    a2. |
+    fis2 d4 |
+    d2.~ |
+    d2.( |
+  }
+  \alternative
+  {
+    {
+      d4) r r |
+    }
+    {
+      d4\repeatTie r r |
+    }
+  }
+
+  % 18
+%  \repeat volta 2
+%  {
+    R4*3*8 |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d2. |
+    d4-. d-. d-. |
+    g4-. r r |
+    R4*3*5 |
+
+    % 38
+    d2.~ |
+    d4-. d-. d-. |
+    g,4-. r r |
+    R4*3*5 |
+    e'2.~ |
+    e4-. e-. e-. |
+    d4-. r r |
+    R4*3 |
+    e2.~ |
+    e4-. e-. e-. |
+    d4-. r r |
+    R4*3 |
+
+    % 54
+    R4*3*15 |
+    r2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 r4 |
+    r4 b'-. a-. |
+    g-. fis-. e-. |
+    d-. cis-. b-. |
+    a-. g'-. fis-. |
+    e-. d-. cis-. |
+    b-. a-. g-. |
+    fis-. e-. d-. |
+    cis-. b-. a-. |
+
+    % 86
+    d-. r r |
+    R4*3*6 |
+    d'2.( |
+    fis2.~) |
+    fis2.~ |
+    fis2.( |
+    \grace g8 fis4 e fis |
+    g2. |
+    d2.)~ |
+    d4( d e |
+    d c b) |
+    d2.~ |
+    d2.~ |
+    d2.( |
+    c2. |
+    c2. |
+    b2.) |
+    R4*3 |
+    d2.( |
+    fis2. |
+    a2. |
+    c2 a4 |
+    a g fis |
+    a2. |
+    g2.~) |
+    g4( d d |
+    \grace e8 d4 c b |
+    d2.~) |
+    d2.~ |
+    d2.( |
+    c2. |
+    c2. |
+    b2.) |
+    R4*3 |
+    g,2. |
+    g'2.~ |
+    g2.~ |
+    g2 a4-. |
+    g( fis-.) e-. |
+
+    % 130
+    d4-. r r |
+    R4*3*3 |
+    c2.~ |
+    c2.~ |
+    c4 r r |
+    R4*3 |
+    g4-. r r |
+    R4*3*3 |
+    c2.~ |
+    c2.~ |
+    c4 r r |
+    R4*3 |
+    d4-. r r |
+    R4*3*3 |
+    d2.~ |
+    d2. |
+    d4-. r r |
+    R4*3 |
+    d2.~ |
+    d2. |
+    d4-. r r |
+
+    % 157
+    R4*3*5 |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d4-. d-. d-. |
+    g4-. r r |
+%  }
+%  \alternative
+%  {
+%    {
+%      g,4-. r r |
+%      R4*3*2 |
+%    }
+%    {
+      g,4-. r r |
+      R4*3*2 |
+%    }
+%  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    R4*3*8 |
+
+    % 181
+    g'2.~ |
+    g2.~ |
+    g2.~ |
+    g2.( |
+    e2. |
+    c2. |
+    g2.~ |
+    g2. |
+    c4)( c'-.) c-. |
+    c-. r a-. |
+    a-. r f-. |
+    f-. r d-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r c-. |
+    c-. r r |
+  }
+
+  % 197
+%  \repeat volta 2
+%  {
+    R4*3*8 |
+
+    % 205
+    c'2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.( |
+    a2. |
+    f2. |
+    a2. |
+    g2.~) |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.( |
+    e2. |
+    d2. |
+    c2.) |
+    c'2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.( |
+    a2. |
+    f2. |
+    a2.) |
+
+    % 229
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.( |
+    e,2. |
+    dis2. |
+    b2.) |
+    b'2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.( |
+    e,2. |
+    dis2. |
+    b2. |
+    e2.~) |
+    e2.~ |
+    e2.~ |
+    e2. |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.( |
+
+    % 253
+    g2.~) |
+    g2.~ |
+    g2.~ |
+    g2.( |
+    e2. |
+    c2. |
+    g2.~) |
+    g2.( |
+    c4)( c'-.) c-. |
+    c-. r a-. |
+    a-. r f-. |
+    f-. r d-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r c-. |
+%  }
+%  \alternative
+%  {
+%    {
+%      c-. r r |
+%    }
+%    {
+      c-. r r |
+%    }
+%  }
+}
+
+trumpetOneMvtIIIScore = \relative c' { << \trumpetOneMvtIIINotes \trumpetOneMvtIIINotCues \trumpetOneMvtIIIDynamics >> }
+trumpetBesOneMvtIIIScore = \transpose bes c \relative c'' { << \trumpetOneMvtIIINotes \trumpetOneMvtIIINotCues \trumpetOneMvtIIIDynamics >> }
+trumpetBesOneMvtIIIPart  = \transpose bes c \relative c'' { << \trumpetOneMvtIIINotes \trumpetOneMvtIIICues    \trumpetOneMvtIIIDynamics >> }

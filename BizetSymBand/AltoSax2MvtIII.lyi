@@ -1,0 +1,542 @@
+\version "2.13.5"
+
+\include "defs.lyi"
+
+altosaxTwoMvtIIIDynamics = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4\f |
+  \repeat volta 2
+  {
+    s2.*6 |
+    s2.^\tenuto |
+    s2. |
+    s2.*4 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2 s4\f |
+    }
+    {
+      s2. |
+    }
+  }
+
+%  \repeat volta 2
+%  {
+    s4\pp s s |
+    \crescTextPocoAPocoCresc 
+    s2.\< |
+    s2.*6 |
+    \crescTextMolto 
+    s4\! s\< s |
+    s2.*2 |
+    s4 s s\! |
+    \crescHairpin
+    s4\f\< s s |
+    s s s\! |
+    s\ff s s |
+    s2.*4 |
+    s4 s s\f |
+
+    % 38
+    s2.*7 |
+    s4 s s\f |
+    s2.*3 |
+    s2 s4 |
+    s2.*3 |
+    s2 s4 |
+
+    % 54
+    s2.\pp |
+    s2.*4 |
+    \crescTextPocoAPocoCrescMolto
+    s2.\< |
+    s2.*17 |
+    s2 s4\! |
+    s4 s\f s |
+    s2.*3 |
+    \crescTextCrescMolto
+    s2.\< |
+    s2.*3 |
+
+    % 86
+    s2.\ff |
+    s2.*6 |
+    s4\p s_\conmoltoespr s |
+    s2. |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*8 |
+    s2.\! |
+    s2.\< |
+    s2.*3 |
+    s2.\! |
+    s2.\> |
+    s2.*8 |
+    s2.\! |
+    s2. |
+    s4\f s s |
+    s2.*4 |
+
+    % 130
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s2.\ff |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s2. |
+    s2.*2 |
+
+    % 157
+    s2. |
+    s4\f s s\p |
+    \crescTextCrescMolto 
+    s2.\< |
+    s2.*5 |
+    \crescHairpin
+    s2.\!\< |
+    s4\!\ff s s |
+%  }
+%  \alternative
+%  {
+%    {
+%      s4-\secco s s |
+%      s2.\pp |
+%      s2. |
+%    }
+%    {
+      s4-\secco s s |
+      s2.*2 |
+%    }
+%  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 181
+    s2.\p\< |
+    s2.*3 |
+    s2.\! |
+    s2.\> |
+    s2.*2 |
+    s4\!\pp s s |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*4 |
+  }
+
+  % 197
+%  \repeat volta 2
+%  {
+    s2.*8 |
+
+    % 205
+    s2.\p\< |
+    s2.*3 |
+    s2.\!\> |
+    s2.*3 |
+    s2.\!\< |
+    s2.*3 |
+    s2.\!\> |
+    s2.*3 |
+    s2.\!\< |
+    s2.*3 |
+    s2.\!\> |
+    s2.*3 |
+
+    % 229
+    s2.\pp |
+    s2.*21 |
+    s2.\< |
+    s4 s s\! |
+
+    % 253
+    s2. |
+    \crescTextCrescMolto 
+    s4 s s\< |
+    s2.*6 |
+    s4\!\f s s |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*3 |
+%  }
+%  \alternative
+%  {
+%    {
+%      s2. |
+%    }
+%    {
+      s4 s s\f |
+%    }
+%  }
+}
+
+
+altosaxTwoMvtIIICues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*21 |
+  \break
+  s2.*40 |
+  \break
+  s2.*31 |
+  \break
+  s2.*77 |
+
+  \key c \major
+
+  s2.*94 |
+}
+
+
+altosaxTwoMvtIIINotCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*94 |
+}
+
+
+altosaxTwoMvtIIINotes = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 d'4 |
+  \repeat volta 2
+  {
+    g2 b4-. |
+    g-. d-. g-. |
+    a2 c4-. |
+    a-. d,-. a'-. |
+    b( d-.) g,-. |
+    g2 b4-. |
+    e,2. |
+    cis'2. |
+    cis2. |
+    b2. |
+    d4-. d-. d-. |
+    cis2. |
+    d2 d,4 |
+    d2.~ |
+    d2.( |
+  }
+  \alternative
+  {
+    {
+      d4) r d-. |
+    }
+    {
+      d4\repeatTie r r |
+    }
+  }
+
+%  \repeat volta 2
+%  {
+    d-. d-. d-. |
+    d-. d-. d-. |
+    g-. g-. g-. |
+    g-. g-. g-. |
+    d-. d-. d-. |
+    d-. d-. d-. |
+    g-. g-. g-. |
+    g-. g-. g-. |
+    d-. d-. d-. |
+    d-. d-. d-. |
+    g-. g-. g-. |
+    g-. g-. g-. |
+    d-. d-. d-. |
+    d-. d-. d-. |
+    g-. r r |
+    R4*3*5 |
+
+    % 38
+    a'2 c4-. |
+    a-. d,-. a'-. |
+    b-. g-. d-. |
+    g,-. r r |
+    R4*3*3 |
+    r4 r a-. |
+    e'2 g4-. |
+    e-. a,-. e'-. |
+    fis-. d-. a-. |
+    fis-. r a-. |
+    e'2 g4-. |
+    e-. a,-. e'-. |
+    fis-. d-. a-. |
+    fis-. r r |
+
+    % 54
+    cis'-. a-. d-. |
+    b-. e-. cis-. |
+    fis-. d-. g-. |
+    e-. a-. fis-. |
+    d-. b-. e-. |
+    cis-. fis-. d-. |
+    g-. e-. a-. |
+    fis-. b-. g-. |
+    e-. cis-. fis-. |
+    d-. g-. e-. |
+    a-. fis-. b-. |
+    g-. cis-. a-. |
+    fis-. d-. g-. |
+    e-. a-. gis-. |
+    b-. g-. cis-. |
+    a-. d-. b-. |
+    e,,-. fis-. g-. |
+    a-. b-. cis-. |
+    fis,-. g-. a-. |
+    b-. cis-. d-. |
+    g,-. a-. b-. |
+    a-. b-. cis-. |
+    b-. cis-. d-. |
+    cis-. d-. dis-. |
+    e-. b'-. a-. |
+    g-. fis-. e-. |
+    d-. cis-. b-. |
+    a-. g-. fis-. |
+    e-. d'-. cis-. |
+    b-. a-. g-. |
+    fis'-. e-. d-. |
+    cis-. b-. a-. |
+
+    % 86
+    d-. r r |
+    R4*3*6 |
+    d2.( |
+    fis2.~) |
+    fis2.~ |
+    fis2.( |
+    \grace g8 fis4 e fis |
+    g2. |
+    d2.)~ |
+    d4( d e |
+    d c b) |
+    d2.~ |
+    d2.~ |
+    d2.( |
+    c2. |
+    c2. |
+    b2.) |
+    R4*3 |
+    d2.( |
+    fis2. |
+    a2. |
+    c2 a4 |
+    a g fis |
+    a2. |
+    g2.~) |
+    g4( d d |
+    \grace e8 d4 c b |
+    d2.~) |
+    d2.~ |
+    d2.( |
+    c2. |
+    c2. |
+    b2.) |
+    R4*3 |
+    g2. |
+    e'2.~ |
+    e2.~ |
+    e2 fis4-. |
+    e( d-.) c-. |
+
+    % 130
+    b4-. r b-. |
+    b-. r g-. |
+    g-. r b-. |
+    b-. r e,-. |
+    fis-. r d'( |
+    a'-.) a-. c-. |
+    a-. r r |
+    R4*3 |
+    g4-. r r |
+    R4*3 |
+    R4*3 |
+    r4 r g, |
+    e'2.~ |
+    e2.~ |
+    e4 e-. e-. |
+    \grace fis8 e4( d-.) c-. |
+    b-. r b-. |
+    b-. r g-. |
+    g-. r b-. |
+    b-. r e,-. |
+    fis-. r d'-. |
+    a'( c-.) a-. |
+    b-. g-. d-. |
+    d,-. r r |
+    fis-. r d'-. |
+    a'( c-.) a-. |
+    b-. g-. d-. |
+
+    % 157
+    d,-. r r |
+    fis-. r d-. |
+    a'-. c-. a-. |
+    d,-. a'-. c-. |
+    a-. d,-. a'-. |
+    c-. d-. a'-. |
+    c-. a-. d,-. |
+    a'-. c-. a-. |
+    d,-. a'-. c-. |
+    b-. r r |
+%  }
+%  \alternative
+%  {
+%    {
+%      g,4-. r r |
+%      d'8( e d e d e |
+%      d e d e d e) |
+%    }
+%    {
+      g,4-. r r |
+      R4*3*2 |
+%    }
+%  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    R4*3*8 |
+
+    % 181
+    g'2.~ |
+    g2.~ |
+    g2.~ |
+    g2.( |
+    e2. |
+    c2. |
+    g2.~ |
+    g2. |
+    c4)( c-.) c-. |
+    c-. r c-. |
+    c-. r c-. |
+    c-. r b-. |
+    b-. b-. b-. |
+    b-. r b-. |
+    b-. r c-. |
+    c-. r r |
+  }
+
+  % 197
+%  \repeat volta 2
+%  {
+    R4*3*8 |
+
+    % 205
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.( |
+    a'2. |
+    f2. |
+    a2. |
+    g,2.~) |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.( |
+    e'2. |
+    d2. |
+    c2.) |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.( |
+    a'2. |
+    f2. |
+    a2.) |
+
+    % 229
+    b,2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.( |
+    e2. |
+    dis2. |
+    b2.) |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.( |
+    e2. |
+    dis2. |
+    b2. |
+    e2.~) |
+    e2.~ |
+    e2.~ |
+    e2. |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.( |
+
+    % 253
+    g2.~) |
+    g2.~ |
+    g2.~ |
+    g2.( |
+    e2. |
+    c2. |
+    g2.~) |
+    g2.( |
+    c4) c-. c-. |
+    c-. r c-. |
+    c-. r c-. |
+    c-. r b-. |
+    b-. b-. b-. |
+    b-. r b-. |
+    b-. r c-. |
+%  }
+%  \alternative
+%  {
+%    {
+%      c-. r r |
+%    }
+%    {
+      c-. r d,-. |
+%    }
+%  }
+}
+
+altosaxTwoMvtIIIScore = \relative c { << \altosaxTwoMvtIIINotes \altosaxTwoMvtIIINotCues \altosaxTwoMvtIIIDynamics >> }
+altosaxEesTwoMvtIIIScore = \transpose ees c \relative c { << \altosaxTwoMvtIIINotes \altosaxTwoMvtIIINotCues \altosaxTwoMvtIIIDynamics >> }
+altosaxEesTwoMvtIIIPart  = \transpose ees c \relative c { << \altosaxTwoMvtIIINotes \altosaxTwoMvtIIICues    \altosaxTwoMvtIIIDynamics >> }
