@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 hornTwoDynamics =
@@ -63,7 +64,10 @@ hornTwoCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -72,7 +76,10 @@ hornTwoNotCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -135,6 +142,6 @@ hornTwoNotes =
   }
 }
 
-hornTwoScore = \transpose c bes \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDynamics >> }
-hornFTwoScore = \transpose f bes \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDynamics >> }
-hornFTwoPart  = \transpose f bes \relative c' { << \hornTwoNotes \hornTwoCues    \hornTwoDynamics >> }
+hornTwoScore = \transpose c \concertKey \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDynamics >> }
+hornFTwoScore = \transpose f \concertKey \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDynamics >> }
+hornFTwoPart  = \transpose f \concertKey \relative c' { << \hornTwoNotes \hornTwoCues    \hornTwoDynamics >> }

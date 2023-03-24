@@ -1,17 +1,25 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 clarinetTwoDynamics =
 {
-  s2*4 |
+  s2*4\mf |
   % 5
-  s2*16 |
+  s2*5\mf |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
+  s2*8\mf |
 
   \repeat volta 2
   {
     % 21
-    s2*15 |
+    s2\f |
+    s2*7 |
+    s2\f |
+    s2*6 |
   }
   \alternative
   {
@@ -24,12 +32,27 @@ clarinetTwoDynamics =
   }
 
   % 38
-  s2*16 |
+  s2*5\mf |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
+  s2*8\mf |
 
   \repeat volta 2
   {
     % 54
-    s2*15 |
+    s4\mp s4_\markup { \italic legato }
+    s2*3 |
+    s2\< |
+    s2 |
+    s2\!\>\! |
+    s2\mp |
+    s2*2 |
+    \crescTextPocoAPocoCresc
+    s2\< |
+    s2\! |
+    s2\mf |
+    s2*2 |
   }
   \alternative
   {
@@ -44,7 +67,8 @@ clarinetTwoDynamics =
   \repeat volta 2
   {
     % 71
-    s2*15 |
+    s4\mf s4_\markup { \italic legato }
+    s2*14 |
   }
   \alternative
   {
@@ -62,8 +86,10 @@ clarinetTwoCues =
 {
   \time 2/4
   \key g \major
+  s2*53 |
 
-  s2*87 |
+  \key c \major
+  s2*34 |
 }
 
 
@@ -71,8 +97,10 @@ clarinetTwoNotCues =
 {
   \time 2/4
   \key g \major
+  s2*53 |
 
-  s2*87 |
+  \key c \major
+  s2*34 |
 }
 
 
@@ -81,28 +109,63 @@ clarinetTwoNotes =
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r r4 |
+  d8 r cis'4 |
 
   % 5
-  s2*16 |
+  e,8. fis16~fis fis fis8 |
+  g16 b d cis~cis cis e8 |
+  e,8. fis16~fis fis fis8 |
+  g16 b d cis~cis cis e8 |
+  e,8. fis16~fis fis fis8 |
+  e8. b'16~b8 d |
+  d8. d16~d d cis8 |
+  a4 cis |
+  e,8. fis16~fis fis fis8 |
+  g16 b d cis~cis cis e8 |
+  e,8. fis16~fis fis fis8 |
+  g4 g |
+  g8 g g4 |
+  g8 g g4 |
+  g8. g16~g16 g fis8 |
+  g4 e' |
 
   \repeat volta 2
   {
     % 21
-    s2*15 |
+    fis8 fis~fis16 fis8. |
+    fis8. fis16~fis8~fis16 r16 |
+    b8 b8~b16 b8. |
+    b16 b b b~b d, e eis |
+    c8 c16 d c c8 a16 |
+    c16 e c c~c8~c16 r16 |
+    b8-^ b( ais a) |
+    g8( g fis) eis-^ |
+    r8 fis'8~fis16 fis8. |
+    fis8. fis16~fis8~fis16 r16 |
+    b,8 b~b16 b8. |
+    b16 b b b~b8 \tuplet 3/2 { d16( cis d) } |
+    e8 gis g4 |
+    d8 fis d4 |
+    g4 fis |
   }
   \alternative
   {
     {
-      s2 |
+      d4 eis-> |
     }
     {
-      s2 |
+      d4 cis-> |
     }
   }
 
   % 38
-  s2*16 |
+  e,8. fis16~fis8 fis |
+  b,8. cis'16~cis4 |
+  e,8. fis16~fis8 fis8 |
+  b,8. cis'16~cis4 |
+  e,8. fis16~fis8 fis8 |
+  e8. fis16~fis8 g |
+s2*10 |
 
   \repeat volta 2
   {
@@ -135,6 +198,6 @@ clarinetTwoNotes =
   }
 }
 
-clarinetTwoScore = \transpose c bes \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDynamics >> }
-clarinetBesTwoScore = \transpose bes bes \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDynamics >> }
-clarinetBesTwoPart  = \transpose bes bes \relative c' { << \clarinetTwoNotes \clarinetTwoCues    \clarinetTwoDynamics >> }
+clarinetTwoScore = \transpose c \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDynamics >> }
+clarinetBesTwoScore = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDynamics >> }
+clarinetBesTwoPart  = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoCues    \clarinetTwoDynamics >> }

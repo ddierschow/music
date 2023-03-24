@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 bassclarinetDynamics =
@@ -63,7 +64,10 @@ bassclarinetCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -72,7 +76,10 @@ bassclarinetNotCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -135,6 +142,6 @@ bassclarinetNotes =
   }
 }
 
-bassclarinetScore = \transpose c bes \relative c { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDynamics >> }
-bassclarinetBesScore = \transpose bes bes \relative c { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDynamics >> }
-bassclarinetBesPart  = \transpose bes bes \relative c { << \bassclarinetNotes \bassclarinetCues    \bassclarinetDynamics >> }
+bassclarinetScore = \transpose c \concertKey \relative c { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDynamics >> }
+bassclarinetBesScore = \transpose bes \concertKey \relative c { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDynamics >> }
+bassclarinetBesPart  = \transpose bes \concertKey \relative c { << \bassclarinetNotes \bassclarinetCues    \bassclarinetDynamics >> }

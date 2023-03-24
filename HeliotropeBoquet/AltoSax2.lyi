@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 altosaxTwoDynamics =
@@ -63,7 +64,10 @@ altosaxTwoCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -72,7 +76,10 @@ altosaxTwoNotCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -135,6 +142,6 @@ altosaxTwoNotes =
   }
 }
 
-altosaxTwoScore = \transpose c bes \relative c { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDynamics >> }
-altosaxEesTwoScore = \transpose ees bes \relative c { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDynamics >> }
-altosaxEesTwoPart  = \transpose ees bes \relative c { << \altosaxTwoNotes \altosaxTwoCues    \altosaxTwoDynamics >> }
+altosaxTwoScore = \transpose c \concertKey \relative c { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDynamics >> }
+altosaxEesTwoScore = \transpose ees \concertKey \relative c { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDynamics >> }
+altosaxEesTwoPart  = \transpose ees \concertKey \relative c { << \altosaxTwoNotes \altosaxTwoCues    \altosaxTwoDynamics >> }

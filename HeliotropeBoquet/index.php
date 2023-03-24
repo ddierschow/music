@@ -84,7 +84,9 @@ $insts[] = "Baritone";
 $insts[] = "BaritoneTC";
 $insts[] = "StringBass";
 $insts[] = "Tuba";
-$insts[] = "Percussion";
+$insts[] = "Percussion1";
+$insts[] = "Percussion2";
+$insts[] = "MalletPercussion";
 $insts[] = "Timpani";
 
 $fils = array();
@@ -95,8 +97,9 @@ $fils[] = ".pdf";
 ShowGridV($insts, $fils);
 
 $others = array();
-$others[] = "README";
+$others[] = "README.md";
 $others[] = "defs.lyi";
+$others[] = "Outline.lyi";
 $others[] = "Part.lyi";
 
 ShowRow($others);

@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 barisaxDynamics =
@@ -63,7 +64,10 @@ barisaxCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -72,7 +76,10 @@ barisaxNotCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -135,6 +142,6 @@ barisaxNotes =
   }
 }
 
-barisaxScore = \transpose c bes \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
-barisaxEesScore = \transpose ees bes \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
-barisaxEesPart  = \transpose ees bes \relative c' { << \barisaxNotes \barisaxCues    \barisaxDynamics >> }
+barisaxScore = \transpose c \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
+barisaxEesScore = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
+barisaxEesPart  = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxCues    \barisaxDynamics >> }

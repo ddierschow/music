@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 trumpetOneDynamics =
@@ -63,7 +64,10 @@ trumpetOneCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -72,7 +76,10 @@ trumpetOneNotCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -135,6 +142,6 @@ trumpetOneNotes =
   }
 }
 
-trumpetOneScore = \transpose c bes \relative c' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDynamics >> }
-trumpetBesOneScore = \transpose bes bes \relative c'' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDynamics >> }
-trumpetBesOnePart  = \transpose bes bes \relative c'' { << \trumpetOneNotes \trumpetOneCues    \trumpetOneDynamics >> }
+trumpetOneScore = \transpose c \concertKey \relative c' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDynamics >> }
+trumpetBesOneScore = \transpose bes \concertKey \relative c'' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDynamics >> }
+trumpetBesOnePart  = \transpose bes \concertKey \relative c'' { << \trumpetOneNotes \trumpetOneCues    \trumpetOneDynamics >> }

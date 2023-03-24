@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 bassoonDynamics =
@@ -61,20 +62,26 @@ bassoonDynamics =
 bassoonCues =
 {
   \time 2/4
-  \key g \major
   \clef bass
+  \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
 bassoonNotCues =
 {
   \time 2/4
-  \key g \major
   \clef bass
+  \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -137,5 +144,5 @@ bassoonNotes =
   }
 }
 
-bassoonScore = \transpose c bes \relative c { << \bassoonNotes \bassoonNotCues \bassoonDynamics >> }
-bassoonPart  = \transpose c bes \relative c { << \bassoonNotes \bassoonCues    \bassoonDynamics >> }
+bassoonScore = \transpose c \concertKey \relative c { << \bassoonNotes \bassoonNotCues \bassoonDynamics >> }
+bassoonPart  = \transpose c \concertKey \relative c { << \bassoonNotes \bassoonCues    \bassoonDynamics >> }

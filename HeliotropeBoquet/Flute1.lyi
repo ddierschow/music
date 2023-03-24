@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 fluteOneDynamics =
@@ -63,7 +64,10 @@ fluteOneCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -72,7 +76,10 @@ fluteOneNotCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -135,5 +142,5 @@ fluteOneNotes =
   }
 }
 
-fluteOneScore = \transpose c bes \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDynamics >> }
-fluteOnePart  = \transpose c bes \relative c' { << \fluteOneNotes \fluteOneCues    \fluteOneDynamics >> }
+fluteOneScore = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDynamics >> }
+fluteOnePart  = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneCues    \fluteOneDynamics >> }

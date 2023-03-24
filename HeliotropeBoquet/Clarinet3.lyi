@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 clarinetThreeDynamics =
@@ -63,7 +64,10 @@ clarinetThreeCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -72,7 +76,10 @@ clarinetThreeNotCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -135,6 +142,6 @@ clarinetThreeNotes =
   }
 }
 
-clarinetThreeScore = \transpose c bes \relative c' { << \clarinetThreeNotes \clarinetThreeNotCues \clarinetThreeDynamics >> }
-clarinetBesThreeScore = \transpose bes bes \relative c' { << \clarinetThreeNotes \clarinetThreeNotCues \clarinetThreeDynamics >> }
-clarinetBesThreePart  = \transpose bes bes \relative c' { << \clarinetThreeNotes \clarinetThreeCues    \clarinetThreeDynamics >> }
+clarinetThreeScore = \transpose c \concertKey \relative c' { << \clarinetThreeNotes \clarinetThreeNotCues \clarinetThreeDynamics >> }
+clarinetBesThreeScore = \transpose bes \concertKey \relative c' { << \clarinetThreeNotes \clarinetThreeNotCues \clarinetThreeDynamics >> }
+clarinetBesThreePart  = \transpose bes \concertKey \relative c' { << \clarinetThreeNotes \clarinetThreeCues    \clarinetThreeDynamics >> }

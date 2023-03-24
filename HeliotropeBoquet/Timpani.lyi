@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 timpaniDynamics =
@@ -61,20 +62,26 @@ timpaniDynamics =
 timpaniCues =
 {
   \time 2/4
-  \key g \major
   \clef bass
+  \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
 timpaniNotCues =
 {
   \time 2/4
-  \key g \major
   \clef bass
+  \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -133,5 +140,5 @@ timpaniNotes =
   }
 }
 
-timpaniScore = \transpose c bes \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDynamics >> }
-timpaniPart  = \transpose c bes \relative c, { << \timpaniNotes \timpaniCues    \timpaniDynamics >> }
+timpaniScore = \transpose c \concertKey \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDynamics >> }
+timpaniPart  = \transpose c \concertKey \relative c, { << \timpaniNotes \timpaniCues    \timpaniDynamics >> }

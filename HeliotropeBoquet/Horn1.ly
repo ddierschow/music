@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 \include "Horn1.lyi"
 
@@ -7,4 +8,4 @@ instrument = "Horn I"
 
 notes = \hornFOnePart
 
-\include "Part.lyi"
+\include "part.lyi"

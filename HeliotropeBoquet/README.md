@@ -19,7 +19,7 @@ piano score.
 - Baritone (bass clef and treble clef)
 - Tuba
 - String Bass
-- Percussion
+- Percussion 1, 2, and Mallet
 - Timpani
 
 The source for all parts is written in the same key to allow for easily switching passages
@@ -31,8 +31,8 @@ point the transposition is done, to produce a mixed seqence for the part and ano
 
 The files with ly extension are rendered into pdf files.  Each part includes defs.lyi,
 which is my library of useful things, not all of which will be used.  Then each part includes its
-own lyi file, which has the four sequences named above.  Finally each part includes Part.lyi,
-which includes Outline.lyi, then lays things out on the page.
+own lyi file, which has the four sequences named above.  Finally each part includes part.lyi,
+which includes outline.lyi, then lays things out on the page.
 
 ## Scores
 

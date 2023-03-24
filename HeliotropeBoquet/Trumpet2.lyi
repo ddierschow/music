@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 trumpetTwoDynamics =
@@ -63,7 +64,10 @@ trumpetTwoCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -72,7 +76,10 @@ trumpetTwoNotCues =
   \time 2/4
   \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
@@ -135,6 +142,6 @@ trumpetTwoNotes =
   }
 }
 
-trumpetTwoScore = \transpose c bes \relative c' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDynamics >> }
-trumpetBesTwoScore = \transpose bes bes \relative c'' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDynamics >> }
-trumpetBesTwoPart  = \transpose bes bes \relative c'' { << \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDynamics >> }
+trumpetTwoScore = \transpose c \concertKey \relative c' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDynamics >> }
+trumpetBesTwoScore = \transpose bes \concertKey \relative c'' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDynamics >> }
+trumpetBesTwoPart  = \transpose bes \concertKey \relative c'' { << \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDynamics >> }

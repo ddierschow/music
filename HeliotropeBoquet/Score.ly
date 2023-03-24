@@ -1,7 +1,8 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
-\include "Outline.lyi"
+\include "outline.lyi"
 \include "Flute1.lyi"
 \include "Flute2.lyi"
 \include "Oboe.lyi"
@@ -24,7 +25,9 @@
 \include "Trombone3.lyi"
 \include "Baritone.lyi"
 \include "Tuba.lyi"
-\include "Percussion.lyi"
+\include "Percussion1.lyi"
+\include "Percussion2.lyi"
+\include "MalletPercussion.lyi"
 \include "Timpani.lyi"
 
 #(set-global-staff-size 14)
@@ -258,9 +261,23 @@ instrument = "Concert Band"
 	\new Staff
 	{
 	    #(set-accidental-style 'modern)
-	  \set Staff.instrumentName = "Percussion"
-	  \set Staff.shortInstrumentName = "Pe."
-	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \percussionScore }
+	  \set Staff.instrumentName = "Percussion 1"
+	  \set Staff.shortInstrumentName = "Pe.1"
+	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \percussionOneScore }
+	}
+	\new Staff
+	{
+	    #(set-accidental-style 'modern)
+	  \set Staff.instrumentName = "Percussion 2"
+	  \set Staff.shortInstrumentName = "Pe.2"
+	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \percussionTwoScore }
+	}
+	\new Staff
+	{
+	    #(set-accidental-style 'modern)
+	  \set Staff.instrumentName = "Mallet Percussion"
+	  \set Staff.shortInstrumentName = "Mal.Pe."
+	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \malletScore }
 	}
 	\new Staff
 	{

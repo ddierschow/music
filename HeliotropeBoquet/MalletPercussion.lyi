@@ -1,8 +1,9 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
-percussionDynamics =
+malletDynamics =
 {
   s2*4 |
   % 5
@@ -58,27 +59,33 @@ percussionDynamics =
 }
 
 
-percussionCues =
+malletCues =
 {
   \time 2/4
-  \key g \major
   \clef percussion
+  \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
-percussionNotCues =
+malletNotCues =
 {
   \time 2/4
-  \key g \major
   \clef percussion
+  \key g \major
 
-  s2*87 |
+  s2*53 |
+
+  \key c \major
+  s2*34 |
 }
 
 
-percussionNotes =
+malletNotes =
 {
   s2*4 |
   % 5
@@ -133,5 +140,5 @@ percussionNotes =
   }
 }
 
-percussionScore = \relative c { << \percussionNotes \percussionNotCues \percussionDynamics >> }
-percussionPart  = \relative c { << \percussionNotes \percussionCues    \percussionDynamics >> }
+malletScore = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDynamics >> }
+malletPart  = \transpose c \concertKey \relative c { << \malletNotes \malletCues    \malletDynamics >> }

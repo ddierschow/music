@@ -1,5 +1,6 @@
 \version "2.22.2"
 
+\include "config.lyi"
 \include "defs.lyi"
 
 clarinetOneDynamics =
@@ -7,9 +8,9 @@ clarinetOneDynamics =
   s2*4\mf |
   % 5
   s2*5\mf |
-  s2\<\! |
-  s2\<\! |
-  s4\f s4\>\! |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
   s2*8\mf |
 
   \repeat volta 2
@@ -31,12 +32,27 @@ clarinetOneDynamics =
   }
 
   % 38
-  s2*16 |
+  s2*5\mf |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
+  s2*8\mf |
 
   \repeat volta 2
   {
     % 54
-    s2*15 |
+    s4\mp s4_\markup { \italic legato }
+    s2*3 |
+    s2\< |
+    s2 |
+    s2\!\>\! |
+    s2\mp |
+    s2*2 |
+    \crescTextPocoAPocoCresc
+    s2\< |
+    s2\! |
+    s2\mf |
+    s2*2 |
   }
   \alternative
   {
@@ -51,7 +67,8 @@ clarinetOneDynamics =
   \repeat volta 2
   {
     % 71
-    s2*15 |
+    s4\mf s4_\markup { \italic legato }
+    s2*14 |
   }
   \alternative
   {
@@ -68,8 +85,10 @@ clarinetOneCues =
 {
   \time 2/4
   \key g \major
+  s2*53 |
 
-  s2*87
+  \key c \major
+  s2*34 |
 }
 
 
@@ -77,8 +96,10 @@ clarinetOneNotCues =
 {
   \time 2/4
   \key g \major
+  s2*53 |
 
-  s2*87 |
+  \key c \major
+  s2*34 |
 }
 
 
@@ -157,34 +178,62 @@ clarinetOneNotes =
   \repeat volta 2
   {
     % 54
-    s2*15 |
+    e16( dis e g,) a c8 d16 |
+    e8 a16 g~g( e' d f,) |
+    e16( dis e g,) a c8 d16 |
+    e2 |
+    f16( c' d, c)~c d( f c') |
+    e,16( g d c)~c g'( a ais) |
+    b16 c d b~b g a8 |
+    g8 g,16( a b c d dis) |
+    e16( dis e g,) a c8 d16 |
+    e8 a16 g~g c, e8 |
+    dis16 e gis c~c e, b'8 |
+    a8 b16 c~c a( e c) |
+    c'16( a fis dis c a8 aes16) |
+    g8 a16 c~c d e8 |
+    a,4 e' |
   }
   \alternative
   {
     {
-      s2 |
+      c8 g16( a b c d dis) |
     }
     {
-      s2 |
+      c4~c8 r8 |
     }
   }
 
   \repeat volta 2
   {
     % 71
-    s2*15 |
+    g16( b d g)~g( a g f) |
+    e8 g16 c~c8. ais,16 |
+    b16 g'8 ais,16 b g'8 b,16 |
+    c16( d dis e)~e4 |
+    g,16( b d g)~g( a g f) |
+    e8 g16 c~c( a e c) |
+    b16( e g fis)~fis8 b |
+    b8 g16( b,) e( cis ais g)~ |
+    g16( b d g)~g( a g f) |
+    e8 g16 c~c8. ais,16 |
+    b16 g'8 ais,16 b g'8 b,16 |
+    c16( b a g)~g8. gis16 |
+    a16( a' f c) g( g'8) gis,16 |
+    a16( a' f c) g( g'8) g,16 |
+    a4 e' |
   }
   \alternative
   {
     {
-      s2 |
+      c4~c8 r8 |
     }
     {
-      s2 |
+      c4 c'8-^ r8 |
     }
   }
 }
 
-clarinetOneScore = \transpose c bes \relative c'' { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDynamics >> }
-clarinetBesOneScore = \transpose bes bes \relative c' { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDynamics >> }
-clarinetBesOnePart  = \transpose bes bes \relative c' { << \clarinetOneNotes \clarinetOneCues    \clarinetOneDynamics >> }
+clarinetOneScore = \transpose c \concertKey \relative c'' { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDynamics >> }
+clarinetBesOneScore = \transpose bes \concertKey \relative c' { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDynamics >> }
+clarinetBesOnePart  = \transpose bes \concertKey \relative c' { << \clarinetOneNotes \clarinetOneCues    \clarinetOneDynamics >> }

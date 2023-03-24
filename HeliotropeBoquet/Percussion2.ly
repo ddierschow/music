@@ -2,10 +2,10 @@
 
 \include "config.lyi"
 \include "defs.lyi"
-\include "BariSax.lyi"
+\include "Percussion2.lyi"
 
-instrument = "Baritone Saxophone"
+instrument = "Percussion2"
 
-notes = \barisaxEesPart
+notes = \percussionTwoPart
 
 \include "part.lyi"
