@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-clarinetOneDynamics =
+clarinetOneDyn =
 {
   s2*4\mf |
   % 5
@@ -13,23 +13,13 @@ clarinetOneDynamics =
   s4\!\f s4\>\! |
   s2*8\mf |
 
-  \repeat volta 2
-  {
-    % 21
-    s2\f |
-    s2*7 |
-    s2\f |
-    s2*6 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 21
+  s2\f |
+  s2*7 |
+  s2\f |
+  s2*6 |
+  s2 |
+  s2 |
 
   % 38
   s2*5\mf |
@@ -38,69 +28,34 @@ clarinetOneDynamics =
   s4\!\f s4\>\! |
   s2*8\mf |
 
-  \repeat volta 2
-  {
-    % 54
-    s4\mp s4_\markup { \italic legato }
-    s2*3 |
-    s2\< |
-    s2 |
-    s2\!\>\! |
-    s2\mp |
-    s2*2 |
-    \crescTextPocoAPocoCresc
-    s2\< |
-    s2\! |
-    s2\mf |
-    s2*2 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 54
+  s4\mp s4_\markup { \italic legato }
+  s2*3 |
+  s2\< |
+  s2 |
+  s2\!\>\! |
+  s2\mp |
+  s2*2 |
+  \crescTextPocoAPocoCresc
+  s2\< |
+  s2\! |
+  s2\mf |
+  s2*2 |
+  s2 |
+  s2 |
 
-  \repeat volta 2
-  {
-    % 71
-    s4\mf s4_\markup { \italic legato }
-    s2*14 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
-}
-
-clarinetOneCues =
-{
-  \time 2/4
-  \key g \major
-  s2*53 |
-
-  \key c \major
-  s2*34 |
+  % 71
+  s4\mf s4_\markup { \italic legato }
+  s2*14 |
+  s2 |
+  s2 |
 }
 
 
-clarinetOneNotCues =
-{
-  \time 2/4
-  \key g \major
-  s2*53 |
+clarinetOneCues = \measures
 
-  \key c \major
-  s2*34 |
-}
+
+clarinetOneNotCues = \measures
 
 
 clarinetOneNotes =
@@ -234,6 +189,7 @@ clarinetOneNotes =
   }
 }
 
-clarinetOneScore = \transpose c \concertKey \relative c'' { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDynamics >> }
-clarinetBesOneScore = \transpose bes \concertKey \relative c' { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDynamics >> }
-clarinetBesOnePart  = \transpose bes \concertKey \relative c' { << \clarinetOneNotes \clarinetOneCues    \clarinetOneDynamics >> }
+
+clarinetOneScore    = \transpose c   \concertKey \relative c'' { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
+clarinetBesOneScore = \transpose bes \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
+clarinetBesOnePart  = \transpose bes \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneCues    \clarinetOneDyn >> }

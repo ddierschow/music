@@ -19,12 +19,13 @@
 
   \header
   {
-    title = \markup{Heliotrope Boquet}
+    title = \markup { "Heliotrope Boquet" }
     subtitle = "A Slow Drag Two Step"
     opus = ""
     composer = "Scott Joplin and Louis Chauvin"
-    copyright = ""
+    arranger = \markup { \italic "arr. Dean Dierschow" }
     instrument = \instrument
+    meter = "Slow March Tempo"
 
     mutopiatitle = "Heliotrope Boquet"
     mutopiacomposer = "Joplin and Chauvin"
@@ -33,11 +34,11 @@
     date = ""
     source = ""
     style = "Ragtime"
-    maintainer = ""
-    maintainerEmail = ""
+    maintainer = "Dean Dierschow"
+    maintainerEmail = "deandierschow@gmail.com"
     lastupdated = ""
 
-    footer = ""
+    copyright = "This arrangement copyright 2023 by Dean Dierschow"
     tagline = ""
   }
 
@@ -49,7 +50,6 @@
       \set Score.skipBars = ##t
       << \keepWithTag #'part \notes \outline >>
     }
-    \header { piece = \headerPiece }
   }
-}
 
+}

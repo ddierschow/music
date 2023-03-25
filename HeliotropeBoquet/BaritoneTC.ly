@@ -6,6 +6,6 @@
 
 instrument = "Baritone (Treble Clef)"
 
-notes = \baritonetcPart
+notes = \baritoneTCPart
 
 \include "part.lyi"

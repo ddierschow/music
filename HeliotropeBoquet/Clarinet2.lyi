@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-clarinetTwoDynamics =
+clarinetTwoDyn =
 {
   s2*4\mf |
   % 5
@@ -82,26 +82,10 @@ clarinetTwoDynamics =
 }
 
 
-clarinetTwoCues =
-{
-  \time 2/4
-  \key g \major
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+clarinetTwoCues = \measures
 
 
-clarinetTwoNotCues =
-{
-  \time 2/4
-  \key g \major
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+clarinetTwoNotCues = \measures
 
 
 clarinetTwoNotes =
@@ -165,7 +149,16 @@ clarinetTwoNotes =
   b,8. cis'16~cis4 |
   e,8. fis16~fis8 fis8 |
   e8. fis16~fis8 g |
-s2*10 |
+  d8. d16~d8 cis |
+  a4 cis |
+  e8. fis16~fis8 fis |
+  b,8. cis'16~cis4 |
+  e,8. fis16~fis8 fis8 |
+  g4 g |
+  g8 g8 g4 |
+  g8 g8 g4 |
+  g8. g16~g8 fis |
+  g8 g16( a b c d dis) |
 
   \repeat volta 2
   {
@@ -198,6 +191,7 @@ s2*10 |
   }
 }
 
-clarinetTwoScore = \transpose c \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDynamics >> }
-clarinetBesTwoScore = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDynamics >> }
-clarinetBesTwoPart  = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoCues    \clarinetTwoDynamics >> }
+
+clarinetTwoScore    = \transpose c   \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
+clarinetBesTwoScore = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
+clarinetBesTwoPart  = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoCues    \clarinetTwoDyn >> }

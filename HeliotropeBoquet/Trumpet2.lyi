@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-trumpetTwoDynamics =
+trumpetTwoDyn =
 {
   s2*4 |
   % 5
@@ -59,28 +59,10 @@ trumpetTwoDynamics =
 }
 
 
-trumpetTwoCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+trumpetTwoCues = \measures
 
 
-trumpetTwoNotCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+trumpetTwoNotCues = \measures
 
 
 trumpetTwoNotes =
@@ -142,6 +124,7 @@ trumpetTwoNotes =
   }
 }
 
-trumpetTwoScore = \transpose c \concertKey \relative c' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDynamics >> }
-trumpetBesTwoScore = \transpose bes \concertKey \relative c'' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDynamics >> }
-trumpetBesTwoPart  = \transpose bes \concertKey \relative c'' { << \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDynamics >> }
+
+trumpetTwoScore    = \transpose c   \concertKey \relative c' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
+trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
+trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDyn >> }

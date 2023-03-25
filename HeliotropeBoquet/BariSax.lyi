@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-barisaxDynamics =
+barisaxDyn =
 {
   s2*4 |
   % 5
@@ -59,28 +59,10 @@ barisaxDynamics =
 }
 
 
-barisaxCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+barisaxCues = \measures
 
 
-barisaxNotCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+barisaxNotCues = \measures
 
 
 barisaxNotes =
@@ -142,6 +124,7 @@ barisaxNotes =
   }
 }
 
-barisaxScore = \transpose c \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
-barisaxEesScore = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDynamics >> }
-barisaxEesPart  = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxCues    \barisaxDynamics >> }
+
+barisaxScore    = \transpose c   \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxEesScore = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxEesPart  = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxCues    \barisaxDyn >> }

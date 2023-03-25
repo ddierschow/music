@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-percussionTwoDynamics =
+percussionTwoDyn =
 {
   s2*4 |
   % 5
@@ -59,30 +59,10 @@ percussionTwoDynamics =
 }
 
 
-percussionTwoCues =
-{
-  \time 2/4
-  \clef percussion
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+percussionTwoCues = \measuresPC
 
 
-percussionTwoNotCues =
-{
-  \time 2/4
-  \clef percussion
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+percussionTwoNotCues = \measuresPC
 
 
 percussionTwoNotes =
@@ -140,5 +120,6 @@ percussionTwoNotes =
   }
 }
 
-percussionTwoScore = \relative c { << \percussionTwoNotes \percussionTwoNotCues \percussionTwoDynamics >> }
-percussionTwoPart  = \relative c { << \percussionTwoNotes \percussionTwoCues    \percussionTwoDynamics >> }
+
+percussionTwoScore = \relative c { << \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoPart  = \relative c { << \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }

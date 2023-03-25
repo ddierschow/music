@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-tromboneOneDynamics =
+tromboneOneDyn =
 {
   s2*4 |
   % 5
@@ -59,30 +59,10 @@ tromboneOneDynamics =
 }
 
 
-tromboneOneCues =
-{
-  \time 2/4
-  \clef bass
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+tromboneOneCues = \measuresBC
 
 
-tromboneOneNotCues =
-{
-  \time 2/4
-  \clef bass
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+tromboneOneNotCues = \measuresBC
 
 
 tromboneOneNotes =
@@ -144,5 +124,6 @@ tromboneOneNotes =
   }
 }
 
-tromboneOneScore = \transpose c \concertKey \relative c' { << \tromboneOneNotes \tromboneOneNotCues \tromboneOneDynamics >> }
-tromboneOnePart  = \transpose c \concertKey \relative c' { << \tromboneOneNotes \tromboneOneCues    \tromboneOneDynamics >> }
+
+tromboneOneScore = \transpose c \concertKey \relative c, { << \tromboneOneNotes \tromboneOneNotCues \tromboneOneDyn >> }
+tromboneOnePart  = \transpose c \concertKey \relative c, { << \tromboneOneNotes \tromboneOneCues    \tromboneOneDyn >> }

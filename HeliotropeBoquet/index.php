@@ -7,8 +7,10 @@ function ShowFile($fn)
 	echo "&nbsp;";
     else if (file_exists($fn))
 	echo '<a href="' . $fn . '">' . $fn . "</a>";
-    else
+    else if (str_ends_with($fn, '.pdf'))
 	echo $fn;
+    else
+        echo '&nbsp';
     echo "</td>\n";
 }
 
@@ -20,88 +22,35 @@ function ShowRow($arr)
     echo " </tr>\n";
 }
 
-function ShowGridV($prefs, $suffs)
+function ShowGrid($prefs, $suffs)
 {
     foreach ($prefs as $pref) {
-	echo "<tr>\n";
+	$arr = [];
 	foreach ($suffs as $suff)
 	    if ($pref == '' or $suff == '')
-		ShowFile('');
+		$arr[] = '';
 	    else
-		ShowFile($pref . $suff);
+		$arr[] = $pref . $suff;
+        ShowRow($arr);
 	echo "</tr>\n";
     }
 }
 
-function ShowGridH($prefs, $suffs)
-{
-    foreach ($suffs as $suff) {
-	echo "<tr>\n";
-	foreach ($prefs as $pref)
-	    if ($pref == '' or $suff == '')
-		ShowFile('');
-	    else
-		ShowFile($pref . $suff);
-	echo "</tr>\n";
-    }
-}
+$insts = [
+    "Flute1", "Flute2", "Oboe", "Bassoon",
+    "Clarinet1", "Clarinet2", "Clarinet3", "BassClarinet",
+    "AltoSax1", "AltoSax2", "TenorSax", "BariSax",  // how saxist
+    "Trumpet1", "Trumpet2", "Trumpet3", "Horn1", "Horn2",
+    "Trombone1", "Trombone2", "Trombone3", "Baritone", "BaritoneTC",
+    "StringBass", "Tuba",
+    "Percussion1", "Percussion2", "MalletPercussion", "Timpani"
+];
 
 echo "<table border=1>\n";
 
-$scores = array();
-$scores[] = "";
-$scores[] = "Score";
-$scores[] = "ScoreNT";
-
-$ftypes = array();
-$ftypes[] = ".ly";
-$ftypes[] = ".pdf";
-$ftypes[] = ".midi";
-
-ShowGridH($scores, $ftypes);
-
-$insts[] = "Flute1";
-$insts[] = "Flute2";
-$insts[] = "Oboe";
-$insts[] = "Bassoon";
-$insts[] = "Clarinet1";
-$insts[] = "Clarinet2";
-$insts[] = "Clarinet3";
-$insts[] = "BassClarinet";
-$insts[] = "AltoSax1";
-$insts[] = "AltoSax2";
-$insts[] = "TenorSax";
-$insts[] = "BariSax";
-$insts[] = "Trumpet1";
-$insts[] = "Trumpet2";
-$insts[] = "Trumpet3";
-$insts[] = "Horn1";
-$insts[] = "Horn2";
-$insts[] = "Trombone1";
-$insts[] = "Trombone2";
-$insts[] = "Trombone3";
-$insts[] = "Baritone";
-$insts[] = "BaritoneTC";
-$insts[] = "StringBass";
-$insts[] = "Tuba";
-$insts[] = "Percussion1";
-$insts[] = "Percussion2";
-$insts[] = "MalletPercussion";
-$insts[] = "Timpani";
-
-$fils = array();
-$fils[] = ".ly";
-$fils[] = ".lyi";
-$fils[] = ".pdf";
-
-ShowGridV($insts, $fils);
-
-$others = array();
-$others[] = "README.md";
-$others[] = "defs.lyi";
-$others[] = "Outline.lyi";
-$others[] = "Part.lyi";
-
-ShowRow($others);
+ShowGrid(['Score', 'ScoreCond', 'ScoreNT'], ['.ly', '.midi', '.pdf']);
+ShowGrid($insts, ['.ly', '.lyi', '.pdf']);
+ShowRow(['README.md', 'config.lyi', 'defs.lyi']);
+ShowRow(['outline.lyi', 'part.lyi', '']);
 
 echo "</table>\n";

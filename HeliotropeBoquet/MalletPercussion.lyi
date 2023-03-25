@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-malletDynamics =
+malletDyn =
 {
   s2*4 |
   % 5
@@ -59,30 +59,10 @@ malletDynamics =
 }
 
 
-malletCues =
-{
-  \time 2/4
-  \clef percussion
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+malletCues = \measures
 
 
-malletNotCues =
-{
-  \time 2/4
-  \clef percussion
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+malletNotCues = \measures
 
 
 malletNotes =
@@ -140,5 +120,6 @@ malletNotes =
   }
 }
 
-malletScore = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDynamics >> }
-malletPart  = \transpose c \concertKey \relative c { << \malletNotes \malletCues    \malletDynamics >> }
+
+malletScore = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDyn >> }
+malletPart  = \transpose c \concertKey \relative c { << \malletNotes \malletCues    \malletDyn >> }

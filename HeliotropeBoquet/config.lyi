@@ -1,4 +1,5 @@
 concertKey = bes
+%headerPiece = "Slow March Tempo"
 
 measures =
 {
@@ -9,3 +10,6 @@ measures =
   \key c \major
   s2*34 |
 }
+
+measuresBC = { << { \clef bass } \measures >> }
+measuresPC = { << { \clef percussion } \measures >> }

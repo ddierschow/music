@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-bassclarinetDynamics =
+bassclarinetDyn =
 {
   s2*4 |
   % 5
@@ -59,28 +59,10 @@ bassclarinetDynamics =
 }
 
 
-bassclarinetCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+bassclarinetCues = \measures
 
 
-bassclarinetNotCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+bassclarinetNotCues = \measures
 
 
 bassclarinetNotes =
@@ -142,6 +124,7 @@ bassclarinetNotes =
   }
 }
 
-bassclarinetScore = \transpose c \concertKey \relative c { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDynamics >> }
-bassclarinetBesScore = \transpose bes \concertKey \relative c { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDynamics >> }
-bassclarinetBesPart  = \transpose bes \concertKey \relative c { << \bassclarinetNotes \bassclarinetCues    \bassclarinetDynamics >> }
+
+bassclarinetScore    = \transpose c   \concertKey \relative c' { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDyn >> }
+bassclarinetBesScore = \transpose bes \concertKey \relative c' { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDyn >> }
+bassclarinetBesPart  = \transpose bes \concertKey \relative c' { << \bassclarinetNotes \bassclarinetCues    \bassclarinetDyn >> }

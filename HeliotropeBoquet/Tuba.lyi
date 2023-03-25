@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-tubaDynamics =
+tubaDyn =
 {
   s2*4 |
   % 5
@@ -59,30 +59,10 @@ tubaDynamics =
 }
 
 
-tubaCues =
-{
-  \time 2/4
-  \clef bass
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+tubaCues = \measuresBC
 
 
-tubaNotCues =
-{
-  \time 2/4
-  \clef bass
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+tubaNotCues = \measuresBC
 
 
 tubaNotes =
@@ -144,7 +124,8 @@ tubaNotes =
   }
 }
 
-tubaScore = \transpose c \concertKey \relative c, { << \tubaNotes \tubaNotCues \tubaDynamics >> }
-tubaPart  = \transpose c \concertKey \relative c, { << \tubaNotes \tubaCues    \tubaDynamics >> }
-stringbassScore = \transpose c \concertKey \relative c { << \tubaNotes \tubaNotCues \tubaDynamics >> }
-stringbassPart  = \transpose c \concertKey \relative c { << \tubaNotes \tubaCues    \tubaDynamics >> }
+
+tubaScore       = \transpose c \concertKey \relative c,, { << \tubaNotes \tubaNotCues \tubaDyn >> }
+tubaPart        = \transpose c \concertKey \relative c,, { << \tubaNotes \tubaCues    \tubaDyn >> }
+stringbassScore = \transpose c \concertKey \relative c,  { << \tubaNotes \tubaNotCues \tubaDyn >> }
+stringbassPart  = \transpose c \concertKey \relative c,  { << \tubaNotes \tubaCues    \tubaDyn >> }

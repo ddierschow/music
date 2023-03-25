@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-oboeDynamics =
+oboeDyn =
 {
   s2*4 |
   % 5
@@ -59,28 +59,10 @@ oboeDynamics =
 }
 
 
-oboeCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+oboeCues = \measures
 
 
-oboeNotCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+oboeNotCues = \measures
 
 
 oboeNotes =
@@ -142,5 +124,6 @@ oboeNotes =
   }
 }
 
-oboeScore = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDynamics >> }
-oboePart  = \transpose c \concertKey \relative c' { << \oboeNotes \oboeCues    \oboeDynamics >> }
+
+oboeScore = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
+oboePart  = \transpose c \concertKey \relative c' { << \oboeNotes \oboeCues    \oboeDyn >> }

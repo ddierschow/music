@@ -59,30 +59,10 @@ percussionOneDynamics =
 }
 
 
-percussionOneCues =
-{
-  \time 2/4
-  \clef percussion
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+percussionOneCues = \measuresPC
 
 
-percussionOneNotCues =
-{
-  \time 2/4
-  \clef percussion
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+percussionOneNotCues = \measuresPC
 
 
 percussionOneNotes =
@@ -139,6 +119,7 @@ percussionOneNotes =
     }
   }
 }
+
 
 percussionOneScore = \relative c { << \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
 percussionOnePart  = \relative c { << \percussionOneNotes \percussionOneCues    \percussionOneDynamics >> }

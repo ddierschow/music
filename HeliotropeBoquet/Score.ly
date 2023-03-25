@@ -66,11 +66,12 @@ instrument = "Concert Band"
     maintainer = ""
     maintainerEmail = ""
     lastupdated = ""
+    meter = "Slow March Tempo"
 
     footer = ""
     tagline = ""
   }
-  \pageBreak
+  % \pageBreak
 
   \score
   {
@@ -288,7 +289,7 @@ instrument = "Concert Band"
 	}
       >>
     >>
-    \header { piece = \headerPiece }
+    % \header { piece = \headerPiece }
     \layout
     {
       max-systems-per-page = #1
@@ -297,7 +298,7 @@ instrument = "Concert Band"
     }
   }
 
-%{
+%{   % midi version, maybe someday
 %  \score
 %  {
 %    %\unfoldTremolos

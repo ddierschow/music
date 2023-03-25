@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-hornOneDynamics =
+hornOneDyn =
 {
   s2*4 |
   % 5
@@ -59,28 +59,10 @@ hornOneDynamics =
 }
 
 
-hornOneCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+hornOneCues = \measures
 
 
-hornOneNotCues =
-{
-  \time 2/4
-  \key g \major
-
-  s2*53 |
-
-  \key c \major
-  s2*34 |
-}
+hornOneNotCues = \measures
 
 
 hornOneNotes =
@@ -142,6 +124,7 @@ hornOneNotes =
   }
 }
 
-hornOneScore = \transpose c \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDynamics >> }
-hornFOneScore = \transpose f \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDynamics >> }
-hornFOnePart  = \transpose f \concertKey \relative c' { << \hornOneNotes \hornOneCues    \hornOneDynamics >> }
+
+hornOneScore  = \transpose c \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornFOneScore = \transpose f \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornFOnePart  = \transpose f \concertKey \relative c' { << \hornOneNotes \hornOneCues    \hornOneDyn >> }
