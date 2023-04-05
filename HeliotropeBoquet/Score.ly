@@ -80,6 +80,7 @@ instrument = "Concert Band"
       <<
         \new Staff
         {
+          \tempomark
           #(set-accidental-style 'modern)
           \set Staff.instrumentName = "Flutes 1, 2"
           \set Staff.shortInstrumentName = "Fl."

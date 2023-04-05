@@ -6,56 +6,26 @@
 malletDyn =
 {
   s2*4 |
+
   % 5
   s2*16 |
-
-  \repeat volta 2
-  {
-    % 21
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 21
+  s2*15 |
+  s2 |
+  s2 |
 
   % 38
   s2*16 |
 
-  \repeat volta 2
-  {
-    % 54
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 54
+  s2*15 |
+  s2 |
+  s2 |
 
-  \repeat volta 2
-  {
-    % 71
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 71
+  s2*15 |
+  s2 |
+  s2 |
 }
 
 
@@ -67,55 +37,59 @@ malletNotCues = \measures
 
 malletNotes =
 {
-  s2*4 |
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
   % 5
-  s2*16 |
+  R2*16 |
 
   \repeat volta 2
   {
     % 21
-    s2*15 |
+    R2*15 |
   }
   \alternative
   {
     {
-      s2 |
+      R2 |
     }
     {
-      s2 |
+      R2 |
     }
   }
 
   % 38
-  s2*16 |
+  R2*16 |
 
   \repeat volta 2
   {
     % 54
-    s2*15 |
+    R2*15 |
   }
   \alternative
   {
     {
-      s2 |
+      R2 |
     }
     {
-      s2 |
+      R2 |
     }
   }
 
   \repeat volta 2
   {
     % 71
-    s2*15 |
+    R2*15 |
   }
   \alternative
   {
     {
-      s2 |
+      R2 |
     }
     {
-      s2 |
+      R2 |
     }
   }
 }

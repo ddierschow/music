@@ -1,12 +1,14 @@
 \version "2.22.2"
 
-pizz = \markup { \italic pizz. }
+rit = \markup { \italic rit. }
+atempo = \markup { \italic "a tempo" }
 arco = \markup { \italic arco }
 FFsec = \markup { \dynamic ff \italic secco }
 ffsecco = \markup { \dynamic ff \italic secco }
 secco = \markup { \italic "secco" }
 tenuto = \markup { \italic ten. }
 leggiero = \markup { \italic leggiero }
+legato = \markup { \italic legato }
 estinto = \markup { \italic estinto }
 conmoltoespr = \markup { \italic "con molto espr." }
 

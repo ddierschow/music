@@ -73,53 +73,53 @@ trumpetThreeNotes =
   d8 r r4 |
 
   % 5
-  s2*16 |
+  R2*16 |
 
   \repeat volta 2
   {
     % 21
-    s2*15 |
+    R2*15 |
   }
   \alternative
   {
     {
-      s2 |
+      R2 |
     }
     {
-      s2 |
+      R2 |
     }
   }
 
   % 38
-  s2*16 |
+  R2*16 |
 
   \repeat volta 2
   {
     % 54
-    s2*15 |
+    R2*15 |
   }
   \alternative
   {
     {
-      s2 |
+      R2 |
     }
     {
-      s2 |
+      R2 |
     }
   }
 
   \repeat volta 2
   {
     % 71
-    s2*15 |
+    R2*15 |
   }
   \alternative
   {
     {
-      s2 |
+      R2 |
     }
     {
-      s2 |
+      R2 |
     }
   }
 }

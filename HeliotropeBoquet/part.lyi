@@ -38,7 +38,7 @@
     maintainerEmail = "deandierschow@gmail.com"
     lastupdated = ""
 
-    copyright = "This arrangement copyright 2023 by Dean Dierschow"
+    copyright = \markup { \teeny "This arrangement copyright 2023 by Dean Dierschow" }
     tagline = ""
   }
 
@@ -48,6 +48,7 @@
     {
       #(set-accidental-style 'modern)
       \set Score.skipBars = ##t
+      \tempomark
       << \keepWithTag #'part \notes \outline >>
     }
   }

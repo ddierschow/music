@@ -1,8 +1,11 @@
 concertKey = bes
-%headerPiece = "Slow March Tempo"
+tempomark = { \tempo 8 = 80 }
 
 measures =
 {
+  \override MultiMeasureRest.expand-limit = #2
+  \override Score.PaperColumn #'keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
   \time 2/4
   \key g \major
   s2*53 |

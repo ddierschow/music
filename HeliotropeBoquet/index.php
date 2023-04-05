@@ -32,7 +32,6 @@ function ShowGrid($prefs, $suffs)
 	    else
 		$arr[] = $pref . $suff;
         ShowRow($arr);
-	echo "</tr>\n";
     }
 }
 
@@ -50,7 +49,8 @@ echo "<table border=1>\n";
 
 ShowGrid(['Score', 'ScoreCond', 'ScoreNT'], ['.ly', '.midi', '.pdf']);
 ShowGrid($insts, ['.ly', '.lyi', '.pdf']);
-ShowRow(['README.md', 'config.lyi', 'defs.lyi']);
-ShowRow(['outline.lyi', 'part.lyi', '']);
+ShowRow(['Makefile', 'README.md', 'config.lyi']);
+ShowRow(['defs.lyi', 'outline.lyi', 'part.lyi']);
+ShowRow(['index.php', 'Heliotrope_Bouquet.mp4', 'heliotrope_bouquet.pdf']);
 
 echo "</table>\n";

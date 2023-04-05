@@ -79,6 +79,7 @@ instrument = "Concert Band (Concert Key)"
       <<
         \new Staff
         {
+          \tempomark
           #(set-accidental-style 'modern)
           \set Staff.instrumentName = "Flutes 1, 2"
 	  \set Staff.shortInstrumentName = \markup { \column { "Fl." \line {"1, 2"} } }

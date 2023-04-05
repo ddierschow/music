@@ -5,50 +5,49 @@
 
 clarinetOneDyn =
 {
-  s2*4\mf |
+  s2\mf |
+  s2*3 |
+
   % 5
-  s2*5\mf |
+  s2\mf |
+  s2*4 |
   s2\< |
   s2 |
   s4\!\f s4\>\! |
-  s2*8\mf |
+  s2\mf |
+  s2*7 |
 
   % 21
   s2\f |
   s2*7 |
   s2\f |
-  s2*6 |
-  s2 |
-  s2 |
+  s2*8 |
 
   % 38
-  s2*5\mf |
+  s2\mf |
+  s2*4 |
   s2\< |
   s2 |
   s4\!\f s4\>\! |
-  s2*8\mf |
+  s2\mf |
+  s2*7 |
 
   % 54
-  s4\mp s4_\markup { \italic legato }
+  s4\mp s4_\legato |
   s2*3 |
   s2\< |
   s2 |
   s2\!\>\! |
   s2\mp |
   s2*2 |
-  \crescTextPocoAPocoCresc
-  s2\< |
+  \crescTextPocoAPocoCresc s2\< |
   s2\! |
   s2\mf |
-  s2*2 |
-  s2 |
-  s2 |
+  s2*4 |
 
   % 71
-  s4\mf s4_\markup { \italic legato }
-  s2*14 |
-  s2 |
-  s2 |
+  s4\mf s4_\legato |
+  s2*16 |
 }
 
 
@@ -108,7 +107,7 @@ clarinetOneNotes =
       g,4 b-> |
     }
     {
-      g4 fes8->( e) |
+      g4 fis8->( e) |
     }
   }
 

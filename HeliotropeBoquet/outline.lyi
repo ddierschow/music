@@ -1,68 +1,36 @@
 rehearsalMarks =
 {
   s2*4 |
+
   \rMark "5"
   s2*16 |
 
-  \repeat volta 2
-  {
-    \rMark "21"
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  \rMark "21"
+  s2*17 |
 
   \rMark "38"
   s2*16 |
 
-  \repeat volta 2
-  {
-    \rMark "54"
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  \rMark "54"
+  s2*17 |
 
-  \repeat volta 2
-  {
-    \rMark "71"
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  \rMark "71"
+  s2*17 |
 }
 
 pageMarks =
 {
-  \override Score.PaperColumn #'keep-inside-line = ##t
-  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
   \time 2/4
 
-  s2*4 \bar "||"
-  s2*16
+  s2*3
+  s4 s_\rit \bar "||"
+
+  % 5
+  s2_\atempo |
+  s2*15
 
   \break
+  % 21
   \repeat volta 2
   {
     s2*15 |
@@ -73,21 +41,26 @@ pageMarks =
       s2 |
     }
     {
-      s2 \bar "||"
+      s4 s_\rit \bar "||"
     }
   }
 
-  s2*16 |
+  % 38
+  s2_\atempo |
+  s2*14 |
+  s8 s4._\rit |
 
   \break
+  % 54
   \repeat volta 2
   {
-    s2*15 |
+    s2_\atempo |
+    s2*14 |
   }
   \alternative
   {
     {
-      s2 |
+      s8 s4._\rit |
     }
     {
       s2 |
@@ -95,6 +68,7 @@ pageMarks =
   }
 
   \break
+  % 71
   \repeat volta 2
   {
     s2*15 |

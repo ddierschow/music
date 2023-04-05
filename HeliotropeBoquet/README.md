@@ -24,10 +24,11 @@ piano score.
 
 The source for all parts is written in the same key to allow for easily switching passages
 to different instruments.  The transposition is done at the bottom of each file.  This is
-arranged from a piano source, so the Notes sections are all written in Gmajor.
+arranged from a piano source, so the Notes sections are all written in Gmajor/Cmajor.
 
 Each part has sequences for Notes, Dynamics, and Cues or NotCues, and these are put together at the same
 point the transposition is done, to produce a mixed seqence for the part and another for the score.
+In some cases, markups have been moved from Notes to Cues to avoid problems with combining parts for the score.
 
 The files with ly extension are rendered into pdf files.  Each part includes defs.lyi,
 which is my library of useful things, not all of which will be used.  Then each part includes its
