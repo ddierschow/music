@@ -1,0 +1,166 @@
+\version "2.22.2"
+
+\include "config.lyi"
+\include "defs.lyi"
+
+hornOneDyn =
+{
+  s2\mf |
+  s2*3 |
+
+  % 5
+  s2*11 |
+  s4 s\mf |
+  s2*4 |
+
+  % 21
+  s2\f |
+  s2*7 |
+  s2\f |
+  s2*8 |
+
+  % 38
+  s2*11 |
+  s4 s\mf |
+  s2*4 |
+
+  % 54
+  s4\mp s4 |
+  s2*6 |
+  s2\mf\!\>\! |
+  s2\mp |
+  s2 |
+  \crescTextPocoAPocoCresc
+  s2\< |
+  s2\! |
+  s2\mf |
+  s2*4 |
+
+  % 71
+  s4\mf s4 |
+  s2*16 |
+}
+
+
+hornOneCues = \measures
+
+
+hornOneNotCues = \measures
+
+
+hornOneNotes =
+{
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
+  % 5
+  R2*11 |
+  r4 g |
+  g8 g g g |
+  g8 g g g |
+  d8. g16~g8 c, |
+  b8 r bes4 |
+
+  \repeat volta 2
+  {
+    % 21
+    r8 c r c |
+    r8 c~c~c16 \tuplet 3/2 { d32( dis e) } |
+    r8 b' r b |
+    r8 b r g16 gis |
+    r8 c r c |
+    r8 c d,~d16 \tuplet 3/2 { d32( e fis) } |
+    g8 r r4 |
+    r4 r8 gis |
+    r8 c r c |
+    r8 c~c~c16 \tuplet 3/2 { d,32( dis e) } |
+    r8 b' r b |
+    r8 b g f |
+    r8 d' r cis |
+    d8 c b b |
+    r8 cis r c |
+  }
+  \alternative
+  {
+    {
+      g4 gis-> |
+    }
+    {
+      g4 bes-> |
+    }
+  }
+
+  % 38
+  R2*11 |
+  r4 g |
+  g8 g g4 |
+  g8 g g4 |
+  d8. g16~g8 c, |
+  b8 r f'4 |
+
+  \repeat volta 2
+  {
+    % 54
+    r8 e r f |
+    r8 e r f |
+    r8 e r4 |
+    r2 |
+    r8 f r f |
+    r8 e r4 |
+    r2 |
+    g8 f e d |
+    r8 e' r f |
+    r8 e r e |
+    r8 e r e |
+    r8 e r e |
+    gis,,16( b d eis gis b8 bes16) |
+    r8 e r e |
+    r8 c r b |
+  }
+  \alternative
+  {
+    {
+      c8 r f4 |
+    }
+    {
+      c8 dis,16-^ e-^ g-^ c-^ b-^ a-^ |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    g8 f e d |
+    r8 e r e |
+    r8 f r4 |
+    r8 e g,16-^ c-^ b-^ a-^ |
+    r2 |
+    r8 e' r e |
+    r8 e r dis |
+    r8 e r ais, |
+    r2 |
+    r8 e' r e |
+    r8 f r4 |
+    r8 e r e |
+    c2 |
+    c2 |
+    r8 c r b |
+  }
+  \alternative
+  {
+    {
+      c'8 dis,16-^ e-^ g-^ c-^ b-^ a-^ |
+    }
+    {
+      c4 c,8-^ r |
+    }
+  }
+}
+
+
+hornOneScore  = \transpose c \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornOneCond   = \transpose c \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornFOneScore = \transpose f \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornFOnePart  = \transpose f \concertKey \relative c' { << \hornOneNotes \hornOneCues    \hornOneDyn >> }

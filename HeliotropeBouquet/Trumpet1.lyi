@@ -1,0 +1,131 @@
+\version "2.22.2"
+
+\include "config.lyi"
+\include "defs.lyi"
+
+trumpetOneDyn =
+{
+  s2*4 |
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+
+trumpetOneCues = \measures
+
+
+trumpetOneNotCues = \measures
+
+
+trumpetOneNotes =
+{
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r r4 |
+
+  % 5
+  R2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    R2*15 |
+  }
+  \alternative
+  {
+    {
+      R2 |
+    }
+    {
+      R2 |
+    }
+  }
+
+  % 38
+  R2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    R2*15 |
+  }
+  \alternative
+  {
+    {
+      R2 |
+    }
+    {
+      R2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    R2*15 |
+  }
+  \alternative
+  {
+    {
+      R2 |
+    }
+    {
+      R2 |
+    }
+  }
+}
+
+
+trumpetOneScore    = \transpose c   \concertKey \relative c' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDyn >> }
+trumpetOneCond     = \transpose c   \concertKey \relative c' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDyn >> }
+trumpetBesOneScore = \transpose bes \concertKey \relative c' { << \trumpetOneNotes \trumpetOneNotCues \trumpetOneDyn >> }
+trumpetBesOnePart  = \transpose bes \concertKey \relative c' { << \trumpetOneNotes \trumpetOneCues    \trumpetOneDyn >> }

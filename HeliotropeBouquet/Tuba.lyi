@@ -1,0 +1,197 @@
+\version "2.22.2"
+
+\include "config.lyi"
+\include "defs.lyi"
+
+tubaDyn =
+{
+  s2\mf |
+  s2*2 |
+  s2 |
+
+  % 5
+  s2*5\mf |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
+  s2*8\mf |
+
+  % 21
+  s2\f |
+  s2*7 |
+  s2\f |
+  s2*6 |
+  s2 |
+  s2 |
+
+  % 38
+  s2*5\mf |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
+  s2*8\mf |
+
+  % 54
+  s4\mp s4 |
+  s2*3 |
+  s2\< |
+  s2 |
+  s2\!\>\! |
+  s2\mp |
+  s2*2 |
+  \crescTextPocoAPocoCresc
+  s2\< |
+  s2\! |
+  s2 |
+  s2\mf |
+  s2*3 |
+
+  % 71
+  s4\mf s4 |
+  s2*16 |
+}
+
+
+tubaCues = \measuresBC
+
+
+tubaNotCues = \measuresBC
+
+
+tubaNotes =
+{
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r bes4-> |
+
+  % 5
+  a8. d16~d8 d |
+  g,8 b16 bes~bes4 |
+  a8. d16~d8 d |
+  g,8 b16 bes~bes4 |
+  a8. d16~d8 dis |
+  e8. b16~b8 bes |
+  a8. b16~b8 a |
+  \slashedGrace { d'8( } d,4) bes-> |
+  a8. d16~d8 d |
+  g,8 b16 bes~bes4 |
+  a8. d16~d8 d |
+  g,4 g |
+  g8 g g g |
+  g8 g g g |
+  d'8 dis16 e16~e8 d8 |
+  g,4 gis4-> |
+
+  \repeat volta 2
+  {
+    % 21
+    a8 r d r |
+    a8 r d8. r16 |
+    g,8 r d' r |
+    g,8 r d'8 g,16 gis |
+    a8 r d r |
+    a8 r d8. r16 |
+    g,8-^ r r4 |
+    r4 r8 g8-^ |
+    a8 r d r |
+    a8 r d8. r16 |
+    g,8 r d' r |
+    g,8 r g' f |
+    e8 r a e |
+    d8 c b d |
+    a8 r d r |
+  }
+  \alternative
+  {
+    {
+      g,4 gis-> |
+    }
+    {
+      g4 bes-> |
+    }
+  }
+
+  % 38
+  a8. d16~d8 d |
+  g,8 b16 bes~bes4 |
+  a8. d16~d8 d |
+  g,8 b16 bes~bes4 |
+  a8. d16~d8 dis |
+  e8. b16~b8 bes |
+  a8. b16~b8 a |
+  \slashedGrace { d'8( } d,4) bes'-> |
+  a8. d16~d8 d, |
+  g8 b16 bes~bes4 |
+  a8. d16~d8 d, |
+  g4 g |
+  g8 g g g |
+  g8 g g g |
+  d8 dis16 e16~e8 d8 |
+  g4 g'4 |
+
+  \repeat volta 2
+  {
+    % 54
+    c,8 r f r |
+    c8 r g r |
+    c8 r f fis |
+    d8 c-> b-> bes-> |
+    a4 aes |
+    g8 r e ees |
+    d8. e16~e8 d |
+    g8 f e d |
+    c8 r f r |
+    c8 r g' r |
+    e8 r e r |
+    a8 r e r |
+    r2 |
+    g8 r a, r |
+    d8 r g r |
+  }
+  \alternative
+  {
+    {
+      c8 r g'4 |
+    }
+    {
+      c,8 dis,16-^ e-^ g-^ c-^ b-^ a-^ |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    g8 f e d |
+    c8 r e r |
+    g,8 r d' dis |
+    e8 r g16-^ c-^ b-^ a-^ |
+    g8 f e d |
+    c8 r a r |
+    b8 r b r |
+    e8 r cis r |
+    d8  f e d |
+    c8 r e r |
+    g,8 r d' dis |
+    e8 r c' r |
+    f8( dis e c) |
+    f8( dis e e,) |
+    d8 r g r |
+  }
+  \alternative
+  {
+    {
+      c8 dis,16-^ e-^ g-^ c-^ b-^ a-^ |
+    }
+    {
+      c8 \slashedGrace { fis,8( } g) c,-^ r |
+    }
+  }
+}
+
+
+tubaScore       = \transpose c \concertKey \relative c,, { << \tubaNotes \tubaNotCues \tubaDyn >> }
+tubaCond        = \transpose c \concertKey \relative c,, { << \tubaNotes \tubaNotCues \tubaDyn >> }
+tubaPart        = \transpose c \concertKey \relative c,, { << \tubaNotes \tubaCues    \tubaDyn >> }
+stringbassScore = \transpose c \concertKey \relative c,  { << \tubaNotes \tubaNotCues \tubaDyn >> }
+stringbassPart  = \transpose c \concertKey \relative c,  { << \tubaNotes \tubaCues    \tubaDyn >> }

@@ -1,0 +1,56 @@
+\version "2.22.2"
+
+\include "config.lyi"
+\include "defs.lyi"
+\include "outline.lyi"
+
+\paper
+{
+  ragged-last-bottom = ##f
+  #(set-paper-size "letter")
+  top-margin = 15\mm
+  left-margin = 18\mm
+  right-margin = 18\mm
+  bottom-margin = 15\mm
+}
+
+\book
+{
+
+  \header
+  {
+    title = \markup { "Heliotrope Bouquet" }
+    subtitle = "A Slow Drag Two Step"
+    opus = ""
+    composer = "Scott Joplin and Louis Chauvin"
+    arranger = \markup { \italic "arr. Dean Dierschow" }
+    instrument = \instrument
+    meter = "Slow March Tempo"
+
+    mutopiatitle = "Heliotrope Bouquet"
+    mutopiacomposer = "Joplin and Chauvin"
+    mutopiaopus = ""
+    mutopiainstrument = "Wind Ensemble"
+    date = ""
+    source = ""
+    style = "Ragtime"
+    maintainer = "Dean Dierschow"
+    maintainerEmail = "deandierschow@gmail.com"
+    lastupdated = ""
+
+    copyright = \markup { \teeny "This arrangement copyright 2023 by Dean Dierschow" }
+    tagline = ""
+  }
+
+  \score
+  {
+    \new Staff
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      \tempomark
+      << \keepWithTag #'part \notes \outline >>
+    }
+  }
+
+}

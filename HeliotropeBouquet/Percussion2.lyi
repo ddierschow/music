@@ -1,0 +1,126 @@
+\version "2.22.2"
+
+\include "config.lyi"
+\include "defs.lyi"
+
+percussionTwoDyn =
+{
+  s2*4 |
+  % 5
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  % 38
+  s2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+}
+
+
+percussionTwoCues = \measuresPC
+
+
+percussionTwoNotCues = \measuresPC
+
+
+percussionTwoNotes =
+{
+  R2*4 |
+  % 5
+  R2*16 |
+
+  \repeat volta 2
+  {
+    % 21
+    R2*15 |
+  }
+  \alternative
+  {
+    {
+      R2 |
+    }
+    {
+      R2 |
+    }
+  }
+
+  % 38
+  R2*16 |
+
+  \repeat volta 2
+  {
+    % 54
+    R2*15 |
+  }
+  \alternative
+  {
+    {
+      R2 |
+    }
+    {
+      R2 |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    R2*15 |
+  }
+  \alternative
+  {
+    {
+      R2 |
+    }
+    {
+      R2 |
+    }
+  }
+}
+
+
+percussionTwoScore = \relative c { << \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoCond  = \relative c { << \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoPart  = \relative c { << \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }

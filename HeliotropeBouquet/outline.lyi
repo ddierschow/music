@@ -1,0 +1,85 @@
+rehearsalMarks =
+{
+  s2*4 |
+
+  \rMark "5"
+  s2*16 |
+
+  \rMark "21"
+  s2*17 |
+
+  \rMark "38"
+  s2*16 |
+
+  \rMark "54"
+  s2*17 |
+
+  \rMark "71"
+  s2*17 |
+}
+
+pageMarks =
+{
+  \time 2/4
+
+  s2*3
+  s4 s_\rit \bar "||"
+
+  % 5
+  s2*16_\atempo |
+
+  \break
+  % 21
+  \repeat volta 2
+  {
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s4 s_\rit \bar "||"
+    }
+  }
+
+  % 38
+  s2*15_\atempo |
+  s8 s4._\rit |
+
+  \break
+  % 54
+  \repeat volta 2
+  {
+    s2*15_\atempo |
+  }
+  \alternative
+  {
+    {
+      s8 s4._\rit |
+    }
+    {
+      s2 |
+    }
+  }
+
+  \break
+  % 71
+  \repeat volta 2
+  {
+    s2*15 |
+  }
+  \alternative
+  {
+    {
+      s2 |
+    }
+    {
+      s2 |
+    }
+  }
+  \bar "|."
+}
+
+outline = << \rehearsalMarks \pageMarks >>
