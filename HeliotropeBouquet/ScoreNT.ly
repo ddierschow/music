@@ -285,6 +285,12 @@ instrument = "Concert Band (Concert Key)"
 	}
       >>
     >>
+    \layout
+    {
+      max-systems-per-page = #1
+      systems-per-page = #1
+      %\context { \RemoveEmptyStaffContext }
+    }
   }
 
 }

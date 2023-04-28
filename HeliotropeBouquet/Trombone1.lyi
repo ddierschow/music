@@ -135,15 +135,15 @@ tromboneOneNotes =
     c8 r g r |
     c8 r f fis |
     g8 c-> b-> bes-> |
-    g8 r ges r |
-    f8 r e ees |
+    a8 r aes r |
+    g8 r e ees |
     d8. e16~e8 d |
     g8 f e d |
     c8 r f r |
     c8 r g r |
     e8 r e r |
     a8 r e r |
-    gis16( b d eis gis b8 bes16) |
+    fis16( a c dis fis a8 aes16) |
     g8 r a, r |
     d8 r g r |
   }

@@ -5,57 +5,47 @@
 
 altosaxTwoDyn =
 {
-  s2*4 |
-  % 5
-  s2*16 |
+  s2\mf |
+  s2*3 |
 
-  \repeat volta 2
-  {
-    % 21
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 5
+  s2\mp |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\mf s4\>\! |
+  s2\mp |
+  s2*7 |
+
+  % 21
+  s2*6 |
+  s8 s4.\f |
+  s2*10 |
 
   % 38
+  s2\mp |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\mf s4\>\! |
+  s2\mp |
+  s2*7 |
+
+  % 54
+  s4\mp s4 |
+  s2*4 |
+  s2\< |
+  s2 |
+  s2\! |
+  s2\mp |
+  s2*2 |
+  s2 |
+  s2 |
+  s2*4 |
+
+  % 71
+  s4\mf s4 |
   s2*16 |
-
-  \repeat volta 2
-  {
-    % 54
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
-
-  \repeat volta 2
-  {
-    % 71
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
 }
 
 
@@ -70,56 +60,117 @@ altosaxTwoNotes =
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r r4 |
+  d8 r bes4 |
 
   % 5
-  R2*16 |
+  c8. d16~d4 |
+  b8. fis'16~fis4 |
+  c8. d16~d4 |
+  b8. fis'16~fis4 |
+  c8. d16~d4 |
+  b8. b16~b4 |
+  a8. a16~a8 a |
+  d4 bes4 |
+  c8. d16~d4 |
+  b8. fis'16~fis4 |
+  c8. d16~d4 |
+  g4 g |
+  f8 f f f |
+  e8 e ees ees |
+  d8 dis16 e~e8 d |
+  g4 gis |
 
   \repeat volta 2
   {
     % 21
-    R2*15 |
+    R2*6 |
+    r8 f( e ees) |
+    d8( cis c) r |
+    R2*7 |
   }
   \alternative
   {
     {
-      R2 |
+      r2 |
     }
     {
-      R2 |
+      r4 b4 |
     }
   }
 
   % 38
-  R2*16 |
+  c8. d16~d4 |
+  b8. f'16~f4 |
+  c8. d16~d4 |
+  b8. f'16~f4 |
+  c8. d16~d4 |
+  b8. b16~b4 |
+  a8. a16~a8 a |
+  d4 bes4 |
+  c8. d16~d4 |
+  b8. f'16~f4 |
+  c8. d16~d4 |
+  g4 g |
+  f8 f f f |
+  e8 e ees ees |
+  d8 dis16 e~e8 d |
+  g8 r b,4 |
 
   \repeat volta 2
   {
     % 54
-    R2*15 |
+    e4( f4 |
+    e8 f16 e~e) r r8 |
+    e4( f8. ees16 |
+    e2) |
+    r2 |
+    r4 r16 g( a ais |
+    b16 c d e,~e8 fis |
+    g8) r8 r4 |
+    e4( f4 |
+    e8 f16 e~e) r r8 |
+
+    e4( d4 |
+    c8) r8 r4 |
+    R2*2 |
+    a4( b) |
   }
   \alternative
   {
     {
-      R2 |
+      c8 r8 r4 |
     }
     {
-      R2 |
+      c4~c8 r8 |
     }
   }
 
   \repeat volta 2
   {
     % 71
-    R2*15 |
+    r8 g'8( f4 |
+    c2 |
+    g4 d'8 dis |
+    e4) r |
+    r8 g8( f4 |
+    c2 |
+    dis2 |
+    e8) r8 r4 |
+    d2( |
+    c2 |
+    d2 |
+    c2) |
+    a8.( dis16 e4) |
+    a8.( dis16 e4) |
+    d4( b) |
   }
   \alternative
   {
     {
-      R2 |
+      c8 r r4 |
     }
     {
-      R2 |
+      c8 r  c'4-^ |
     }
   }
 }

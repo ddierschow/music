@@ -6,23 +6,46 @@
 altosaxOneDyn =
 {
   s2\mf |
-  s2*2 |
-  s4 s\p |
+  s2*3 |
 
   % 5
-  s2*16 |
+  s2\mp |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\mf s4\>\! |
+  s2\mp |
+  s2*7 |
 
   % 21
-  s2*17 |
+  s2*6 |
+  s8 s4.\f |
+  s2*10 |
 
   % 38
-  s2*16 |
+  s2\mp |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\mf s4\>\! |
+  s2\mp |
+  s2*7 |
 
   % 54
-  s2*17 |
+  s4\mp s4 |
+  s2*4 |
+  s2\< |
+  s2 |
+  s2\! |
+  s2\mp |
+  s2*2 |
+  s2 |
+  s2 |
+  s2*4 |
 
   % 71
-  s2*17 |
+  s4\mf s4 |
+  s2*16 |
 }
 
 
@@ -37,7 +60,7 @@ altosaxOneNotes =
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r b4 |
+  d8 r bes4 |
 
   % 5
   e8. fis16~fis4 |
@@ -96,21 +119,20 @@ altosaxOneNotes =
   \repeat volta 2
   {
     % 54
-    g4 a8. aes16 |
-    g8 a16 g~g r r8 |
-    g4 a8. aes16 |
-    g2 |
+    g4( a8. aes16 |
+    g8 a16 g~g) r r8 |
+    g4( a8. aes16 |
+    g2) |
     r2 |
-    r4 r16 g a ais |
+    r4 r16 g( a ais |
     b16 c d cis~cis8 c |
-    b8 r8 r4 |
-    g4 a8. aes16 |
-    g8 a16 g~g r r8 |
-    gis2 |
-    a8 r8 r4 |
-    r2 |
-    r2 |
-    fis4 f |
+    b8) r8 r4 |
+    g4( a8. aes16 |
+    g8 a16 g~g) r r8 |
+    gis2( |
+    a8) r8 r4 |
+    R2*2 |
+    fis4( f) |
   }
   \alternative
   {
@@ -125,15 +147,29 @@ altosaxOneNotes =
   \repeat volta 2
   {
     % 71
-    R2*15 |
+    r8 g( a b |
+    e,2 |
+    f2 |
+    e2) |
+    r8 g( a b |
+    e,2 |
+    fis2 |
+    e8) r8 r4 |
+    f2( |
+    e2 |
+    f2 |
+    e2) |
+    f8.( dis16 e4) |
+    f8.( dis16 e4) |
+    fis4( f) |
   }
   \alternative
   {
     {
-      R2 |
+      e8 r r4 |
     }
     {
-      R2 |
+      e8 r  e'4-^ |
     }
   }
 }

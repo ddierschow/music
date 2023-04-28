@@ -42,4 +42,7 @@ The Score.ly file includes all the part lyi files, then lays out the full score.
 There is also a ScoreNT.ly file to combine all the parts without transposing them.  This is just
 for me to help understand how things fit together.
 
+The ScoreMidi.ly file is there just to create the midi file, as the voltas have to be unfolded
+to make it come out right.
+
 TODO: Condensed score.

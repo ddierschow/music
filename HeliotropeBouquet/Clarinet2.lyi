@@ -89,8 +89,8 @@ clarinetTwoNotes =
     b16 b b b~b d, e eis |
     c'8 c16 d c c8 e16 |
     c16 e c c~c8~c16 r16 |
-    b8-^ b( ais a) |
-    g8( g fis) eis-^ |
+    b8-^ r r4 |
+    r4 r8 eis,-^ |
     r8 fis'8~fis16 fis8. |
     fis8. fis16~fis8. r16 |
     b,8 b~b16 b8. |

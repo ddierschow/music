@@ -1,39 +1,5 @@
 <?php
-
-function ShowFile($fn)
-{
-    echo '  <td>';
-    if ($fn == '')
-	echo "&nbsp;";
-    else if (file_exists($fn))
-	echo '<a href="' . $fn . '">' . $fn . "</a>";
-    else if (str_ends_with($fn, '.pdf'))
-	echo $fn;
-    else
-        echo '&nbsp';
-    echo "</td>\n";
-}
-
-function ShowRow($arr)
-{
-    echo " <tr>\n";
-    foreach ($arr as $fn)
-	ShowFile($fn);
-    echo " </tr>\n";
-}
-
-function ShowGrid($prefs, $suffs)
-{
-    foreach ($prefs as $pref) {
-	$arr = [];
-	foreach ($suffs as $suff)
-	    if ($pref == '' or $suff == '')
-		$arr[] = '';
-	    else
-		$arr[] = $pref . $suff;
-        ShowRow($arr);
-    }
-}
+include "../bin/helpers.php";
 
 $insts = [
     "Flute1", "Flute2", "Oboe", "Bassoon",
@@ -50,26 +16,31 @@ echo "<table border=1>\n";
 
 echo "<tr><td colspan=3><center><h2>heliotrope bouquet</h2></center></td></tr>\n";
 
-ShowGrid(['Score', 'ScoreCond', 'ScoreNT'], ['.ly', '.midi', '.pdf']);
+show_grid(['Score', 'ScoreCond', 'ScoreNT'], ['.ly', '.midi', '.pdf']);
+show_grid(['ScoreMidi'], ['.ly', '.midi', '.']);
 
 echo "<tr><td colspan=3>\n";
 echo "<p><ul>\n";
-echo '<li><a href="http://lilypond.org/doc/v2.22/Documentation/notation-big-page.html"> LilyPond_--_Notation_Reference</a>' . "\n";
-echo '<li><a href="https://silverclefmusic.com/about-scores-for-band/"> Scores_for_Band</a>' . "\n";
-echo '<li><a href="https://www.orchestralibrary.com/reftables/rang.html"> Range_of_Instruments</a>' . "\n";
-echo '<li><a href="https://web.mit.edu/merolish/Public/drums.pdf"> Drum_and_Percussion_Notation</a>' . "\n";
+show_link("http://lilypond.org/doc/v2.22/Documentation/notation-big-page.html", "LilyPond_--_Notation_Reference");
+show_link("https://silverclefmusic.com/about-scores-for-band/", "Scores_for_Band</a");
+show_link("https://www.orchestralibrary.com/reftables/rang.html", "Range_of_Instruments");
+show_link("https://web.mit.edu/merolish/Public/drums.pdf", "Drum_and_Percussion_Notation");
 echo "</ul>\n";
 echo "</td></tr>\n";
 
-ShowRow(['Makefile', 'README.md', 'config.lyi']);
-ShowRow(['defs.lyi', 'outline.lyi', 'part.lyi']);
-ShowRow(['index.php', 'Heliotrope_Bouquet.mp4', 'heliotrope_bouquet.pdf']);
+show_row(['Makefile', 'README.md', 'config.lyi']);
+show_row(['defs.lyi', 'outline.lyi', 'part.lyi']);
 
 echo "</td></tr></table>\n";
+echo "<ul>\n";
+show_link("Heliotrope_Bouquet.mp4", "Heliotrope_Bouquet.mp4");
+show_link("heliotrope_bouquet.pdf", "heliotrope_bouquet.pdf");
+show_link("../Percussion_Key.pdf", "Percussion_Key.pdf");
+echo "</ul>\n";
 echo "</td><td>\n";
 echo "<table border=1>\n";
 
-ShowGrid($insts, ['.ly', '.lyi', '.pdf']);
+show_grid($insts, ['.ly', '.lyi', '.pdf']);
 
 echo "</td></tr></table>\n";
 echo "</table>\n";

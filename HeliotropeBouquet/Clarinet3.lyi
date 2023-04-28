@@ -101,8 +101,8 @@ clarinetThrNotes =
     g16 fis g g~g d e eis |
     fis8 fis16 d' fis, a8 e'16 |
     fis,16 e' fis, fis~fis8~fis16 r16 |
-    b8-^ f( e ees) |
-    d8( cis c) dis-^ |
+    b8-^ r r4 |
+    r4 r8 dis,-^ |
     r8 c'8~c16 d8. |
     c8. d16~d8. r16 |
     b8 g~g16 g8. |

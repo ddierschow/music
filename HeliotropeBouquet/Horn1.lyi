@@ -61,7 +61,7 @@ hornOneNotes =
   g8 g g g |
   g8 g g g |
   d8. g16~g8 c, |
-  b8 r bes4 |
+  b8 r b4 |
 
   \repeat volta 2
   {
@@ -115,7 +115,7 @@ hornOneNotes =
     r8 e r e |
     r8 e r e |
     r8 e r e |
-    gis,,16( b d eis gis b8 bes16) |
+    fis,,16( a c dis fis a8 aes16) |
     r8 e r e |
     r8 c r b |
   }
