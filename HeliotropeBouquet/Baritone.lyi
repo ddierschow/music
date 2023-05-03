@@ -6,6 +6,7 @@
 baritoneDyn =
 {
   s2*4\mf |
+
   % 5
   s2*5\mf |
   s2\< |
@@ -17,9 +18,7 @@ baritoneDyn =
   s2\f |
   s2*7 |
   s2\f |
-  s2*6 |
-  s2 |
-  s2 |
+  s2*8 |
 
   % 38
   s2*5\mf |
@@ -40,15 +39,11 @@ baritoneDyn =
   s2\< |
   s2\! |
   s2\mf |
-  s2*2 |
-  s2 |
-  s2 |
+  s2*4 |
 
   % 71
   s4\mf s4 |
-  s2*14 |
-  s2 |
-  s2 |
+  s2*16 |
 }
 
 
@@ -196,7 +191,9 @@ baritoneNotes =
 }
 
 
-baritoneScore   = \transpose c   \concertKey \relative c,  { << \baritoneNotes \baritoneNotCues   \baritoneDyn >> }
+baritoneCScore  = \transpose c   \concertKey \relative c,  { << \baritoneNotes \baritoneNotCues   \baritoneDyn >> }
+baritoneScore   =                            \relative c,  { << \baritoneNotes \baritoneNotCues   \baritoneDyn >> }
 baritoneCond    = \transpose c   \concertKey \relative c,  { << \baritoneNotes \baritoneNotCues   \baritoneDyn >> }
+baritoneMidi    = \transpose c   \concertKey \relative c,  { << \baritoneNotes \baritoneNotCues   \baritoneDyn >> }
 baritonePart    = \transpose c   \concertKey \relative c,  { << \baritoneNotes \baritoneCues      \baritoneDyn >> }
 baritoneTCPart  = \transpose bes \concertKey \relative c'' { << \baritoneNotes \baritonetcCues    \baritoneDyn >> }

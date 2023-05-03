@@ -5,57 +5,44 @@
 
 barisaxDyn =
 {
-  s2*4 |
-  % 5
-  s2*16 |
+  s2\mf |
+  s2*3 |
 
-  \repeat volta 2
-  {
-    % 21
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 5
+  s2\mp |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\mf s4\>\! |
+  s2\mp |
+  s2*7 |
+
+  % 21
+  s2*6 |
+  s8 s4.\f |
+  s2*10 |
 
   % 38
+  s2\mp |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\mf s4\>\! |
+  s2\mp |
+  s2*7 |
+
+  % 54
+  s4\mp s4 |
+  s2*4 |
+  s2\< |
+  s2 |
+  s2\! |
+  s2\mp |
+  s2*8 |
+
+  % 71
+  s4\mf s4 |
   s2*16 |
-
-  \repeat volta 2
-  {
-    % 54
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
-
-  \repeat volta 2
-  {
-    % 71
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
 }
 
 
@@ -70,62 +57,124 @@ barisaxNotes =
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r r4 |
+  d8 r bes4 |
 
   % 5
-  R2*16 |
+  a8. d16~d4 |
+  g,8 b16 bes~bes4 |
+  a8. d16~d4 |
+  g,8 b16 bes~bes4 |
+  a8. d16~d8 dis |
+  g,8. b16~b8. bes16 |
+  a8. fis'16~fis4 |
+  g,4 bes |
+  a8. d16~d4 |
+  g,8 b16 bes~bes4 |
+  a8. d16~d4 |
+  g4 g |
+  g2 |
+  g2 |
+  d8 dis16 e~e8 d |
+  g4 r |
 
   \repeat volta 2
   {
     % 21
-    R2*15 |
+    R2*6 |
+    r8 b( ais a) |
+    g8( g fis) r |
+    R2*7 |
   }
   \alternative
   {
     {
-      R2 |
+      r2 |
     }
     {
-      R2 |
+      r4 bes |
     }
   }
 
   % 38
-  R2*16 |
+  a,8. d16~d4 |
+  g,8 b16 bes~bes4 |
+  a8. d16~d4 |
+  g,8 b16 bes~bes4 |
+  a8. d16~d8 dis |
+  g,8. b16~b8. bes16 |
+  a8. fis'16~fis4 |
+  g,4 bes |
+  a8. d16~d4 |
+  g,8 b16 bes~bes4 |
+  a8. d16~d4 |
+  g4 g |
+  g2 |
+  g2 |
+  d8 dis16 e~e8 d |
+  g4 g |
 
   \repeat volta 2
   {
     % 54
-    R2*15 |
+    c,4 f |
+    c4 g' |
+    c,4 f8 fis |
+    g8 r r4 |
+    a4 ais |
+    g4 e8 ees |
+    d8. e16~e8 d |
+    g8 r r4 |
+    c,4 f |
+    c4 g' |
+    e4 e |
+    a4 e |
+    r2 |
+    g4 a |
+    d4 g,4 |
   }
   \alternative
   {
     {
-      R2 |
+      c8 r g4 |
     }
     {
-      R2 |
+      c4~c8 r |
     }
   }
 
   \repeat volta 2
   {
     % 71
-    R2*15 |
+    g2 |
+    c,4 e |
+    g4 d8 dis |
+    e2 |
+    g2 |
+    c,4 a |
+    b4 b4 |
+    e4 cis |
+    g2 |
+    c4 e |
+    g4 d8 dis |
+    e2 |
+    c2 |
+    c2 |
+    d4 e |
   }
   \alternative
   {
     {
-      R2 |
+      c4~c8 r |
     }
     {
-      R2 |
+      c4 c8-^ r |
     }
   }
 }
 
 
-barisaxScore    = \transpose c   \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxScore    =                            \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
 barisaxCond     = \transpose c   \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxMidi     = \transpose c   \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
 barisaxEesScore = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
 barisaxEesPart  = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxCues    \barisaxDyn >> }

@@ -5,57 +5,44 @@
 
 tenorsaxDyn =
 {
-  s2*4 |
-  % 5
-  s2*16 |
+  s2\mf |
+  s2*3 |
 
-  \repeat volta 2
-  {
-    % 21
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 5
+  s2\mp |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\mf s4\>\! |
+  s2\mp |
+  s2*7 |
+
+  % 21
+  s2*6 |
+  s8 s4.\f |
+  s2*10 |
 
   % 38
+  s2\mp |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\mf s4\>\! |
+  s2\mp |
+  s2*7 |
+
+  % 54
+  s4\mp s4 |
+  s2*4 |
+  s2\< |
+  s2 |
+  s2\! |
+  s2\mp |
+  s2*8 |
+
+  % 71
+  s4\mf s4 |
   s2*16 |
-
-  \repeat volta 2
-  {
-    % 54
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
-
-  \repeat volta 2
-  {
-    % 71
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
 }
 
 
@@ -70,62 +57,123 @@ tenorsaxNotes =
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r r4 |
+  d8 r bes'4 |
 
   % 5
-  R2*16 |
+  a8. a16~a4 |
+  d8. des16~des4 |
+  a8. a16~a4 |
+  d8. des16~des4 |
+  a8. a16~a8 ais |
+  b8. b16~b8. bes16 |
+  a8. b16~b8 a |
+  fis4 f4 |
+  a8. a16~a4 |
+  d8. des16~des4 |
+  a8. a16~a4 |
+  g4 g |
+  g2 |
+  g2 |
+  d8 dis16 e~e8 d |
+  g4 gis |
 
   \repeat volta 2
   {
     % 21
-    R2*15 |
+    R2*6 |
+    r8 f( e ees) |
+    d8( cis c) r |
+    R2*7 |
   }
   \alternative
   {
     {
-      R2 |
+      r2 |
     }
     {
-      R2 |
+      r4 b'4 |
     }
   }
 
   % 38
-  R2*16 |
+  a8. a16~a4 |
+  d8. des16~des4 |
+  a8. a16~a4 |
+  d8. des16~des4 |
+  a8. a16~a8 ais |
+  b8. b16~b8. bes16 |
+  a8. b16~b8 a |
+  fis4 f4 |
+  a8. a16~a4 |
+  d8. des16~des4 |
+  a8. a16~a4 |
+  g4 g |
+  g2 |
+  g2 |
+  d8 dis16 e~e8 d |
+  g4 f |
 
   \repeat volta 2
   {
     % 54
-    R2*15 |
+    g4( a8. aes16 |
+    g8 a16 g~g) r r8 |
+    g4( a8. aes16 |
+    g2) |
+    r2 |
+    r4 r16 g( a ais |
+    b16 c d cis~cis8 c |
+    b8) r8 r4 |
+    g4( a8. aes16 |
+    g8 a16 g~g) r r8 |
+    gis2( |
+    a8) r8 r4 |
+    R2*2 |
+    fis4( f) |
   }
   \alternative
   {
     {
-      R2 |
+      e8 r8 r4 |
     }
     {
-      R2 |
+      e4~e8 r8 |
     }
   }
 
   \repeat volta 2
   {
     % 71
-    R2*15 |
+    r8 g( a b |
+    e,2 |
+    f2 |
+    e2) |
+    r8 g( a b |
+    e,2 |
+    fis2 |
+    e8) r8 r4 |
+    f2( |
+    e2 |
+    f2 |
+    e2) |
+    f8.( dis16 e4) |
+    f8.( dis16 e4) |
+    fis4( f) |
   }
   \alternative
   {
     {
-      R2 |
+      e8 r r4 |
     }
     {
-      R2 |
+      e8 r  e'-^ r |
     }
   }
 }
 
 
-tenorsaxScore    = \transpose c   \concertKey \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
+tenorsaxScore    =                            \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
 tenorsaxCond     = \transpose c   \concertKey \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
+tenorsaxMidi     = \transpose c   \concertKey \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
 tenorsaxBesScore = \transpose bes \concertKey \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
 tenorsaxBesPart  = \transpose bes \concertKey \relative c' { << \tenorsaxNotes \tenorsaxCues    \tenorsaxDyn >> }

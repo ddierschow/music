@@ -1,7 +1,6 @@
 <?php
 
-function show_file($fn)
-{
+function show_file($fn) {
     echo '  <td>';
     if ($fn == '')
 	echo "&nbsp;";
@@ -14,16 +13,14 @@ function show_file($fn)
     echo "</td>\n";
 }
 
-function show_row($arr)
-{
+function show_row($arr) {
     echo " <tr>\n";
     foreach ($arr as $fn)
 	show_file($fn);
     echo " </tr>\n";
 }
 
-function show_grid($prefs, $suffs)
-{
+function show_grid($prefs, $suffs) {
     foreach ($prefs as $pref) {
 	$arr = [];
 	foreach ($suffs as $suff)
@@ -35,9 +32,25 @@ function show_grid($prefs, $suffs)
     }
 }
 
-function show_link($link, $name)
-{
+function show_parts($parts) {
+    echo "<table border=1>\n";
+    show_grid($parts, ['.ly', '.lyi', '.pdf']);
+    echo "</td></tr></table>\n";
+}
+
+function show_link($link, $name) {
     echo '<li><a href="' . $link . '">' . $name . "</a>\n";
+}
+
+function show_common_links() {
+    echo "<p><ul>\n";
+    show_link("http://lilypond.org/doc/v2.22/Documentation/notation-big-page.html", "LilyPond_--_Notation_Reference");
+    show_link("https://silverclefmusic.com/about-scores-for-band/", "Scores_for_Band</a");
+    show_link("https://www.orchestralibrary.com/reftables/rang.html", "Range_of_Instruments");
+    show_link("https://web.mit.edu/merolish/Public/drums.pdf", "Drum_and_Percussion_Notation");
+    show_link("../Percussion_Key.pdf", "Percussion_Key.pdf");
+    show_link("https://www.zamzar.com/", "Zamzar MIDI->MP3 Conversion");
+    echo "</ul>\n";
 }
 
 ?>

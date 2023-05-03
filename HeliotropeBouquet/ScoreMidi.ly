@@ -3,32 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 \include "outline.lyi"
-\include "Flute1.lyi"
-\include "Flute2.lyi"
-\include "Oboe.lyi"
-\include "Bassoon.lyi"
-\include "Clarinet1.lyi"
-\include "Clarinet2.lyi"
-\include "Clarinet3.lyi"
-\include "BassClarinet.lyi"
-\include "AltoSax1.lyi"
-\include "AltoSax2.lyi"
-\include "TenorSax.lyi"
-\include "BariSax.lyi"
-\include "Trumpet1.lyi"
-\include "Trumpet2.lyi"
-\include "Trumpet3.lyi"
-\include "Horn1.lyi"
-\include "Horn2.lyi"
-\include "Trombone1.lyi"
-\include "Trombone2.lyi"
-\include "Trombone3.lyi"
-\include "Baritone.lyi"
-\include "Tuba.lyi"
-\include "Percussion1.lyi"
-\include "Percussion2.lyi"
-\include "MalletPercussion.lyi"
-\include "Timpani.lyi"
+\include "allparts.lyi"
 
 instrument = "Concert Band (Concert Key)"
 
@@ -39,40 +14,47 @@ instrument = "Concert Band (Concert Key)"
   {
     \unfoldRepeats
     <<
-        \new Staff
-        {
-          \tempomark
-          \new Voice {\keepWithTag #'score \relative c <<
-            \outline \fluteOneScore \fluteTwoScore \oboeScore \bassoonScore >> }
-        }
-        \new Staff
-        {
-          \new Voice {\keepWithTag #'score \relative c <<
-            \clarinetOneScore \clarinetTwoScore \clarinetThreeScore \bassclarinetScore >> }
-        }
-        \new Staff
-        {
-          \new Voice {\keepWithTag #'score \relative c <<
-            \altosaxOneScore \altosaxTwoScore \tenorsaxScore \barisaxScore >> }
-        }
-        \new Staff
-        {
-          \new Voice {\keepWithTag #'score \relative c <<
-            \trumpetOneScore \trumpetTwoScore \trumpetThreeScore \hornOneScore \hornTwoScore >> }
-        }
-        \new Staff
-        {
-          \new Voice {\keepWithTag #'score \relative c <<
-            \tromboneOneScore \tromboneTwoScore \tromboneThreeScore \baritoneScore \tubaScore >> } 
-        }
-        \new Staff
-        {
-          \new Voice {\keepWithTag #'score \relative c <<
-            \stringbassScore \percussionOneScore \percussionTwoScore \malletScore \timpaniScore >> }
-	}
+      \tempomark
+      \new Staff \with { midiInstrument = "oboe" }
+        { \new Voice { \relative c << \outline \oboeMidi >> } }
+      \new Staff \with { midiInstrument = "flute" }
+        { \new Voice { \relative c << \fluteOneMidi \fluteTwoMidi >> } }
+      \new Staff \with { midiInstrument = "bassoon" }
+        { \new Voice { \relative c << \bassoonMidi >> } }
+      \new Staff \with { midiInstrument = "clarinet" }
+        { \new Voice { \relative c << \clarinetOneMidi \clarinetTwoMidi \clarinetThreeMidi >> } }
+      \new Staff \with { midiInstrument = "clarinet" }
+        { \new Voice { \relative c, << \bassclarinetMidi >> } }
+      \new Staff \with { midiInstrument = "alto sax" }
+        { \new Voice { \relative c << \altosaxOneMidi \altosaxTwoMidi >> } }
+      \new Staff \with { midiInstrument = "tenor sax" }
+        { \new Voice { \relative c << \tenorsaxMidi >> } }
+      \new Staff \with { midiInstrument = "baritone sax" }
+        { \new Voice { \relative c << \barisaxMidi >> } }
+      \new Staff \with { midiInstrument = "trumpet" }
+        { \new Voice { \relative c << \trumpetOneMidi \trumpetTwoMidi \trumpetThreeMidi >> } }
+      \new Staff \with { midiInstrument = "french horn" }
+        { \new Voice { \relative c << \hornOneMidi \hornTwoMidi >> } }
+      \new Staff \with { midiInstrument = "trombone" }
+        { \new Voice { \relative c << \tromboneOneMidi \tromboneTwoMidi \tromboneThreeMidi \baritoneMidi >> } }
+      \new Staff \with { midiInstrument = "tuba" }
+        { \new Voice { \relative c << \tubaMidi >> } }
+      \new Staff \with { midiInstrument = "contrabass" }
+        { \new Voice { \relative c << \stringbassMidi >> } }
+      \new DrumStaff
+        { \new Voice { \relative c << \percussionOneMidi \percussionTwoMidi >> } }
+      \new Staff \with { midiInstrument = "xylophone" }
+        { \new Voice { \relative c << \malletMidi >> } }
+      \new Staff \with { midiInstrument = "timpani" }
+        { \new Voice { \relative c << \timpaniMidi >> } }
     >>
     \midi
     {
+      \context {
+        \Score
+        midiMinimumVolume = #0.2
+        midiMaximumVolume = #0.5
+      }
     }
   }
 }

@@ -38,10 +38,7 @@ altosaxTwoDyn =
   s2 |
   s2\! |
   s2\mp |
-  s2*2 |
-  s2 |
-  s2 |
-  s2*4 |
+  s2*8 |
 
   % 71
   s4\mf s4 |
@@ -49,7 +46,22 @@ altosaxTwoDyn =
 }
 
 
-altosaxTwoCues = \measures
+altosaxTwoCues =
+{
+  \time 2/4
+  \key g \major
+  s2*53 |
+
+  \key c \major
+  s2*5 |
+  s4 s16 s( s8 |
+  s2 |
+  s8) s8 s4 |
+  s2*21 |
+  s8.( s16 s4) |  % how to defeat partcombine
+  s8.( s16 s4) |
+  s2*3 |
+}
 
 
 altosaxTwoNotCues = \measures
@@ -84,8 +96,8 @@ altosaxTwoNotes =
   {
     % 21
     R2*6 |
-    r8 f( e ees) |
-    d8( cis c) r |
+    r8 b( ais a) |
+    g8( g fis) r |
     R2*7 |
   }
   \alternative
@@ -94,7 +106,7 @@ altosaxTwoNotes =
       r2 |
     }
     {
-      r4 b4 |
+      r4 b,4 |
     }
   }
 
@@ -124,9 +136,9 @@ altosaxTwoNotes =
     e4( f8. ees16 |
     e2) |
     r2 |
-    r4 r16 g( a ais |
+    r4 r16 g a ais |
     b16 c d e,~e8 fis |
-    g8) r8 r4 |
+    g8 r8 r4 |
     e4( f4 |
     e8 f16 e~e) r r8 |
 
@@ -160,8 +172,8 @@ altosaxTwoNotes =
     c2 |
     d2 |
     c2) |
-    a8.( dis16 e4) |
-    a8.( dis16 e4) |
+    a8. dis16 e4 |
+    a,8. dis16 e4 |
     d4( b) |
   }
   \alternative
@@ -170,13 +182,14 @@ altosaxTwoNotes =
       c8 r r4 |
     }
     {
-      c8 r  c'4-^ |
+      c8 r  c'-^ r |
     }
   }
 }
 
 
-altosaxTwoScore    = \transpose c   \concertKey \relative c' { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
+altosaxTwoScore    =                            \relative c' { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
 altosaxTwoCond     = \transpose c   \concertKey \relative c' { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
+altosaxTwoMidi     = \transpose c   \concertKey \relative c' { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
 altosaxEesTwoScore = \transpose ees \concertKey \relative c' { << \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
 altosaxEesTwoPart  = \transpose ees \concertKey \relative c' { << \altosaxTwoNotes \altosaxTwoCues    \altosaxTwoDyn >> }

@@ -9,6 +9,7 @@ malletDyn =
 
   % 5
   s2*16 |
+
   % 21
   s2*15 |
   s2 |
@@ -95,6 +96,8 @@ malletNotes =
 }
 
 
-malletScore = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDyn >> }
-malletCond  = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDyn >> }
-malletPart  = \transpose c \concertKey \relative c { << \malletNotes \malletCues    \malletDyn >> }
+malletScore  =                          \relative c { << \malletNotes \malletNotCues \malletDyn >> }
+malletCScore = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDyn >> }
+malletCond   = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDyn >> }
+malletMidi   = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDyn >> }
+malletPart   = \transpose c \concertKey \relative c { << \malletNotes \malletCues    \malletDyn >> }

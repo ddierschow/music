@@ -125,7 +125,7 @@ hornOneNotes =
       c8 r f4 |
     }
     {
-      c8 dis,16-^ e-^ g-^ c-^ b-^ a-^ |
+      c8 dis16-^ e-^ g-^ c-^ b-^ a-^ |
     }
   }
 
@@ -160,7 +160,8 @@ hornOneNotes =
 }
 
 
-hornOneScore  = \transpose c \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornOneScore  =                          \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
 hornOneCond   = \transpose c \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornOneMidi   = \transpose c \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
 hornFOneScore = \transpose f \concertKey \relative c' { << \hornOneNotes \hornOneNotCues \hornOneDyn >> }
 hornFOnePart  = \transpose f \concertKey \relative c' { << \hornOneNotes \hornOneCues    \hornOneDyn >> }

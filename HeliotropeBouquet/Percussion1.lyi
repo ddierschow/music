@@ -6,56 +6,27 @@
 percussionOneDynamics =
 {
   s2*4 |
+
   % 5
   s2*16 |
 
-  \repeat volta 2
-  {
-    % 21
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 21
+  s2*15 |
+  s2 |
+  s2 |
 
   % 38
   s2*16 |
 
-  \repeat volta 2
-  {
-    % 54
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 54
+  s2*15 |
+  s2 |
+  s2 |
 
-  \repeat volta 2
-  {
-    % 71
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 71
+  s2*15 |
+  s2 |
+  s2 |
 }
 
 
@@ -123,4 +94,5 @@ percussionOneNotes =
 
 percussionOneScore = \relative c { << \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
 percussionOneCond  = \relative c { << \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
+percussionOneMidi  = \relative c { << \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
 percussionOnePart  = \relative c { << \percussionOneNotes \percussionOneCues    \percussionOneDynamics >> }

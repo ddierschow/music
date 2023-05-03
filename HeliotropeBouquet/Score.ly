@@ -3,32 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 \include "outline.lyi"
-\include "Flute1.lyi"
-\include "Flute2.lyi"
-\include "Oboe.lyi"
-\include "Bassoon.lyi"
-\include "Clarinet1.lyi"
-\include "Clarinet2.lyi"
-\include "Clarinet3.lyi"
-\include "BassClarinet.lyi"
-\include "AltoSax1.lyi"
-\include "AltoSax2.lyi"
-\include "TenorSax.lyi"
-\include "BariSax.lyi"
-\include "Trumpet1.lyi"
-\include "Trumpet2.lyi"
-\include "Trumpet3.lyi"
-\include "Horn1.lyi"
-\include "Horn2.lyi"
-\include "Trombone1.lyi"
-\include "Trombone2.lyi"
-\include "Trombone3.lyi"
-\include "Baritone.lyi"
-\include "Tuba.lyi"
-\include "Percussion1.lyi"
-\include "Percussion2.lyi"
-\include "MalletPercussion.lyi"
-\include "Timpani.lyi"
+\include "allparts.lyi"
 
 #(set-global-staff-size 14)
 
@@ -86,7 +61,7 @@ instrument = "Concert Band"
           \set Staff.shortInstrumentName = "Fl."
             \new Voice {\keepWithTag #'score \relative c <<
 		\outline
-		\partCombine \fluteOneScore \fluteTwoScore
+		\partCombine \fluteCOneScore \fluteCTwoScore
           >> }
         }
         \new Staff
@@ -94,14 +69,14 @@ instrument = "Concert Band"
           #(set-accidental-style 'modern)
           \set Staff.instrumentName = "Oboe"
           \set Staff.shortInstrumentName = "Ob."
-            \new Voice {\keepWithTag #'score \relative c \oboeScore }
+            \new Voice {\keepWithTag #'score \relative c \oboeCScore }
         }
         \new Staff
         {
           #(set-accidental-style 'modern)
           \set Staff.instrumentName = "Bassoon"
           \set Staff.shortInstrumentName = "Bs."
-            \new Voice {\keepWithTag #'score \relative c \bassoonScore }
+            \new Voice {\keepWithTag #'score \relative c \bassoonCScore }
         }
 	\new GrandStaff
 	<<
@@ -219,7 +194,7 @@ instrument = "Concert Band"
 	      \column { "Trombone 1"
 			\line { "in B" \smaller \flat} } }
 	    \set Staff.shortInstrumentName = "Trm.1"
-	    \new Voice {\voiceOne \keepWithTag #'score \tromboneOneScore }
+	    \new Voice {\voiceOne \keepWithTag #'score \tromboneCOneScore }
 	  }
 	  \new Staff
 	  {
@@ -232,7 +207,7 @@ instrument = "Concert Band"
 	    \set Staff.soloIIText = #"3."
 	    \set Staff.aDueText = #"unis."
 	    \new Voice {\voiceOne \dynamicUp \keepWithTag #'score \relative c <<
-		\partCombine \tromboneTwoScore \tromboneThreeScore
+		\partCombine \tromboneCTwoScore \tromboneCThreeScore
 	    >> }
 	  }
         >>
@@ -241,21 +216,21 @@ instrument = "Concert Band"
 	    #(set-accidental-style 'modern)
 	    \set Staff.instrumentName = \markup "Baritone"
 	    \set Staff.shortInstrumentName = "Bar."
-	    \new Voice {\voiceOne \keepWithTag #'score \relative c \baritoneScore }
+	    \new Voice {\voiceOne \keepWithTag #'score \relative c \baritoneCScore }
 	  }
 	  \new Staff
 	  {
 	    #(set-accidental-style 'modern)
 	    \set Staff.instrumentName = \markup "Tuba"
 	    \set Staff.shortInstrumentName = "Tuba"
-	    \new Voice {\voiceOne \keepWithTag #'score \relative c \tubaScore }
+	    \new Voice {\voiceOne \keepWithTag #'score \relative c \tubaCScore }
 	  }
 	  \new Staff
 	  {
 	    #(set-accidental-style 'modern)
 	    \set Staff.instrumentName = \markup "String Bass"
 	    \set Staff.shortInstrumentName = "Bass"
-	    \new Voice {\voiceOne \keepWithTag #'score \relative c \stringbassScore }
+	    \new Voice {\voiceOne \keepWithTag #'score \relative c \stringbassCScore }
 	  }
       >>
       \new StaffGroup
@@ -279,14 +254,14 @@ instrument = "Concert Band"
 	    #(set-accidental-style 'modern)
 	  \set Staff.instrumentName = "Mallet Percussion"
 	  \set Staff.shortInstrumentName = "Mal.Pe."
-	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \malletScore }
+	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \malletCScore }
 	}
 	\new Staff
 	{
 	    #(set-accidental-style 'modern)
 	  \set Staff.instrumentName = "Timpani"
 	  \set Staff.shortInstrumentName = "Ti."
-	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \timpaniScore }
+	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \timpaniCScore }
 	}
       >>
     >>
@@ -298,79 +273,4 @@ instrument = "Concert Band"
       %\context { \RemoveEmptyStaffContext }
     }
   }
-
-%{   % midi version, maybe someday
-%  \score
-%  {
-%    %\unfoldTremolos
-%    \unfoldRepeats
-%    {
-%    <<
-%      \new Staff
-%      {
-%	\set Score.tempoHideNote = ##t
-%	\tempo 2. = 132
-%        \set Staff.midiInstrument = "flute"
-%        <<
-%          \relative c' \fluteOneScore
-%          \relative c' \fluteTwoScore
-%        >>
-%      }
-%      \new Staff
-%      {
-%        \set Staff.midiInstrument = "oboe"
-%        <<
-%          \relative c' \oboeOneScore
-%        >>
-%      }
-%      \new Staff
-%      {
-%        \set Staff.midiInstrument = "clarinet"
-%        <<
-%          \relative c'' \clarinetOneScore
-%          \relative c'' \clarinetTwoScore
-%          \relative c'' \clarinetThreeScore
-%        >>
-%      }
-%      \new Staff
-%      {
-%        \set Staff.midiInstrument = "bassoon"
-%        <<
-%          \relative c \bassoonOneScore
-%        >>
-%      }
-%      \new Staff
-%      {
-%        \set Staff.midiInstrument = "french horn"
-%        <<
-%          \relative c' \hornOneScore
-%          \relative c' \hornTwoScore
-%        >>
-%      }
-%      \new Staff
-%      {
-%        \set Staff.midiInstrument = "trumpet"
-%        <<
-%          \relative c' \trumpetOneScore
-%          \relative c' \trumpetTwoScore
-%          \relative c' \trumpetThreeScore
-%        >>
-%      }
-%      \new Staff
-%      {
-%        \set Staff.midiInstrument = "timpani"
-%        \relative c, \timpaniScore
-%      }
-%    >>
-%    }
-%    \midi
-%    {
-%      \context
-%      {
-%        \Voice
-%        \remove "Dynamic_performer"
-%      }
-%    }
-%  }
-%}
 }

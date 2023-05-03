@@ -50,7 +50,18 @@ fluteTwoDyn =
 }
 
 
-fluteTwoCues = \measures
+fluteTwoCues =
+{
+  \time 2/4
+  \key g \major
+  s2*53 |
+
+  \key c \major
+  s2*29 |
+  s16( s s s) s( s8) s16 |  % how to defeat partcombine
+  s16( s s s) s( s8) s16 |
+  s2*3 |
+}
 
 
 fluteTwoNotCues = \measures
@@ -79,7 +90,7 @@ fluteTwoNotes =
   g8 g g4 |
   g8 g g4 |
   g8. g16~g8 fis8 |
-  g4 e' |
+  g4 eis' |
 
   \repeat volta 2
   {
@@ -172,8 +183,8 @@ fluteTwoNotes =
     c8. c16~c8 r8 |
     b16 g'8 ais,16 b g'8 b,16 |
     c16( b a g)~g8. gis16 |
-    a16( a' f c) g( e'8) gis,16 |
-    a16( a' f c) g( e'8) g,16 |
+    a16 a' f c g e'8 gis,16 |
+    a16 a' f c g e'8 g,16 |
     a4 g |
   }
   \alternative
@@ -188,6 +199,8 @@ fluteTwoNotes =
 }
 
 
-fluteTwoScore = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoCond  = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoPart  = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoCues    \fluteTwoDyn >> }
+fluteTwoScore  =                          \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
+fluteCTwoScore = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
+fluteTwoCond   = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
+fluteTwoMidi   = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
+fluteTwoPart   = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoCues    \fluteTwoDyn >> }

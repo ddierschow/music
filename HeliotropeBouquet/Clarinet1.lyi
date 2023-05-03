@@ -189,7 +189,8 @@ clarinetOneNotes =
 }
 
 
-clarinetOneScore    = \transpose c   \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
+clarinetOneScore    =                            \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
 clarinetOneCond     = \transpose c   \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
+clarinetOneMidi     = \transpose c   \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
 clarinetBesOneScore = \transpose bes \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
 clarinetBesOnePart  = \transpose bes \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneCues    \clarinetOneDyn >> }

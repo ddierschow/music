@@ -90,7 +90,7 @@ clarinetThrNotes =
   g8 g g4 |
   g8 g g4 |
   d8. cis16~cis8 c |
-  b4 dis' |
+  b4 d' |
 
   \repeat volta 2
   {
@@ -199,7 +199,8 @@ clarinetThrNotes =
 }
 
 
-clarinetThreeScore    = \transpose c   \concertKey \relative c' { << \clarinetThrNotes \clarinetThrNotCues \clarinetThrDyn >> }
+clarinetThreeScore    =                            \relative c' { << \clarinetThrNotes \clarinetThrNotCues \clarinetThrDyn >> }
 clarinetThreeCond     = \transpose c   \concertKey \relative c' { << \clarinetThrNotes \clarinetThrNotCues \clarinetThrDyn >> }
+clarinetThreeMidi     = \transpose c   \concertKey \relative c' { << \clarinetThrNotes \clarinetThrNotCues \clarinetThrDyn >> }
 clarinetBesThreeScore = \transpose bes \concertKey \relative c' { << \clarinetThrNotes \clarinetThrNotCues \clarinetThrDyn >> }
 clarinetBesThreePart  = \transpose bes \concertKey \relative c' { << \clarinetThrNotes \clarinetThrCues    \clarinetThrDyn >> }

@@ -189,6 +189,8 @@ oboeNotes =
 }
 
 
-oboeScore = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeCond  = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
-oboePart  = \transpose c \concertKey \relative c' { << \oboeNotes \oboeCues    \oboeDyn >> }
+oboeScore  =                          \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
+oboeCScore = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
+oboeCond   = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
+oboeMidi   = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
+oboePart   = \transpose c \concertKey \relative c' { << \oboeNotes \oboeCues    \oboeDyn >> }

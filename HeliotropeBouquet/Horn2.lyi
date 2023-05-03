@@ -71,8 +71,8 @@ hornTwoNotes =
     r8 g r g |
     r8 g r g16 gis |
     r8 a r fis |
-    r8 a d,~d16 r |
-    g8 r r4 |
+    r8 a d~d16 r |
+    g,8 r r4 |
     r4 r8 gis |
     r8 fis r fis |
     r8 fis~fis~fis16 r |
@@ -94,11 +94,11 @@ hornTwoNotes =
 
   % 38
   R2*11 |
-  r4 g |
+  r4 g' |
   f8 f f f |
   e8 e ees ees |
   d8 dis16 e~e8 d |
-  g8 r b4 |
+  g8 r b,4 |
 
   \repeat volta 2
   {
@@ -125,7 +125,7 @@ hornTwoNotes =
       c8 r f4 |
     }
     {
-      c8 dis,16-^ e-^ g-^ c-^ b-^ a-^ |
+      c8 dis16-^ e-^ g-^ c-^ b-^ a-^ |
     }
   }
 
@@ -133,11 +133,11 @@ hornTwoNotes =
   {
     % 71
     g8 f r d |
-    r8 e r e' |
+    r8 e r e |
     r8 f r dis |
     r8 e g,16-^ c-^ b-^ a-^ |
     r2 |
-    r8 e r e |
+    r8 e' r e |
     r8 e r dis |
     r8 e r ais |
     r8 f r d |
@@ -160,7 +160,8 @@ hornTwoNotes =
 }
 
 
-hornTwoScore  = \transpose c \concertKey \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
+hornTwoScore  =                          \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
 hornTwoCond   = \transpose c \concertKey \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
+hornTwoMidi   = \transpose c \concertKey \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
 hornFTwoScore = \transpose f \concertKey \relative c' { << \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
 hornFTwoPart  = \transpose f \concertKey \relative c' { << \hornTwoNotes \hornTwoCues    \hornTwoDyn >> }

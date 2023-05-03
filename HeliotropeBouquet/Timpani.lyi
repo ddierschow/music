@@ -6,56 +6,27 @@
 timpaniDyn =
 {
   s2*4 |
+
   % 5
   s2*16 |
 
-  \repeat volta 2
-  {
-    % 21
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 21
+  s2*15 |
+  s2 |
+  s2 |
 
   % 38
   s2*16 |
 
-  \repeat volta 2
-  {
-    % 54
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 54
+  s2*15 |
+  s2 |
+  s2 |
 
-  \repeat volta 2
-  {
-    % 71
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 71
+  s2*15 |
+  s2 |
+  s2 |
 }
 
 
@@ -121,6 +92,8 @@ timpaniNotes =
 }
 
 
-timpaniScore = \transpose c \concertKey \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniCond  = \transpose c \concertKey \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniPart  = \transpose c \concertKey \relative c, { << \timpaniNotes \timpaniCues    \timpaniDyn >> }
+timpaniScore  =                          \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDyn >> }
+timpaniCScore = \transpose c \concertKey \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDyn >> }
+timpaniCond   = \transpose c \concertKey \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDyn >> }
+timpaniMidi   = \transpose c \concertKey \relative c, { << \timpaniNotes \timpaniNotCues \timpaniDyn >> }
+timpaniPart   = \transpose c \concertKey \relative c, { << \timpaniNotes \timpaniCues    \timpaniDyn >> }

@@ -78,7 +78,7 @@ clarinetTwoNotes =
   g8 g g4 |
   g8 g g4 |
   g8. g16~g8 fis8 |
-  g4 e' |
+  g4 eis' |
 
   \repeat volta 2
   {
@@ -187,7 +187,8 @@ clarinetTwoNotes =
 }
 
 
-clarinetTwoScore    = \transpose c   \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
+clarinetTwoScore    =                            \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
 clarinetTwoCond     = \transpose c   \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
+clarinetTwoMidi     = \transpose c   \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
 clarinetBesTwoScore = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
 clarinetBesTwoPart  = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoCues    \clarinetTwoDyn >> }

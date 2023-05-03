@@ -6,56 +6,27 @@
 tromboneThreeDyn =
 {
   s2*4 |
+
   % 5
   s2*16 |
 
-  \repeat volta 2
-  {
-    % 21
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 21
+  s2*15 |
+  s2 |
+  s2 |
 
   % 38
   s2*16 |
 
-  \repeat volta 2
-  {
-    % 54
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 54
+  s2*15 |
+  s2 |
+  s2 |
 
-  \repeat volta 2
-  {
-    % 71
-    s2*15 |
-  }
-  \alternative
-  {
-    {
-      s2 |
-    }
-    {
-      s2 |
-    }
-  }
+  % 71
+  s2*15 |
+  s2 |
+  s2 |
 }
 
 
@@ -125,6 +96,8 @@ tromboneThreeNotes =
 }
 
 
-tromboneThreeScore = \transpose c \concertKey \relative c, { << \tromboneThreeNotes \tromboneThreeNotCues \tromboneThreeDyn >> }
-tromboneThreeCond  = \transpose c \concertKey \relative c, { << \tromboneThreeNotes \tromboneThreeNotCues \tromboneThreeDyn >> }
-tromboneThreePart  = \transpose c \concertKey \relative c, { << \tromboneThreeNotes \tromboneThreeCues    \tromboneThreeDyn >> }
+tromboneThreeScore  =                          \relative c, { << \tromboneThreeNotes \tromboneThreeNotCues \tromboneThreeDyn >> }
+tromboneCThreeScore = \transpose c \concertKey \relative c, { << \tromboneThreeNotes \tromboneThreeNotCues \tromboneThreeDyn >> }
+tromboneThreeCond   = \transpose c \concertKey \relative c, { << \tromboneThreeNotes \tromboneThreeNotCues \tromboneThreeDyn >> }
+tromboneThreeMidi   = \transpose c \concertKey \relative c, { << \tromboneThreeNotes \tromboneThreeNotCues \tromboneThreeDyn >> }
+tromboneThreePart   = \transpose c \concertKey \relative c, { << \tromboneThreeNotes \tromboneThreeCues    \tromboneThreeDyn >> }

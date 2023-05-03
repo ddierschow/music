@@ -189,6 +189,8 @@ fluteOneNotes =
 }
 
 
-fluteOneScore = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOneCond  = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOnePart  = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneCues    \fluteOneDyn >> }
+fluteOneScore  =                          \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
+fluteCOneScore = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
+fluteOneCond   = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
+fluteOneMidi   = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
+fluteOnePart   = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneCues    \fluteOneDyn >> }

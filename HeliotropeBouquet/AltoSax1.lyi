@@ -38,10 +38,7 @@ altosaxOneDyn =
   s2 |
   s2\! |
   s2\mp |
-  s2*2 |
-  s2 |
-  s2 |
-  s2*4 |
+  s2*8 |
 
   % 71
   s4\mf s4 |
@@ -169,13 +166,14 @@ altosaxOneNotes =
       e8 r r4 |
     }
     {
-      e8 r  e'4-^ |
+      e8 r  e'-^ r |
     }
   }
 }
 
 
-altosaxOneScore    = \transpose c   \concertKey \relative c' { << \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
+altosaxOneScore    =                            \relative c' { << \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
 altosaxOneCond     = \transpose c   \concertKey \relative c' { << \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
+altosaxOneMidi     = \transpose c   \concertKey \relative c' { << \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
 altosaxEesOneScore = \transpose ees \concertKey \relative c' { << \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
 altosaxEesOnePart  = \transpose ees \concertKey \relative c' { << \altosaxOneNotes \altosaxOneCues    \altosaxOneDyn >> }
