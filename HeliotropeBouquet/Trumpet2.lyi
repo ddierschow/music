@@ -19,9 +19,9 @@ trumpetTwoDyn =
 
   % 21
   s2\f |
-  s2*7 |
-  s2\f |
-  s2*8 |
+  s2*6 |
+  s4 s8 s\f |
+  s2*9 |
 
   % 38
   s2*5\mf |
@@ -34,14 +34,15 @@ trumpetTwoDyn =
   % 54
   s4\mp s4 |
   s2*4 |
-  s8 s8\<s4\! |
+  s4 s16 s8.\mf |
   s2\> |
   s2\!\mp |
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
+  s2*2 |
   s2\mf |
-  s2*4 |
+  s2*2 |
 
   % 71
   s4\mf s4 |
@@ -142,8 +143,8 @@ trumpetTwoNotes =
     c8 e16 e~e c e8 |
     dis16 e gis gis~gis e gis8 |
     e8 b16 c~c a'( e c) |
-    c'16( a fis dis c a8 aes16) |
-    g8 a16 c~c d e8 |
+    r2 |
+    r2 |
     fis,4 g |
   }
   \alternative

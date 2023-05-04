@@ -14,10 +14,10 @@ hornTwoDyn =
   s2*4 |
 
   % 21
-  s2\f |
-  s2*7 |
-  s2\f |
-  s2*8 |
+  s8 s4.\f |
+  s2*6 |
+  s4. s8\f |
+  s2*9 |
 
   % 38
   s2*11 |
@@ -25,7 +25,7 @@ hornTwoDyn =
   s2*4 |
 
   % 54
-  s4\mp s4 |
+  s8 s8\mp s4 |
   s2*6 |
   s2\mf\!\>\! |
   s2\mp |

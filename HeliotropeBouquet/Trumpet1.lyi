@@ -19,9 +19,9 @@ trumpetOneDyn =
 
   % 21
   s2\f |
-  s2*7 |
-  s2\f |
-  s2*8 |
+  s2*6 |
+  s4 s8 s\f |
+  s2*9 |
 
   % 38
   s2\mf |
@@ -42,8 +42,9 @@ trumpetOneDyn =
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
+  s2*2 |
   s2\mf |
-  s2*4 |
+  s2*2 |
 
   % 71
   s4\mf s4 |
@@ -136,17 +137,17 @@ trumpetOneNotes =
     e8 a16 g~g( e' d f,) |
     e16( dis e g,) a c8 d16 |
     e2 |
-    f16( c' d, c)~c d( f c') |
-    e,16( g d c)~c g'( a ais) |
+    r2 |
+    r4 r16 g( a ais) |
     b16 c d b~b g a8 |
     g8 g,16( a b c d dis) |
     e16( dis e g,) a c8 d16 |
     e8 a16 g~g c, e8 |
     dis16 e gis c~c e, b'8 |
     a8 b16 c~c a( e c) |
-    c'16( a fis dis c a8 aes16) |
-    g8 a16 c~c d e8 |
-    a,4 e' |
+    r2 |
+    r2 |
+    a4 e' |
   }
   \alternative
   {

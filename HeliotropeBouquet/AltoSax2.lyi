@@ -34,14 +34,14 @@ altosaxTwoDyn =
   % 54
   s4\mp s4 |
   s2*4 |
-  s2\< |
+  s4 s16 s8.\< |
   s2 |
   s2\! |
   s2\mp |
   s2*8 |
 
   % 71
-  s4\mf s4 |
+  s8 s8\mf s4 |
   s2*16 |
 }
 

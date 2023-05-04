@@ -81,8 +81,8 @@ barisaxNotes =
   {
     % 21
     R2*6 |
-    r8 b( ais a) |
-    g8( g fis) r |
+    r8 f( e ees) |
+    d8( cis c) r |
     R2*7 |
   }
   \alternative
@@ -91,7 +91,7 @@ barisaxNotes =
       r2 |
     }
     {
-      r4 bes |
+      r4 bes' |
     }
   }
 

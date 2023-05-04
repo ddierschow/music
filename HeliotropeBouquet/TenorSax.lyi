@@ -41,7 +41,7 @@ tenorsaxDyn =
   s2*8 |
 
   % 71
-  s4\mf s4 |
+  s8 s8\mf s4 |
   s2*16 |
 }
 
@@ -81,8 +81,8 @@ tenorsaxNotes =
   {
     % 21
     R2*6 |
-    r8 f( e ees) |
-    d8( cis c) r |
+    r8 b( ais a) |
+    g8( g fis) r |
     R2*7 |
   }
   \alternative
@@ -91,7 +91,7 @@ tenorsaxNotes =
       r2 |
     }
     {
-      r4 b'4 |
+      r4 b4 |
     }
   }
 

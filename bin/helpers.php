@@ -43,7 +43,7 @@ function show_link($link, $name) {
 }
 
 function show_common_links() {
-    echo "<p><ul>\n";
+    echo "<p><center><h3>References</h3></center><ul>\n";
     show_link("http://lilypond.org/doc/v2.22/Documentation/notation-big-page.html", "LilyPond_--_Notation_Reference");
     show_link("https://silverclefmusic.com/about-scores-for-band/", "Scores_for_Band</a");
     show_link("https://www.orchestralibrary.com/reftables/rang.html", "Range_of_Instruments");
