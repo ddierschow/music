@@ -13,6 +13,8 @@ tromboneOneDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2\mf |
   s2*7 |
 
@@ -20,6 +22,8 @@ tromboneOneDyn =
   s2\f |
   s2*6 |
   s4. s8\f |
+
+  % 29
   s2*9 |
 
   % 38
@@ -28,6 +32,8 @@ tromboneOneDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2\mf |
   s2*7 |
 
@@ -38,6 +44,8 @@ tromboneOneDyn =
   s2 |
   s2\!\>\! |
   s2\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
@@ -46,14 +54,17 @@ tromboneOneDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
-tromboneOneCues = \measuresBC
+tromboneOneCues = \measures
 
 
-tromboneOneNotCues = \measuresBC
+tromboneOneNotCues = \measures
 
 
 tromboneOneNotes =
@@ -71,7 +82,9 @@ tromboneOneNotes =
   e,8. d16~d8 dis |
   e8. b'16~b8 bes |
   a8. b,16~b8 a |
-  \slashedGrace { d8( } d,4) bes'' |
+  \slashedGrace { d'8( } d,4) bes' |
+
+  % 13
   e,8. d16~d8 d8 |
   d8 b'16 bes~bes4 |
   e,8. d16~d8 d |
@@ -89,9 +102,11 @@ tromboneOneNotes =
     g8 b d, b' |
     g8 b d, g16 gis |
     a8 c d, c' |
-    a8 c d,8~d16 \tuplet 3/2 { d,32( e f) } |
+    a8 c d,8~d16 \tuplet 3/2 { d32( e f) } |
     g8 r8 r4 |
     r4 r8 gis8-^ |
+
+    % 29
     a8 c d, c' |
     a8 c~c~c16 \tuplet 3/2 { d,32( dis e) } |
     g8 b d, b' |
@@ -111,14 +126,16 @@ tromboneOneNotes =
   }
 
   % 38
-  e8. d16~d8 d |
+  e,8. d16~d8 d |
   d b'16 bes~bes4 |
   e,8. d16~d8 d |
   d b'16 bes~bes4 |
   e,8. d16~d8 dis |
   e8. b'16~b8 bes |
   a8. b,16~b8 a |
-  \slashedGrace { d8( } d,4) bes'' |
+  \slashedGrace { d'8( } d,4) bes' |
+
+  % 46
   e,8. d16~d8 d8 |
   d8 b'16 bes~bes4 |
   e,8. d16~d8 d |
@@ -139,6 +156,8 @@ tromboneOneNotes =
     g8 r e ees |
     d8. e16~e8 d |
     g8 f e d |
+
+    % 62
     c8 r f r |
     c8 r g r |
     e8 r e r |
@@ -168,6 +187,8 @@ tromboneOneNotes =
     c8 r a r |
     b8 r b r |
     e8 r cis r |
+
+    % 79
     d8 f e d |
     c8 r e r |
     d8 r d dis |
@@ -188,8 +209,8 @@ tromboneOneNotes =
 }
 
 
-tromboneOneScore  =                          \relative c, { << \tromboneOneNotes \tromboneOneNotCues \tromboneOneDyn >> }
-tromboneCOneScore = \transpose c \concertKey \relative c, { << \tromboneOneNotes \tromboneOneNotCues \tromboneOneDyn >> }
-tromboneOneCond   = \transpose c \concertKey \relative c, { << \tromboneOneNotes \tromboneOneNotCues \tromboneOneDyn >> }
-tromboneOneMidi   = \transpose c \concertKey \relative c, { << \tromboneOneNotes \tromboneOneNotCues \tromboneOneDyn >> }
-tromboneOnePart   = \transpose c \concertKey \relative c, { << \tromboneOneNotes \tromboneOneCues    \tromboneOneDyn >> }
+tromboneOneScore  =                          \relative c, { << \bc \tromboneOneNotes \tromboneOneNotCues \tromboneOneDyn >> }
+tromboneCOneScore = \transpose c \concertKey \relative c, { << \bc \tromboneOneNotes \tromboneOneNotCues \tromboneOneDyn >> }
+tromboneOneCond   = \transpose c \concertKey \relative c, { << \bc \tromboneOneNotes \tromboneOneNotCues \tromboneOneDyn >> }
+tromboneOneMidi   = \transpose c \concertKey \relative c, { << \bc \tromboneOneNotes \tromboneOneNotCues \tromboneOneDyn >> }
+tromboneOnePart   = \transpose c \concertKey \relative c, { << \bc \tromboneOneNotes \tromboneOneCues    \tromboneOneDyn >> }

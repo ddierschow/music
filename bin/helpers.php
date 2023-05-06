@@ -1,5 +1,11 @@
 <?php
 
+function show_top() {
+    echo "<html><head>\n";
+    echo "</head>\n";
+    echo "<body>\n";
+}
+
 function show_file($fn) {
     echo '  <td>';
     if ($fn == '')
@@ -49,8 +55,13 @@ function show_common_links() {
     show_link("https://www.orchestralibrary.com/reftables/rang.html", "Range_of_Instruments");
     show_link("https://web.mit.edu/merolish/Public/drums.pdf", "Drum_and_Percussion_Notation");
     show_link("../Percussion_Key.pdf", "Percussion_Key.pdf");
-    show_link("https://www.zamzar.com/", "Zamzar MIDI->MP3 Conversion");
+    show_link("https://audio.online-convert.com/convert/midi-to-mp3", "Online-Convert MIDI to MP3");
     echo "</ul>\n";
+}
+
+function show_bottom() {
+    echo "<body>\n";
+    echo "</html>\n";
 }
 
 ?>

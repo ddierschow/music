@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-clarinetTwoDyn =
+clarTwoDyn =
 {
   s2\mf |
   s2*3 |
@@ -14,12 +14,16 @@ clarinetTwoDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2\mf |
   s2*7 |
 
   % 21
   s2\f |
   s2*7 |
+
+  % 29
   s2\f |
   s2*8 |
 
@@ -28,6 +32,8 @@ clarinetTwoDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2\mf |
   s2*7 |
 
@@ -36,6 +42,8 @@ clarinetTwoDyn =
   s4 s16 s8.\mf |
   s2\> |
   s2\!\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
@@ -44,17 +52,20 @@ clarinetTwoDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
-clarinetTwoCues = \measures
+clarTwoCues = \measures
 
 
-clarinetTwoNotCues = \measures
+clarTwoNotCues = \measures
 
 
-clarinetTwoNotes =
+clarTwoNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
@@ -70,6 +81,8 @@ clarinetTwoNotes =
   e8. b'16~b8 d |
   d8. d16~d8 cis8 |
   a4 cis-> |
+
+  % 13
   e,8. fis16~fis8 fis8 |
   g16 b d cis~cis4 |
   e,8. fis16~fis8 fis8 |
@@ -90,6 +103,8 @@ clarinetTwoNotes =
     c16 e c c~c8~c16 r16 |
     b8-^ r r4 |
     r4 r8 eis,-^ |
+
+    % 29
     r8 fis'8~fis16 fis8. |
     fis8. fis16~fis8. r16 |
     b,8 b~b16 b8. |
@@ -117,6 +132,8 @@ clarinetTwoNotes =
   e8. fis16~fis8 g |
   d'8. d16~d8 cis |
   a4 cis |
+
+  % 46
   e,8. fis16~fis8 fis |
   b,8. cis'16~cis4 |
   e,8. fis16~fis8 fis8 |
@@ -137,6 +154,8 @@ clarinetTwoNotes =
     dis16 e gis gis~gis e gis8 |
     e8 b16 c~c a'( e c) |
     c'16( a fis dis c a8 aes16) |
+
+    % 62
     g8 a16 c~c d e8 |
     fis,4 g |
   }
@@ -161,6 +180,8 @@ clarinetTwoNotes =
     c8. e16~e8 r8 |
     b8. dis16~dis8 dis |
     e8 g16( b,) e( cis ais g)~ |
+
+    % 79
     g8. b16~b4 |
     c8. c16~c8 r8 |
     b16 g'8 ais,16 b g'8 b,16 |
@@ -181,8 +202,8 @@ clarinetTwoNotes =
 }
 
 
-clarinetTwoScore    =                            \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
-clarinetTwoCond     = \transpose c   \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
-clarinetTwoMidi     = \transpose c   \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
-clarinetBesTwoScore = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoNotCues \clarinetTwoDyn >> }
-clarinetBesTwoPart  = \transpose bes \concertKey \relative c' { << \clarinetTwoNotes \clarinetTwoCues    \clarinetTwoDyn >> }
+clarinetTwoScore    =                            \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
+clarinetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
+clarinetTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
+clarinetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
+clarinetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoCues    \clarTwoDyn >> }

@@ -8,44 +8,60 @@ percussionTwoDyn =
   s2*4 |
 
   % 5
-  s2*16 |
+  s2*8 |
+
+  % 13
+  s2*8 |
 
   % 21
-  s2*15 |
-  s2 |
-  s2 |
+  s2*8 |
+
+  % 29
+  s2*9 |
 
   % 38
-  s2*16 |
+  s2*8 |
+
+  % 46
+  s2*8 |
 
   % 54
-  s2*15 |
-  s2 |
-  s2 |
+  s2*8 |
+
+  % 62
+  s2*9 |
 
   % 71
-  s2*15 |
-  s2 |
-  s2 |
+  s2*8 |
+
+  % 79
+  s2*9 |
 }
 
 
-percussionTwoCues = \measuresPC
+percussionTwoCues = \measures
 
 
-percussionTwoNotCues = \measuresPC
+percussionTwoNotCues = \measures
 
 
 percussionTwoNotes =
 {
   R2*4 |
+
   % 5
-  R2*16 |
+  R2*8 |
+
+  % 13
+  R2*8 |
 
   \repeat volta 2
   {
     % 21
-    R2*15 |
+    R2*8 |
+
+    % 29
+    R2*7 |
   }
   \alternative
   {
@@ -58,12 +74,18 @@ percussionTwoNotes =
   }
 
   % 38
-  R2*16 |
+  R2*8 |
+
+  % 46
+  R2*8 |
 
   \repeat volta 2
   {
     % 54
-    R2*15 |
+    R2*8 |
+
+    % 62
+    R2*7 |
   }
   \alternative
   {
@@ -78,7 +100,10 @@ percussionTwoNotes =
   \repeat volta 2
   {
     % 71
-    R2*15 |
+    R2*8 |
+
+    % 79
+    R2*7 |
   }
   \alternative
   {
@@ -92,7 +117,7 @@ percussionTwoNotes =
 }
 
 
-percussionTwoScore = \relative c { << \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoCond  = \relative c { << \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoMidi  = \relative c { << \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoPart  = \relative c { << \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }
+percussionTwoScore = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoCond  = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoMidi  = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoPart  = \relative c { << \pc \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }

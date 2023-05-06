@@ -14,6 +14,8 @@ oboeDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2\mf |
   s2*7 |
 
@@ -21,6 +23,8 @@ oboeDyn =
   s2\f |
   s2*6 |
   s4. s8\f |
+
+  % 29
   s2*9 |
 
   % 38
@@ -29,6 +33,8 @@ oboeDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2\mf |
   s2*7 |
 
@@ -38,6 +44,8 @@ oboeDyn =
   s2 |
   s2\!\>\! |
   s2\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
@@ -46,7 +54,10 @@ oboeDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
@@ -72,6 +83,8 @@ oboeNotes =
   g16( a b d)~d d e8 |
   fis16( g a fis)~fis d e8 |
   d4 fis8->( e) |
+
+  % 13
   c16( d e b)~b fis a8 |
   g16( b d fis)~fis cis e8 |
   c16( d e b)~b fis a8 |
@@ -92,6 +105,8 @@ oboeNotes =
     fis16 e fis e~e8~e16 \tuplet 3/2 { d32( e fis) } |
     g8 r r4 |
     r4 r8 b,-^ |
+
+    % 29
     r16 a' b a b d8 a16 |
     b16( a b d)~d8~d16 \tuplet 3/2 { d,32( dis e) } |
     g8 e16 d e g8 d16 |
@@ -119,6 +134,8 @@ oboeNotes =
   g16( a b d)~d d e8 |
   fis16( g a fis)~fis d e8 |
   d4 fis8->( e) |
+
+  % 46
   c16( d e b)~b fis a8 |
   g16( b d fis)~fis cis e8 |
   c16( d e b)~b fis a8 |
@@ -132,10 +149,12 @@ oboeNotes =
   {
     % 54
     R2*4 |
-    f16( c' d, c)~c d( f c') |
+    f'16( c' d, c)~c d( f c') |
     e,16( g d c)~c g'( a ais) |
     b16 c d b~b g a8 |
     g8 r r4 |
+
+    % 62
     r2 |
     e8 a16 g~g c, e8 |
     dis16 e gis c~c e, b'8 |
@@ -147,7 +166,7 @@ oboeNotes =
   \alternative
   {
     {
-      c8 g16( a b c d dis) |
+      c8 r8 r4 |
     }
     {
       c4~c8 r8 |
@@ -165,6 +184,8 @@ oboeNotes =
     e8 g16 c~c( a e c) |
     b16( e g fis)~fis8 b |
     b8 g16( b,) e( cis ais g)~ |
+
+    % 79
     g16( b d g)~g( a g f) |
     e8 g16 c~c8. ais,16 |
     b16 g'8 ais,16 b g'8 b,16 |
@@ -185,8 +206,8 @@ oboeNotes =
 }
 
 
-oboeScore  =                          \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeCScore = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeCond   = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeMidi   = \transpose c \concertKey \relative c' { << \oboeNotes \oboeNotCues \oboeDyn >> }
-oboePart   = \transpose c \concertKey \relative c' { << \oboeNotes \oboeCues    \oboeDyn >> }
+oboeScore  =                          \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
+oboeCScore = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
+oboeCond   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
+oboeMidi   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
+oboePart   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeCues    \oboeDyn >> }

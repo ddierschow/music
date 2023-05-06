@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-clarinetOneDyn =
+clarOneDyn =
 {
   s2\mf |
   s2*3 |
@@ -14,6 +14,8 @@ clarinetOneDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2\mf |
   s2*7 |
 
@@ -21,6 +23,8 @@ clarinetOneDyn =
   s2\f |
   s2*6 |
   s4. s8\f |
+
+  % 29
   s2*9 |
 
   % 38
@@ -29,6 +33,8 @@ clarinetOneDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2\mf |
   s2*7 |
 
@@ -38,6 +44,8 @@ clarinetOneDyn =
   s2 |
   s2\!\>\! |
   s2\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
@@ -46,17 +54,20 @@ clarinetOneDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
-clarinetOneCues = \measures
+clarOneCues = \measures
 
 
-clarinetOneNotCues = \measures
+clarOneNotCues = \measures
 
 
-clarinetOneNotes =
+clarOneNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
@@ -72,6 +83,8 @@ clarinetOneNotes =
   g16( a b d)~d d e8 |
   fis16( g a fis)~fis d e8 |
   d4 fis8->( e) |
+
+  % 13
   c16( d e b)~b fis a8 |
   g16( b d fis)~fis cis e8 |
   c16( d e b)~b fis a8 |
@@ -92,6 +105,8 @@ clarinetOneNotes =
     fis16 e fis e~e8~e16 \tuplet 3/2 { d32( e fis) } |
     g8 r r4 |
     r4 r8 b,-^ |
+
+    % 29
     r16 a' b a b d8 a16 |
     b16( a b d)~d8~d16 \tuplet 3/2 { d,32( dis e) } |
     g8 e16 d e g8 d16 |
@@ -119,6 +134,8 @@ clarinetOneNotes =
   g16( a b d)~d d e8 |
   fis16( g a fis)~fis d e8 |
   d4 fis8->( e) |
+
+  % 46
   c16( d e b)~b fis a8 |
   g16( b d fis)~fis cis e8 |
   c16( d e b)~b fis a8 |
@@ -139,6 +156,8 @@ clarinetOneNotes =
     R2*2 |
     dis16 e gis c~c e, b'8 |
     a8 b16 c~c a( e c) |
+
+    % 62
     c'16( a fis dis c a8 aes16) |
     g8 a16 c~c d e8 |
     a,4 e' |
@@ -146,7 +165,7 @@ clarinetOneNotes =
   \alternative
   {
     {
-      c8 g16( a b c d dis) |
+      c8 r r4 |
     }
     {
       c4~c8 r8 |
@@ -156,7 +175,7 @@ clarinetOneNotes =
   \repeat volta 2
   {
     % 71
-    g16( b d g)~g( a g f) |
+    g'16( b d g)~g( a g f) |
     e8 g16 c~c8. ais,16 |
     b16 g'8 ais,16 b g'8 b,16 |
     c16( d dis e)~e4 |
@@ -164,6 +183,8 @@ clarinetOneNotes =
     e8 g16 c~c( a e c) |
     b16( e g fis)~fis8 b |
     b8 g16( b,) e( cis ais g)~ |
+
+    % 79
     g16( b d g)~g( a g f) |
     e8 g16 c~c8. ais,16 |
     b16 g'8 ais,16 b g'8 b,16 |
@@ -184,8 +205,8 @@ clarinetOneNotes =
 }
 
 
-clarinetOneScore    =                            \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
-clarinetOneCond     = \transpose c   \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
-clarinetOneMidi     = \transpose c   \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
-clarinetBesOneScore = \transpose bes \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneNotCues \clarinetOneDyn >> }
-clarinetBesOnePart  = \transpose bes \concertKey \relative c'  { << \clarinetOneNotes \clarinetOneCues    \clarinetOneDyn >> }
+clarinetOneScore    =                            \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarinetOneCond     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarinetOneMidi     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarinetBesOneScore = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarinetBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneCues    \clarOneDyn >> }

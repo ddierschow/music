@@ -1,5 +1,9 @@
 \version "2.22.2"
 
+tc = { \clef treble }
+bc = { \clef bass }
+pc = { \clef percussion }
+
 rit = \markup { \italic rit. }
 atempo = \markup { \italic "a tempo" }
 arco = \markup { \italic arco }

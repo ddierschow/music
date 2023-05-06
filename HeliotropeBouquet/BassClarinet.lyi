@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "defs.lyi"
 
-bassclarinetDyn =
+bassclarDyn =
 {
   s2*4\mf |
 
@@ -13,14 +13,18 @@ bassclarinetDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2\mf |
   s2*7 |
 
   % 21
   s2\f |
-  s2*7 |
-  s2\f |
-  s2*8 |
+  s2*6 |
+  s4. s8\f |
+
+  % 29
+  s2*9 |
 
   % 38
   s2\mf |
@@ -28,6 +32,8 @@ bassclarinetDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2\mf |
   s2*7 |
 
@@ -38,6 +44,8 @@ bassclarinetDyn =
   s2 |
   s2\!\>\! |
   s2\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
@@ -46,17 +54,20 @@ bassclarinetDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
-bassclarinetCues = \measures
+bassclarCues = \measures
 
 
-bassclarinetNotCues = \measures
+bassclarNotCues = \measures
 
 
-bassclarinetNotes =
+bassclarNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
@@ -71,7 +82,9 @@ bassclarinetNotes =
   e,8. d16~d8 dis |
   e8. b'16~b8 bes |
   a8. b,16~b8 a |
-  \slashedGrace { d8( } d,4) bes'' |
+  \slashedGrace { d'8( } d,4) bes' |
+
+  % 13
   e,8. d16~d8 d8 |
   d8 b'16 bes~bes4 |
   e,8. d16~d8 d |
@@ -89,9 +102,11 @@ bassclarinetNotes =
     g8 b d, b' |
     g8 b d, g16 gis |
     a8 c d, c' |
-    a8 c d,8~d16 \tuplet 3/2 { d,32( e f) } |
+    a8 c d,8~d16 \tuplet 3/2 { d32( e f) } |
     g8 r8 r4 |
     r4 r8 gis8-^ |
+
+    % 29
     a8 c d, c' |
     a8 c~c~c16 \tuplet 3/2 { d,32( dis e) } |
     g8 b d, b' |
@@ -112,13 +127,15 @@ bassclarinetNotes =
 
   % 38
   e8. d16~d8 d |
-  d b'16 bes~bes4 |
+  d b16 bes~bes4 |
   e,8. d16~d8 d |
   d b'16 bes~bes4 |
   e,8. d16~d8 dis |
   e8. b'16~b8 bes |
-  a8. b,16~b8 a |
-  \slashedGrace { d8( } d,4) bes'' |
+  a8. b16~b8 a |
+  \slashedGrace { d8( } d,4) bes' |
+
+  % 46
   e,8. d16~d8 d8 |
   d8 b'16 bes~bes4 |
   e,8. d16~d8 d |
@@ -131,29 +148,31 @@ bassclarinetNotes =
   \repeat volta 2
   {
     % 54
-    c,8 r f r |
-    c8 r g r |
-    c8 r f fis |
+    c,8 g' f aes |
+    c,8 g' g, g' |
+    c,8 g' f fis |
     g8 c-> b-> bes-> |
-    a8 r aes r |
-    g8 r e ees |
+    a8 a aes aes |
+    g8 g e ees |
     d8. e16~e8 d |
     g8 f e d |
-    c8 r f r |
-    c8 r g r |
-    e8 r e r |
-    a8 r e r |
-    fis16( a c dis fis a8 aes16) |
-    g8 r a, r |
-    d8 r g r |
+
+    % 62
+    c8 g' f aes |
+    c,8 g' g, g' |
+    e,8 gis' e, gis' |
+    a,8 a' e, a' |
+    fis,16( a c dis fis a8 aes16) |
+    g8 g a, a' |
+    d,8 fis g f |
   }
   \alternative
   {
     {
-      c8 r r4 |
+      e8 r g4 |
     }
     {
-      c8 dis,16-^ e-^ g-^ c-^ b-^ a-^ |
+      e8 dis16-^ e-^ g-^ c-^ b-^ a-^ |
     }
   }
 
@@ -161,35 +180,37 @@ bassclarinetNotes =
   {
     % 71
     g8 f e d |
-    c8 r e r |
-    g8 r d dis |
-    e8 r g16-^ c-^ b-^ a-^ |
+    c8 g' e g |
+    g,8 g' d dis |
+    e8 g g16-^ c-^ b-^ a-^ |
     g8 f e d |
-    c8 r a r |
-    b8 r b r |
-    e8 r cis r |
+    c8 g' a, a' |
+    b,8 g' b, a' |
+    e8 g cis, e |
+
+    % 79
     d8 f e d |
-    c8 r e r |
-    d8 r d dis |
-    e8 r c r |
+    c8 g' e g |
+    g,8 g' d dis |
+    e8 g c, g' |
     c2 |
     c2 |
-    d8 r g r |
+    d,8 fis g f |
   }
   \alternative
   {
     {
-      c8 dis,16-^ e-^ g-^ c-^ b-^ a-^ |
+      e8 dis16-^ e-^ g-^ c-^ b-^ a-^ |
     }
     {
-      c4 c,8-^ r |
+      e4 c8-^ r |
     }
   }
 }
 
 
-bassclarinetScore    =                            \relative c' { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDyn >> }
-bassclarinetCond     = \transpose c   \concertKey \relative c' { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDyn >> }
-bassclarinetMidi     = \transpose c   \concertKey \relative c' { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDyn >> }
-bassclarinetBesScore = \transpose bes \concertKey \relative c' { << \bassclarinetNotes \bassclarinetNotCues \bassclarinetDyn >> }
-bassclarinetBesPart  = \transpose bes \concertKey \relative c' { << \bassclarinetNotes \bassclarinetCues    \bassclarinetDyn >> }
+bassclarinetScore    =                            \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarinetCond     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarinetMidi     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarinetBesScore = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarinetBesPart  = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarCues    \bassclarDyn >> }

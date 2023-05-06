@@ -14,13 +14,18 @@ tenorsaxDyn =
   s2\< |
   s2 |
   s4\!\mf s4\>\! |
+
+  % 13
   s2\mp |
   s2*7 |
 
   % 21
   s2*6 |
   s8 s4.\f |
-  s2*10 |
+  s2 |
+
+  % 29
+  s2*9 |
 
   % 38
   s2\mp |
@@ -28,6 +33,8 @@ tenorsaxDyn =
   s2\< |
   s2 |
   s4\!\mf s4\>\! |
+
+  % 46
   s2\mp |
   s2*7 |
 
@@ -37,12 +44,17 @@ tenorsaxDyn =
   s2\< |
   s2 |
   s2\! |
+
+  % 62
   s2\mp |
   s2*8 |
 
   % 71
   s8 s8\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
@@ -68,6 +80,8 @@ tenorsaxNotes =
   b8. b16~b8. bes16 |
   a8. b16~b8 a |
   fis4 f4 |
+
+  % 13
   a8. a16~a4 |
   d8. des16~des4 |
   a8. a16~a4 |
@@ -83,6 +97,8 @@ tenorsaxNotes =
     R2*6 |
     r8 b( ais a) |
     g8( g fis) r |
+
+    % 29
     R2*7 |
   }
   \alternative
@@ -104,6 +120,8 @@ tenorsaxNotes =
   b8. b16~b8. bes16 |
   a8. b16~b8 a |
   fis4 f4 |
+
+  % 46
   a8. a16~a4 |
   d8. des16~des4 |
   a8. a16~a4 |
@@ -124,6 +142,8 @@ tenorsaxNotes =
     r4 r16 g( a ais |
     b16 c d cis~cis8 c |
     b8) r8 r4 |
+
+    % 62
     g4( a8. aes16 |
     g8 a16 g~g) r r8 |
     gis2( |
@@ -152,6 +172,8 @@ tenorsaxNotes =
     e,2 |
     fis2 |
     e8) r8 r4 |
+
+    % 79
     f2( |
     e2 |
     f2 |
@@ -172,8 +194,8 @@ tenorsaxNotes =
 }
 
 
-tenorsaxScore    =                            \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxCond     = \transpose c   \concertKey \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxMidi     = \transpose c   \concertKey \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxBesScore = \transpose bes \concertKey \relative c' { << \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxBesPart  = \transpose bes \concertKey \relative c' { << \tenorsaxNotes \tenorsaxCues    \tenorsaxDyn >> }
+tenorsaxScore    =                            \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
+tenorsaxCond     = \transpose c   \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
+tenorsaxMidi     = \transpose c   \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
+tenorsaxBesScore = \transpose bes \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
+tenorsaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxCues    \tenorsaxDyn >> }

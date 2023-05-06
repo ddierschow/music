@@ -14,6 +14,8 @@ fluteTwoDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2\mf |
   s2*7 |
 
@@ -21,6 +23,8 @@ fluteTwoDyn =
   s2\f |
   s2*6 |
   s4. s8\f |
+
+  % 29
   s2*9 |
 
   % 38
@@ -29,6 +33,8 @@ fluteTwoDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2\mf |
   s2*7 |
 
@@ -37,6 +43,8 @@ fluteTwoDyn =
   s4. s8\mf
   s2\> |
   s2\!\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
@@ -45,7 +53,10 @@ fluteTwoDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
@@ -82,6 +93,8 @@ fluteTwoNotes =
   e8. b'16~b8 d |
   d8. d16~d8 cis8 |
   a4 cis-> |
+
+  % 13
   e,8. fis16~fis8 fis8 |
   g16 b d cis~cis4 |
   e,8. fis16~fis8 fis8 |
@@ -103,6 +116,8 @@ fluteTwoNotes =
     b8-^ r r4 |
     r4 r8 eis,-^ |
     r8 fis'8~fis16 fis8. |
+
+    % 29
     fis8. fis16~fis8. r16 |
     b,8 b~b16 b8. |
     b16 b b b~b8 \tuplet 3/2 { d16( cis d) } |
@@ -129,6 +144,8 @@ fluteTwoNotes =
   e8. fis16~fis8 g |
   d'8. d16~d8 cis |
   a4 cis |
+
+  % 46
   e,8. fis16~fis8 fis |
   b,8. cis'16~cis4 |
   e,8. fis16~fis8 fis8 |
@@ -145,13 +162,15 @@ fluteTwoNotes =
     r4 r16 c8. |
     g'8. g16~g16 g fis8 |
     d8 r r4 |
+
+    % 62
     r2 |
     c8 e16 e~e c e8 |
     dis16 e gis gis~gis e gis8 |
     e8 b16 c~c a'( e c) |
-    c'16( a fis dis c a8 aes16) |
+    c16( a fis dis c a8 aes16) |
     g8 a16 c~c d e8 |
-    fis,4 g |
+    fis4 g |
   }
   \alternative
   {
@@ -174,6 +193,8 @@ fluteTwoNotes =
     c8. e16~e8 r8 |
     b8. dis16~dis8 dis |
     e8 g16( b,) e( cis ais g)~ |
+
+    % 79
     g8. b16~b4 |
     c8. c16~c8 r8 |
     b16 g'8 ais,16 b g'8 b,16 |
@@ -194,8 +215,8 @@ fluteTwoNotes =
 }
 
 
-fluteTwoScore  =                          \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteCTwoScore = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoCond   = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoMidi   = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoPart   = \transpose c \concertKey \relative c' { << \fluteTwoNotes \fluteTwoCues    \fluteTwoDyn >> }
+fluteTwoScore  =                          \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
+fluteCTwoScore = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
+fluteTwoCond   = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
+fluteTwoMidi   = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
+fluteTwoPart   = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoCues    \fluteTwoDyn >> }

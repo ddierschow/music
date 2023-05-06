@@ -14,6 +14,8 @@ fluteOneDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2\mf |
   s2*7 |
 
@@ -21,6 +23,8 @@ fluteOneDyn =
   s2\f |
   s2*6 |
   s4. s8\f |
+
+  % 29
   s2*9 |
 
   % 38
@@ -29,6 +33,8 @@ fluteOneDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2\mf |
   s2*7 |
 
@@ -38,6 +44,8 @@ fluteOneDyn =
   s2 |
   s2\!\>\! |
   s2\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
@@ -46,7 +54,10 @@ fluteOneDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
@@ -72,6 +83,8 @@ fluteOneNotes =
   g16( a b d)~d d e8 |
   fis16( g a fis)~fis d e8 |
   d4 fis8->( e) |
+
+  % 13
   c16( d e b)~b fis a8 |
   g16( b d fis)~fis cis e8 |
   c16( d e b)~b fis a8 |
@@ -79,34 +92,36 @@ fluteOneNotes =
   d8 d16 b d g8 b,16 |
   c8 c16 b c( g a ais) |
   b16 d8 b16~b g a8 |
-  g4 b'-> |
+  g4 b-> |
 
   \repeat volta 2
   {
     % 21
     b8 b16 a b d8 a16 |
-    b16 a b d~d8~d16 \tuplet 3/2 { d,32( dis e) } |
+    b16 a b d~d8~d16 \tuplet 3/2 { d32( dis e) } |
     g8 e16 d e g8 d16 |
     g16 fis g e~e d e eis |
     fis8 fis16 d fis a8 e16 |
     fis16 e fis e~e8~e16 \tuplet 3/2 { d32( e fis) } |
     g8 r r4 |
     r4 r8 b,-^ |
-    r16 a' b a b d8 a16 |
-    b16( a b d)~d8~d16 \tuplet 3/2 { d,32( dis e) } |
+
+    % 29
+    r16 a b a b d8 a16 |
+    b16( a b d)~d8~d16 \tuplet 3/2 { d32( dis e) } |
     g8 e16 d e g8 d16 |
     g16 fis g e~e8 \tuplet 3/2 { d16( cis d) } |
-    e8 b' a16( e'8.) |
+    e8 b a16( e'8.) |
     d,8 a' g16( d'8.) |
     a16( e'8.) a,16( d8.) |
   }
   \alternative
   {
     {
-      g,4 b-> |
+      g4 b,-> |
     }
     {
-      g4 fis8->( e) |
+      g'4 fis8->( e) |
     }
   }
 
@@ -119,6 +134,8 @@ fluteOneNotes =
   g16( a b d)~d d e8 |
   fis16( g a fis)~fis d e8 |
   d4 fis8->( e) |
+
+  % 46
   c16( d e b)~b fis a8 |
   g16( b d fis)~fis cis e8 |
   c16( d e b)~b fis a8 |
@@ -136,6 +153,8 @@ fluteOneNotes =
     e,16( g d c)~c g'( a ais) |
     b16 c d b~b g a8 |
     g8 r r4 |
+
+    % 62
     r2 |
     e8 a16 g~g c, e8 |
     dis16 e gis c~c e, b'8 |
@@ -165,6 +184,8 @@ fluteOneNotes =
     e8 g16 c~c( a e c) |
     b16( e g fis)~fis8 b |
     b8 g16( b,) e( cis ais g)~ |
+
+    % 79
     g16( b d g)~g( a g f) |
     e8 g16 c~c8. ais,16 |
     b16 g'8 ais,16 b g'8 b,16 |
@@ -185,8 +206,8 @@ fluteOneNotes =
 }
 
 
-fluteOneScore  =                          \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteCOneScore = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOneCond   = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOneMidi   = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOnePart   = \transpose c \concertKey \relative c' { << \fluteOneNotes \fluteOneCues    \fluteOneDyn >> }
+fluteOneScore  =                          \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
+fluteCOneScore = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
+fluteOneCond   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
+fluteOneMidi   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
+fluteOnePart   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneCues    \fluteOneDyn >> }

@@ -256,13 +256,6 @@ instrument = "Concert Band"
 	  \set Staff.shortInstrumentName = "Mal.Pe."
 	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \malletCScore }
 	}
-	\new Staff
-	{
-	    #(set-accidental-style 'modern)
-	  \set Staff.instrumentName = "Timpani"
-	  \set Staff.shortInstrumentName = "Ti."
-	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \timpaniCScore }
-	}
       >>
     >>
     % \header { piece = \headerPiece }

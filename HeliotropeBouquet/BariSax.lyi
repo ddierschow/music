@@ -14,13 +14,18 @@ barisaxDyn =
   s2\< |
   s2 |
   s4\!\mf s4\>\! |
+
+  % 13
   s2\mp |
   s2*7 |
 
   % 21
   s2*6 |
   s8 s4.\f |
-  s2*10 |
+  s2 |
+
+  % 29
+  s2*9 |
 
   % 38
   s2\mp |
@@ -28,6 +33,8 @@ barisaxDyn =
   s2\< |
   s2 |
   s4\!\mf s4\>\! |
+
+  % 46
   s2\mp |
   s2*7 |
 
@@ -37,12 +44,17 @@ barisaxDyn =
   s2\< |
   s2 |
   s2\! |
+
+  % 62
   s2\mp |
   s2*8 |
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
@@ -68,6 +80,8 @@ barisaxNotes =
   g,8. b16~b8. bes16 |
   a8. fis'16~fis4 |
   g,4 bes |
+
+  % 13
   a8. d16~d4 |
   g,8 b16 bes~bes4 |
   a8. d16~d4 |
@@ -83,6 +97,8 @@ barisaxNotes =
     R2*6 |
     r8 f( e ees) |
     d8( cis c) r |
+
+    % 29
     R2*7 |
   }
   \alternative
@@ -104,6 +120,8 @@ barisaxNotes =
   g,8. b16~b8. bes16 |
   a8. fis'16~fis4 |
   g,4 bes |
+
+  % 46
   a8. d16~d4 |
   g,8 b16 bes~bes4 |
   a8. d16~d4 |
@@ -119,11 +137,13 @@ barisaxNotes =
     c,4 f |
     c4 g' |
     c,4 f8 fis |
-    g8 r r4 |
-    a4 ais |
+    g2 |
+    a4 aes |
     g4 e8 ees |
     d8. e16~e8 d |
     g8 r r4 |
+
+    % 62
     c,4 f |
     c4 g' |
     e4 e |
@@ -153,6 +173,8 @@ barisaxNotes =
     c,4 a |
     b4 b4 |
     e4 cis |
+
+    % 79
     g2 |
     c4 e |
     g4 d8 dis |
@@ -173,8 +195,8 @@ barisaxNotes =
 }
 
 
-barisaxScore    =                            \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxCond     = \transpose c   \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxMidi     = \transpose c   \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxEesScore = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxEesPart  = \transpose ees \concertKey \relative c' { << \barisaxNotes \barisaxCues    \barisaxDyn >> }
+barisaxScore    =                            \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxCond     = \transpose c   \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxMidi     = \transpose c   \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxEesScore = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxEesPart  = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxCues    \barisaxDyn >> }

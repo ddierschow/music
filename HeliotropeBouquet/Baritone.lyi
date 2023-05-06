@@ -12,12 +12,16 @@ baritoneDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2*8\mf |
 
   % 21
   s2\f |
   s2*6 |
   s4. s8\f |
+
+  % 29
   s2*9 |
 
   % 38
@@ -25,6 +29,8 @@ baritoneDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2*8\mf |
 
   % 54
@@ -34,6 +40,8 @@ baritoneDyn =
   s2 |
   s2\!\>\! |
   s2\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc
   s2\< |
@@ -43,20 +51,17 @@ baritoneDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
-baritoneCues = \measuresBC
+baritoneCues = \measures
 
 
-baritonetcCues = \measures
-
-
-baritoneNotCues = \measuresBC
-
-
-baritonetcNotCues = \measures
+baritoneNotCues = \measures
 
 
 baritoneNotes =
@@ -74,7 +79,9 @@ baritoneNotes =
   e,8. d16~d8 dis |
   e8. b'16~b8 bes |
   a8. b,16~b8 a |
-  \slashedGrace { d8( } d,4) bes'' |
+  \slashedGrace { d'8( } d,4) bes' |
+
+  % 13
   e,8. d16~d8 d8 |
   d8 b'16 bes~bes4 |
   e,8. d16~d8 d |
@@ -95,6 +102,8 @@ baritoneNotes =
     a'8 r d,8~d16 \tuplet 3/2 { d32( e f) } |
     g8 r8 r4 |
     r4 r8 gis8-^ |
+
+    % 29
     a8 r d, r |
     a'8 r d,~d16 \tuplet 3/2 { d32( dis e) } |
     g8 r d r |
@@ -121,7 +130,9 @@ baritoneNotes =
   e,8. d16~d8 dis |
   e8. b'16~b8 bes |
   a8. b,16~b8 a |
-  \slashedGrace { d8( } d,4) bes'' |
+  \slashedGrace { d'8( } d,4) bes' |
+
+  % 46
   e,8. d16~d8 d8 |
   d8 b'16 bes~bes4 |
   e,8. d16~d8 d |
@@ -134,21 +145,23 @@ baritoneNotes =
   \repeat volta 2
   {
     % 54
-    c,8 r f r |
+    c8 r f r |
     c8 r g r |
-    c8 r f fis |
+    c8 r f, fis |
     g8 c-> b-> bes-> |
     a8 r aes r |
     g8 r e ees |
     d8. e16~e8 d |
     g8 f e d |
+
+    % 62
     c8 r f r |
-    c8 r g r |
+    c'8 r g r |
     e8 r e r |
     a8 r e r |
     fis16( a c dis fis a8 aes16) |
     g8 r a, r |
-    d8 r g r |
+    d8 r g, r |
   }
   \alternative
   {
@@ -165,15 +178,17 @@ baritoneNotes =
     % 71
     g8 f e d |
     c8 r e r |
-    g,8 r d' dis |
+    g8 r d dis |
     e8 r g16-^ c-^ b-^ a-^ |
     g8 f e d |
     c8 r a r |
     b8 r b r |
     e8 r cis r |
+
+    % 79
     d8 f e d |
     c8 r e r |
-    g,8 r d' dis |
+    g8 r d dis |
     e8 r c r |
     c'2 |
     c2 |
@@ -191,9 +206,9 @@ baritoneNotes =
 }
 
 
-baritoneCScore  = \transpose c   \concertKey \relative c,  { << \baritoneNotes \baritoneNotCues   \baritoneDyn >> }
-baritoneScore   =                            \relative c,  { << \baritoneNotes \baritoneNotCues   \baritoneDyn >> }
-baritoneCond    = \transpose c   \concertKey \relative c,  { << \baritoneNotes \baritoneNotCues   \baritoneDyn >> }
-baritoneMidi    = \transpose c   \concertKey \relative c,  { << \baritoneNotes \baritoneNotCues   \baritoneDyn >> }
-baritonePart    = \transpose c   \concertKey \relative c,  { << \baritoneNotes \baritoneCues      \baritoneDyn >> }
-baritoneTCPart  = \transpose bes \concertKey \relative c'' { << \baritoneNotes \baritonetcCues    \baritoneDyn >> }
+baritoneCScore  = \transpose c   \concertKey \relative c, { << \bc \baritoneNotes \baritoneNotCues \baritoneDyn >> }
+baritoneScore   =                            \relative c, { << \bc \baritoneNotes \baritoneNotCues \baritoneDyn >> }
+baritoneCond    = \transpose c   \concertKey \relative c, { << \bc \baritoneNotes \baritoneNotCues \baritoneDyn >> }
+baritoneMidi    = \transpose c   \concertKey \relative c, { << \bc \baritoneNotes \baritoneNotCues \baritoneDyn >> }
+baritonePart    = \transpose c   \concertKey \relative c, { << \bc \baritoneNotes \baritoneCues    \baritoneDyn >> }
+baritoneTCPart  = \transpose bes \concertKey \relative c' { << \tc \baritoneNotes \baritoneCues    \baritoneDyn >> }

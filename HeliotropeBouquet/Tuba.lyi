@@ -13,11 +13,15 @@ tubaDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2*8\mf |
 
   % 21
   s2\f |
   s2*7 |
+
+  % 29
   s2\f |
   s2*8 |
 
@@ -26,6 +30,8 @@ tubaDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2*8\mf |
 
   % 54
@@ -35,6 +41,8 @@ tubaDyn =
   s2 |
   s2\!\>\! |
   s2\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc
   s2\< |
@@ -45,14 +53,17 @@ tubaDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
-tubaCues = \measuresBC
+tubaCues = \measures
 
 
-tubaNotCues = \measuresBC
+tubaNotCues = \measures
 
 
 tubaNotes =
@@ -71,6 +82,8 @@ tubaNotes =
   e8. b16~b8 bes |
   a8. b16~b8 a |
   \slashedGrace { d'8( } d,4) bes-> |
+
+  % 13
   a8. d16~d8 d |
   g,8 b16 bes~bes4 |
   a8. d16~d8 d |
@@ -91,6 +104,8 @@ tubaNotes =
     a8 r d8. r16 |
     g,8-^ r r4 |
     r4 r8 gis8-^ |
+
+    % 29
     a8 r d r |
     a8 r d8. r16 |
     g,8 r d' r |
@@ -118,6 +133,8 @@ tubaNotes =
   e8. b16~b8 bes |
   a8. b16~b8 a |
   \slashedGrace { d'8( } d,4) bes'-> |
+
+  % 46
   a8. d16~d8 d, |
   g8 b16 bes~bes4 |
   a8. d16~d8 d, |
@@ -138,6 +155,8 @@ tubaNotes =
     g8 r e ees |
     d8. e16~e8 d |
     g8 f e d |
+
+    % 62
     c8 r f r |
     c8 r g' r |
     e8 r e r |
@@ -167,6 +186,8 @@ tubaNotes =
     c8 r a r |
     b8 r b r |
     e8 r cis r |
+
+    % 79
     d8  f e d |
     c8 r e r |
     g,8 r d' dis |
@@ -187,12 +208,12 @@ tubaNotes =
 }
 
 
-tubaScore        =                          \relative c,, { << \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaCScore       = \transpose c \concertKey \relative c,, { << \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaCond         = \transpose c \concertKey \relative c,, { << \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaMidi         = \transpose c \concertKey \relative c,, { << \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaPart         = \transpose c \concertKey \relative c,, { << \tubaNotes \tubaCues    \tubaDyn >> }
-stringbassScore  =                          \relative c,  { << \tubaNotes \tubaNotCues \tubaDyn >> }
-stringbassCScore =                          \relative c,  { << \tubaNotes \tubaNotCues \tubaDyn >> }
-stringbassMidi   = \transpose c \concertKey \relative c,  { << \tubaNotes \tubaNotCues \tubaDyn >> }
-stringbassPart   = \transpose c \concertKey \relative c,  { << \tubaNotes \tubaCues    \tubaDyn >> }
+tubaScore        =                          \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
+tubaCScore       = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
+tubaCond         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
+tubaMidi         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
+tubaPart         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaCues    \tubaDyn >> }
+stringbassScore  =                          \relative c,  { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
+stringbassCScore =                          \relative c,  { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
+stringbassMidi   = \transpose c \concertKey \relative c,  { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
+stringbassPart   = \transpose c \concertKey \relative c,  { << \bc \tubaNotes \tubaCues    \tubaDyn >> }

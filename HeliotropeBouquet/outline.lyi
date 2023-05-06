@@ -3,19 +3,34 @@ rehearsalMarks =
   s2*4 |
 
   \rMark "5"
-  s2*16 |
+  s2*8 |
+
+  \rMark "13"
+  s2*8 |
 
   \rMark "21"
-  s2*17 |
+  s2*8 |
+
+  \rMark "29"
+  s2*9 |
 
   \rMark "38"
-  s2*16 |
+  s2*8 |
+
+  \rMark "46"
+  s2*8 |
 
   \rMark "54"
-  s2*17 |
+  s2*8 |
+
+  \rMark "62"
+  s2*9 |
 
   \rMark "71"
-  s2*17 |
+  s2*8 |
+
+  \rMark "79"
+  s2*9 |
 }
 
 pageMarks =

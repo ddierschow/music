@@ -8,25 +8,34 @@ malletDyn =
   s2*4 |
 
   % 5
-  s2*16 |
+  s2*8 |
+
+  % 13
+  s2*8 |
 
   % 21
-  s2*15 |
-  s2 |
-  s2 |
+  s2*8 |
+
+  % 29
+  s2*9 |
 
   % 38
-  s2*16 |
+  s2*8 |
+
+  % 46
+  s2*8 |
 
   % 54
-  s2*15 |
-  s2 |
-  s2 |
+  s2*8 |
+
+  % 62
+  s2*9 |
 
   % 71
-  s2*15 |
-  s2 |
-  s2 |
+  s2*8 |
+
+  % 79
+  s2*9 |
 }
 
 
@@ -44,12 +53,18 @@ malletNotes =
   d8 r r4 |
 
   % 5
-  R2*16 |
+  R2*8 |
+
+  % 13
+  R2*8 |
 
   \repeat volta 2
   {
     % 21
-    R2*15 |
+    R2*8 |
+
+    % 29
+    R2*7 |
   }
   \alternative
   {
@@ -62,12 +77,18 @@ malletNotes =
   }
 
   % 38
-  R2*16 |
+  R2*8 |
+
+  % 46
+  R2*8 |
 
   \repeat volta 2
   {
     % 54
-    R2*15 |
+    R2*8 |
+
+    % 62
+    R2*7 |
   }
   \alternative
   {
@@ -82,7 +103,10 @@ malletNotes =
   \repeat volta 2
   {
     % 71
-    R2*15 |
+    R2*8 |
+
+    % 79
+    R2*7 |
   }
   \alternative
   {
@@ -96,8 +120,8 @@ malletNotes =
 }
 
 
-malletScore  =                          \relative c { << \malletNotes \malletNotCues \malletDyn >> }
-malletCScore = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDyn >> }
-malletCond   = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDyn >> }
-malletMidi   = \transpose c \concertKey \relative c { << \malletNotes \malletNotCues \malletDyn >> }
-malletPart   = \transpose c \concertKey \relative c { << \malletNotes \malletCues    \malletDyn >> }
+malletScore  =                          \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
+malletCScore = \transpose c \concertKey \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
+malletCond   = \transpose c \concertKey \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
+malletMidi   = \transpose c \concertKey \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
+malletPart   = \transpose c \concertKey \relative c { << \tc \malletNotes \malletCues    \malletDyn >> }

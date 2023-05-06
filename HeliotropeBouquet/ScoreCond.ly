@@ -24,22 +24,25 @@ instrument = "Concert Band"
 
 woodwinds =
 <<
-  \fluteOneCond \fluteTwoCond \oboeCond \bassoonCond
+  \fluteOneCond \fluteTwoCond \oboeCond
   \clarinetOneCond \clarinetTwoCond \clarinetThreeCond \bassclarinetCond 
   \altosaxOneCond \altosaxTwoCond \tenorsaxCond \barisaxCond
 >>
 
 brass =
 <<
-  \trumpetOneCond \trumpetTwoCond \trumpetThreeCond
-  \hornOneCond \hornTwoCond
-  \tromboneOneCond \tromboneTwoCond \tromboneThreeCond
-  \baritoneCond \tubaCond
+  \trumpetOneCond \trumpetTwoCond \trumpetThreeCond \hornOneCond \hornTwoCond
+>>
+
+bassclef =
+<<
+  \bassoonCond
+  \tromboneOneCond \tromboneTwoCond \tromboneThreeCond \baritoneCond \tubaCond
 >>
 
 percussion =
 <<
-  \percussionOneCond \percussionTwoCond \malletCond \timpaniCond
+  \percussionOneCond \percussionTwoCond \malletCond
 >>
 
 \book
@@ -88,21 +91,27 @@ percussion =
           #(set-accidental-style 'modern)
           \set Staff.instrumentName = "Brass"
           \set Staff.shortInstrumentName = "Brass"
-%          \new Voice { \keepWithTag #'score \relative c <<
-%              \trumpetOneCond \trumpetTwoCond \trumpetThreeCond
-%              \hornOneCond \hornTwoCond
-%              \tromboneOneCond \tromboneTwoCond \tromboneThreeCond
-%              \baritoneCond \tubaCond
-%          >> }
+          \new Voice { \keepWithTag #'score \relative c <<
+              \brass
+          >> }
+        }
+        \new Staff
+        {
+          #(set-accidental-style 'modern)
+          \set Staff.instrumentName = "Brass"
+          \set Staff.shortInstrumentName = "Brass"
+          \new Voice { \keepWithTag #'score \relative c <<
+              \bassclef
+          >> }
         }
 	\new Staff
 	{
           #(set-accidental-style 'modern)
 	  \set Staff.instrumentName = "Percussion"
 	  \set Staff.shortInstrumentName = "Perc."
-%	  \new Voice { \dynamicDown \keepWithTag #'score \relative c <<
-%              \percussionOneCond \percussionTwoCond \malletCond \timpaniCond
-%          >> }
+	  \new Voice { \dynamicDown \keepWithTag #'score \relative c <<
+              \percussion
+          >> }
 	}
       >>
     >>

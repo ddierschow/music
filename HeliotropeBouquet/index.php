@@ -1,12 +1,14 @@
 <?php
 include "../bin/helpers.php";
 
+show_top();
+
 $parts = [
     "Flute1", "Flute2", "Oboe", "Bassoon", "Clarinet1", "Clarinet2", "Clarinet3", "BassClarinet",
     "AltoSax1", "AltoSax2", "TenorSax", "BariSax",  // how saxist
     "Trumpet1", "Trumpet2", "Trumpet3", "Horn1", "Horn2", "Trombone1", "Trombone2", "Trombone3",
     "Baritone", "BaritoneTC", "Tuba", "StringBass",
-    "Percussion1", "Percussion2", "MalletPercussion", "Timpani"
+    "Percussion1", "Percussion2", "MalletPercussion"
 ];
 
 echo "<table border=0><tr><td valign=top>\n";
@@ -33,5 +35,17 @@ echo "</td><td>\n";
 
 show_parts($parts);
 
-echo "</table>\n";
+echo "</td><td valign=top><table border=0><tr><td>\n";
+echo "<h4>To do</h4><ul>\n";
+echo "<li>Check all instrument ranges\n";
+echo "<li>Edit parts for details (slurs, accents, etc.)\n";
+echo "<li>Write percussion parts\n";
+echo "<li>Print\n";
+echo "<li>Play!\n";
+echo "</ul>\n";
+echo "</td></tr></table>\n";
+
+echo "</td></tr></table>\n";
+
+show_bottom();
 ?>

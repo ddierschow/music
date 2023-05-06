@@ -251,13 +251,6 @@ instrument = "Concert Band (Concert Key)"
 	  \set Staff.shortInstrumentName = "Mal.Pe."
 	  \new Voice { \dynamicDown \keepWithTag #'score \relative c \malletScore }
 	}
-	\new Staff
-	{
-	    #(set-accidental-style 'modern)
-	  \set Staff.instrumentName = "Timpani"
-	  \set Staff.shortInstrumentName = "Ti."
-	  \new Voice { \dynamicDown \keepWithTag #'score \timpaniScore }
-	}
       >>
     >>
     \layout

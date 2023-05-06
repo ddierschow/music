@@ -8,44 +8,60 @@ percussionOneDynamics =
   s2*4 |
 
   % 5
-  s2*16 |
+  s2*8 |
+
+  % 13
+  s2*8 |
 
   % 21
-  s2*15 |
-  s2 |
-  s2 |
+  s2*8 |
+
+  % 29
+  s2*9 |
 
   % 38
-  s2*16 |
+  s2*8 |
+
+  % 46
+  s2*8 |
 
   % 54
-  s2*15 |
-  s2 |
-  s2 |
+  s2*8 |
+
+  % 62
+  s2*9 |
 
   % 71
-  s2*15 |
-  s2 |
-  s2 |
+  s2*8 |
+
+  % 79
+  s2*9 |
 }
 
 
-percussionOneCues = \measuresPC
+percussionOneCues = \measures
 
 
-percussionOneNotCues = \measuresPC
+percussionOneNotCues = \measures
 
 
 percussionOneNotes =
 {
   R2*4 |
+
   % 5
-  R2*16 |
+  R2*8 |
+
+  % 13
+  R2*8 |
 
   \repeat volta 2
   {
     % 21
-    R2*15 |
+    R2*8 |
+
+    % 29
+    R2*7 |
   }
   \alternative
   {
@@ -58,12 +74,18 @@ percussionOneNotes =
   }
 
   % 38
-  R2*16 |
+  R2*8 |
+
+  % 46
+  R2*8 |
 
   \repeat volta 2
   {
     % 54
-    R2*15 |
+    R2*8 |
+
+    % 62
+    R2*7 |
   }
   \alternative
   {
@@ -78,7 +100,10 @@ percussionOneNotes =
   \repeat volta 2
   {
     % 71
-    R2*15 |
+    R2*8 |
+
+    % 79
+    R2*7 |
   }
   \alternative
   {
@@ -92,7 +117,7 @@ percussionOneNotes =
 }
 
 
-percussionOneScore = \relative c { << \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
-percussionOneCond  = \relative c { << \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
-percussionOneMidi  = \relative c { << \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
-percussionOnePart  = \relative c { << \percussionOneNotes \percussionOneCues    \percussionOneDynamics >> }
+percussionOneScore = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
+percussionOneCond  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
+percussionOneMidi  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
+percussionOnePart  = \relative c { << \pc \percussionOneNotes \percussionOneCues    \percussionOneDynamics >> }

@@ -14,6 +14,8 @@ trumpetTwoDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 13
   s2\mf |
   s2*7 |
 
@@ -21,6 +23,8 @@ trumpetTwoDyn =
   s2\f |
   s2*6 |
   s4 s8 s\f |
+
+  % 29
   s2*9 |
 
   % 38
@@ -28,6 +32,8 @@ trumpetTwoDyn =
   s2\< |
   s2 |
   s4\!\f s4\>\! |
+
+  % 46
   s2\mf |
   s2*7 |
 
@@ -37,6 +43,8 @@ trumpetTwoDyn =
   s4 s16 s8.\mf |
   s2\> |
   s2\!\mp |
+
+  % 62
   s2*2 |
   \crescTextPocoAPocoCresc s2\< |
   s2\! |
@@ -46,7 +54,10 @@ trumpetTwoDyn =
 
   % 71
   s4\mf s4 |
-  s2*16 |
+  s2*7 |
+
+  % 79
+  s2*9 |
 }
 
 
@@ -72,6 +83,8 @@ trumpetTwoNotes =
   e8. b'16~b8 d |
   d8. d16~d8 cis8 |
   a4 cis-> |
+
+  % 13
   e,8. fis16~fis8 fis8 |
   g16 b d cis~cis4 |
   e,8. fis16~fis8 fis8 |
@@ -92,6 +105,8 @@ trumpetTwoNotes =
     c16 e c c~c8~c16 r16 |
     b8-^ r r4 |
     r4 r8 eis,-^ |
+
+    % 29
     r8 fis'8~fis16 fis8. |
     fis8. fis16~fis8. r16 |
     b,8 b~b16 b8. |
@@ -119,6 +134,8 @@ trumpetTwoNotes =
   e8. fis16~fis8 g |
   d'8. d16~d8 cis |
   a4 cis |
+
+  % 46
   e,8. fis16~fis8 fis |
   b,8. cis'16~cis4 |
   e,8. fis16~fis8 fis8 |
@@ -139,6 +156,8 @@ trumpetTwoNotes =
     r4 r16 c8. |
     g'8. g16~g16 g fis8 |
     d8 g,16( a b c d dis) |
+
+    % 62
     g,4 a8. aes16 |
     c8 e16 e~e c e8 |
     dis16 e gis gis~gis e gis8 |
@@ -168,6 +187,8 @@ trumpetTwoNotes =
     c8. e16~e8 r8 |
     b8. dis16~dis8 dis |
     e8 g16( b,) e( cis ais g)~ |
+
+    % 79
     g8. b16~b4 |
     c8. c16~c8 r8 |
     b16 g'8 ais,16 b g'8 b,16 |
@@ -188,8 +209,8 @@ trumpetTwoNotes =
 }
 
 
-trumpetTwoScore    =                            \relative c' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
-trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
-trumpetTwoMidi     = \transpose c   \concertKey \relative c' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
-trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
-trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDyn >> }
+trumpetTwoScore    =                            \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
+trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
+trumpetTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
+trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
+trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDyn >> }

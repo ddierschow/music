@@ -20,7 +20,6 @@ piano score.
 - Tuba
 - String Bass
 - Percussion 1, 2, and Mallet
-- Timpani
 
 The source for all parts is written in the same key to allow for easily switching passages
 to different instruments.  The transposition is done at the bottom of each file.  This is

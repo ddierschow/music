@@ -45,8 +45,6 @@ instrument = "Concert Band (Concert Key)"
         { \new Voice { \relative c << \percussionOneMidi \percussionTwoMidi >> } }
       \new Staff \with { midiInstrument = "xylophone" }
         { \new Voice { \relative c << \malletMidi >> } }
-      \new Staff \with { midiInstrument = "timpani" }
-        { \new Voice { \relative c << \timpaniMidi >> } }
     >>
     \midi
     {
