@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 fluteTwoDyn =
 {
@@ -143,7 +142,7 @@ fluteTwoNotes =
   e,8. fis16~fis8 fis8 |
   e8. fis16~fis8 g |
   d'8. d16~d8 cis |
-  a4 cis |
+  a4 cis-> |
 
   % 46
   e,8. fis16~fis8 fis |

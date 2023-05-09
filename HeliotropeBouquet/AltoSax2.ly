@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 \include "AltoSax2.lyi"
 
 instrument = "Alto Saxophone II"

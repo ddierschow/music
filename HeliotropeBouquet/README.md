@@ -29,7 +29,7 @@ Each part has sequences for Notes, Dynamics, and Cues or NotCues, and these are 
 point the transposition is done, to produce a mixed seqence for the part and another for the score.
 In some cases, markups have been moved from Notes to Cues to avoid problems with combining parts for the score.
 
-The files with ly extension are rendered into pdf files.  Each part includes defs.lyi,
+The files with ly extension are rendered into pdf files.  Each part includes ../common/defs.lyi,
 which is my library of useful things, not all of which will be used.  Then each part includes its
 own lyi file, which has the four sequences named above.  Finally each part includes part.lyi,
 which includes outline.lyi, then lays things out on the page.
@@ -45,3 +45,5 @@ The ScoreMidi.ly file is there just to create the midi file, as the voltas have 
 to make it come out right.
 
 TODO: Condensed score.
+
+Uses https://github.com/kastdeur/lilydrum

@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 altosaxOneDyn =
 {
@@ -69,7 +68,7 @@ altosaxOneNotes =
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r bes4 |
+  d8 r bes4-> |
 
   % 5
   e8. fis16~fis4 |
@@ -79,7 +78,7 @@ altosaxOneNotes =
   e,8. fis16~fis4 |
   g8. b16~b4 |
   a8. a16~a8 a |
-  d4 bes4 |
+  d4 bes4-> |
 
   % 13
   e,8. fis16~fis4 |
@@ -89,7 +88,7 @@ altosaxOneNotes =
   g2 |
   g2 |
   d8 dis16 e~e8 d |
-  g4 gis |
+  g4 gis-> |
 
   \repeat volta 2
   {
@@ -107,7 +106,7 @@ altosaxOneNotes =
       r2 |
     }
     {
-      r4 b4 |
+      r4 b4-> |
     }
   }
 
@@ -119,7 +118,7 @@ altosaxOneNotes =
   e,8. fis16~fis4 |
   g8. b16~b4 |
   a8. a16~a8 a |
-  d4 bes4 |
+  d4 bes4-> |
 
   % 46
   e,8. fis16~fis4 |

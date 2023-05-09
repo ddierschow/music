@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 \include "outline.lyi"
 \include "allparts.lyi"
 
@@ -14,10 +13,10 @@ instrument = "Concert Band"
   systems-per-page = #1
   #(set-paper-size "letter")
   ragged-last-bottom = ##f
-  top-margin = 18\mm
+  top-margin = 14\mm
   left-margin = 22\mm
   right-margin = 22\mm
-  bottom-margin = 18\mm
+  bottom-margin = 14\mm
 }
 
 \book
@@ -235,19 +234,19 @@ instrument = "Concert Band"
       >>
       \new StaffGroup
       <<
-	\new Staff
+	\new DrumStaff \with { drumStyleTable = #(alist->hash-table mydrums) }
 	{
 	    #(set-accidental-style 'modern)
 	  \set Staff.instrumentName = "Percussion 1"
 	  \set Staff.shortInstrumentName = "Pe.1"
-	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \percussionOneScore }
+	  \new DrumVoice {\dynamicDown \keepWithTag #'score \relative c \percussionOneScore }
 	}
-	\new Staff
+	\new DrumStaff \with { drumStyleTable = #(alist->hash-table mydrums) }
 	{
 	    #(set-accidental-style 'modern)
 	  \set Staff.instrumentName = "Percussion 2"
 	  \set Staff.shortInstrumentName = "Pe.2"
-	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \percussionTwoScore }
+	  \new DrumVoice {\dynamicDown \keepWithTag #'score \relative c \percussionTwoScore }
 	}
 	\new Staff
 	{

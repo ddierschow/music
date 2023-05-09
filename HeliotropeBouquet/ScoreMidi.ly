@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 \include "outline.lyi"
 \include "allparts.lyi"
 
@@ -42,7 +41,7 @@ instrument = "Concert Band (Concert Key)"
       \new Staff \with { midiInstrument = "contrabass" }
         { \new Voice { \relative c << \stringbassMidi >> } }
       \new DrumStaff
-        { \new Voice { \relative c << \percussionOneMidi \percussionTwoMidi >> } }
+        { \new DrumVoice { \relative c << \percussionOneMidi \percussionTwoMidi >> } }
       \new Staff \with { midiInstrument = "xylophone" }
         { \new Voice { \relative c << \malletMidi >> } }
     >>

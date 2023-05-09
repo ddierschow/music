@@ -1,7 +1,5 @@
 \version "2.22.2"
 
-\include "config.lyi"
-\include "defs.lyi"
 \include "outline.lyi"
 
 \paper
@@ -44,7 +42,7 @@
 
   \score
   {
-    \new Staff
+    \new \stafftype \with { drumStyleTable = #(alist->hash-table mydrums) }
     {
       #(set-accidental-style 'modern)
       \set Score.skipBars = ##t

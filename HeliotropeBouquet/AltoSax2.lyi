@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 altosaxTwoDyn =
 {
@@ -84,7 +83,7 @@ altosaxTwoNotes =
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r bes4 |
+  d8 r bes4-> |
 
   % 5
   c8. d16~d4 |
@@ -94,7 +93,7 @@ altosaxTwoNotes =
   c8. d16~d4 |
   b8. d16~d4 |
   a8. a16~a8 a |
-  d4 bes4 |
+  d4 bes4-> |
 
   % 13
   c8. d16~d4 |
@@ -104,7 +103,7 @@ altosaxTwoNotes =
   f8 f f f |
   e8 e ees ees |
   d8 dis16 e~e8 d |
-  g4 gis |
+  g4 gis-> |
 
   \repeat volta 2
   {
@@ -122,7 +121,7 @@ altosaxTwoNotes =
       r2 |
     }
     {
-      r4 b,4 |
+      r4 b,4-> |
     }
   }
 
@@ -134,7 +133,7 @@ altosaxTwoNotes =
   c8. d16~d4 |
   b8. b16~b4 |
   a8. a16~a8 a |
-  d4 bes4 |
+  d4 bes4-> |
 
   % 46
   c8. d16~d4 |
@@ -209,8 +208,8 @@ altosaxTwoNotes =
 }
 
 
-altosaxTwoScore    =                            \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
-altosaxTwoCond     = \transpose c   \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
+altosaxTwoScore    =                            \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues                >> }
+altosaxTwoCond     = \transpose c   \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues                >> }
 altosaxTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
-altosaxEesTwoScore = \transpose ees \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
+altosaxEesTwoScore = \transpose ees \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues                >> }
 altosaxEesTwoPart  = \transpose ees \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoCues    \altosaxTwoDyn >> }

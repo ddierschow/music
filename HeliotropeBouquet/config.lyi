@@ -13,3 +13,7 @@ measures =
   \key c \major
   s2*34 |
 }
+
+stafftype = Staff
+
+\include "../common/defs.lyi"

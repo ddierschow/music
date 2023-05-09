@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 trumpetThreeDyn =
 {
@@ -134,7 +133,7 @@ trumpetThreeNotes =
   c,16( d e c)~c8 c |
   b8. fis'16~fis8 g |
   fis8. gis16~gis8 g |
-  fis4 g |
+  fis4 g-> |
 
   % 46
   c,16( d e c)~c8 c |
@@ -210,8 +209,8 @@ trumpetThreeNotes =
 }
 
 
-trumpetThreeScore    =                            \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues \trumpetThreeDyn >> }
-trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues \trumpetThreeDyn >> }
+trumpetThreeScore    =                            \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues                  >> }
+trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues                  >> }
 trumpetThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues \trumpetThreeDyn >> }
-trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues \trumpetThreeDyn >> }
+trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues                  >> }
 trumpetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeCues    \trumpetThreeDyn >> }

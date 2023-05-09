@@ -1,5 +1,13 @@
 \version "2.22.2"
 
+\include "../../lilydrum/lib/layout_tweaks.ily"
+\include "../../lilydrum/lib/musical_functions.ily"
+\include "../../lilydrum/lib/embellishments.ily"
+\include "../../lilydrum/lib/flourishing.ily"
+\include "../../lilydrum/lib/special_sticking.ily"
+\include "../../lilydrum/lib/rehearsal_marks.ily"
+\include "../../lilydrum/lib/midi.ily"
+
 tc = { \clef treble }
 bc = { \clef bass }
 pc = { \clef percussion }
@@ -70,3 +78,11 @@ rMark = #(define-music-function (parser location markp) (string?)
   \mark \markup { \box \bold $markp }
 #})
 
+#(define mydrums '(
+        (bassdrum       default   #f    -1)
+        (snare          default   #f    0)
+        (triangle       triangle  #f    6)
+        (cowbell        triangle  #f    3)
+        (hiwoodblock    triangle  #f    2)
+        (lowoodblock    triangle  #f    1)
+))

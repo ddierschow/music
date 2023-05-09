@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 clarOneDyn =
 {
@@ -103,7 +102,7 @@ clarOneNotes =
     g16 fis g e~e d e eis |
     fis8 fis16 d fis a8 e16 |
     fis16 e fis e~e8~e16 \tuplet 3/2 { d32( e fis) } |
-    g8 r r4 |
+    g8-^ r r4 |
     r4 r8 b,-^ |
 
     % 29

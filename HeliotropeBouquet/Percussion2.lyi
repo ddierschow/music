@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 percussionTwoDyn =
 {
@@ -46,38 +45,57 @@ percussionTwoNotCues = \measures
 
 
 percussionTwoNotes =
-{
-  R2*4 |
+\drummode {
+
+  R2*3 |
+  r4 \palmMute tri4 |
 
   % 5
-  R2*8 |
+  \palmMute tri4 r4 |
+  R2*7 |
 
   % 13
-  R2*8 |
+  R2*7 |
+  \palmMute tri4 r4 |
 
   \repeat volta 2
   {
     % 21
-    R2*8 |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 r |
+    r2 |
 
     % 29
-    R2*7 |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 wbh |
+    wbh4 wbh |
   }
   \alternative
   {
     {
-      R2 |
+      wbh4 wbh |
     }
     {
-      R2 |
+      wbh4 r |
     }
   }
 
   % 38
-  R2*8 |
+  \palmMute tri4 r4 |
+  R2*7 |
 
   % 46
-  R2*8 |
+  R2*7 |
+  \palmMute tri4 r4 |
 
   \repeat volta 2
   {
@@ -90,10 +108,10 @@ percussionTwoNotes =
   \alternative
   {
     {
-      R2 |
+      \palmMute tri4 r4 |
     }
     {
-      R2 |
+      \palmMute tri4 r4 |
     }
   }
 
@@ -108,16 +126,16 @@ percussionTwoNotes =
   \alternative
   {
     {
-      R2 |
+      \palmMute tri4 r4 |
     }
     {
-      R2 |
+      \palmMute tri4 \palmMute tri4 |
     }
   }
 }
 
 
-percussionTwoScore = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoCond  = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoMidi  = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoPart  = \relative c { << \pc \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }
+percussionTwoScore = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoCond  = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoMidi  = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoPart  = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }

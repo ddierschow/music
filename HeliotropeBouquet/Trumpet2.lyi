@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 trumpetTwoDyn =
 {
@@ -133,7 +132,7 @@ trumpetTwoNotes =
   e,8. fis16~fis8 fis8 |
   e8. fis16~fis8 g |
   d'8. d16~d8 cis |
-  a4 cis |
+  a4 cis-> |
 
   % 46
   e,8. fis16~fis8 fis |
@@ -209,8 +208,8 @@ trumpetTwoNotes =
 }
 
 
-trumpetTwoScore    =                            \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
-trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
+trumpetTwoScore    =                            \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
+trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
 trumpetTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
-trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
+trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
 trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDyn >> }

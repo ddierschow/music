@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 tenorsaxDyn =
 {
@@ -69,7 +68,7 @@ tenorsaxNotes =
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r bes'4 |
+  d8 r bes'4-> |
 
   % 5
   a8. a16~a4 |
@@ -79,7 +78,7 @@ tenorsaxNotes =
   a8. a16~a8 ais |
   b8. b16~b8. bes16 |
   a8. b16~b8 a |
-  fis4 f4 |
+  fis4 f4-> |
 
   % 13
   a8. a16~a4 |
@@ -89,7 +88,7 @@ tenorsaxNotes =
   g2 |
   g2 |
   d8 dis16 e~e8 d |
-  g4 gis |
+  g4 gis-> |
 
   \repeat volta 2
   {
@@ -107,7 +106,7 @@ tenorsaxNotes =
       r2 |
     }
     {
-      r4 b4 |
+      r4 b4-> |
     }
   }
 
@@ -119,7 +118,7 @@ tenorsaxNotes =
   a8. a16~a8 ais |
   b8. b16~b8. bes16 |
   a8. b16~b8 a |
-  fis4 f4 |
+  fis4 f4-> |
 
   % 46
   a8. a16~a4 |

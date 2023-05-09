@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 baritoneDyn =
 {
@@ -100,7 +99,7 @@ baritoneNotes =
     g8 r d g16 gis |
     a8 r d, r |
     a'8 r d,8~d16 \tuplet 3/2 { d32( e f) } |
-    g8 r8 r4 |
+    g8-^ r8 r4 |
     r4 r8 gis8-^ |
 
     % 29
@@ -130,7 +129,7 @@ baritoneNotes =
   e,8. d16~d8 dis |
   e8. b'16~b8 bes |
   a8. b,16~b8 a |
-  \slashedGrace { d'8( } d,4) bes' |
+  \slashedGrace { d'8( } d,4) bes'-> |
 
   % 46
   e,8. d16~d8 d8 |

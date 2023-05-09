@@ -1,7 +1,6 @@
 \version "2.22.2"
 
 \include "config.lyi"
-\include "defs.lyi"
 
 clarThreeDyn =
 {
@@ -92,7 +91,7 @@ clarThreeNotes =
   c,16( d e c)~c8 c8 |
   b8. fis'16~fis8 g |
   fis16( g a gis)~gis8 g |
-  fis4 g4 |
+  fis4 g4-> |
 
   % 13
   c,16( d e c)~c8 c |
@@ -102,7 +101,7 @@ clarThreeNotes =
   g8 g g4 |
   g8 g g4 |
   d8. cis16~cis8 c |
-  b4 d' |
+  b4 d'-> |
 
   \repeat volta 2
   {
@@ -114,7 +113,7 @@ clarThreeNotes =
     fis8 fis16 d' fis, a8 e'16 |
     fis,16 e' fis, fis~fis8~fis16 r16 |
     b8-^ r r4 |
-    r4 r8 dis,-^ |
+    r4 r8 d,-^ |
 
     % 29
     r8 c'8~c16 d8. |
@@ -143,7 +142,7 @@ clarThreeNotes =
   c,16( d e c)~c8 c |
   b8. fis'16~fis8 g |
   fis8. gis16~gis8 g |
-  fis4 g |
+  fis4 g-> |
 
   % 46
   c,16( d e c)~c8 c |
@@ -214,8 +213,8 @@ clarThreeNotes =
 }
 
 
-clarinetThreeScore    =                            \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
-clarinetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
+clarinetThreeScore    =                            \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
+clarinetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
 clarinetThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
-clarinetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
+clarinetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
 clarinetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeCues    \clarThreeDyn >> }

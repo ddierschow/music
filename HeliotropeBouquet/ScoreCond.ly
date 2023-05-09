@@ -3,7 +3,6 @@
 % This may be a pipe dream.
 
 \include "config.lyi"
-\include "defs.lyi"
 \include "outline.lyi"
 \include "allparts.lyi"
 
@@ -104,12 +103,12 @@ percussion =
               \bassclef
           >> }
         }
-	\new Staff
+	\new DrumStaff \with { drumStyleTable = #(alist->hash-table mydrums) }
 	{
           #(set-accidental-style 'modern)
 	  \set Staff.instrumentName = "Percussion"
 	  \set Staff.shortInstrumentName = "Perc."
-	  \new Voice { \dynamicDown \keepWithTag #'score \relative c <<
+	  \new DrumVoice { \dynamicDown \keepWithTag #'score \relative c <<
               \percussion
           >> }
 	}

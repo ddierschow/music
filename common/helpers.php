@@ -56,6 +56,7 @@ function show_common_links() {
     show_link("https://web.mit.edu/merolish/Public/drums.pdf", "Drum_and_Percussion_Notation");
     show_link("../Percussion_Key.pdf", "Percussion_Key.pdf");
     show_link("https://audio.online-convert.com/convert/midi-to-mp3", "Online-Convert MIDI to MP3");
+    show_link("https://github.com/kastdeur/lilydrum", "lilydrum");
     echo "</ul>\n";
 }
 
