@@ -48,7 +48,7 @@ percussionTwoNotes =
 \drummode {
 
   R2*3 |
-  r4 \palmMute tri4 |
+  r4 \palmMute tri4 ^\markup { Triangle } |
 
   % 5
   \palmMute tri4 r4 |
@@ -61,7 +61,7 @@ percussionTwoNotes =
   \repeat volta 2
   {
     % 21
-    wbh4 wbh |
+    wbh4 ^\markup { "High Wood Block" } wbh |
     wbh4 wbh |
     wbh4 wbh |
     wbh4 wbh |

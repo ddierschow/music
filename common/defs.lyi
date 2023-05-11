@@ -79,8 +79,8 @@ rMark = #(define-music-function (parser location markp) (string?)
 #})
 
 #(define mydrums '(
-        (bassdrum       default   #f    -1)
-        (snare          default   #f    0)
+        (bassdrum       default   #f    -3)
+        (snare          default   #f    1)
         (triangle       triangle  #f    6)
         (cowbell        triangle  #f    3)
         (hiwoodblock    triangle  #f    2)

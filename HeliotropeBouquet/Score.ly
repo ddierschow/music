@@ -27,6 +27,7 @@ instrument = "Concert Band"
     subtitle = "A Slow Drag Two Step"
     opus = ""
     subsubtitle = "Scott Joplin and Louis Chauvin"
+    arranger = \markup { \italic "arr. Dean Dierschow" }
     copyright = ""
     instrument = \instrument
 
@@ -37,8 +38,8 @@ instrument = "Concert Band"
     date = "1907"
     source = ""
     style = "Ragtime"
-    maintainer = ""
-    maintainerEmail = ""
+    maintainer = "Dean Dierschow"
+    maintainerEmail = "deandierschow@gmail.com"
     lastupdated = ""
     meter = "Slow March Tempo"
 
