@@ -1,49 +1,19 @@
 \version "2.22.2"
 
+instrument = "Concert Band (Concert Key)"
+
 \include "config.lyi"
 \include "outline.lyi"
 \include "allparts.lyi"
+\include "layout.lyi"
 
 #(set-global-staff-size 14)
 
-instrument = "Concert Band (Concert Key)"
-
-\paper
-{
-  systems-per-page = #1
-  #(set-paper-size "letter")
-  ragged-last-bottom = ##f
-  top-margin = 18\mm
-  left-margin = 22\mm
-  right-margin = 22\mm
-  bottom-margin = 18\mm
-}
+\ScorePaper
 
 \book
 {
-  \header
-  {
-    title = \markup{Heliotrope Bouquet}
-    subtitle = "A Slow Drag Two Step"
-    opus = ""
-    subsubtitle = "Scott Joplin and Louis Chauvin"
-    copyright = ""
-    instrument = \instrument
-
-    mutopiatitle = "Heliotrope Bouquet"
-    mutopiacomposer = "Joplin/Chauvin"
-    mutopiaopus = ""
-    mutopiainstrument = "Concert Band"
-    date = "1907"
-    source = ""
-    style = "Ragtime"
-    maintainer = ""
-    maintainerEmail = ""
-    lastupdated = ""
-
-    footer = ""
-    tagline = ""
-  }
+  \ScoreHeader
   \pageBreak
 
   \score

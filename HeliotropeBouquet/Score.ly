@@ -1,52 +1,20 @@
 \version "2.22.2"
 
+instrument = "Concert Band"
+
 \include "config.lyi"
 \include "outline.lyi"
 \include "allparts.lyi"
+\include "layout.lyi"
 
 #(set-global-staff-size 14)
 
-instrument = "Concert Band"
-
-\paper
-{
-  systems-per-page = #1
-  #(set-paper-size "letter")
-  ragged-last-bottom = ##f
-  top-margin = 14\mm
-  left-margin = 22\mm
-  right-margin = 22\mm
-  bottom-margin = 14\mm
-}
+\ScorePaper
 
 \book
 {
-  \header
-  {
-    title = \markup{Heliotrope Bouquet}
-    subtitle = "A Slow Drag Two Step"
-    opus = ""
-    subsubtitle = "Scott Joplin and Louis Chauvin"
-    arranger = \markup { \italic "arr. Dean Dierschow" }
-    copyright = ""
-    instrument = \instrument
-
-    mutopiatitle = "Heliotrope Bouquet"
-    mutopiacomposer = "Joplin/Chauvin"
-    mutopiaopus = ""
-    mutopiainstrument = "Concert Band"
-    date = "1907"
-    source = ""
-    style = "Ragtime"
-    maintainer = "Dean Dierschow"
-    maintainerEmail = "deandierschow@gmail.com"
-    lastupdated = ""
-    meter = "Slow March Tempo"
-
-    footer = ""
-    tagline = ""
-  }
-  % \pageBreak
+  \ScoreHeader
+  \pageBreak
 
   \score
   {

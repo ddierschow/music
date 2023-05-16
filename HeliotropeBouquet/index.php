@@ -40,7 +40,6 @@ show_parts($parts);
 
 echo "</td><td valign=top><table border=0><tr><td>\n";
 echo "<h4>To do</h4><ul>\n";
-echo "<li>Check all instrument ranges\n";
 echo "<li>Write a condensed score\n";
 echo "<li>Print\n";
 echo "<li>Play!\n";
