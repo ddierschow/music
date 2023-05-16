@@ -205,21 +205,21 @@ instrument = "Concert Band"
       <<
 	\new DrumStaff \with { drumStyleTable = #(alist->hash-table mydrums) }
 	{
-	    #(set-accidental-style 'modern)
+	  #(set-accidental-style 'modern)
 	  \set Staff.instrumentName = "Percussion 1"
 	  \set Staff.shortInstrumentName = "Pe.1"
 	  \new DrumVoice {\dynamicDown \keepWithTag #'score \relative c \percussionOneScore }
 	}
 	\new DrumStaff \with { drumStyleTable = #(alist->hash-table mydrums) }
 	{
-	    #(set-accidental-style 'modern)
+	  #(set-accidental-style 'modern)
 	  \set Staff.instrumentName = "Percussion 2"
 	  \set Staff.shortInstrumentName = "Pe.2"
 	  \new DrumVoice {\dynamicDown \keepWithTag #'score \relative c \percussionTwoScore }
 	}
 	\new Staff
 	{
-	    #(set-accidental-style 'modern)
+	  #(set-accidental-style 'modern)
 	  \set Staff.instrumentName = "Mallet Percussion"
 	  \set Staff.shortInstrumentName = "Mal.Pe."
 	  \new Voice {\dynamicDown \keepWithTag #'score \relative c \malletCScore }

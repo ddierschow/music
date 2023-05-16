@@ -1,11 +1,10 @@
-\version "2.13.5"
+\version "2.22.2"
 
-\include "defs.lyi" 
-\include "Trumpet2MvtIII.lyi" 
+\include "config.lyi" 
+\include "Trumpet2.lyi" 
 
 instrument = "Trumpet II"
 
-notesMvtIII = \trumpetBesTwoMvtIIIPart
+notes = \trumpetBesTwoPart
 
-\include "Part.lyi"
-
+\include "part.lyi"

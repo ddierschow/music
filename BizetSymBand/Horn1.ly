@@ -1,11 +1,10 @@
-\version "2.13.5"
+\version "2.22.2"
 
-\include "defs.lyi" 
-\include "Horn1MvtIII.lyi" 
+\include "config.lyi" 
+\include "Horn1.lyi" 
 
 instrument = "Horn I"
 
-notesMvtIII = \hornFOneMvtIIIPart
+notes = \hornFOnePart
 
-\include "Part.lyi"
-
+\include "part.lyi"

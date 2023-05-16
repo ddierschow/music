@@ -1,10 +1,10 @@
-\version "2.13.5"
+\version "2.22.2"
 
-\include "defs.lyi" 
-\include "BaritoneMvtIII.lyi" 
+\include "config.lyi" 
+\include "Baritone.lyi" 
 
 instrument = "Baritone (Treble Clef)"
 
-notesMvtIII = \baritonetcMvtIIIPart
+notes = \baritoneTCPart
 
-\include "Part.lyi"
+\include "part.lyi"

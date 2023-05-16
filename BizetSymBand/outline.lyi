@@ -1,0 +1,126 @@
+rehearsalMarks =
+{
+  \partial 4 s4 |
+  s2.*17 |
+
+  \rMark "18"
+  s2.*20 |
+
+  \rMark "38"
+  s2.*16 |
+
+  \rMark "54"
+  s2.*32 |
+
+  \rMark "86"
+  s2.*44 |
+
+  \rMark "130"
+  s2.*27 |
+
+  \rMark "157"
+  s2.*16 |
+
+  % Trio
+  % \rMark "173"
+  s2.*8 |
+
+  \rMark "181"
+  s2.*16 |
+
+  \rMark "204"
+  s2.*8 |
+
+  \rMark "212"
+  s2.*24 |
+
+  \rMark "236"
+  s2.*24 |
+
+  \rMark "260"
+  s2.*17 |
+}
+
+
+pageMarks =
+{
+  \override Score.PaperColumn #'keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
+  \time 3/4
+
+  \partial 4 s4 |
+  \mark \markup { \musicglyph #"scripts.segno" }
+  \repeat volta 2
+  {
+    s2.*15 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2. |
+    }
+  }
+
+  \repeat volta 2
+  {
+    s2.*20 |
+
+    s2.*16 |
+
+    s2.*32 |
+
+    s2.*44 |
+
+    s2.*27 |
+
+    s2.*10 |
+  }
+  \alternative
+  {
+    {
+      s2.*3 |
+    }
+    {
+      s4 s s^\markup { Fin. }  \bar "||"
+      s2.*2 |
+    }
+  }
+
+  \tempoMark "Trio"
+  \repeat volta 2
+  {
+    s2.*8|
+
+    s2.*16 |
+  }
+
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    s2.*24 |
+
+    s2.*24 |
+
+    s2.*15 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2_\markup { \italic "Da capo il Minuetto" }
+      s4 %\mark \markup { \musicglyph #"scripts.segno" }
+      \bar "||"
+    }
+  }
+  \stopStaff
+  s4 \mark \markup { \musicglyph #"scripts.segno" } s s
+}
+
+
+outline = << \rehearsalMarks \pageMarks >>

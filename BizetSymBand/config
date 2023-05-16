@@ -1,4 +1,0 @@
-all: score parts
-score: ScoreMvtIII.pdf ScoreNT.pdf
-parts: Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf Tuba.pdf Percussion.pdf Timpani.pdf
-.pdf.ly: lilypond

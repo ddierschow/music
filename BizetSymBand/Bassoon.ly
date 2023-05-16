@@ -1,10 +1,10 @@
-\version "2.13.5"
+\version "2.22.2"
 
-\include "defs.lyi" 
-\include "BassoonMvtIII.lyi" 
+\include "config.lyi" 
+\include "Bassoon.lyi" 
 
 instrument = "Bassoon"
 
-notesMvtIII = \bassoonMvtIIIPart
+notes = \bassoonPart
 
-\include "Part.lyi"
+\include "part.lyi"

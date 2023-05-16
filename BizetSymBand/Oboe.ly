@@ -1,10 +1,10 @@
-\version "2.13.5"
+\version "2.22.2"
 
-\include "defs.lyi" 
-\include "OboeMvtIII.lyi" 
+\include "config.lyi" 
+\include "Oboe.lyi" 
 
 instrument = "Oboe"
 
-notesMvtIII = \oboeMvtIIIPart
+notes = \oboePart
 
-\include "Part.lyi"
+\include "part.lyi"

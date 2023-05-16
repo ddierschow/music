@@ -1,11 +1,10 @@
-\version "2.13.5"
+\version "2.22.2"
 
-\include "defs.lyi" 
-\include "TimpaniMvtIII.lyi" 
+\include "config.lyi" 
+\include "Timpani.lyi" 
 
 instrument = "Timpani"
 
-notesMvtIII = \timpaniMvtIIIPart
+notes = \timpaniPart
 
-\include "Part.lyi"
-
+\include "part.lyi"

@@ -1,0 +1,517 @@
+\version "2.22.2"
+
+\include "config.lyi"
+
+bassclarDyn = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4\f |
+  \repeat volta 2
+  {
+    s2.*6 |
+    s2.^\tenuto |
+    s2. |
+    s2.*4 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2 s4\f |
+    }
+    {
+      s2. |
+    }
+  }
+
+  % 18
+  \repeat volta 2
+  {
+    s2.*3 |
+    s2 s4\p |
+    \crescTextPocoAPocoCresc 
+    s4\< s s |
+    s2.*2 |
+    \crescTextMolto
+    s4\! s s\< |
+    s2.*2 |
+    s4 s s\! |
+    s4 s s\f |
+    \crescHairpin
+    s4\< s s |
+    s s s\! |
+    s\ff s s |
+    s2.*5 |
+
+    % 38
+    s2.\f |
+    s2.*2 |
+    s2 s4\p |
+    s2.*4 |
+    s2.\f |
+    s2.*2 |
+    s2 s4 |
+    s2.*3 |
+    s2 s4\pp |
+
+    % 54
+    s2.*5 |
+    \crescTextPocoAPocoCrescMolto
+    s2.\< |
+    s2.*17 |
+    s2 s4\! |
+    s2.\f |
+    s2.*3 |
+    s4 s\ff s |
+    s2.*3 |
+
+    % 86
+    s4\ff s\f s |
+    \dimTextDimMolto
+    s2.\>
+    s2.*6 |
+    s2.\pp |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*10 |
+    s2.\!\< |
+    s2.*3 |
+    s2.\!\> |
+    s2.*9 |
+    s2.*2\! |
+    s4 s s\f |
+    s2.*3 |
+
+    % 130
+    s2.\ff |
+    s2.*3 |
+    s2.\f |
+    s2.*3 |
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s s s |
+    s2.*3 |
+    s4\ff s s |
+    s2.*3 |
+    s2.\f |
+    s2.*3 |
+    s2. |
+    s2.*2 |
+
+    % 157
+    s2. |
+    s2.\fp |
+    s2. |
+    \crescTextCrescMolto 
+    s2.\< |
+    s2.*3 |
+    s2.\! |
+    \crescHairpin
+    s2.\< |
+    s4\!\ff s s |
+  }
+  \alternative
+  {
+    {
+      s4-\secco s s |
+      s2.*2 |
+    }
+    {
+      s4-\secco s s |
+      s2.*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 181
+    s2.*11 |
+    s4 s s\pp |
+    s2.*4 |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 205
+    \crescHairpin
+    s2.\pp\< |
+    s2.*3 |
+    s2.\!\> |
+    s2. |
+    s2.\! |
+    s2.*9 |
+    s2.\pp\< |
+    s2.*3 |
+    s2.\!\> |
+    s2. |
+    s2.\! |
+    s2. |
+
+    % 229
+    s2.\pp |
+    s2.*21 |
+    s2.\ppp |
+    s2. |
+
+    % 253
+    s2.*11 |
+    s4 s s\pp |
+    s2.*3 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s4 s s\f |
+    }
+  }
+}
+
+
+bassclarCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*58 | \break
+  s2.*27 |
+    \set countPercentRepeats = ##t
+    \override PercentRepeat #'transparent = ##t
+    \override PercentRepeatCounter #'staff-padding = #2
+    \set repeatCountVisibility = #(every-nth-repeat-count-visible 2)
+
+    \repeat percent 8 { s2. | }
+
+  s2.*76 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+bassclarNotCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+bassclarNotes = 
+{
+  \time 3/4
+  \key g \major
+  \clef treble
+
+  \partial 4 d''4 |
+  \repeat volta 2
+  {
+    g2 b4-. |
+    g-. d-. g-. |
+    a2 c4-. |
+    a-. d,-. a'-. |
+    b( d-.) g,-. |
+    g2 b4-. |
+    e,2. |
+    e |
+    fis |
+    b |
+    g4-. fis-. e-. |
+    a2. |
+    d2 d,4 |
+    d2.~ |
+    d2.~ |
+  }
+  \alternative
+  {
+    {
+      d4 r d'-. |
+    }
+    {
+      d,4\repeatTie r r |
+    }
+  }
+
+  % 18
+  \repeat volta 2
+  {
+    R4*3*3 |
+    r4 r b'-. |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g2-> d'4-. |
+    b-. g-. b-. |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g2-> d'4-. |
+    b-. g-. b-. |
+    c2 a4-. |
+    fis-. d-. fis-. |
+    g-. d'-. b-. |
+    g-. r g-. |
+    g-. r d-. |
+    d-. r e-. |
+    e-. b-. c-. |
+    g-. a-. b-. |
+
+    % 38
+    d2.~ |
+    d2. |
+    g4-. r r |
+    r r g-. |
+    g-. r d-. |
+    d-. r e-. |
+    e-. fis-. g-. |
+    fis-. e-. d-. |
+    a2.~ |
+    a2. |
+    a4-. r r |
+    r r a-. |
+    a2.~ |
+    a2. |
+    a4-. r r |
+    r r a-. |
+
+    % 54
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a4 r r |
+    r d'-. cis-. |
+    b-. a-. g-. |
+    fis-. e-. d-. |
+    cis-. b-. a-. |
+
+    % 86
+    d4-. d-. d-. |
+    \repeat unfold 7 { d-. d-. d-. | }
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2. |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2. |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2. |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2. |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2. |
+    g2.~ |
+    g2.~ |
+    g2 r4 |
+    R4*3 |
+    r4 r g'( |
+    e'-.) e-. g-. |
+    e-. r r |
+    R4*3 |
+
+    % 130
+    g,4-. r r |
+    R4*3*3 |
+    d2.~ |
+    d2.~ |
+    d4 r r |
+    R4*3 |
+    g4-. r d'-. |
+    d-. r b-. |
+    b-. r g-. |
+    g-. r f-. |
+    e-. r g( |
+    e'-.) e-. g-. |
+    e-. r r |
+    R4*3 |
+    g,4-. r r |
+    R4*3*3 |
+    d2.~ |
+    d2.~ |
+    d4-. r r |
+    R4*3 |
+    d2.~ |
+    d2.~ |
+    d4-. r r |
+
+    % 157
+    R4*3 |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    g4-. r r |
+  }
+  \alternative
+  {
+    {
+      g,4-. r r |
+      R4*3*2 |
+    }
+    {
+      g,4-. r r |
+      R4*3*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    R4*3*8 |
+
+    % 181
+    R4*3*11 |
+    r4 r g'-. |
+    g-. g-. g-. |
+    g-. r g-. |
+    g-. r c-. |
+    c-. r r |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    R4*3*8 |
+
+    % 205
+    f,2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2 r4 |
+    R4*3 |
+    R4*3*8 |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2 r4 |
+    R4*3 |
+
+    % 229
+    e2.~( |
+    e2. |
+    fis2.~ |
+    fis2. |
+    gis2.~ |
+    gis2. |
+    fis2.~ |
+    fis2. |
+    e2.~ |
+    e2. |
+    fis2.~ |
+    fis2. |
+    gis2.~ |
+    gis2.) |
+    fis2.~ |
+    fis2. |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e4 r r |
+
+    % 253
+    R4*3*8 |
+    R4*3*3 |
+    r4 r g-. |
+    g-. g-. g-. |
+    g-. r g-. |
+    g-. r c-. |
+  }
+  \alternative
+  {
+    {
+      c-. r r |
+    }
+    {
+      c-. r d,-. |
+    }
+  }
+}
+
+
+bassclarinetScore    =                            \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarinetCond     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarinetMidi     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarinetBesScore = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarinetBesPart  = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarCues    \bassclarDyn >> }

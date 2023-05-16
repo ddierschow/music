@@ -1,0 +1,23 @@
+concertKey = bes
+tempomark = { \tempo 8 = 92 }
+
+measures =
+{
+  \override MultiMeasureRest.expand-limit = #2
+  \override Score.PaperColumn #'keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+  s2.*169 |
+
+  % Trio
+  \key c \major
+
+  s2.*96 |
+}
+
+stafftype = Staff
+
+\include "../common/defs.lyi"

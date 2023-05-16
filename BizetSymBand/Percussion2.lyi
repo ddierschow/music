@@ -1,0 +1,549 @@
+\version "2.22.2"
+
+\include "config.lyi"
+
+percussionTwoDyn = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4\f |
+  \repeat volta 2
+  {
+    s2.*6 |
+    s2.^\tenuto |
+    s2. |
+    s2.*4 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2 s4 |
+    }
+    {
+      s2. |
+    }
+  }
+
+  \repeat volta 2
+  {
+    \crescTextPocoAPocoCresc 
+    s4\pp\< s s |
+    s2.*7 |
+    \crescTextMolto 
+    s4\! s\< s |
+    s2.*2 |
+    s4 s s\! |
+    \crescHairpin
+    s4\f\< s s |
+    s s s\! |
+    s\ff s s |
+    s^\leggiero s s\pp |
+    s2.*2 |
+    \crescTextCrescMolto 
+    s4\< s s\! |
+    s2. |
+
+    % 38
+    s2.\f |
+    s2.*2 |
+    s2 s4\pp |
+    s2. |
+    s2 s4\< |
+    s2. |
+    s2 s4\! |
+    s2.\f |
+    s2.*2 |
+    s2  s4 |
+    s2.*3 |
+    s2 s4\pp |
+
+    % 54
+    s2.*5 |
+    \crescTextPocoAPoco 
+    s2.\< |
+    \crescTextCrescMolto 
+    s2.\! |
+    s2\< s4 |
+    s2.*15 |
+    s2 s4\! |
+    s2.\f |
+    s2.*3 |
+    s4 s\ff s |
+    s2.*3 |
+
+    % 86
+    s2.*32 |
+    s2.\p\> |
+    s2.*3 |
+    s2.\! |
+    s2.*3 |
+    s4 s s\f |
+    s2.*3 |
+
+    % 130
+    s4\ff s s |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s s s\ff |
+    s2.*3 |
+    s4 s s |
+    s2.*2 |
+    s4 s s\f |
+    s2.*3 |
+    s4 s s |
+    s2.*3 |
+
+    % 157
+    s4 s s\f |
+    s2.\fp |
+    s2. |
+    \crescTextCrescMolto 
+    s2.\< |
+    s2. |
+    s2.\startTrillSpan |
+    s2.\! |
+    \crescHairpin
+    s2.\< |
+    s2.\stopTrillSpan\! |
+    s4\ff s s |
+  }
+  \alternative
+  {
+    {
+      s4-\secco s s |
+      s2.*2 |
+    }
+    {
+      s4-\secco s s |
+      s2.*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 181
+    s2.*11 |
+    s4\pp s s |
+    s2.*4 |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 205
+    s2.*24 |
+
+    % 229
+    s2.\pp |
+    s2.*21 |
+    s2.\ppp |
+    s4 s s\p |
+
+    % 253
+    s2. |
+    \crescTextCrescMolto 
+    s4 s s\< |
+    s2.*6 |
+    s4\! s s |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*3 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s4 s s\f |
+    }
+  }
+}
+
+
+percussionTwoCues = 
+{
+  \time 3/4
+  \key g \major
+  \clef percussion
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*96 |
+}
+
+
+percussionTwoNotCues = 
+{
+  \time 3/4
+  \key g \major
+  \clef percussion
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*96 |
+}
+
+
+percussionTwoNotes = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 r4 |
+  \repeat volta 2
+  {
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+  }
+  \alternative
+  {
+    {
+      r2. |
+    }
+    {
+      r2. |
+    }
+  }
+
+  \repeat volta 2
+  {
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+
+    % 38
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+
+    % 54
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+
+    % 86
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+
+    % 130
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+
+    % 157
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+  }
+  \alternative
+  {
+    {
+      r2. |
+      r2. |
+      r2. |
+    }
+    {
+      r2. |
+      r2. |
+      r2. |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+
+    % 181
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+
+    % 205
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+
+    % 229
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+
+    % 253
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+    r2. |
+  }
+  \alternative
+  {
+    {
+      r2. |
+    }
+    {
+      r2. |
+    }
+  }
+}
+
+
+percussionTwoScore = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoCond  = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoMidi  = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
+percussionTwoPart  = \relative c { << \pc \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }

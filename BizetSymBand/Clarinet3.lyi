@@ -1,0 +1,491 @@
+\version "2.22.2"
+
+\include "config.lyi"
+
+clarThreeDyn = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4\f |
+  \repeat volta 2
+  {
+    s2.*6 |
+    s2.^\tenuto |
+    s2. |
+    s2.*4 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2 s4\f |
+    }
+    {
+      s2. |
+    }
+  }
+
+  \repeat volta 2
+  {
+    s2.*12 |
+    \crescHairpin
+    s4\f\< s s |
+    s s s\! |
+    s\ff s s |
+    s2.*5 |
+
+    % 38
+    s2.\f |
+    s2.*7 |
+    s2.\f |
+    s2.*2 |
+    s2  s4 |
+    s2.*3 |
+    s2 s4\pp |
+
+    % 54
+    s2.*5 |
+    \crescTextPocoAPocoCrescMolto
+    s2.\< |
+    s2.*17 |
+    s2 s4\! |
+    s2.\f |
+    s2.*3 |
+    s4 s\ff s |
+    s2.*3 |
+
+    % 86
+    s2.\ff |
+    s2.*7 |
+    s2.\pp |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*10 |
+    s2.\!\< |
+    s2.*3 |
+    s2.\p\> |
+    s2.*9
+    s2.\! |
+    s2. |
+    s4 s s\f |
+    s2.*3 |
+
+    % 130
+    s4\ff s s |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s s s\ff |
+    s2.*3 |
+    s4 s s |
+    s2.*2 |
+    s4 s s\f |
+    s2.*3 |
+    s4 s s |
+    s2.*3 |
+
+    % 157
+    s4 s s\f |
+    s2.\fp |
+    s2. |
+    \crescTextCrescMolto 
+    s2.\< |
+    s2.*3 |
+    s2.\! |
+    \crescHairpin
+    s2.\< |
+    s4\!\ff s s |
+  }
+  \alternative
+  {
+    {
+      s4-\secco s s |
+      s2.*2 |
+    }
+    {
+      s4-\secco s s |
+      s2.*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    s2.*7 |
+    s4 s s\p |
+
+    % 181
+    s2.*11 |
+    s4 s s\pp |
+    s2.*4 |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    s2.*8 |
+
+    % 205
+    \crescHairpin
+    s2.\pp\< |
+    s2.*3 |
+    s2.\!\> |
+    s2. |
+    s2.\! |
+    s2.*9 |
+    s2.\pp\< |
+    s2.*3 |
+    s2.\!\> |
+    s2. |
+    s2.\! |
+    s2. |
+
+    % 229
+    s2.\pp |
+    s2.*21 |
+    s2.\ppp |
+    s2. |
+
+    % 253
+    s2.*11 |
+    s4 s s\pp |
+    s2.*3 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s4 s s\f |
+    }
+  }
+}
+
+
+clarThreeCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*58 | \break
+  s2.*111 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+clarThreeNotCues = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+clarThreeNotes = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 d4 |
+  \repeat volta 2
+  {
+    g2 b4-. |
+    g-. d-. g-. |
+    a2 c4-. |
+    a-. d,-. a'-. |
+    b( d-.) g,-. |
+    g2 b4-. |
+    e,2. |
+    g2. |
+    fis2. |
+    fis2. |
+    b4-. b-. b-. |
+    a2. |
+    a2 d,4 |
+    d2.~ |
+    d2.( |
+  }
+  \alternative
+  {
+    {
+      d4) r d-. |
+    }
+    {
+      d4\repeatTie r r |
+    }
+  }
+
+  % 18
+  \repeat volta 2
+  {
+    R4*3*12 |
+    d4-. d-. d-. |
+    d-. d-. d-. |
+    g-. r r |
+    R4*3*5 |
+
+    % 38
+    d2.~ |
+    d2. |
+    d4-. r r |
+    R4*3*5 |
+    e2.~ |
+    e2. |
+    d4-. r r |
+    r r a'-. |
+    e2.~ |
+    e2. |
+    d4-. r r |
+    r r a'-. |
+
+    % 54
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2.~ |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a4 r r |
+    r d'-. cis-. |
+    b-. a-. g-. |
+    fis-. e-. d-. |
+    cis-. b-. a-. |
+
+    % 86
+    d4-. r r |
+    R4*3*7 |
+    fis,2.~ |
+    fis2.~ |
+    fis2.~ |
+    fis2. |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2. |
+    fis2.~ |
+    fis2.~ |
+    fis2.~ |
+    fis2. |
+    g2. |
+    g2.~ |
+    g2.~ |
+    g2. |
+    fis2.~ |
+    fis2.~ |
+    fis2.~ |
+    fis2. |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2. |
+    fis2.~ |
+    fis2.~ |
+    fis2.~ |
+    fis2. |
+    g2. |
+    g2.~ |
+    g2 r4 |
+    R4*3 |
+    r4 r g( |
+    e'-.) e-. g-. |
+    e-. r r |
+    R4*3 |
+
+    % 130
+    b4-. r r |
+    R4*3*2 |
+    r4 r e,-. |
+    fis2.~ |
+    fis2.~ |
+    fis2 fis4-. |
+    \grace g8( fis4)( e-.) fis-. |
+    g4-. r g-. |
+    g-. r d'-. |
+    d-. r b-. |
+    b-. r f'-. |
+    e-. r g,( |
+    e'-.) e-. g-. |
+    e-. r r |
+    R4*3 |
+    b4-. r r |
+    R4*3*2 |
+    r4 r e,-.
+    fis2.~ |
+    fis2.( |
+    g4-.) r r |
+    r4 r g-. |
+    fis2.~ |
+    fis2.( |
+    g4-.) r r |
+
+    % 157
+    r r g-. |
+    fis2.~ |
+    fis2.~ |
+    fis2.~ |
+    fis2. |
+    c'2.~\startTrillSpan |
+    c2.~ |
+    c2.~ |
+    c2.\stopTrillSpan( |
+    b4-.) r r |
+  }
+  \alternative
+  {
+    {
+      g4-. r r |
+      R4*3*2 |
+    }
+    {
+      g4-. r r |
+      R4*3*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    R4*3*7 |
+    r4 r g(
+
+    % 181
+    c2 e4 |
+    c g c |
+    d2 f4 | 
+    d g, d' |
+    e2 g4 |
+    e g, e' |
+    d2 f4 |
+    d g, d' |
+    c-.) r r |
+    R4*3*2 |
+    r2 b4-. |
+    b-. b-. b-. |
+    b-. r b-. |
+    b-. r g-. |
+    g-. r r |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    R4*3*8 |
+
+    % 205
+    f'2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2 r4 |
+    R4*3 |
+    R4*3*8 |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2.~ |
+    f2 r4 |
+    R4*3 |
+
+    % 229
+    e2.~( |
+    e2. |
+    fis2.~ |
+    fis2. |
+    gis2.~ |
+    gis2. |
+    fis2.~ |
+    fis2. |
+    e2.~ |
+    e2. |
+    fis2.~ |
+    fis2. |
+    gis2.~ |
+    gis2.) |
+    fis2.~ |
+    fis2. |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e2.~ |
+    e4 r r |
+
+    % 253
+    R4*3*8 |
+    R4*3*3 |
+    r4 r b-. |
+    b-. b-. b-. |
+    b-. r b-. |
+    b-. r g-. |
+  }
+  \alternative
+  {
+    {
+      g-. r r |
+    }
+    {
+      g-. r d-. |
+    }
+  }
+}
+
+
+clarinetThreeScore    =                            \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
+clarinetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
+clarinetThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
+clarinetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
+clarinetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeCues    \clarThreeDyn >> }

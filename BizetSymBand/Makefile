@@ -1,396 +1,104 @@
-all:  score parts
+all: scores parts
 
-score:  ScoreMvtIII.pdf ScoreNT.pdf
+scores: Score.pdf ScoreNT.pdf ScoreMidi.midi
 
-parts:  Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf BaritoneTC.pdf StringBass.pdf Tuba.pdf Percussion.pdf Timpani.pdf
+parts: Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf BaritoneTC.pdf StringBass.pdf Tuba.pdf MalletPercussion.pdf Percussion1.pdf Percussion2.pdf Timpani.pdf
 
-ScoreMvtIII.pdf: ScoreMvtIII.ly
-	lilypond ScoreMvtIII.ly
+clean:
+	rm -f Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf BaritoneTC.pdf StringBass.pdf Tuba.pdf MalletPercussion.pdf Percussion1.pdf Percussion2.pdf Timpani.pdf *~ Score.pdf ScoreCond.pdf ScoreNT.pdf ScoreMidi.midi
 
-ScoreNT.pdf: ScoreNT.ly
+Score.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi Score.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi Timpani.lyi
+	lilypond Score.ly
+
+#ScoreCond.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi ScoreNT.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi Timpani.lyi
+#	lilypond ScoreCond.ly
+
+ScoreNT.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi ScoreNT.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi Timpani.lyi
 	lilypond ScoreNT.ly
 
-Flute1.pdf: Flute1.ly
+ScoreMidi.midi: config.lyi ../common/defs.lyi outline.lyi ScoreMidi.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi Timpani.lyi
+	lilypond ScoreMidi.ly
+
+Flute1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Flute1.ly Flute1.lyi
 	lilypond Flute1.ly
 
-Flute2.pdf: Flute2.ly
+Flute2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Flute2.ly Flute2.lyi
 	lilypond Flute2.ly
 
-Oboe.pdf: Oboe.ly
+Oboe.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Oboe.ly Oboe.lyi
 	lilypond Oboe.ly
 
-Bassoon.pdf: Bassoon.ly
+Bassoon.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Bassoon.ly Bassoon.lyi BassClarinet.lyi
 	lilypond Bassoon.ly
 
-Clarinet1.pdf: Clarinet1.ly
+Clarinet1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Clarinet1.ly Clarinet1.lyi
 	lilypond Clarinet1.ly
 
-Clarinet2.pdf: Clarinet2.ly
+Clarinet2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Clarinet2.ly Clarinet2.lyi
 	lilypond Clarinet2.ly
 
-Clarinet3.pdf: Clarinet3.ly
+Clarinet3.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Clarinet3.ly Clarinet3.lyi
 	lilypond Clarinet3.ly
 
-BassClarinet.pdf: BassClarinet.ly
+BassClarinet.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi BassClarinet.ly BassClarinet.lyi
 	lilypond BassClarinet.ly
 
-AltoSax1.pdf: AltoSax1.ly
+AltoSax1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi AltoSax1.ly AltoSax1.lyi
 	lilypond AltoSax1.ly
 
-AltoSax2.pdf: AltoSax2.ly
+AltoSax2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi AltoSax2.ly AltoSax2.lyi
 	lilypond AltoSax2.ly
 
-TenorSax.pdf: TenorSax.ly
+TenorSax.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi TenorSax.ly TenorSax.lyi
 	lilypond TenorSax.ly
 
-BariSax.pdf: BariSax.ly
+BariSax.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi BariSax.ly BariSax.lyi
 	lilypond BariSax.ly
 
-Trumpet1.pdf: Trumpet1.ly
+Trumpet1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trumpet1.ly Trumpet1.lyi
 	lilypond Trumpet1.ly
 
-Trumpet2.pdf: Trumpet2.ly
+Trumpet2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trumpet2.ly Trumpet2.lyi
 	lilypond Trumpet2.ly
 
-Trumpet3.pdf: Trumpet3.ly
+Trumpet3.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trumpet3.ly Trumpet3.lyi
 	lilypond Trumpet3.ly
 
-Horn1.pdf: Horn1.ly
+Horn1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Horn1.ly Horn1.lyi
 	lilypond Horn1.ly
 
-Horn2.pdf: Horn2.ly
+Horn2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Horn2.ly Horn2.lyi
 	lilypond Horn2.ly
 
-Trombone1.pdf: Trombone1.ly
+Trombone1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trombone1.ly Trombone1.lyi
 	lilypond Trombone1.ly
 
-Trombone2.pdf: Trombone2.ly
+Trombone2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trombone2.ly Trombone2.lyi
 	lilypond Trombone2.ly
 
-Trombone3.pdf: Trombone3.ly
+Trombone3.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trombone3.ly Trombone3.lyi
 	lilypond Trombone3.ly
 
-Baritone.pdf: Baritone.ly
+Baritone.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Baritone.ly Baritone.lyi
 	lilypond Baritone.ly
 
-BaritoneTC.pdf: BaritoneTC.ly
+BaritoneTC.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi BaritoneTC.ly Baritone.lyi
 	lilypond BaritoneTC.ly
 
-StringBass.pdf: StringBass.ly
+StringBass.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi StringBass.ly Tuba.lyi
 	lilypond StringBass.ly
 
-Tuba.pdf: Tuba.ly
+Tuba.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Tuba.ly Tuba.lyi
 	lilypond Tuba.ly
 
-Percussion.pdf: Percussion.ly
-	lilypond Percussion.ly
+MalletPercussion.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi MalletPercussion.ly MalletPercussion.lyi
+	lilypond MalletPercussion.ly
 
-Timpani.pdf: Timpani.ly
+Percussion1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Percussion1.ly Percussion1.lyi
+	lilypond Percussion1.ly
+
+Percussion2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Percussion2.ly Percussion2.lyi
+	lilypond Percussion2.ly
+
+Timpani.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Timpani.ly Timpani.lyi
 	lilypond Timpani.ly
-
-ScoreMvtIII.ly: defs.lyi
-
-ScoreMvtIII.ly: Flute1MvtIII.lyi
-
-ScoreMvtIII.ly: Flute2MvtIII.lyi
-
-ScoreMvtIII.ly: OboeMvtIII.lyi
-
-ScoreMvtIII.ly: BassoonMvtIII.lyi
-
-ScoreMvtIII.ly: Clarinet1MvtIII.lyi
-
-ScoreMvtIII.ly: Clarinet2MvtIII.lyi
-
-ScoreMvtIII.ly: Clarinet3MvtIII.lyi
-
-ScoreMvtIII.ly: BassClarinetMvtIII.lyi
-
-ScoreMvtIII.ly: AltoSax1MvtIII.lyi
-
-ScoreMvtIII.ly: AltoSax2MvtIII.lyi
-
-ScoreMvtIII.ly: TenorSaxMvtIII.lyi
-
-ScoreMvtIII.ly: BariSaxMvtIII.lyi
-
-ScoreMvtIII.ly: Trumpet1MvtIII.lyi
-
-ScoreMvtIII.ly: Trumpet2MvtIII.lyi
-
-ScoreMvtIII.ly: Trumpet3MvtIII.lyi
-
-ScoreMvtIII.ly: Horn1MvtIII.lyi
-
-ScoreMvtIII.ly: Horn2MvtIII.lyi
-
-ScoreMvtIII.ly: Trombone1MvtIII.lyi
-
-ScoreMvtIII.ly: Trombone2MvtIII.lyi
-
-ScoreMvtIII.ly: Trombone3MvtIII.lyi
-
-ScoreMvtIII.ly: BaritoneMvtIII.lyi
-
-ScoreMvtIII.ly: TubaMvtIII.lyi
-
-ScoreMvtIII.ly: PercussionMvtIII.lyi
-
-ScoreMvtIII.ly: TimpaniMvtIII.lyi
-
-ScoreNT.ly: defs.lyi
-
-ScoreNT.ly: Flute1MvtIII.lyi
-
-ScoreNT.ly: Flute2MvtIII.lyi
-
-ScoreNT.ly: OboeMvtIII.lyi
-
-ScoreNT.ly: BassoonMvtIII.lyi
-
-ScoreNT.ly: Clarinet1MvtIII.lyi
-
-ScoreNT.ly: Clarinet2MvtIII.lyi
-
-ScoreNT.ly: Clarinet3MvtIII.lyi
-
-ScoreNT.ly: BassClarinetMvtIII.lyi
-
-ScoreNT.ly: AltoSax1MvtIII.lyi
-
-ScoreNT.ly: AltoSax2MvtIII.lyi
-
-ScoreNT.ly: TenorSaxMvtIII.lyi
-
-ScoreNT.ly: BariSaxMvtIII.lyi
-
-ScoreNT.ly: Trumpet1MvtIII.lyi
-
-ScoreNT.ly: Trumpet2MvtIII.lyi
-
-ScoreNT.ly: Trumpet3MvtIII.lyi
-
-ScoreNT.ly: Horn1MvtIII.lyi
-
-ScoreNT.ly: Horn2MvtIII.lyi
-
-ScoreNT.ly: Trombone1MvtIII.lyi
-
-ScoreNT.ly: Trombone2MvtIII.lyi
-
-ScoreNT.ly: Trombone3MvtIII.lyi
-
-ScoreNT.ly: BaritoneMvtIII.lyi
-
-ScoreNT.ly: TubaMvtIII.lyi
-
-ScoreNT.ly: PercussionMvtIII.lyi
-
-ScoreNT.ly: TimpaniMvtIII.lyi
-
-Flute1.ly: defs.lyi
-
-Flute1.ly: Flute1MvtIII.lyi
-
-Flute1.ly: Part.lyi
-
-Flute2.ly: defs.lyi
-
-Flute2.ly: Flute2MvtIII.lyi
-
-Flute2.ly: Part.lyi
-
-Oboe.ly: defs.lyi
-
-Oboe.ly: OboeMvtIII.lyi
-
-Oboe.ly: Part.lyi
-
-Bassoon.ly: defs.lyi
-
-Bassoon.ly: BassoonMvtIII.lyi
-
-Bassoon.ly: Part.lyi
-
-Clarinet1.ly: defs.lyi
-
-Clarinet1.ly: Clarinet1MvtIII.lyi
-
-Clarinet1.ly: Part.lyi
-
-Clarinet2.ly: defs.lyi
-
-Clarinet2.ly: Clarinet2MvtIII.lyi
-
-Clarinet2.ly: Part.lyi
-
-Clarinet3.ly: defs.lyi
-
-Clarinet3.ly: Clarinet3MvtIII.lyi
-
-Clarinet3.ly: Part.lyi
-
-BassClarinet.ly: defs.lyi
-
-BassClarinet.ly: BassClarinetMvtIII.lyi
-
-BassClarinet.ly: Part.lyi
-
-AltoSax1.ly: defs.lyi
-
-AltoSax1.ly: AltoSax1MvtIII.lyi
-
-AltoSax1.ly: Part.lyi
-
-AltoSax2.ly: defs.lyi
-
-AltoSax2.ly: AltoSax2MvtIII.lyi
-
-AltoSax2.ly: Part.lyi
-
-TenorSax.ly: defs.lyi
-
-TenorSax.ly: TenorSaxMvtIII.lyi
-
-TenorSax.ly: Part.lyi
-
-BariSax.ly: defs.lyi
-
-BariSax.ly: BariSaxMvtIII.lyi
-
-BariSax.ly: Part.lyi
-
-Trumpet1.ly: defs.lyi
-
-Trumpet1.ly: Trumpet1MvtIII.lyi
-
-Trumpet1.ly: Part.lyi
-
-Trumpet2.ly: defs.lyi
-
-Trumpet2.ly: Trumpet2MvtIII.lyi
-
-Trumpet2.ly: Part.lyi
-
-Trumpet3.ly: defs.lyi
-
-Trumpet3.ly: Trumpet3MvtIII.lyi
-
-Trumpet3.ly: Part.lyi
-
-Horn1.ly: defs.lyi
-
-Horn1.ly: Horn1MvtIII.lyi
-
-Horn1.ly: Part.lyi
-
-Horn2.ly: defs.lyi
-
-Horn2.ly: Horn2MvtIII.lyi
-
-Horn2.ly: Part.lyi
-
-Trombone1.ly: defs.lyi
-
-Trombone1.ly: Trombone1MvtIII.lyi
-
-Trombone1.ly: Part.lyi
-
-Trombone2.ly: defs.lyi
-
-Trombone2.ly: Trombone2MvtIII.lyi
-
-Trombone2.ly: Part.lyi
-
-Trombone3.ly: defs.lyi
-
-Trombone3.ly: Trombone3MvtIII.lyi
-
-Trombone3.ly: Part.lyi
-
-Baritone.ly: defs.lyi
-
-Baritone.ly: BaritoneMvtIII.lyi
-
-Baritone.ly: Part.lyi
-
-BaritoneTC.ly: defs.lyi
-
-BaritoneTC.ly: BaritoneMvtIII.lyi
-
-BaritoneTC.ly: Part.lyi
-
-StringBass.ly: defs.lyi
-
-StringBass.ly: TubaMvtIII.lyi
-
-StringBass.ly: Part.lyi
-
-Tuba.ly: defs.lyi
-
-Tuba.ly: TubaMvtIII.lyi
-
-Tuba.ly: Part.lyi
-
-Percussion.ly: defs.lyi
-
-Percussion.ly: PercussionMvtIII.lyi
-
-Percussion.ly: Part.lyi
-
-Timpani.ly: defs.lyi
-
-Timpani.ly: TimpaniMvtIII.lyi
-
-Timpani.ly: Part.lyi
-
-Flute1MvtIII.lyi: defs.lyi
-
-Flute2MvtIII.lyi: defs.lyi
-
-OboeMvtIII.lyi: defs.lyi
-
-BassoonMvtIII.lyi: defs.lyi
-
-Clarinet1MvtIII.lyi: defs.lyi
-
-Clarinet2MvtIII.lyi: defs.lyi
-
-Clarinet3MvtIII.lyi: defs.lyi
-
-BassClarinetMvtIII.lyi: defs.lyi
-
-AltoSax1MvtIII.lyi: defs.lyi
-
-AltoSax2MvtIII.lyi: defs.lyi
-
-TenorSaxMvtIII.lyi: defs.lyi
-
-BariSaxMvtIII.lyi: defs.lyi
-
-Trumpet1MvtIII.lyi: defs.lyi
-
-Trumpet2MvtIII.lyi: defs.lyi
-
-Trumpet3MvtIII.lyi: defs.lyi
-
-Horn1MvtIII.lyi: defs.lyi
-
-Horn2MvtIII.lyi: defs.lyi
-
-Trombone1MvtIII.lyi: defs.lyi
-
-Trombone2MvtIII.lyi: defs.lyi
-
-Trombone3MvtIII.lyi: defs.lyi
-
-BaritoneMvtIII.lyi: defs.lyi
-
-TubaMvtIII.lyi: defs.lyi
-
-PercussionMvtIII.lyi: defs.lyi
-
-TimpaniMvtIII.lyi: defs.lyi
-
-Part.lyi: defs.lyi
-

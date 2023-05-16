@@ -1,10 +1,10 @@
-\version "2.13.5"
+\version "2.22.2"
 
-\include "defs.lyi" 
-\include "TubaMvtIII.lyi" 
+\include "config.lyi" 
+\include "Tuba.lyi" 
 
 instrument = "String Bass"
 
-notesMvtIII = \stringbassMvtIIIPart
+notes = \stringbassPart
 
-\include "Part.lyi"
+\include "part.lyi"

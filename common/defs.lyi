@@ -14,6 +14,7 @@ pc = { \clef percussion }
 
 rit = \markup { \italic rit. }
 atempo = \markup { \italic "a tempo" }
+pizz = \markup { \italic pizz. }
 arco = \markup { \italic arco }
 FFsec = \markup { \dynamic ff \italic secco }
 ffsecco = \markup { \dynamic ff \italic secco }

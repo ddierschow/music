@@ -1,0 +1,21 @@
+\version "2.22.2"
+
+\include "config.lyi"
+
+malletDyn = \measures
+
+
+malletCues = \measures
+
+
+malletNotCues = \measures
+
+
+malletNotes = \measures
+
+
+malletScore  =                          \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
+malletCScore = \transpose c \concertKey \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
+malletCond   = \transpose c \concertKey \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
+malletMidi   = \transpose c \concertKey \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
+malletPart   = \transpose c \concertKey \relative c { << \tc \malletNotes \malletCues    \malletDyn >> }

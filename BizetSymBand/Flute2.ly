@@ -1,11 +1,10 @@
-\version "2.13.5"
+\version "2.22.2"
 
-\include "defs.lyi" 
-\include "Flute2MvtIII.lyi" 
+\include "config.lyi" 
+\include "Flute2.lyi" 
 
 instrument = "Flute II"
 
-notesMvtIII = \fluteTwoMvtIIIPart
+notes = \fluteTwoPart
 
-\include "Part.lyi"
-
+\include "part.lyi"
