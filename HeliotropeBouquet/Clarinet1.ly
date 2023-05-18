@@ -3,8 +3,8 @@
 \include "config.lyi"
 \include "Clarinet1.lyi"
 
-instrument = "Clarinet I"
+instrument = \markup { "Clarinet I in B" \smaller \flat }
 
-notes = \clarinetBesOnePart
+notes = \clarBesOnePart
 
 \include "part.lyi"

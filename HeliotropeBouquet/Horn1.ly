@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "Horn1.lyi"
 
-instrument = "Horn I"
+instrument = "Horn I in F"
 
 notes = \hornFOnePart
 

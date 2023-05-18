@@ -213,8 +213,8 @@ clarThreeNotes =
 }
 
 
-clarinetThreeScore    =                            \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
-clarinetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
-clarinetThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
-clarinetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
-clarinetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeCues    \clarThreeDyn >> }
+clarThreeScore    =                            \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
+clarThreeCond     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
+clarThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
+clarBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
+clarBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeCues    \clarThreeDyn >> }

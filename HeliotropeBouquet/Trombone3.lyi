@@ -208,8 +208,8 @@ tromThreeNotes =
 }
 
 
-tromboneThreeScore  =                          \relative c, { << \bc \tromThreeNotes \tromThreeNotCues               >> }
-tromboneCThreeScore = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues               >> }
-tromboneThreeCond   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues               >> }
-tromboneThreeMidi   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeDyn >> }
-tromboneThreePart   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeCues    \tromThreeDyn >> }
+tromThreeScore  =                          \relative c, { << \bc \tromThreeNotes \tromThreeNotCues               >> }
+tromCThreeScore = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues               >> }
+tromThreeCond   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues               >> }
+tromThreeMidi   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeDyn >> }
+tromThreePart   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeCues    \tromThreeDyn >> }

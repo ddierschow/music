@@ -1,0 +1,21 @@
+\version "@version@"
+
+\include "config.lyi"
+
+@part@@text@Dyn = \measures
+
+
+@part@@text@Cues = \measures
+
+
+@part@@text@NotCues = \measures
+
+
+@part@@text@Notes = \measures
+
+
+@part@@text@Score    =                            \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@NotCues \@part@@text@Dyn >> }
+@part@@text@Cond     = \transpose c   \concertKey \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@NotCues \@part@@text@Dyn >> }
+@part@@text@Midi     = \transpose c   \concertKey \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@NotCues \@part@@text@Dyn >> }
+@part@@ckey@@text@Score = \transpose @key@ \concertKey \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@NotCues \@part@@text@Dyn >> }
+@part@@ckey@@text@Part  = \transpose @key@ \concertKey \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@Cues    \@part@@text@Dyn >> }

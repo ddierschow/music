@@ -208,8 +208,8 @@ bassclarNotes =
 }
 
 
-bassclarinetScore    =                            \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
-bassclarinetCond     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
-bassclarinetMidi     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
-bassclarinetBesScore = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
-bassclarinetBesPart  = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarCues    \bassclarDyn >> }
+bassclarScore    =                            \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarCond     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarMidi     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarBesScore = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarBesPart  = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarCues    \bassclarDyn >> }

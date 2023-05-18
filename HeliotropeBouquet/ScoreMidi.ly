@@ -6,7 +6,6 @@
 
 instrument = "Concert Band (Concert Key)"
 
-
 \book
 {
   \score
@@ -21,9 +20,9 @@ instrument = "Concert Band (Concert Key)"
       \new Staff \with { midiInstrument = "bassoon" }
         { \new Voice { \relative c << \bassoonMidi >> } }
       \new Staff \with { midiInstrument = "clarinet" }
-        { \new Voice { \relative c << \clarinetOneMidi \clarinetTwoMidi \clarinetThreeMidi >> } }
+        { \new Voice { \relative c << \clarOneMidi \clarTwoMidi \clarThreeMidi >> } }
       \new Staff \with { midiInstrument = "clarinet" }
-        { \new Voice { \relative c, << \bassclarinetMidi >> } }
+        { \new Voice { \relative c, << \bassclarMidi >> } }
       \new Staff \with { midiInstrument = "alto sax" }
         { \new Voice { \relative c << \altosaxOneMidi \altosaxTwoMidi >> } }
       \new Staff \with { midiInstrument = "tenor sax" }
@@ -35,7 +34,7 @@ instrument = "Concert Band (Concert Key)"
       \new Staff \with { midiInstrument = "french horn" }
         { \new Voice { \relative c << \hornOneMidi \hornTwoMidi >> } }
       \new Staff \with { midiInstrument = "trombone" }
-        { \new Voice { \relative c << \tromboneOneMidi \tromboneTwoMidi \tromboneThreeMidi \baritoneMidi >> } }
+        { \new Voice { \relative c << \tromOneMidi \tromTwoMidi \tromThreeMidi \baritoneMidi >> } }
       \new Staff \with { midiInstrument = "tuba" }
         { \new Voice { \relative c << \tubaMidi >> } }
       \new Staff \with { midiInstrument = "contrabass" }

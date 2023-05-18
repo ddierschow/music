@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "BariSax.lyi"
 
-instrument = "Baritone Saxophone"
+instrument = \markup { "Baritone Saxophone in E" \smaller \flat }
 
 notes = \barisaxEesPart
 

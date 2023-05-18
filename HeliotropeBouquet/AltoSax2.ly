@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "AltoSax2.lyi"
 
-instrument = "Alto Saxophone II"
+instrument = \markup { "Alto Saxophone II in E" \smaller \flat }
 
 notes = \altosaxEesTwoPart
 

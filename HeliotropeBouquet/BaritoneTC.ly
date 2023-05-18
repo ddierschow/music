@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "Baritone.lyi"
 
-instrument = "Baritone (Treble Clef)"
+instrument = \markup { "Baritone" \teeny \musicglyph #"clefs.G_change" "in B" \smaller \flat }
 
 notes = \baritoneTCPart
 

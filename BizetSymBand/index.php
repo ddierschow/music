@@ -15,10 +15,10 @@ echo "<table border=0><tr><td valign=top>\n";
 echo "<table border=1>\n";
 
 echo "<tr><td colspan=3><center><h2>\n";
-echo '<a href="https://en.wikipedia.org/wiki/Symphony_in_C_(Bizet)">symphony number 1 in c</a>' . "\n";
+echo '<a href="https://en.wikipedia.org/wiki/Symphony_in_C_(Bizet)">symphony number 1 in c<br>scherzo</a>' . "\n";
 echo "</h2></center></td></tr>\n";
 
-show_grid(['Score', 'ScoreCond', 'ScoreNT'], ['.ly', '.', '.pdf']);
+show_grid(['Score', 'ScoreNT'], ['.ly', '.', '.pdf']);
 show_grid(['ScoreMidi'], ['.ly', '.midi', '.mp3']);
 
 echo "<tr><td colspan=3>\n";
@@ -30,15 +30,15 @@ show_row(['../common/defs.lyi', 'outline.lyi', 'part.lyi']);
 
 echo "</td></tr></table>\n";
 echo "<ul>\n";
-//show_link("heliotrope_bouquet.pdf", "heliotrope_bouquet.pdf");
-//show_link("Heliotrope_Bouquet.mp4", "Heliotrope_Bouquet.mp4");
-//show_link("https://www.youtube.com/watch?v=E0mvRf7dvO0&pp=ygUSaGVsaW90cm9wZSBib3VxdWV0", "... on YouTube");
+echo "<li><a href='BizetSyphony1MvtIII.pdf'>Orchestral Score</a>\n";
 echo "</ul>\n";
 echo "</td><td>\n";
 
 show_parts($parts);
 
 echo "</td><td valign=top><table border=0><tr><td>\n";
+echo "<ul>\n";
+echo "</ul>\n";
 echo "</td></tr></table>\n";
 
 echo "</td></tr></table>\n";

@@ -208,8 +208,8 @@ tromTwoNotes =
 }
 
 
-tromboneTwoScore  =                          \relative c, { << \bc \tromTwoNotes \tromTwoNotCues             >> }
-tromboneCTwoScore = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues             >> }
-tromboneTwoCond   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues             >> }
-tromboneTwoMidi   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues \tromTwoDyn >> }
-tromboneTwoPart   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoCues    \tromTwoDyn >> }
+tromTwoScore  =                          \relative c, { << \bc \tromTwoNotes \tromTwoNotCues             >> }
+tromCTwoScore = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues             >> }
+tromTwoCond   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues             >> }
+tromTwoMidi   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues \tromTwoDyn >> }
+tromTwoPart   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoCues    \tromTwoDyn >> }

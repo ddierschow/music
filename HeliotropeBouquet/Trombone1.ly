@@ -5,6 +5,6 @@
 
 instrument = "Trombone I"
 
-notes = \tromboneOnePart
+notes = \tromOnePart
 
 \include "part.lyi"

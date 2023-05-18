@@ -201,8 +201,8 @@ clarTwoNotes =
 }
 
 
-clarinetTwoScore    =                            \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
-clarinetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
-clarinetTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
-clarinetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
-clarinetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoCues    \clarTwoDyn >> }
+clarTwoScore    =                            \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
+clarTwoCond     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
+clarTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
+clarBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
+clarBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoCues    \clarTwoDyn >> }

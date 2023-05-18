@@ -1,0 +1,21 @@
+rehearsalMarks =
+{
+  s2*8 |
+
+  \rMark "9"
+  s2*8 |
+}
+
+pageMarks =
+{
+  \time @time@
+
+  s2*8
+
+  % 9
+  s2*8
+
+  \bar "|."
+}
+
+outline = << \rehearsalMarks \pageMarks >>

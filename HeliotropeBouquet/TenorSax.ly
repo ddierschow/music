@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "TenorSax.lyi"
 
-instrument = "Tenor Saxophone"
+instrument = \markup { "Tenor Saxophone in B" \smaller \flat }
 
 notes = \tenorsaxBesPart
 

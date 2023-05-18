@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "Trumpet2.lyi"
 
-instrument = "Trumpet II"
+instrument = \markup { "Trumpet II in B" \smaller \flat }
 
 notes = \trumpetBesTwoPart
 

@@ -2,7 +2,7 @@
 
 \include "config.lyi"
 
-percussionOneDynamics =
+percussionOneDyn =
 {
   s2*3 |
   s4 s4\p |
@@ -145,7 +145,7 @@ percussionOneNotes =
 }
 
 
-percussionOneScore = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
-percussionOneCond  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
-percussionOneMidi  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDynamics >> }
-percussionOnePart  = \relative c { << \pc \percussionOneNotes \percussionOneCues    \percussionOneDynamics >> }
+percussionOneScore = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDyn >> }
+percussionOneCond  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDyn >> }
+percussionOneMidi  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDyn >> }
+percussionOnePart  = \relative c { << \pc \percussionOneNotes \percussionOneCues    \percussionOneDyn >> }

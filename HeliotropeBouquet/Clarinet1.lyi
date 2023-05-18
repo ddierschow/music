@@ -204,8 +204,8 @@ clarOneNotes =
 }
 
 
-clarinetOneScore    =                            \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
-clarinetOneCond     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
-clarinetOneMidi     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
-clarinetBesOneScore = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
-clarinetBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneCues    \clarOneDyn >> }
+clarOneScore    =                            \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarOneCond     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarOneMidi     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarBesOneScore = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneCues    \clarOneDyn >> }

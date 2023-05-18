@@ -208,8 +208,8 @@ tromOneNotes =
 }
 
 
-tromboneOneScore  =                          \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromboneCOneScore = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromboneOneCond   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromboneOneMidi   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromboneOnePart   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneCues    \tromOneDyn >> }
+tromOneScore  =                          \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
+tromCOneScore = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
+tromOneCond   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
+tromOneMidi   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
+tromOnePart   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneCues    \tromOneDyn >> }

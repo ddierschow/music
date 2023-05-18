@@ -16,7 +16,7 @@ instrument = "Concert Band"
 woodwinds =
 <<
   \fluteOneCond \fluteTwoCond \oboeCond
-  \clarinetOneCond \clarinetTwoCond \clarinetThreeCond \bassclarinetCond 
+  \clarOneCond \clarTwoCond \clarThreeCond \bassclarCond 
   \altosaxOneCond \altosaxTwoCond \tenorsaxCond \barisaxCond
 >>
 
@@ -28,7 +28,7 @@ brass =
 bassclef =
 <<
   \bassoonCond
-  \tromboneOneCond \tromboneTwoCond \tromboneThreeCond \baritoneCond \tubaCond
+  \tromOneCond \tromTwoCond \tromThreeCond \baritoneCond \tubaCond
 >>
 
 percussion =
