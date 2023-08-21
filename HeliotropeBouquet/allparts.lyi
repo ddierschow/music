@@ -1,5 +1,3 @@
-\version "2.22.2"
-
 \include "Flute1.lyi"
 \include "Flute2.lyi"
 \include "Oboe.lyi"

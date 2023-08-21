@@ -49,12 +49,13 @@ def command_line_args():
 def main():
     args = command_line_args()
 
-    if args.file:
-        start_from_scratch(args.file, args.version)
-
     if args.part:
+        config = read_config(args.file)
         for part in args.part:
-            render_part(part)
+            render_part(config, config_instrument(part), part)
+
+    else:
+        start_from_scratch(args.file, args.version)
 
 
 def config_instrument(arg):
@@ -142,6 +143,11 @@ def render_makefile(config, infilename, outfilename):
     open(outfilename, 'wt').write(image)
 
 
+def render_part(inst, config, part):
+    render_file(inst, config, 'Part.ly', part + '.ly')
+    render_file(inst, config, 'Part.lyi', part + '.lyi')
+
+
 def start_from_scratch(config_file, version):
     config = read_config(config_file)
 
@@ -157,8 +163,7 @@ def start_from_scratch(config_file, version):
     render_file({}, config, 'ScoreNT.ly', 'ScoreNT.ly', make_score_blob(config, scorent_snippet))
     render_file({}, config, 'ScoreMidi.ly', 'ScoreMidi.ly', make_score_blob(config, scoremidi_snippet))
     for inst in config['inst']:
-        render_file(inst, config, 'Part.ly', inst['filename'] + '.ly')
-        render_file(inst, config, 'Part.lyi', inst['filename'] + '.lyi')
+        render_part(inst, config, inst['filename'])
     render_makefile(config, 'Makefile', 'Makefile')
 
 

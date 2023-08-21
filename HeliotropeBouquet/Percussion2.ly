@@ -1,9 +1,9 @@
-\version "2.22.2"
+\version "2.24.1"
 
 \include "config.lyi"
 \include "Percussion2.lyi"
 
-instrument = "Percussion2"
+instrument = "Percussion II"
 stafftype = DrumStaff
 
 notes = \percussionTwoPart
