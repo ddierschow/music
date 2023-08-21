@@ -1,5 +1,3 @@
-\version "@version@"
-
 \include "config.lyi"
 
 @part@@text@Dyn = \measures

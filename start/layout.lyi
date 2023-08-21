@@ -1,5 +1,3 @@
-\version "2.22.2"
-
 ScorePaper = \paper {
   systems-per-page = #1
   #(set-paper-size "letter")

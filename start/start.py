@@ -37,7 +37,7 @@ makefile_part_snippet = '''@filename@.pdf: config.lyi ../common/defs.lyi outline
 
 def command_line_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-v', dest='version', default='2.22.2',
+    parser.add_argument('-v', dest='version', default='2.24.1',
                         help='Version')
     parser.add_argument('-f', dest='file',
                         help='Configuration file')
