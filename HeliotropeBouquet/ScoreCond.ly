@@ -7,9 +7,10 @@ instrument = "Concert Band"
 \include "config.lyi"
 \include "outline.lyi"
 \include "allparts.lyi"
-\include "layout.lyi"
 
 #(set-global-staff-size 14)
+
+\include "layout.lyi"
 
 \ScorePaper
 
