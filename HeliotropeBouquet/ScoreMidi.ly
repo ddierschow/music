@@ -42,7 +42,7 @@ instrument = "Concert Band (Concert Key)"
       \new DrumStaff
         { \new DrumVoice { \relative c << \percussionOneMidi \percussionTwoMidi >> } }
       \new Staff \with { midiInstrument = "xylophone" }
-        { \new Voice { \relative c << \malletMidi >> } }
+        { \new Voice { \relative c << \malletOneMidi \malletTwoMidi >> } }
     >>
     \midi
     {

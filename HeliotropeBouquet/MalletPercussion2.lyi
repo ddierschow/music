@@ -1,0 +1,208 @@
+\include "config.lyi"
+
+malletTwoDyn =
+{
+  s2\mf |
+  s2*3 |
+
+  % 5
+  s2\mf |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
+
+  % 13
+  s2\mf |
+  s2*7 |
+
+  % 21
+  s2\f |
+  s2*6 |
+  s4. s8\f |
+
+  % 29
+  s2*9 |
+
+  % 38
+  s2\mf |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
+
+  % 46
+  s2\mf |
+  s2*7 |
+
+  % 54
+  s2*4 |
+  s2\mp\< |
+  s2 |
+  s2\!\>\! |
+  s2\mp |
+
+  % 62
+  s2*2 |
+  \crescTextPocoAPocoCresc s2\< |
+  s2\! |
+  s2\mf |
+  s2*4 |
+
+  % 71
+  s4\mf s4 |
+  s2*7 |
+
+  % 79
+  s2*9 |
+}
+
+
+malletTwoCues = \measures
+
+
+malletTwoNotCues = \measures
+
+
+malletTwoNotes =
+{
+  d8. g16~g4 |
+  d'8. a16~a4 |
+  c4 g8 e |
+  d8 r r4 |
+
+  % 5
+  c'8. b16~b8 a8 |
+  g8. fis'16~fis8 e8 |
+  c8. b16~b8 a8 |
+  g8. fis'16~fis8 e8 |
+  c8. b16~b8 a8 |
+  g8. d'16~d8 e8 |
+  fis8. fis16~fis8 e8 |
+  d4 fis8-> e |
+
+  % 13
+  c8. b16~b8 a8 |
+  g8. fis'16~fis8 e8 |
+  c8. b16~b8 a8 |
+  g4 d' |
+  d4 d |
+  c4 c |
+  b8. b16~b8 a8 |
+  g4 b-> |
+
+  \repeat volta 2
+  {
+    % 21
+    b4 b |
+    b8. d16~d8 r |
+    g4 g |
+    g8. e16~e4 |
+    fis4 fis |
+    fis8. e16~e8 r |
+    g8-^ r r4 |
+    r4 r8 b,-^ |
+
+    % 29
+    r4 b |
+    b8. d16~d8 r |
+    g4 e |
+    g8. e16~e8 r |
+    e4 a |
+    d,4 g |
+    a4 a |
+  }
+  \alternative
+  {
+    {
+      g,4 b-> |
+    }
+    {
+      g4 r |
+    }
+  }
+
+  % 38
+  c8. b16~b8 a8 |
+  g8. fis'16~fis8 e8 |
+  c8. b16~b8 a8 |
+  g8. fis'16~fis8 e8 |
+  c8. b16~b8 a8 |
+  g8. d'16~d8 e8 |
+  fis8. fis16~fis8 e8 |
+  d4 fis8-> e |
+
+  % 46
+  c8. b16~b8 a8 |
+  g8. fis'16~fis8 e8 |
+  c8. b16~b8 a8 |
+  g4 d' |
+  d4 d |
+  c4 c |
+  b8. b16~b8 a8 |
+  g4 r |
+
+  \repeat volta 2
+  {
+    % 54
+    R2*4 |
+    f'8. c16~c4 |
+    e8. c16~c4 |
+    b8. b16~b8 a8 |
+    g8 r r4 |
+
+    % 62
+    R2*2 |
+    dis'8. c16~c8 b'8 |
+    a4 r |
+    c4 c, |
+    g8. c16~c8 e8 |
+    a,4 e' |
+  }
+  \alternative
+  {
+    {
+      c8 r r4 |
+    }
+    {
+      c4 r |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    g'8. g16~g4 |
+    e8. c16~c8 r |
+    b4 b |
+    c8. e16~e4 |
+    g8. g16~g4 |
+    e8. c16~c8 r |
+    b8. fis16~fis8 b |
+    b4 e |
+
+    % 79
+    g8. g16~g4 |
+    e8. c16~c8 r |
+    b4 b |
+    c8. g16~g8 r |
+    a4 g |
+    a4 g |
+    a4 e' |
+  }
+  \alternative
+  {
+    {
+      c4~c8 r8 |
+    }
+    {
+      c4 c'8-^ r8 |
+    }
+  }
+}
+
+malletTwoScore  =                          \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
+malletTwoCScore = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
+malletTwoCond   = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
+malletTwoMidi   = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
+malletTwoPart   = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoCues    \malletTwoDyn >> }

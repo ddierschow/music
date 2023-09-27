@@ -8,7 +8,7 @@ $parts = [
     "AltoSax1", "AltoSax2", "TenorSax", "BariSax",  // how saxist
     "Trumpet1", "Trumpet2", "Trumpet3", "Horn1", "Horn2", "Trombone1", "Trombone2", "Trombone3",
     "Baritone", "BaritoneTC", "Tuba", "StringBass",
-    "Percussion1", "Percussion2", "MalletPercussion"
+    "Percussion1", "Percussion2", "MalletPercussion1", "MalletPercussion2"
 ];
 
 echo "<table border=0><tr><td valign=top>\n";

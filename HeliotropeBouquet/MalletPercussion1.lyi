@@ -1,6 +1,6 @@
 \include "config.lyi"
 
-malletDyn =
+malletOneDyn =
 {
   s2\mf |
   s2*3 |
@@ -58,13 +58,13 @@ malletDyn =
 }
 
 
-malletCues = \measures
+malletOneCues = \measures
 
 
-malletNotCues = \measures
+malletOneNotCues = \measures
 
 
-malletNotes =
+malletOneNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
@@ -150,11 +150,11 @@ malletNotes =
     e,16 g d c~c g' a ais |
     b16 c d b~b g a8 |
     g8 r r4 |
+
+    % 62
     R2*2 |
     dis16 e gis c~c e, b'8 |
     a8 b16 c~c a e c |
-
-    % 62
     c'16 a fis dis c a8 aes16 |
     g8 a16 c~c d e8 |
     a,4 e' |
@@ -201,8 +201,8 @@ malletNotes =
   }
 }
 
-malletScore  =                          \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
-malletCScore = \transpose c \concertKey \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
-malletCond   = \transpose c \concertKey \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
-malletMidi   = \transpose c \concertKey \relative c { << \tc \malletNotes \malletNotCues \malletDyn >> }
-malletPart   = \transpose c \concertKey \relative c { << \tc \malletNotes \malletCues    \malletDyn >> }
+malletOneScore  =                          \relative c { << \tc \malletOneNotes \malletOneNotCues \malletOneDyn >> }
+malletOneCScore = \transpose c \concertKey \relative c { << \tc \malletOneNotes \malletOneNotCues \malletOneDyn >> }
+malletOneCond   = \transpose c \concertKey \relative c { << \tc \malletOneNotes \malletOneNotCues \malletOneDyn >> }
+malletOneMidi   = \transpose c \concertKey \relative c { << \tc \malletOneNotes \malletOneNotCues \malletOneDyn >> }
+malletOnePart   = \transpose c \concertKey \relative c { << \tc \malletOneNotes \malletOneCues    \malletOneDyn >> }

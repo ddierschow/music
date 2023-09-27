@@ -189,9 +189,16 @@ instrument = "Concert Band"
         \new Staff
         {
           #(set-accidental-style 'modern)
-          \set Staff.instrumentName = "Mallet Percussion"
-          \set Staff.shortInstrumentName = "Mal.Pe."
-          \new Voice {\dynamicDown \keepWithTag #'score \relative c \malletCScore }
+          \set Staff.instrumentName = "Mallet Percussion 1"
+          \set Staff.shortInstrumentName = "Mal.Pe.1"
+          \new Voice {\dynamicDown \keepWithTag #'score \relative c \malletOneCScore }
+        }
+        \new Staff
+        {
+          #(set-accidental-style 'modern)
+          \set Staff.instrumentName = "Mallet Percussion 2"
+          \set Staff.shortInstrumentName = "Mal.Pe.2"
+          \new Voice {\dynamicDown \keepWithTag #'score \relative c \malletTwoCScore }
         }
       >>
     >>

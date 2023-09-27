@@ -34,7 +34,7 @@ bassclef =
 
 percussion =
 <<
-  \percussionOneCond \percussionTwoCond \malletCond
+  \percussionOneCond \percussionTwoCond \malletOneCond \malletTwoCond
 >>
 
 \book

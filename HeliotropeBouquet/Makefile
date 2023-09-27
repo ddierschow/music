@@ -2,21 +2,21 @@ all: scores parts
 
 scores: Score.pdf ScoreNT.pdf ScoreMidi.midi
 
-parts: Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf BaritoneTC.pdf StringBass.pdf Tuba.pdf MalletPercussion.pdf Percussion1.pdf Percussion2.pdf
+parts: Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf BaritoneTC.pdf StringBass.pdf Tuba.pdf MalletPercussion1.pdf MalletPercussion2.pdf Percussion1.pdf Percussion2.pdf
 
 clean:
-	rm -f Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf BaritoneTC.pdf StringBass.pdf Tuba.pdf MalletPercussion.pdf Percussion1.pdf Percussion2.pdf *~ Score.pdf ScoreCond.pdf ScoreNT.pdf ScoreMidi.midi
+	rm -f Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf BaritoneTC.pdf StringBass.pdf Tuba.pdf MalletPercussion1.pdf MalletPercussion2.pdf Percussion1.pdf Percussion2.pdf *~ Score.pdf ScoreCond.pdf ScoreNT.pdf ScoreMidi.midi
 
-Score.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi Score.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi
+Score.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi Score.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion1.lyi MalletPercussion2.lyi Percussion1.lyi Percussion2.lyi
 	lilypond Score.ly
 
-#ScoreCond.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi ScoreNT.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi
+#ScoreCond.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi ScoreNT.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion1.lyi MalletPercussion2.lyi Percussion1.lyi Percussion2.lyi
 #	lilypond ScoreCond.ly
 
-ScoreNT.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi ScoreNT.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi
+ScoreNT.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi ScoreNT.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion1.lyi MalletPercussion2.lyi Percussion1.lyi Percussion2.lyi
 	lilypond ScoreNT.ly
 
-ScoreMidi.midi: config.lyi ../common/defs.lyi outline.lyi ScoreMidi.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi
+ScoreMidi.midi: config.lyi ../common/defs.lyi outline.lyi ScoreMidi.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion1.lyi MalletPercussion2.lyi Percussion1.lyi Percussion2.lyi
 	lilypond ScoreMidi.ly
 
 Flute1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Flute1.ly Flute1.lyi
@@ -91,8 +91,11 @@ StringBass.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi St
 Tuba.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Tuba.ly Tuba.lyi
 	lilypond Tuba.ly
 
-MalletPercussion.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi MalletPercussion.ly MalletPercussion.lyi
-	lilypond MalletPercussion.ly
+MalletPercussion1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi MalletPercussion1.ly MalletPercussion1.lyi
+	lilypond MalletPercussion1.ly
+
+MalletPercussion2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi MalletPercussion2.ly MalletPercussion2.lyi
+	lilypond MalletPercussion2.ly
 
 Percussion1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Percussion1.ly Percussion1.lyi
 	lilypond Percussion1.ly

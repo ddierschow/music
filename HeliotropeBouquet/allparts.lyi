@@ -22,4 +22,5 @@
 \include "Tuba.lyi"
 \include "Percussion1.lyi"
 \include "Percussion2.lyi"
-\include "MalletPercussion.lyi"
+\include "MalletPercussion1.lyi"
+\include "MalletPercussion2.lyi"
