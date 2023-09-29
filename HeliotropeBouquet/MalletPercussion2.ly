@@ -3,7 +3,7 @@
 \include "config.lyi"
 \include "MalletPercussion2.lyi"
 
-instrument = "Mallet Percussion Two"
+instrument = "Mallet Percussion II"
 
 notes = \malletTwoPart
 
