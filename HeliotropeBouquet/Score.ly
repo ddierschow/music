@@ -77,6 +77,13 @@ instrument = "Concert Band"
           \new Staff
           {
             #(set-accidental-style 'modern)
+            \set Staff.instrumentName = \markup { \column { "Soprano Saxophone" \line { "in B" \smaller \flat} } }
+            \set Staff.shortInstrumentName = "S.Sx."
+            \new Voice {\keepWithTag #'score \relative c \sopsaxBesScore }
+          }
+          \new Staff
+          {
+            #(set-accidental-style 'modern)
             \set Staff.instrumentName = \markup { \column { "Alto Saxophones 1, 2" \line { "in E" \smaller \flat} } }
             \set Staff.shortInstrumentName = "A.Sx."
             \new Voice {\keepWithTag #'score \relative c << \partCombine \altosaxEesOneScore \altosaxEesTwoScore >> }

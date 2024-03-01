@@ -10,13 +10,28 @@ function show_file($fn) {
     echo '  <td>';
     if ($fn == '')
 	echo "&nbsp;";
-    else if (file_exists($fn))
+    else if (!file_exists($fn))
+        if (str_ends_with($fn, '.pdf'))
+            echo $fn;
+        else
+            echo '';
+    else if (str_ends_with($fn, '.mp3'))
 	echo '<a href="' . $fn . '">' . $fn . "</a>";
-    else if (str_ends_with($fn, '.pdf'))
-	echo $fn;
     else
-        echo '&nbsp';
+	echo '<a href="' . $fn . '">' . $fn . "</a>";
     echo "</td>\n";
+}
+
+function show_audio($fn) {
+    $ft = 'audio/mp3';
+    if (str_ends_with($fn, '.mp4'))
+        $ft = 'video/mp4';
+    if (file_exists($fn)) {
+        echo " <tr><td colspan=3>\n";
+        echo $fn . "<br>\n";
+        echo '<audio controls><source src="' . $fn . '" type="' . $ft . '"></audio><br>' . "\n";
+        echo " </td></tr>\n";
+    }
 }
 
 function show_row($arr) {

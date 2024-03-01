@@ -17,9 +17,7 @@ trumpetTwoDyn =
   s2*7 |
 
   % 21
-  s2\f |
-  s2*6 |
-  s4 s8 s\f |
+  s2*8 |
 
   % 29
   s2*9 |
@@ -35,17 +33,11 @@ trumpetTwoDyn =
   s2*7 |
 
   % 54
-  s4\mp s4 |
-  s2*4 |
-  s4 s16 s8.\mf |
-  s2\> |
-  s2\!\mp |
+  s2*7 |
+  s8 s4.\mp |
 
   % 62
-  s2*2 |
-  \crescTextPocoAPocoCresc s2\< |
-  s2\! |
-  s2*2 |
+  s2*6 |
   s2\mf |
   s2*2 |
 
@@ -89,78 +81,60 @@ trumpetTwoNotes =
   g8 g g4 |
   g8 g g4 |
   g8. g16~g8 fis8 |
-  g4 eis' |
+  g4 r4 |
 
   \repeat volta 2
   {
     % 21
-    fis8 fis~fis16 fis8. |
-    fis8. fis16~fis8~fis16 r16 |
-    b,8 b8~b16 b8. |
-    b16 b b b~b d, e eis |
-    c'8 c16 d c c8 e16 |
-    c16 e c c~c8~c16 r16 |
-    b8-^ r r4 |
-    r4 r8 eis,-^ |
+    R2*8 |
 
     % 29
-    r8 fis'8~fis16 fis8. |
-    fis8. fis16~fis8. r16 |
-    b,8 b~b16 b8. |
-    b16 b b b~b8 \tuplet 3/2 { d16( cis d) } |
-    e8 gis g4 |
-    d8 fis d4 |
-    g4 fis |
+    R2*7 |
   }
   \alternative
   {
     {
-      d4 eis-> |
+      r2 |
     }
     {
-      d4 cis-> |
+      r4 cis-> |
     }
   }
 
   % 38
-  e,8. fis16~fis8 fis |
-  b,8. cis'16~cis4 |
   e,8. fis16~fis8 fis8 |
-  b,8. cis'16~cis4 |
+  g16 b d cis~cis4 |
   e,8. fis16~fis8 fis8 |
-  e8. fis16~fis8 g |
-  d'8. d16~d8 cis |
+  g16 b d cis~cis4 |
+  e,8. fis16~fis8 fis8 |
+  e8. b'16~b8 d |
+  d8. d16~d8 cis8 |
   a4 cis-> |
 
   % 46
-  e,8. fis16~fis8 fis |
-  b,8. cis'16~cis4 |
+  e,8. fis16~fis8 fis8 |
+  g16 b d cis~cis4 |
   e,8. fis16~fis8 fis8 |
   g4 g |
   g8 g8 g4 |
   g8 g8 g4 |
   g8. g16~g8 fis |
-  g8 g16( a b c d dis) |
+  g8 r8 r4 |
 
   \repeat volta 2
   {
     % 54
-    g,4 a8. aes16 |
+    g4 a8. aes16 |
     c8 e16 e~e e( d f) |
     g,4 a8. aes16 |
     c2 |
-    r2 |
-    r4 r16 c8. |
-    g'8. g16~g16 g fis8 |
-    d8 g,16( a b c d dis) |
+    R2*3 |
+    r8 g16( a b c d dis) |
 
     % 62
     g,4 a8. aes16 |
     c8 e16 e~e c e8 |
-    dis16 e gis gis~gis e gis8 |
-    e8 b16 c~c a'( e c) |
-    r2 |
-    r2 |
+    R2*4 |
     fis,4 g |
   }
   \alternative
@@ -178,20 +152,15 @@ trumpetTwoNotes =
     % 71
     g8. b16~b4 |
     c8. e16~e8 r8 |
-    b16 g'8 ais,16 b g'8 b,16 |
-    c16( d dis e)~e4 |
+    R2*2 |
     g,8. b16~b4 |
     c8. e16~e8 r8 |
-    b8. dis16~dis8 dis |
-    e8 g16( b,) e( cis ais g)~ |
+    R2*2 |
 
     % 79
-    g8. b16~b4 |
+    g,8. b16~b4 |
     c8. c16~c8 r8 |
-    b16 g'8 ais,16 b g'8 b,16 |
-    c16( b a g)~g8. gis16 |
-    a16( a' f c) g( e'8) gis,16 |
-    a16( a' f c) g( e'8) g,16 |
+    R2*4 |
     a4 g |
   }
   \alternative

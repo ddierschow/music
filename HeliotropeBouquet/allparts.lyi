@@ -6,6 +6,7 @@
 \include "Clarinet2.lyi"
 \include "Clarinet3.lyi"
 \include "BassClarinet.lyi"
+\include "SopranoSax.lyi"
 \include "AltoSax1.lyi"
 \include "AltoSax2.lyi"
 \include "TenorSax.lyi"

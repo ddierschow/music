@@ -23,6 +23,8 @@ instrument = "Concert Band (Concert Key)"
         { \new Voice { \relative c << \clarOneMidi \clarTwoMidi \clarThreeMidi >> } }
       \new Staff \with { midiInstrument = "clarinet" }
         { \new Voice { \relative c, << \bassclarMidi >> } }
+      \new Staff \with { midiInstrument = "soprano sax" }
+        { \new Voice { \relative c << \sopsaxMidi >> } }
       \new Staff \with { midiInstrument = "alto sax" }
         { \new Voice { \relative c << \altosaxOneMidi \altosaxTwoMidi >> } }
       \new Staff \with { midiInstrument = "tenor sax" }

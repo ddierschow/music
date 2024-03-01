@@ -18,7 +18,7 @@ woodwinds =
 <<
   \fluteOneCond \fluteTwoCond \oboeCond
   \clarOneCond \clarTwoCond \clarThreeCond \bassclarCond 
-  \altosaxOneCond \altosaxTwoCond \tenorsaxCond \barisaxCond
+  \sopsaxCond \altosaxOneCond \altosaxTwoCond \tenorsaxCond \barisaxCond
 >>
 
 brass =

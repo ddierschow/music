@@ -76,6 +76,13 @@ instrument = "Concert Band (Concert Key)"
           \new Staff
           {
             #(set-accidental-style 'modern)
+            \set Staff.instrumentName = \markup { \column { "Soprano Saxophone" \line { "in B" \smaller \flat} } }
+            \set Staff.shortInstrumentName = "S.Sx."
+            \new Voice { \keepWithTag #'score \sopsaxScore }
+          }
+          \new Staff
+          {
+            #(set-accidental-style 'modern)
             \set Staff.instrumentName = \markup { \column { "Alto Saxophone 1, 2" \line { "in E" \smaller \flat} } }
             \set Staff.shortInstrumentName = \markup { \column { "A.Sx." \line {"1, 2"} } }
             \set Staff.soloText = #"1."
