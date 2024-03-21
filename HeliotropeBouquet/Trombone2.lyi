@@ -5,33 +5,33 @@ tromTwoDyn =
   s2*4\mf |
 
   % 5
-  s2\mf |
+  s2\mp |
   s2*4 |
   s2\< |
   s2 |
-  s4\!\f s4\>\! |
+  s4\!\mf s4\>\! |
 
   % 13
-  s2\mf |
+  s2\mp |
   s2*7 |
 
   % 21
-  s2\f |
+  s2\mp |
   s2*6 |
-  s4. s8\f |
+  s4. s8\mp |
 
   % 29
   s2*9 |
 
   % 38
-  s2\mf |
+  s2\mp |
   s2*4 |
   s2\< |
   s2 |
-  s4\!\f s4\>\! |
+  s4\!\mf s4\>\! |
 
   % 46
-  s2\mf |
+  s2\mp |
   s2*7 |
 
   % 54
@@ -50,7 +50,7 @@ tromTwoDyn =
   s2*4 |
 
   % 71
-  s4\mf s4 |
+  s4\mp s4 |
   s2*7 |
 
   % 79

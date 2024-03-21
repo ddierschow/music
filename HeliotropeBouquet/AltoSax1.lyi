@@ -19,10 +19,11 @@ altosaxOneDyn =
   % 21
   s2*6 |
   s8 s4.\f |
-  s2
+  s2 |
 
   % 29
-  s2*9 |
+  s2\mf |
+  s2*8 |
 
   % 38
   s2\mp |

@@ -80,11 +80,8 @@ trumpetOneNotes =
   c16( d e b)~b fis a8 |
   g16( b d fis)~fis cis e8 |
   c16( d e b)~b fis a8 |
-  g8 d'16( b) d( b d b) |
-  d8 d16 b d g8 b,16 |
-  c8 c16 b c( g a ais) |
-  b16 d8 b16~b g a8 |
-  g4 r4 |
+  g8 r8 r4 |
+  R2*4 |
 
   \repeat volta 2
   {
@@ -118,11 +115,8 @@ trumpetOneNotes =
   c16( d e b)~b fis a8 |
   g16( b d fis)~fis cis e8 |
   c16( d e b)~b fis a8 |
-  g8 d'16( b) d( b d b) |
-  d8 d16 b d g8 b,16 |
-  c8 c16 b c( g a ais) |
-  b16 d8 b16~b g a8 |
   g8 r8 r4 |
+  R2*4 |
 
   \repeat volta 2
   {

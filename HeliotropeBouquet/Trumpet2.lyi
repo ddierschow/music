@@ -77,11 +77,8 @@ trumpetTwoNotes =
   e,8. fis16~fis8 fis8 |
   g16 b d cis~cis4 |
   e,8. fis16~fis8 fis8 |
-  g4 g |
-  g8 g g4 |
-  g8 g g4 |
-  g8. g16~g8 fis8 |
-  g4 r4 |
+  g4 r |
+  R2*4 |
 
   \repeat volta 2
   {
@@ -115,11 +112,8 @@ trumpetTwoNotes =
   e,8. fis16~fis8 fis8 |
   g16 b d cis~cis4 |
   e,8. fis16~fis8 fis8 |
-  g4 g |
-  g8 g8 g4 |
-  g8 g8 g4 |
-  g8. g16~g8 fis |
-  g8 r8 r4 |
+  g4 r |
+  R2*4 |
 
   \repeat volta 2
   {

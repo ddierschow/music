@@ -34,10 +34,10 @@ ScoreHeader = \header {
 PartPaper = \paper {
   ragged-last-bottom = ##f
   #(set-paper-size "letter")
-  top-margin = 15\mm
-  left-margin = 18\mm
-  right-margin = 18\mm
-  bottom-margin = 15\mm
+  top-margin = 12\mm
+  left-margin = 14\mm
+  right-margin = 14\mm
+  bottom-margin = 12\mm
 }
 
 PartHeader = \header {
