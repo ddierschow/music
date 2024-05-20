@@ -1,0 +1,145 @@
+\include "config.lyi"
+
+tromOneDyn = {
+  s1*8 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1*7 |
+  s2.. s8\f |
+  s1*2 |
+
+  % 43
+  s1\mf |
+  s1*11 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1*7 |
+  s2.. s8\f |
+  s1*2 |
+
+  % 77
+  s1\mf |
+  s1*9 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s4 s2.\ff |
+  s1*7 |
+
+  % 111
+  s1*8 |
+
+  % 119
+  s1*6 |
+}
+
+
+tromOneMarks = \measures
+
+
+tromOneCues = \measures
+
+
+tromOneNotCues = \measures
+
+
+tromOneNotes = {
+  R1*8
+
+  % 9
+  R1*12
+
+  % 21
+  R1*12
+
+  % 33
+  R1*7
+  r2 r4 r8 g' |
+  g8 g f4 e d |
+  f4 e d r |
+
+  % 43
+  g2 g |
+  a2 b4 r |
+  g2 g |
+  a2 b4 r |
+  r4 g~ g8 g~ g4 |
+  g4 g g2 |
+  r4 g~ g8 g~ g4 |
+  a4 a g2 |
+  g2~ g4 e |
+  f4 f g2 |
+  f4( e)~ e2 |
+  r1 |
+
+  % 55
+  R1*12
+
+  % 67
+  R1*7
+  r2 r4 r8 g |
+  g8 g f4 e d |
+  f4 e d r |
+
+  % 77
+  g2 g |
+  a2 b4 r |
+  g2 g |
+  a2 b4 r |
+  r4 g~ g8 g~ g4 |
+  g4 g g2 |
+  r4 g~ g8 g~ g4 |
+  a4 a g2 |
+  g2~ g4 e |
+  f4 f g2 |
+
+  % 87
+  R1*8
+
+  % 95
+  R1*8 |
+
+  % 103
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+
+  % 111
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+
+  % 119
+  R1*6
+}
+
+
+tromOneScore  =                          \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
+tromOneCond   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneMarks >> }
+tromOneMidi   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
+tromCOneScore = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
+tromCOnePart  = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneCues    \tromOneDyn >> }

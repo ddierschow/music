@@ -1,0 +1,145 @@
+\include "config.lyi"
+
+oboeDyn = {
+  s1*8 |
+
+  % 9
+  s1\p |
+  s1*11 |
+
+  % 21
+  s1*11 |
+  s2.. s8\mf |
+
+  % 33
+  s1*10 |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1*11 |
+  s2.. s8\mf |
+
+  % 67
+  s1*10 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1\p |
+  s1*7 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*8 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*2 |
+  s1\mf |
+  s1*3 |
+}
+
+
+oboeMarks = \measures
+
+
+oboeCues = \measures
+
+
+oboeNotCues = \measures
+
+
+oboeNotes = {
+  R1*8 |
+
+  % 9
+  g8 g g4 g4. g8 |
+  a8( b c4) d r8 c( |
+  e8) e e4 e e |
+  d8( c) c4 d r |
+  r4 e4~ e8 e d( e) |
+  d c c4 d r |
+  r4 e4~ e8 e d( e) |
+  d c c4 d r |
+  e4.( d8) d4 d |
+  d8 d8~ d2 e4 |
+  d4( c)~ c2 |
+  r1 |
+
+  % 21
+  R1*11 |
+  r2 r4 r8 e |
+
+  % 33
+  f4 f r4. f8 |
+  e4 e r4. e8 |
+  f4 f r4. f8 |
+  e4 e r4. e8 |
+  e1 |
+  a1 |
+  g4-. r r2 |
+  R1*3 |
+
+  % 43
+  R1*12 |
+
+  % 55
+  R1*11 |
+  r2 r4 r8 e |
+
+  % 67
+  f4 f r4. f8 |
+  e4 e r4. e8 |
+  f4 f r4. f8 |
+  e4 e r4. e8 |
+  e1 |
+  a1 |
+  g4-. r r2 |
+  R1*3 |
+
+  % 77
+  R1*10 |
+
+  % 87
+  \set countPercentRepeats = ##t
+  \repeat percent 4 { e8 e e e c c c c |
+  f8 f f f d d d d | }
+
+  % 95
+  R1*8 |
+
+  % 103
+  R1*8 |
+
+  % 111
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+
+  % 119
+  R1*2 |
+  e4 e e2 |
+  e4 e e2 |
+  e4 g c, d |
+  e1 |
+}
+
+
+oboeScore  =                          \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
+oboeCond   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeMarks >> }
+oboeMidi   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
+oboeCScore = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
+oboeCPart  = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeCues    \oboeDyn >> }

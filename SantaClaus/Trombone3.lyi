@@ -1,0 +1,143 @@
+\include "config.lyi"
+
+tromThreeDyn = {
+  s1*8 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1*7 |
+  s2.. s8\f |
+  s1*2 |
+
+  % 43
+  s1\mf |
+  s1*11 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1*7 |
+  s2.. s8\f |
+  s1*2 |
+
+  % 77
+  s1\mf |
+  s1*9 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*4 |
+  s4 s2.\ff |
+  s1*3 |
+
+  % 111
+  s1*8 |
+
+  % 119
+  s1*6 |
+}
+
+
+tromThreeMarks = \measures
+
+
+tromThreeCues = \measures
+
+
+tromThreeNotCues = \measures
+
+
+tromThreeNotes = {
+  R1*8 |
+
+  % 9
+  R1*12 |
+
+  % 21
+  R1*12 |
+
+  % 33
+  R1*7
+  r2 r4 r8 g' |
+  g8 g f4 e d |
+  f4 e d r |
+
+  % 43
+  c2 c |
+  c2 d4 r |
+  c2 c |
+  c2 d4 r |
+  r4 c~ c8 c~ c4 |
+  d4 c b2 |
+  r4 c~ c8 c~ c4 |
+  c4 c b2 |
+  c2~ c4 g |
+  b4 b b2 |
+  b4( g)~ g2 |
+  r1 |
+
+  % 55
+  R1*12 |
+
+  % 67
+  R1*7
+  r2 r4 r8 g' |
+  g8 g f4 e d |
+  f4 e d r |
+
+  % 77
+  c2 c |
+  c2 d4 r |
+  c2 c |
+  c2 d4 r |
+  r4 c~ c8 c~ c4 |
+  d4 c b2 |
+  r4 c~ c8 c~ c4 |
+  c4 c b2 |
+  c2~ c4 g |
+  b4 b b2 |
+
+  % 87
+  R1*8 |
+
+  % 95
+  R1*8 |
+
+  % 103
+  R1*4 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+
+  % 111
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+
+  % 119
+  R1*6 |
+}
+
+
+tromThreeScore  =                          \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeDyn >> }
+tromThreeCond   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeMarks >> }
+tromThreeMidi   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeDyn >> }
+tromCThreeScore = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeDyn >> }
+tromCThreePart  = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeCues    \tromThreeDyn >> }

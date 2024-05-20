@@ -1,0 +1,148 @@
+\include "config.lyi"
+
+barisaxDyn = {
+  s1*8 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1\mp |
+  s1*9 |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1\f |
+  s1*11 |
+
+  % 67
+  s1\mp |
+  s1*9 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*6 |
+  s4 s2.\mf |
+  s1 |
+
+  % 103
+  s4 s2.\f |
+  s1*7 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*5 |
+  s2\p\< s4 s4\!\ff |
+}
+
+
+barisaxMarks = \measures
+
+
+barisaxCues = \measures
+
+
+barisaxNotCues = \measures
+
+
+barisaxNotes = {
+  R1*8 |
+
+  % 9
+  R1*12 |
+
+  % 21
+  R1*12 |
+
+  % 33
+  bes2 e |
+  f2 a2 |
+  bes,2 e |
+  f2 a2 |  
+  fis2 fis |
+  fis2 fis |
+  g,4 r4 r2 |
+  R1*3 |
+
+  % 43
+  R1*12 |
+
+  % 55
+  c4 e g a |
+  f4 a c d |
+  c,4 e g a |
+  f4 a c d |
+  c4-. c,4~ c g' |
+  f4 f g a |
+  c,4-. c'4~ c g |
+  f4 f a c |
+  c4 b a e |
+  d2 g2 |
+  c,4 e g bes |
+  a4 g e c |
+
+  % 67
+  bes2 e |
+  f2 a2 |
+  bes,2 e |
+  f2 a2 |  
+  fis2 fis |
+  fis2 fis |
+  g,4 r4 r2 |
+  R1*3 |
+
+  % 77
+  R1*10 |
+
+  % 87
+  R1*8 |
+
+  % 95
+  R1*6 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+
+  % 103
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+
+  % 111
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+
+  % 119
+  R1*5 |
+  r2 c2 |
+}
+
+
+barisaxScore    =                            \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxCond     = \transpose c   \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxMarks >> }
+barisaxMidi     = \transpose c   \concertKey \relative c,  { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxEesScore = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
+barisaxEesPart  = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxCues    \barisaxDyn >> }

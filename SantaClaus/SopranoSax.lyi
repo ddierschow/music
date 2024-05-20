@@ -1,0 +1,159 @@
+\include "config.lyi"
+
+sopranosaxDyn = {
+  s1*8 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1\mp |
+  s1*9 |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1 |
+  s1\f |
+  s1*10 |
+
+  % 67
+  s1\mp |
+  s1*9 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*4 |
+  s4 s2.\mf |
+  s1*3 |
+
+  % 103
+  s4 s2.\f |
+  s1*7 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*5 |
+  s2\p\< s4 s4\!\ff |
+}
+
+
+sopranosaxMarks = \measures
+
+
+sopranosaxCues = << \measures {
+  s1*94 |
+
+  % 95
+  s1*8 | \break
+
+  % 103
+  s1*22 |
+} >>
+
+
+sopranosaxNotCues = \measures
+
+
+sopranosaxNotes = {
+  R1*8 |
+
+  % 9
+  R1*12 |
+
+  % 21
+  R1*12 |
+
+  % 33
+  c'2. g4-. |
+  c2. f,4-.
+  c'2. g4-. |
+  c2. f,4-.
+  a2. fis4-. |
+  a2. fis4-.
+  g4-. r r2 |
+  R1*3 |
+
+  % 43
+  R1*12 |
+
+  % 55
+  r1 |
+  g'4 f8 f f4 r8 f |
+  e8 e e e e g g g |
+  f8 f f4 f r |
+  r8 g8~ g4~ g8( f) g g |
+  f8 f f4 f r |
+  r8 g8~ g4~ g8( f) g g |
+  f8 f f4 f r |
+  g4 g e e |
+  f4 f r g |
+  f4( e)~ e2~ |
+  e2. r4 |
+
+  % 67
+  c'2. g4-. |
+  c2. f,4-.
+  c'2. g4-. |
+  c2. f,4-.
+  a2. fis4-. |
+  a2. fis4-.
+  g4-. r r2 |
+  R1*3 |
+
+  % 77
+  R1*10 |
+
+  % 87
+  R1*8 |
+
+  % 95
+  R1*4 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+
+  % 103
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+
+  % 111
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+
+  % 119
+  R1*5 |
+  r2 g2 |
+}
+
+
+sopranosaxScore    =                            \relative c' { << \tc \sopranosaxNotes \sopranosaxNotCues \sopranosaxDyn >> }
+sopranosaxCond     = \transpose c   \concertKey \relative c' { << \tc \sopranosaxNotes \sopranosaxNotCues \sopranosaxMarks >> }
+sopranosaxMidi     = \transpose c   \concertKey \relative c' { << \tc \sopranosaxNotes \sopranosaxNotCues \sopranosaxDyn >> }
+sopranosaxBesScore = \transpose bes \concertKey \relative c' { << \tc \sopranosaxNotes \sopranosaxNotCues \sopranosaxDyn >> }
+sopranosaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \sopranosaxNotes \sopranosaxCues    \sopranosaxDyn >> }

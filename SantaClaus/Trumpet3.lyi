@@ -1,0 +1,143 @@
+\include "config.lyi"
+
+trumThreeDyn = {
+  s1*8 |
+
+  % 9
+  s1*11 |
+  s2 s8 s4.\mf |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1*9 |
+  s2.. s8\f |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1*9 |
+  s2.. s8\f |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*8 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*6 |
+}
+
+
+trumThreeMarks = \measures
+
+
+trumThreeCues = \measures
+
+
+trumThreeNotCues = \measures
+
+
+trumThreeNotes = {
+  R1*8 |
+
+  % 9
+  R1*11 |
+  r2. b4 |
+
+  % 21
+  c8 c c4 c4. c8 |
+  c8 c( e4) f r8 e |
+  g8 g g4 g g |
+  f8( e) e4 g r |
+  r4 g4~ g8 g f g |
+  f( e) e4 f r |
+  r4 g4~ g8 g f g |
+  f( e) e4 f r |
+  g4. f8 f4 f |
+  f8 f8~ f2 g4 |
+  f4( e~) e2 |
+  r1 |
+
+  % 33
+  R1*9 |
+  r2 r4 r8 g |
+
+  % 43
+  g8 g g4 g g |
+  f8 f f4 g4 r8 g |
+  g8 g g4 g g |
+  f8 f f4 g4 r |
+  r4 g4~ g8 g f( g) |
+  f( e) e4 g r |
+  r4 g4~ g8 g f( g) |
+  f( e) e4 g r |
+  g4. g8 f4 f |
+  f8 f8~ f2 g4 |
+  f4( e~) e2 |
+  r1 |
+
+  % 55
+  R1*12 |
+
+  % 67
+  R1*9 |
+  r2 r4 r8 g |
+
+  % 77
+  g8 g g4 g g |
+  f8 f f4 g4 r8 g |
+  g8 g g4 g g |
+  f8 f f4 g4 r |
+  r4 g4~ g8 g f( g) |
+  f( e) e4 g r |
+  r4 g4~ g8 g f( g) |
+  f( e) e4 g r |
+  g4. g8 f4 f |
+  f8 f8~ f2 g4 |
+
+  % 87
+  R1*8 |
+
+  % 95
+  R1*8 |
+
+  % 103
+  R1*8 |
+
+  % 111
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+  r4 g4~ g8 g f g |
+  f8( e) e4 f2 |
+
+  % 119
+  R1*6 |
+}
+
+
+trumpetThreeScore    =                            \relative c' { << \tc \trumThreeNotes \trumThreeNotCues \trumThreeDyn >> }
+trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \trumThreeNotes \trumThreeNotCues \trumThreeMarks >> }
+trumpetThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \trumThreeNotes \trumThreeNotCues \trumThreeDyn >> }
+trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \trumThreeNotes \trumThreeNotCues \trumThreeDyn >> }
+trumpetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \trumThreeNotes \trumThreeCues    \trumThreeDyn >> }

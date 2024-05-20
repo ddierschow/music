@@ -1,0 +1,157 @@
+\include "config.lyi"
+
+hornOneDyn = {
+  s1*8 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*11 |
+  s2.. s8\f |
+
+  % 33
+  s1*10 |
+
+  % 43
+  s4 s2.\mf |
+  s1*11 |
+
+  % 55
+  s1*11 |
+  s2.. s8\f |
+
+  % 67
+  s1*10 |
+
+  % 77
+  s4 s2.\mf |
+  s1*9 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s4 s2.\f
+  s1*7 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*6\mf |
+}
+
+
+hornOneMarks = \measures
+
+
+hornOneCues = \measures
+
+
+hornOneNotCues = \measures
+
+
+hornOneNotes = {
+  R1*8 |
+
+  % 9
+  R1*12 |
+
+  % 21
+  R1*11 |
+  r2 r4 r8 c |
+
+  % 33
+  d4( c bes) g |
+  a8 a~ a4 r r8 c |
+  d4( c bes) g |
+  a2 r4 r8 d |
+  d4. d8 d4 d |
+  d4 c8( e)~e4. d8 |
+  e8 e d4 e d |
+  e4 d8( e)~ e2 |
+  R1*2 |
+
+  % 43
+  r4 g-. r g-. |
+  r4 a-. r b-. |
+  r4 g-. r g-. |
+  r4 a-. r b-. |
+  r4 g~ g8 g~ g4 |
+  f2 g4 r |
+  r4 g~ g8 g~ g4 |
+  f,2 g4 r |
+  c2 f |
+  b2 b4 r |
+  c1 |
+  r1 |
+
+  % 55
+  R1*11 |
+  r2 r4 r8 a |
+
+  % 67
+  d,4( c bes) g |
+  a8 a~ a4 r r8 c |
+  d4( c bes) g |
+  a2 r4 r8 d |
+  d4. d8 d4 d |
+  d4 c8( e)~e4. d8 |
+  e8 e d4 e d |
+  e4 d8( e)~ e2 |
+  R1*2 |
+
+  % 77
+  r4 g-. r g-. |
+  r4 a-. r b-. |
+  r4 g-. r g-. |
+  r4 a-. r b-. |
+  r4 g~ g8 g~ g4 |
+  f2 g4 r |
+  r4 g~ g8 g~ g4 |
+  f,2 g4 r |
+  c2 f |
+  b2 b4 r |
+
+  % 87
+  R1*8 |
+
+  % 95
+  R1*8 |
+
+  % 103
+  r4 g~ g g |
+  a2 b2 |
+  r4 g~ g g |
+  a2 b2 |
+  r4 g~ g g |
+  a2 b2 |
+  r4 g~ g g |
+  a2 b2 |
+
+  % 111
+  r4 g~ g g |
+  a2 b2 |
+  r4 g~ g g |
+  a2 b2 |
+  r4 g~ g g |
+  a2 b2 |
+  R1*2 |
+
+  % 119
+  g2 a |
+  a2 g |
+  R1*4 |
+}
+
+
+hornOneScore  =                          \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornOneCond   = \transpose c \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneMarks >> }
+hornOneMidi   = \transpose c \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornFOneScore = \transpose f \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
+hornFOnePart  = \transpose f \concertKey \relative c' { << \tc \hornOneNotes \hornOneCues    \hornOneDyn >> }

@@ -1,0 +1,145 @@
+\include "config.lyi"
+
+malletpercDyn = {
+  s1\mp_\markup "glockenspiel" |
+  s1*7 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1\mf |
+  s1*9 |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1\mf |
+  s1*9 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1\p |
+  s1*7 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*8 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*2 |
+  s1\mf_\markup "tubular bells" |
+  s1*3 |
+}
+
+
+malletpercMarks = \measures
+
+
+malletpercCues = << \measures {
+  s1*32 |
+
+  % 33
+  s1*10 | \break
+
+  % 43
+  s1*82 |
+} >>
+
+
+malletpercNotCues = \measures
+
+
+malletpercNotes = {
+  \set countPercentRepeats = ##t
+  \repeat percent 4 { e'2 c | f2 d | }
+
+  % 9
+  \repeat percent 4 { e2 c | f2 d | }
+  e2 c |
+  d2 e |
+  e2 c |
+  f2 d |
+
+  % 21
+  R1*12 |
+
+  % 33
+  d2 bes |
+  a1 |
+  d2 bes |
+  a1 |
+  d2 d2 |
+  d4. e8~e4 r4 |
+  e2 e |
+  e4. e8~ e2 |
+  R1*2 |
+
+  % 43
+  R1*12 |
+
+  % 55
+  R1*12 |
+
+  % 67
+  d2 bes |
+  a1 |
+  d2 bes |
+  a1 |
+  d2 d2 |
+  d4. e8~e4 r4 |
+  e2 e |
+  e4. e8~ e2 |
+  R1*2 |
+
+  % 77
+  R1*10 |
+
+  % 87
+  \repeat percent 4 { e2 c | f2 d | }
+
+  % 95
+  \repeat percent 4 { e2 c | f2 d | }
+
+  % 103
+  \repeat percent 4 { e2 c | f2 d | }
+
+  % 111
+  r4 e4~ e8 e d e |
+  d8 c c4 d2 |
+  r4 e4~ e8 e d e |
+  d8 c c4 d2 |
+  r4 e4~ e8 e d e |
+  d8 c c4 d2 |
+  r4 e4~ e8 e d e |
+  d8 c c4 d2 |
+
+  % 119
+  R1*2 |
+  e4 e e2 |
+  e4 e e2 |
+  e4 g c, d |
+  e1 |
+}
+
+
+malletpercScore  =                          \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercDyn >> }
+malletpercCond   = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercMarks >> }
+malletpercMidi   = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercDyn >> }
+malletpercCScore = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercDyn >> }
+malletpercCPart  = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercCues    \malletpercDyn >> }

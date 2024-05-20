@@ -1,0 +1,101 @@
+\include "config.lyi"
+
+percTwoDyn = {
+  s1\mp_\markup "sleigh bells" |
+  s1*7 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1*10 |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1*10 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1\p_\markup "sleigh bells" |
+  s1*7 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*8 |
+
+  % 111
+  s1*8 |
+
+  % 119
+  s1*6 |
+}
+
+
+percTwoMarks = \measures
+
+
+percTwoCues = \measures
+
+
+percTwoNotCues = \measures
+
+
+percTwoNotes = \drummode {
+  \set countPercentRepeats = ##t
+  \repeat percent 8 { \repeat unfold 4 { tri4:8 } } |
+
+  % 9
+  \repeat percent 12 { \repeat unfold 4 { tri4:8 } } |
+
+  % 21
+  R1*12 |
+
+  % 33
+  R1*10 |
+
+  % 43
+  R1*12 |
+
+  % 55
+  R1*12 |
+
+  % 67
+  R1*10 |
+
+  % 77
+  R1*10 |
+
+  % 87
+  \repeat percent 8 { \repeat unfold 4 { tri4:8 } } |
+
+  % 95
+  R1*8 |
+
+  % 103
+  R1*8 |
+
+  % 111
+  R1*8 |
+
+  % 119
+  R1*6 |
+}
+
+
+percTwoScore =                          \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoDyn >> }
+percTwoCond  = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoMarks >> }
+percTwoMidi  = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoDyn >> }
+percTwoScore = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoDyn >> }
+percTwoPart  = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoCues    \percTwoDyn >> }

@@ -1,0 +1,171 @@
+\include "config.lyi"
+
+trumOneDyn = {
+  s1*7 |
+  s2 s8 s4.\mf |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1*9 |
+  s2.. s8\f |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1*9 |
+  s2.. s8\f |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*7 |
+  s2... s16\mf |
+
+  % 103
+  s1*8 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*6 |
+}
+
+
+trumOneMarks = \measures
+
+
+trumOneCues = << \measures {
+  s1*94 |
+
+  % 95
+  s1*8 | \break
+
+  % 103
+  s1*22 |
+} >>
+
+
+trumOneNotCues = \measures
+
+
+trumOneNotes = {
+  R1*7 |
+  r2 r8 g'8~ g8 g8 |
+
+  % 9
+  g8 g g4 g4. g8 |
+  a8( b c4) d r8 c |
+  e8 e e4 e e |
+  d8( c) c4 d r |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d r |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d r |
+  e4. d8 d4 d |
+  d8 d8~ d2 e4 |
+  d4( c)~ c2 |
+  r2. e,4 |
+
+  % 21
+  g8 g g4 g4. g8 |
+  a8( b c4) d r8 c |
+  e8 e e4 e e |
+  d8( c) c4 d r |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d r |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d r |
+  e4. d8 d4 d |
+  d8 d8~ d2 e4 |
+  d4( c~) c2 |
+  r1 |
+
+  % 33
+  R1*9 |
+  r2 r4 r8 e |
+
+  % 43
+  e8 e e4 e e |
+  d8( c) c4 d4 r8 e |
+  e8 e e4 e e |
+  d8( c) c4 d4 r |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d r |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d r |
+  e4. d8 d4 d |
+  d8 d8~ d2 e4 |
+  d4( c~) c2 |
+  r1 |
+
+  % 55
+  R1*12
+
+  % 67
+  R1*9 |
+  r2 r4 r8 e |
+
+  % 77
+  e8 e e4 e e |
+  d8( c) c4 d4 r8 e |
+  e8 e e4 e e |
+  d8( c) c4 d4 r |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d r |
+  r4 e4~ e8 e d e |
+  d8 c c4 d r |
+  e4. d8 d4 d |
+  d8 d8~ d2 e4 |
+
+  % 87
+  R1*8 |
+
+  % 95
+  R1*7 |
+  r2 r4 r8 r16 fis16( |
+
+  % 103
+  g8.) fis16( g4)~ g4. d8 |
+  e4-. r4 r r8 r16 fis16( |
+  g8.) fis16( g4)~ g4. d8 |
+  e4-. r4 r r8 r16 fis16( |
+  g8.) fis16( g4)~ g4. d8 |
+  e4-. r4 r r8 r16 fis16( |
+  g8.) fis16( g4)~ g4. d8 |
+  e4-. r4 r2 |
+
+  % 111
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+
+  % 119
+  R1*6
+}
+
+
+trumpetOneScore    =                            \relative c' { << \tc \trumOneNotes \trumOneNotCues \trumOneDyn >> }
+trumpetOneCond     = \transpose c   \concertKey \relative c' { << \tc \trumOneNotes \trumOneNotCues \trumOneMarks >> }
+trumpetOneMidi     = \transpose c   \concertKey \relative c' { << \tc \trumOneNotes \trumOneNotCues \trumOneDyn >> }
+trumpetBesOneScore = \transpose bes \concertKey \relative c' { << \tc \trumOneNotes \trumOneNotCues \trumOneDyn >> }
+trumpetBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \trumOneNotes \trumOneCues    \trumOneDyn >> }

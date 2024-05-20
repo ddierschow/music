@@ -1,0 +1,133 @@
+\include "config.lyi"
+
+clarOneDyn = {
+  s1\p |
+  s1*7 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s2. s4\mp |
+  s1*9 |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s2. s4\mp |
+  s1*9 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1\p |
+  s1*7 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*8 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*5 |
+  s4\p\< s2 s4\!\ff |
+}
+
+
+clarOneMarks = \measures
+
+
+clarOneCues = \measures
+
+
+clarOneNotCues = \measures
+
+
+clarOneNotes = {
+  \set countPercentRepeats = ##t
+  \repeat percent 4 { e'8 e e e c c c c | f8 f f f d d d d | }
+
+  % 9
+  \repeat percent 4 { g,8 g g g g g g g | a8 a a a f f f f | }
+  g4 g f e |
+  f2 g |
+  g8 g g g g g g g |
+  a8 a a a f f r4 |
+
+  % 21
+  R1*12
+
+  % 33
+  r2 r4 c'-. |
+  r2 r4 a-. |
+  r2 r4 c-. |
+  r2 r4 a-. |
+  r2 r4 a-. |
+  r2 r4 a-. |
+  r2 r4 b-. |
+  r2 r4 b-. |
+  R1*2 |
+
+  % 43
+  R1*12
+
+  % 55
+  R1*12
+
+  % 67
+  r2 r4 c-. |
+  r2 r4 a-. |
+  r2 r4 c-. |
+  r2 r4 a-. |
+  r2 r4 a-. |
+  r2 r4 a-. |
+  r2 r4 b-. |
+  r2 r4 b-. |
+  R1*2 |
+
+  % 77
+  R1*10
+
+  % 87
+  \repeat percent 4 { e8 e e e c c c c | f8 f f f d d d d | }
+
+  % 95
+  \repeat percent 4 { e8 e e e c c c c | f8 f f f d d d d | }
+
+  % 103
+  \repeat percent 4 { e8 e e e c c c c | f8 f f f d d d d | }
+
+  % 111
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+  r4 e4~ e8 e d e |
+  d8( c) c4 d2 |
+
+  % 119
+  R1*5 |
+  r2 e2 |
+}
+
+
+clarOneScore    =                            \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarOneCond     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneMarks >> }
+clarOneMidi     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarBesOneScore = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
+clarBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneCues    \clarOneDyn >> }

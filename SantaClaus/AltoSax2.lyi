@@ -1,0 +1,152 @@
+\include "config.lyi"
+
+altosaxTwoDyn = {
+  s1*8 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1\mp |
+  s1*9 |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1\f |
+  s1*11 |
+
+  % 67
+  s1\mp |
+  s1*9 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*2 |
+  s4 s2.\mf |
+  s1*5 |
+
+  % 103
+  s4 s2.\f |
+  s1*7 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*5 |
+  s2\p\< s4 s4\!\ff |
+}
+
+
+altosaxTwoMarks = \measures
+
+
+altosaxTwoCues = \measures
+
+
+altosaxTwoNotCues = \measures
+
+
+altosaxTwoNotes = {
+  R1*8 |
+
+  % 9
+  R1*12 |
+
+  % 21
+  R1*12 |
+
+  % 33
+  e1 |
+  c1 |
+  e1 |
+  c1 |
+  d1 |
+  d1 |
+  d4 r r2 |
+  R1*3 |
+
+  % 43
+  R1*12 |
+
+  % 55
+  c8 e e c e4 e8 e |
+  f8 a a f( a4) r8 e |
+  c8( e) c( e) c( e) e e |
+  f8( e) d4 d r |
+  r8 c'8~ c4~ c8 c( b) c |
+  a8 a g4 b r |
+  r8 c8~ c4~ c8 c b c |
+  a8( f) g4 b r |
+  c4 c a a8 a |
+  f8( a) f( a) a4 a |
+  g4 f8( e)~ e2~ |
+  e2. r4 |
+
+  % 67
+  e1 |
+  c1 |
+  e1 |
+  c1 |
+  d1 |
+  d1 |
+  d4 r r2 |
+  R1*3 |
+
+  % 77
+  R1*10 |
+
+  % 87
+  R1*8 |
+
+  % 95
+  R1*2 |
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+
+  % 103
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+
+  % 111
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+  r4 c4~ c8 c b c |
+  a8 a a4 b2 |
+
+  % 119
+  R1*5 |
+  r2 c2 |
+}
+
+
+altosaxTwoScore    =                            \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
+altosaxTwoCond     = \transpose c   \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoMarks >> }
+altosaxTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
+altosaxEesTwoScore = \transpose ees \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
+altosaxEesTwoPart  = \transpose ees \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoCues    \altosaxTwoDyn >> }

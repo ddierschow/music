@@ -1,0 +1,184 @@
+\include "config.lyi"
+
+percOneDyn = {
+  s1*8 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s2. 4\f |
+  s1*10 |
+  s8 s2..\mf |
+
+  % 33
+  s1*10 |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1*10 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1 |
+  s2 s8 s4.\f |
+  s1*6 |
+
+  % 103
+  s4\mp \crescTextPocoAPocoCresc s4\< s2 |
+  s1*7 |
+
+  % 111
+  s4\!\ff s s2 |
+  s1*7 |
+
+  % 119
+  s1*6 |
+}
+
+
+percOneMarks = \measures
+
+
+percOneCues = \measures
+
+
+percOneNotCues = \measures
+
+
+percOneNotes = \drummode {
+  R1*8 |
+
+  % 9
+  R1*12 |
+
+  % 21
+  r2 r4 <<bd4 sn-^>> |
+  r2 r4 <<bd4 sn-^>> |
+  r2 r4 <<bd4 sn-^>> |
+  r2 r8 <<bd sn-^>> <<bd sn-^>> <<bd sn-^>> |
+  r2 r4 <<bd4 sn-^>> |
+  r2 r8 <<bd sn-^>> <<bd sn-^>> <<bd sn-^>> |
+  r2 r4 <<bd4 sn-^>> |
+  r2 r8 <<bd sn-^>> <<bd sn-^>> <<bd sn-^>> |
+  r2 r4 <<bd4 sn-^>> |
+  r2 r4 <<bd4 sn-^>> |
+  r2 r4 <<bd4 sn-^>> |
+  r8 sn sn sn sn sn sn sn |
+
+  % 33
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn8 sn8 bd bd sn4 |
+  bd4 sn8 sn8 bd bd sn4 |
+  bd4 sn8 sn8 bd bd sn4 |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+
+  % 43
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd8 sn r sn |
+  << bd4 sn>> sn bd4 sn |
+  bd4 sn bd8 sn r sn |
+  << bd4 sn>> sn bd4 sn |
+  bd4 sn bd8 sn sn4 |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+
+  % 55
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 toml8. toml16 toml8. toml16 toml4 |
+  bd4 sn bd sn |
+  bd4 toml8 toml \tuplet 3/2 { <<bd8 toml>> toml toml } toml4 |
+  bd4 sn bd sn |
+  bd4 sn bd8 sn sn4 |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  <<bd8 sn>> \tuplet 3/2 { toml16 toml toml } toml8 \tuplet 3/2 { toml16 toml toml } toml8 \tuplet 3/2 { toml16 toml toml } toml4 |
+
+  % 67
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn8 sn8 bd bd sn4 |
+  bd4 sn8 sn8 bd bd sn4 |
+  bd4 sn8 sn8 bd bd sn4 |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+
+  % 77
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd8. toml16 toml8. toml16 |
+  toml4 sn bd sn |
+  bd4 sn \tuplet 3/2 { <<bd8 sn>> sn sn } \tuplet 3/2 { <<bd8 sn>> sn sn } |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+  bd4 sn bd sn |
+
+  % 87
+  R1*8 |
+
+  % 95
+  r1 |
+  r2 r8 r16 tommh16-^ r8. tommh16-^ |
+  tommh4-^ r r2 |
+  r2 r8 r16 tommh16-^ r8. tommh16-^ |
+  tommh4-^ r r2 |
+  r2 r8 r16 tommh16-^ r8. tommh16-^ |
+  tommh4-^ r r2 |
+  r2 r8 r16 tommh16-^ r8. tommh16-^ |
+
+  % 103
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+  \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
+
+  % 111
+  <<bd4 sn-^>> sn bd sn |
+  bd4 sn bd sn |
+  <<bd4 sn-^>> sn bd sn |
+  bd4 sn bd sn |
+  <<bd4 sn-^>> sn bd sn |
+  bd4 sn bd sn |
+  <<bd4 sn-^>> sn bd sn |
+  bd4 sn bd sn |
+
+  % 119
+  R1*6 |
+}
+
+
+percOneScore = \relative c { << \pc \percOneNotes \percOneNotCues \percOneDyn >> }
+percOneCond  = \relative c { << \pc \percOneNotes \percOneNotCues \percOneMarks >> }
+percOneMidi  = \relative c { << \pc \percOneNotes \percOneNotCues \percOneDyn >> }
+percOnePart  = \relative c { << \pc \percOneNotes \percOneCues    \percOneDyn >> }

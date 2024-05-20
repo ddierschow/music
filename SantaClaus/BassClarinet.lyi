@@ -1,0 +1,133 @@
+\include "config.lyi"
+
+bassclarDyn = {
+  s1\p |
+  s1*7 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s2. s4\mp |
+  s1*9 |
+
+  % 43
+  s1*12 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s2. s4\mp |
+  s1*9 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1\p |
+  s1*7 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*8 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*5 |
+  s4\p\< s2 s4\!\ff |
+}
+
+
+bassclarMarks = \measures
+
+
+bassclarCues = \measures
+
+
+bassclarNotCues = \measures
+
+
+bassclarNotes = {
+  \set countPercentRepeats = ##t
+  \repeat percent 4 { c8 c c c g g g g | a8 a a a g g g g | }
+
+  % 9
+  \repeat percent 4 { c8 c c c g g g g | a8 a a a b b b b | }
+  c4 b a g |
+  f2 g |
+  c8 c c c g g g g |
+  a8 a a a g g r4 |
+
+  % 21
+  R1*12 |
+
+  % 33
+  r2 r4 g-. |
+  r2 r4 c-. |
+  r2 r4 g-. |
+  r2 r4 c-. |
+  r2 r4 d-. |
+  r2 r4 d-. |
+  r2 r4 g,-. |
+  r2 r4 g-. |
+  R1*2 |
+
+  % 43
+  R1*12 |
+
+  % 55
+  R1*12 |
+
+  % 67
+  r2 r4 g-. |
+  r2 r4 c-. |
+  r2 r4 g-. |
+  r2 r4 c-. |
+  r2 r4 d-. |
+  r2 r4 d-. |
+  r2 r4 g,-. |
+  r2 r4 g-. |
+  R1*2 |
+
+  % 77
+  R1*10 |
+
+  % 87
+  \repeat percent 4 { c8 c c c g g g g | a8 a a a g g g g | }
+
+  % 95
+  \repeat percent 4 { c8 c c c g g g g | a8 a a a g g g g | }
+
+  % 103
+  \repeat percent 4 { c8 c c c g g g g | a8 a a a g g g g | }
+
+  % 111
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+  r4 c4~ c8 c b c |
+  c8 c c4 c2 |
+
+  % 119
+  R1*5 |
+  r2 c2 |
+}
+
+
+bassclarScore    =                            \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarCond     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarMarks >> }
+bassclarMidi     = \transpose c   \concertKey \relative c  { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarBesScore = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
+bassclarBesPart  = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarCues    \bassclarDyn >> }

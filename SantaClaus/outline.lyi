@@ -1,0 +1,99 @@
+rehearsalMarks =
+{
+  s1*8 |  % intro - clarinets, glock
+
+  \rMark "9"
+  s1*12 |  % first verse - trumpet over clarinets
+
+  \rMark "21"
+  s1*12 |  % second verse - trumpets over clarients, add bass and perc
+
+  \rMark "33"
+  s1*10 |  % bridge - horns
+
+  \rMark "43"
+  s1*12 |  % third verse - accel
+
+  \rMark "55"
+  s1*12 |  % instrumental verse - saxes
+
+  \rMark "67"
+  s1*10 |  % bridge - horns
+
+  \rMark "77"
+  s1*10 |  % fourth verse
+
+  \rMark "87"
+  s1*8 |  % outro
+
+  \rMark "95"
+  s1*8 |  % reprise - start building
+
+  \rMark "103"
+  s1*8 |  % build and accel
+
+  \rMark "111"
+  s1*8 |  % reprise - all out
+
+  \rMark "119"
+  s1*6 |  % finale
+}
+
+pageMarks =
+{
+  \time 4/4
+
+  s1*8 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1*10 |
+
+  % 43
+  \override TextSpanner.bound-details.left.text = \markup { \upright "accel. poco a poco" }
+  s1_\startTextSpan |
+  s1*10 |
+  s1_\stopTextSpan |
+
+  % 55
+  \tempomarkfast
+  s1*12 |
+
+  % 67
+  s1*10 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1*8_\markup \upright "original tempo" |
+
+  % 95
+  s1*8 |
+  \override TextSpanner.bound-details.left.text = \markup { \upright "accel. poco a poco" }
+
+  % 103
+  s1_\startTextSpan |
+  s1*6 |
+  s1_\stopTextSpan |
+
+  % 111
+  \tempomarkfast
+  s1*8 |
+
+  % 119
+  \override TextSpanner.bound-details.left.text = \markup { \italic "rit." }
+  s1_\startTextSpan |
+  s1 |
+  s1_\stopTextSpan |
+  s1*3 |
+
+  \bar "|."
+}
+
+outline = << \rehearsalMarks \pageMarks >>

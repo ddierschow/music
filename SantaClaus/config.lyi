@@ -1,0 +1,55 @@
+concertKey = c'
+tempomark = { \tempo 4 = 120 }
+tempomarkfast = { \tempo 4 = 136 }
+
+measures =
+{
+  #(set-accidental-style 'modern)
+  \override MultiMeasureRest.expand-limit = #2
+  \override Score.PaperColumn.keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
+  \time 4/4
+  \key c \major
+
+  s1*8 |
+
+  % 9
+  s1*12 |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1*10 |
+
+  % 43
+  s1*10 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1*10 |
+
+  % 77
+  s1*10 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*8 |
+
+  % 111
+  s1*8 |
+
+  % 119
+  s1*6 |
+}
+
+stafftype = Staff
+
+\include "../common/defs.lyi"
