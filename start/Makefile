@@ -1,19 +1,35 @@
+scores := Score ScoreNT
+parts := @partlist@
+infra := allparts.lyi config.lyi layout.lyi outline.lyi part.lyi
+
+scorepdfs := $(scores:%=%.pdf) ScoreMidi.midi
+scoresrcs := $(scores:%=%.ly)
+partprods := $(parts)
+partpdfs := $(partprods:%=%.pdf)
+partincs := $(parts:%=%.lyi)
+partsrcs := $(partprods:%=%.ly)
+
 all: scores parts
 
-scores: Score.pdf ScoreNT.pdf ScoreMidi.midi
+scores: $(scorepdfs)
+
+parts: $(partpdfs)
+
+clean:
+	rm -f $(partpdfs) $(scorepdfs) *~
 
 parts: @partspdf@
 
 clean:
 	rm -f @partspdf@ *~ Score.pdf ScoreCond.pdf ScoreNT.pdf ScoreMidi.midi
 
-Score.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi Score.ly @partslyi@
+Score.pdf: Score.ly $(infra) $(partincs)
 	lilypond Score.ly
 
-ScoreNT.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi ScoreNT.ly @partslyi@
+ScoreNT.pdf: ScoreNT.ly $(infra) $(partincs)
 	lilypond ScoreNT.ly
 
-ScoreMidi.midi: config.lyi ../common/defs.lyi outline.lyi ScoreMidi.ly @partslyi@
+ScoreMidi.midi: $(infra) $(partincs)
 	lilypond ScoreMidi.ly
 
 @blob@

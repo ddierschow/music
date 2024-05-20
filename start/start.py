@@ -29,7 +29,7 @@ scoremidi_snippet = r'''      \new Staff \with { midiInstrument = "@midi@" }
         { \new Voice { \relative c \@part@@text@Midi } }
 '''
 
-makefile_part_snippet = '''@filename@.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi @filename@.ly @filename@.lyi
+makefile_part_snippet = '''@filename@.pdf: $(infra) @filename@.ly @filename@.lyi
 \tlilypond @filename@.ly
 
 '''
@@ -59,40 +59,51 @@ def main():
 
 
 def config_instrument(arg):
-    inst_name, num = (arg[:-1], int(arg[-1])) if arg[-1].isdigit() else (arg, 0)
-    settings = data.instruments[inst_name]
-    # 'name' 'shortname' 'part' 'key' 'clef' 'midi'
-    nums = data.numbers[num]
-    # 'num' 'text' 'roman'
-    formalname = settings['name']
-    if num:
-        formalname += ' ' + nums['roman']
-    if settings.get('key', '').endswith('es'):
-        formalname = r'\markup { "' + formalname + ' in ' + settings['key'][0].upper() + r'" \smaller \flat }'
-    elif settings.get('key', '').endswith('is'):
-        formalname = r'\markup { "' + formalname + ' in ' + settings['key'][0].upper() + r' \smaller \sharp }'
-    elif settings.get('key', '') not in ['c', '']:
-        formalname = formalname + ' in ' + settings['key'].upper()
-    else:
-        formalname = f'"{formalname}"'
-    return({
-        'filename': arg,
-        'formalname': formalname,
-        'name': settings['name'],
-        'shortname': settings['shortname'] + nums['num'],
-        'part': settings['part'],
-        'key': settings.get('key', 'c'),
-        'ckey': settings.get('key', '').title(),
-        'clef': settings['clef'],
-        'octave': settings['octave'],
-        'mclef': 'pc' if settings['clef'] == 'percussion' else 'bc' if settings['clef'] == 'bass' else 'tc',
-        'midi': settings.get('midi', ''),
-        'num': nums['num'],
-        'text': nums['text'],
-        'roman': nums['roman'],
-        'textkey': data.keys.get(settings.get('key', ''), ''),
-    })
-    
+    # comma-delimited should be coupled on score
+    # equal-delimited should map to the same lyi file
+    base_inst = None
+    for inst in arg.split(','):
+        same_as = None
+        if '=' in inst:
+            inst, same_as = inst.split('=')
+        base_inst = base_inst or inst
+        inst_name, num = (inst[:-1], int(inst[-1])) if inst[-1].isdigit() else (inst, 0)
+        settings = data.instruments[inst_name]
+        # 'name' 'shortname' 'part' 'key' 'clef' 'midi'
+        nums = data.numbers[num]
+        # 'num' 'text' 'roman'
+        formalname = settings['name']
+        key = settings['key'][0].upper()
+        if num:
+            formalname = ' ' + nums['roman']
+        if settings.get('key', '').endswith('es'):
+            formalname = r'\markup { "' + formalname + ' in ' + key + r'" \smaller \flat }'
+        elif settings.get('key', '').endswith('is'):
+            formalname = r'\markup { "' + formalname + ' in ' + key + r' \smaller \sharp }'
+        elif settings.get('key', '') not in ['c', '']:
+            formalname = f'"{formalname} in {key}"'
+        else:
+            formalname = f'"{formalname}"'
+        return([{
+            'filename': inst,
+            'formalname': formalname,
+            'name': settings['name'],
+            'shortname': settings['shortname'] + nums['num'],
+            'part': settings['part'],
+            'key': settings.get('key', 'c'),
+            'ckey': settings.get('key', '').title(),
+            'clef': settings['clef'],
+            'octave': settings['octave'],
+            'mclef': 'pc' if settings['clef'] == 'percussion' else 'bc' if settings['clef'] == 'bass' else 'tc',
+            'midi': settings.get('midi', ''),
+            'num': nums['num'],
+            'text': nums['text'],
+            'roman': nums['roman'],
+            'textkey': data.keys.get(settings.get('key', ''), ''),
+            'base': base_inst,
+            'same_as': same_as,
+        }])
+        
 
 def read_config(config_file):
     config = {
@@ -106,7 +117,7 @@ def read_config(config_file):
     for ln in open(config_file).readlines():
         cmd, arg = ln.strip().split('|', 1)
         if cmd == 'inst':
-            config['inst'].append(config_instrument(arg))
+            config['inst'].extend(config_instrument(arg))
         else:
             config[cmd] = arg
     return config
@@ -138,8 +149,9 @@ def render_makefile(config, infilename, outfilename):
     image = render_dict(image, config)
     partspdf = ' '.join([f"{x['filename']}.pdf" for x in config['inst']])
     partslyi = ' '.join([f"{x['filename']}.lyi" for x in config['inst']])
+    partlist = ' '.join([x['filename'] for x in config['inst']])
     blob = ''.join([render_dict(makefile_part_snippet, x) for x in config['inst']])
-    image = render_dict(image, {'partspdf': partspdf, 'partslyi': partslyi, 'blob': blob})
+    image = render_dict(image, {'partspdf': partspdf, 'partslyi': partslyi, 'partlist': partlist, 'blob': blob})
     open(outfilename, 'wt').write(image)
 
 

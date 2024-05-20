@@ -79,6 +79,11 @@ rMark = #(define-music-function (parser location markp) (string?)
   \mark \markup { \box \bold $markp }
 #})
 
+rMarkWithTempo = #(define-music-function (parser location markp tempo) (string? integer?)
+#{
+  \mark { \markup { \box \bold $markp }  { \tempo 4 = $tempo } }
+#})
+
 #(define mydrums '(
         (bassdrum       default   #f    -3)
         (snare          default   #f    1)
@@ -86,4 +91,5 @@ rMark = #(define-music-function (parser location markp) (string?)
         (cowbell        triangle  #f    3)
         (hiwoodblock    triangle  #f    2)
         (lowoodblock    triangle  #f    1)
+        (jing           default #f  0)
 ))

@@ -142,6 +142,16 @@ instruments = {
             'clef': 'percussion',
             'octave': "'",
         },
+    'SopranoSax':
+        {
+            'name': 'Soprano Sax',
+	    'shortname': "S.Sx.",
+            'part': 'sopranosax',
+            'key': 'bes',
+            'clef': 'treble',
+            'octave': "'",
+            'midi': "soprano sax",
+        },
     'StringBass':
         {
             'name': 'String Bass',

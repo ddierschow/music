@@ -10,6 +10,7 @@ piano score.
 - Bassoon
 - Clarinet 1, 2, and 3
 - Bass Clarinet
+- Soprano Sax
 - Alto Sax 1 and 2
 - Tenor Sax
 - Bari Sax

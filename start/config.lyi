@@ -1,16 +1,14 @@
-\version "@version@"
-
 concertKey = @concertkey@
 tempomark = { \tempo @tempomark@ }
 
 measures =
 {
   \override MultiMeasureRest.expand-limit = #2
-  \override Score.PaperColumn #'keep-inside-line = ##t
-  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
+  \override Score.PaperColumn.keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
   \time @time@
   \key @key@
-  s4*16 |
+  s1*16 |
 }
 
 stafftype = Staff
