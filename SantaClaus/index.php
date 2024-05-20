@@ -15,7 +15,8 @@ echo "<table border=0><tr><td valign=top>\n";
 echo "<table border=1>\n";
 
 echo "<tr><td colspan=3><center><h2>\n";
-echo "santa claus is coming to town\n";
+echo '<a href="https://en.wikipedia.org/wiki/Santa_Claus_Is_Comin%27_to_Town">';
+echo "santa claus is comin' to town</a>\n";
 echo "</h2></center></td></tr>\n";
 
 show_grid(['Score', 'ScoreCond', 'ScoreNT'], ['.ly', '.', '.pdf']);
@@ -33,7 +34,7 @@ echo "<ul>\n";
 show_link("http://phrogz.net/tmp/Sing/SantaClausisComintoTown.pdf", "original song");
 show_link("https://www.youtube.com/watch?v=qrNMYDPYY0E", "Springsteen's version");
 echo "</ul>\n";
-echo "</td><td>\n";
+echo "</td><td valign=top>\n";
 
 show_parts($parts);
 

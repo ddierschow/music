@@ -27,7 +27,7 @@ show_row(['../common/defs.lyi', 'outline.lyi', 'part.lyi']);
 echo "</td></tr></table>\n";
 echo "<ul>\n";
 echo "</ul>\n";
-echo "</td><td>\n";
+echo "</td><td valign=top>\n";
 
 show_parts($parts);
 

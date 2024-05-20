@@ -9,14 +9,14 @@ ScorePaper = \paper {
 }
 
 ScoreHeader = \header {
-  title = \markup{Santa Claus is Coming to Town}
+  title = \markup{Santa Claus is Comin' to Town}
   subtitle = "Inspired by Bruce Springsteen"
   opus = ""
   subsubtitle = "J. Fred Coots"
   copyright = ""
   instrument = \instrument
 
-  mutopiatitle = "Santa Claus is Coming to Town"
+  mutopiatitle = "Santa Claus is Comin' to Town"
   mutopiacomposer = "J. Fred Coots"
   mutopiaopus = ""
   mutopiainstrument = \instrument
@@ -41,7 +41,7 @@ PartPaper = \paper {
 }
 
 PartHeader = \header {
-  title = \markup { "Santa Claus is Coming to Town" }
+  title = \markup { "Santa Claus is Comin' to Town" }
   subtitle = "Inspired by Bruce Springsteen"
   opus = ""
   composer = "J. Fred Coots"
@@ -49,7 +49,7 @@ PartHeader = \header {
   instrument = \instrument
   meter = "Moderately"
 
-  mutopiatitle = "Santa Claus is Coming to Town"
+  mutopiatitle = "Santa Claus is Comin' to Town"
   mutopiacomposer = "J. Fred Coots"
   mutopiaopus = ""
   mutopiainstrument = "Concert Band"

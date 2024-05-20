@@ -38,7 +38,7 @@ show_link("Heliotrope_Bouquet.mp4", "Heliotrope_Bouquet.mp4");
 show_link("https://www.youtube.com/watch?v=E0mvRf7dvO0&pp=ygUSaGVsaW90cm9wZSBib3VxdWV0", "... on YouTube");
 show_link("Percussion.pdf", "Mark's percussion part");
 echo "</ul>\n";
-echo "</td><td>\n";
+echo "</td><td valign=top>\n";
 
 show_parts($parts);
 
