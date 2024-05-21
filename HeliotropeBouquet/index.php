@@ -11,25 +11,19 @@ $parts = [
     "Percussion1", "Percussion2", "MalletPercussion1", "MalletPercussion2"
 ];
 
-echo "<table border=0><tr><td valign=top>\n";
+echo "<table border=0><tr>";
+
+echo "<td valign=top>\n";
 echo "<table border=1>\n";
-
-echo "<tr><td colspan=3><center><h2>\n";
-echo '<a href="https://en.wikipedia.org/wiki/Heliotrope_Bouquet">heliotrope bouquet</a>' . "\n";
-echo "</h2></center></td></tr>\n";
-
+show_title("heliotrope bouquet", "https://en.wikipedia.org/wiki/Heliotrope_Bouquet");
+show_description_cell();
 show_grid(['Score', 'ScoreCond', 'ScoreNT'], ['.ly', '.', '.pdf']);
-show_grid(['ScoreMidi'], ['.ly', '.midi', '.mp3']);
-
+show_grid(['ScoreMidi'], ['.ly', '.midi', '.mp3'], 1);
 show_audio('ScoreMidi.mp3');
-echo "<tr><td colspan=3>\n";
 show_common_links();
-echo "</td></tr>\n";
-
-show_row(['Makefile', 'README.md', 'config.lyi']);
-show_row(['../common/defs.lyi', 'outline.lyi', 'part.lyi']);
-
-echo "</td></tr>\n";
+show_row(['Makefile', 'README.md']);
+show_row(['allparts.lyi', 'config.lyi', '../common/defs.lyi'], 1);
+show_row(['layout.lyi', 'outline.lyi', 'part.lyi']);
 show_audio('Heliotrope_Bouquet.mp4');
 echo "</table>\n";
 echo "<ul>\n";
@@ -38,15 +32,19 @@ show_link("Heliotrope_Bouquet.mp4", "Heliotrope_Bouquet.mp4");
 show_link("https://www.youtube.com/watch?v=E0mvRf7dvO0&pp=ygUSaGVsaW90cm9wZSBib3VxdWV0", "... on YouTube");
 show_link("Percussion.pdf", "Mark's percussion part");
 echo "</ul>\n";
-echo "</td><td valign=top>\n";
+echo "</td>";
 
+echo "<td valign=top>\n";
 show_parts($parts);
+echo "</td>\n";
 
-echo "</td></tr></table>\n";
-//echo "<img src='image.png' style='float:right;'><br>\n";
+echo "<td valign=top>\n";
+show_image();
 echo "<h4>To do</h4><ul>\n";
 echo "<li>Write a condensed score (someday?)\n";
 echo "</ul>\n";
+
+echo "</td></tr></table>\n";
 
 show_bottom();
 ?>

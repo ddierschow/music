@@ -11,35 +11,31 @@ $parts = [
     "Percussion1", "Percussion2", "MalletPercussion", "Timpani"
 ];
 
-echo "<table border=0><tr><td valign=top>\n";
+echo "<table border=0><tr>";
+
+echo "<td valign=top>\n";
 echo "<table border=1>\n";
-
-echo "<tr><td colspan=3><center><h2>\n";
-echo '<a href="https://en.wikipedia.org/wiki/Symphony_in_C_(Bizet)">symphony number 1 in c<br>scherzo</a>' . "\n";
-echo "</h2></center></td></tr>\n";
-
+show_title("symphony number 1 in c<br>scherzo", "https://en.wikipedia.org/wiki/Symphony_in_C_(Bizet)");
+show_description_cell();
 show_grid(['Score', 'ScoreNT'], ['.ly', '.', '.pdf']);
 show_grid(['ScoreMidi'], ['.ly', '.midi', '.mp3']);
-
-echo "<tr><td colspan=3>\n";
+show_audio('ScoreMidi.mp3');
 show_common_links();
-echo "</td></tr>\n";
-
-show_row(['Makefile', 'README.md', 'config.lyi']);
-show_row(['../common/defs.lyi', 'outline.lyi', 'part.lyi']);
-
-echo "</td></tr></table>\n";
-echo "<ul>\n";
-echo "<li><a href='BizetSyphony1MvtIII.pdf'>Orchestral Score</a>\n";
+show_row(['Makefile', 'README.md']);
+show_row(['allparts.lyi', 'config.lyi', '../common/defs.lyi'], 1);
+show_row(['layout.lyi', 'outline.lyi', 'part.lyi']);
+echo "</table>\n";
+echo "<h4>To do</h4><ul>\n";
+echo "<li>Completely revise this\n";
 echo "</ul>\n";
-echo "</td><td>\n";
+echo "</td>";
 
+echo "<td valign=top>\n";
 show_parts($parts);
+echo "</td>";
 
-echo "</td><td valign=top><table border=0><tr><td>\n";
-echo "<img src='image.png'>\n";
-echo "<ul>\n";
-echo "</ul>\n";
+echo "<td valign=top>\n";
+show_image();
 echo "</td></tr></table>\n";
 
 echo "</td></tr></table>\n";
