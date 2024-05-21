@@ -1,0 +1,1 @@
+common files used by all Lilypond work in this directory

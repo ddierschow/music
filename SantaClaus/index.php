@@ -39,6 +39,7 @@ echo "</td><td valign=top>\n";
 show_parts($parts);
 
 echo "</td><td valign=top><table border=0><tr><td>\n";
+echo "<img src='image.png'>\n";
 echo "<h4>To do</h4><ul>\n";
 echo "<li>print it";
 echo "<li>play it";

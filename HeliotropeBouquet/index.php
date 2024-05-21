@@ -43,6 +43,7 @@ echo "</td><td valign=top>\n";
 show_parts($parts);
 
 echo "</td></tr></table>\n";
+//echo "<img src='image.png' style='float:right;'><br>\n";
 echo "<h4>To do</h4><ul>\n";
 echo "<li>Write a condensed score (someday?)\n";
 echo "</ul>\n";

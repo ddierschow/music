@@ -1,4 +1,0 @@
-all: score parts
-score: ScoreMvtIII.pdf MScoreMvtIII.pdf
-parts: Bass.pdf Bassoon1.pdf Bassoon2.pdf Cello.pdf Clarinet1.pdf Clarinet2.pdf Flute1.pdf Flute2.pdf Horn1.pdf Horn2.pdf Horn3.pdf Horn4.pdf HornF1.pdf HornF2.pdf HornF3.pdf HornF4.pdf Oboe1.pdf Oboe2.pdf Timpani.pdf Trumpet1.pdf Trumpet2.pdf Viola.pdf Violin1.pdf Violin2.pdf
-.pdf.ly: lilypond

@@ -37,6 +37,7 @@ echo "</td><td>\n";
 show_parts($parts);
 
 echo "</td><td valign=top><table border=0><tr><td>\n";
+echo "<img src='image.png'>\n";
 echo "<ul>\n";
 echo "</ul>\n";
 echo "</td></tr></table>\n";
