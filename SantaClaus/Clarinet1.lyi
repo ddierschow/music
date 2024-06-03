@@ -82,10 +82,10 @@ clarOneNotes = {
   R1*2 |
 
   % 43
-  R1*12
+  R1*12 |
 
   % 55
-  R1*12
+  R1*12 |
 
   % 67
   r2 r4 c-. |
@@ -99,7 +99,7 @@ clarOneNotes = {
   R1*2 |
 
   % 77
-  R1*10
+  R1*10 |
 
   % 87
   \repeat percent 4 { e8 e e e c c c c | f8 f f f d d d d | }

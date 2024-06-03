@@ -14,11 +14,11 @@ altosaxTwoDyn = {
   s1*9 |
 
   % 43
-  s1*12 |
+  s1*11 |
+  s2 s4 s8 s8\f |
 
   % 55
-  s1\f |
-  s1*11 |
+  s1*12 |
 
   % 67
   s1\mp |
@@ -78,7 +78,8 @@ altosaxTwoNotes = {
   R1*3 |
 
   % 43
-  R1*12 |
+  R1*11 |
+  r2 r4 r8 g,8 |
 
   % 55
   c8 e e c e4 e8 e |

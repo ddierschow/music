@@ -43,6 +43,7 @@ pageMarks =
 {
   \time 4/4
 
+  \tempomark |
   s1*8 |
 
   % 9
@@ -56,16 +57,16 @@ pageMarks =
 
   % 43
   \override TextSpanner.bound-details.left.text = \markup { \upright "accel. poco a poco" }
-  s1_\startTextSpan |
-  s1*10 |
+  s1*11_\startTextSpan |
+  % s1*11 |
   s1_\stopTextSpan |
 
   % 55
   \tempomarkfast
-  s1*12 |
+  s1*12^\markup { Swing \hspace #0.4 \rhythm { 8[ 8] } = \rhythm { \tuplet 3/2 { 4 8 } } }
 
   % 67
-  s1*10 |
+  s1*10^\markup "Even 8ths"
 
   % 77
   s1*10 |

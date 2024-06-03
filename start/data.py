@@ -139,6 +139,7 @@ instruments = {
             'name': 'Percussion',
             'shortname': "Pe.",
             'part': 'perc',
+            'key': 'p',
             'clef': 'percussion',
             'octave': "'",
         },

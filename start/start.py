@@ -1,3 +1,12 @@
+'''
+This is a fairly straightforward startup script to create a directory
+and populate files for a new project.  IT IS NOT INTENDED TO BE CORRECT.
+You will have to do a LOT of work on these files.  It's just designed to
+give you a starting point quickly.
+
+The most difficult line to write is the first one.  This handles that.
+'''
+
 import argparse
 
 import data

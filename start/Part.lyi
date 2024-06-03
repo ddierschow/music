@@ -3,6 +3,9 @@
 @part@@text@Dyn = \measures
 
 
+@part@@text@Marks = \measures
+
+
 @part@@text@Cues = \measures
 
 
@@ -13,7 +16,7 @@
 
 
 @part@@text@Score    =                            \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@NotCues \@part@@text@Dyn >> }
-@part@@text@Cond     = \transpose c   \concertKey \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@NotCues \@part@@text@Dyn >> }
+@part@@text@Cond     = \transpose c   \concertKey \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@NotCues \@part@@text@Marks >> }
 @part@@text@Midi     = \transpose c   \concertKey \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@NotCues \@part@@text@Dyn >> }
 @part@@ckey@@text@Score = \transpose @key@ \concertKey \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@NotCues \@part@@text@Dyn >> }
 @part@@ckey@@text@Part  = \transpose @key@ \concertKey \relative c@octave@ { << \@mclef@ \@part@@text@Notes \@part@@text@Cues    \@part@@text@Dyn >> }

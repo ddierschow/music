@@ -21,8 +21,7 @@
 - Percussion 1, 2, and Mallet
 
 The source for all parts is written in the same key to allow for easily switching passages
-to different instruments.  The transposition is done at the bottom of each file.  This is
-arranged from a piano source, so the Notes sections are all written in Gmajor/Cmajor.
+to different instruments.  The transposition is done at the bottom of each file.
 
 Each part has sequences for Notes, Dynamics, and Cues or NotCues, and Marks; and these are put together at the same
 point the transposition is done, to produce a mixed seqence for the part and another for the score.

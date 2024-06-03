@@ -4,17 +4,13 @@
 
 \PartPaper
 
-\book
-{
-  \PartHeader
+\PartHeader
 
-  \score
+\score
+{
+  \new \stafftype \with { drumStyleTable = #(alist->hash-table mydrums) }
   {
-    \new \stafftype \with { drumStyleTable = #(alist->hash-table mydrums) }
-    {
-      \set Score.skipBars = ##t
-      \tempomark
-      << \keepWithTag #'part \notes \outline >>
-    }
+    \set Score.skipBars = ##t
+    << \keepWithTag #'part \notes \outline >>
   }
 }

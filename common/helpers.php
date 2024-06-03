@@ -14,19 +14,16 @@ function show_top() {
     echo "<body>\n";
 }
 
-function show_file($fn) {
+function show_file($fn, $show_pdf=1) {
     echo '  <td>';
     if ($fn == '')
 	echo "&nbsp;";
-    else if (!file_exists($fn))
-        if (str_ends_with($fn, '.pdf'))
-            echo $fn;
-        else
-            echo '';
-    else if (str_ends_with($fn, '.mp3'))
+    else if (file_exists($fn))
 	echo '<a href="' . $fn . '">' . $fn . "</a>";
+    else if (str_ends_with($fn, '.pdf') && $show_pdf)
+        echo $fn;
     else
-	echo '<a href="' . $fn . '">' . $fn . "</a>";
+        echo '&nbsp;';
     echo "</td>\n";
 }
 
@@ -42,15 +39,15 @@ function show_audio($fn) {
     }
 }
 
-function show_row($arr, $style=0) {
+function show_row($arr, $style=0, $show_pdf=1) {
     global $styles;
     echo " <tr class='" . $styles[$style] . "'>\n";
     foreach ($arr as $fn)
-	show_file($fn);
+	show_file($fn, $show_pdf);
     echo " </tr>\n";
 }
 
-function show_grid($prefs, $suffs, $style=0) {
+function show_grid($prefs, $suffs, $style=0, $show_pdf=1) {
     foreach ($prefs as $pref) {
 	$arr = [];
 	foreach ($suffs as $suff)
@@ -58,14 +55,14 @@ function show_grid($prefs, $suffs, $style=0) {
 		$arr[] = '';
 	    else
 		$arr[] = $pref . $suff;
-        show_row($arr, $style);
+        show_row($arr, $style, $show_pdf);
         $style = 1 - $style;
     }
 }
 
-function show_parts($parts) {
+function show_parts($parts, $show_pdf=1) {
     echo "<table border=1>\n";
-    show_grid($parts, ['.ly', '.lyi', '.pdf']);
+    show_grid($parts, ['.ly', '.lyi', '.pdf'], $show_pdf);
     echo "</table>\n";
 }
 
