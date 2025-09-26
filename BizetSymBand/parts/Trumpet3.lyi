@@ -1,8 +1,6 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
-trumpetThreeDyn = 
+trumThreeDyn = 
 {
   \time 3/4
   \key g \major
@@ -172,7 +170,10 @@ trumpetThreeDyn =
 }
 
 
-trumpetThreeCues = 
+trumThreeMks = {}
+
+
+trumThreeCues = 
 {
   \time 3/4
   \key g \major
@@ -188,7 +189,7 @@ trumpetThreeCues =
 }
 
 
-trumpetThreeNotCues = 
+trumThreeScor = 
 {
   \time 3/4
   \key g \major
@@ -204,7 +205,7 @@ trumpetThreeNotCues =
 }
 
 
-trumpetThreeNotes = 
+trumThreeNotes = 
 {
   \time 3/4
   \key g \major
@@ -470,8 +471,7 @@ trumpetThreeNotes =
 }
 
 
-trumpetThreeScore    =                            \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues                  >> }
-trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues                  >> }
-trumpetThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues \trumpetThreeDyn >> }
-trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues                  >> }
-trumpetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeCues    \trumpetThreeDyn >> }
+trumpetThreeScore    = \transpose c   \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeDyn >> }
+trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeMks >> }
+trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeDyn >> }
+trumpetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeCues \trumThreeDyn >> }

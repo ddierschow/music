@@ -1,8 +1,6 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
-tromOneDyn = 
+tromThreeDyn = 
 {
   \time 3/4
   \key g \major
@@ -27,11 +25,7 @@ tromOneDyn =
   % 18
   \repeat volta 2
   {
-    s2.*8 |
-    \crescTextCrescMolto 
-    s4\p s\< s |
-    s2.*2 |
-    s4 s s\! |
+    s2.*12 |
     \crescHairpin
     s4\f\< s s |
     s s s\! |
@@ -59,21 +53,8 @@ tromOneDyn =
     s2.*3 |
 
     % 86
-    s2.\ff |
-    s2.*7 |
-    s2.\pp |
-    \crescHairpin
-    s2.\< |
-    s2.*2 |
-    s2.\! |
-    s2.\> |
-    s2.*10 |
-    s2.\!\< |
-    s2.*3 |
-    s2.\p\> |
-    s2.*9
-    s2.\! |
-    s2. |
+    s4\ff s s |
+    s2.*39 |
     s4\f s s |
     s2.*3 |
 
@@ -120,18 +101,11 @@ tromOneDyn =
   % 173
   \repeat volta 2
   {
-    s4\f s s |
-    s2.*3 |
-    \dimTextDimMolto
-    s4\> s s |
-    s2.*2 |
-    s2.\! |
+    s2.*8 |
 
     % 181
-    s4\pp s s |
-    s2.*7 |
-    s4\pp s s |
-    s2.*2 |
+    s2.\pp |
+    s2.*10 |
     s4 s s\pp |
     s2.*4 |
   }
@@ -142,8 +116,8 @@ tromOneDyn =
     s2.*8 |
 
     % 205
-    \crescHairpin
     s2.*8 |
+    \crescHairpin
     s4\pp\< s s |
     s2.*3 |
     s4\!\> s s |
@@ -156,7 +130,7 @@ tromOneDyn =
 
     % 253
     s2.\p |
-    \crescTextCrescMolto
+    \crescTextCrescMolto 
     s4 s s\< |
     s2.*6 |
     s2.\! |
@@ -176,25 +150,10 @@ tromOneDyn =
 }
 
 
-tromOneCues = 
-{
-  \time 3/4
-  \key g \major
-  \clef bass
-
-  \partial 4 s4 |
-
-  s2.*60 | \break
-  s2.*109 |
-
-  \key c \major
-
-  s2.*96 |
-
-}
+tromThreeMks = {}
 
 
-tromOneNotCues = 
+tromThreeCues = 
 {
   \time 3/4
   \key g \major
@@ -211,7 +170,24 @@ tromOneNotCues =
 }
 
 
-tromOneNotes = 
+tromThreeScor = 
+{
+  \time 3/4
+  \key g \major
+  \clef bass
+
+  \partial 4 s4 |
+
+  s2.*169 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+tromThreeNotes = 
 {
   \time 3/4
   \key g \major
@@ -237,23 +213,18 @@ tromOneNotes =
   % 18
   \repeat volta 2
   {
-    R4*3*8 |
-    c2-> a4-. |
-    fis-. d-. fis-. |
-    g2-> d'4-. |
-    b-. g-. b-. |
-    c2-> a4-. |
-    fis-. d-. fis-. |
-    g-. d'-. b-. |
-    g-. r r |
-    R4*3*4 |
+    R4*3*12 |
+    d2. |
+    d4-. d-. d-. |
+    g,4-. r r |
+    R4*3*5 |
 
     % 38
-    d2.~ |
+    d'2.~ |
     d4-. d-. d-. |
-    g4-. r r |
+    g,4-. r r |
     R4*3*5 |
-    e2.~ |
+    e'2.~ |
     e4-. e-. e-. |
     d4-. r r |
     R4*3 |
@@ -264,7 +235,7 @@ tromOneNotes =
 
     % 54
     R4*3*7 |
-    r2 a''4-. |
+    r2 a4-. |
     a2.~ |
     a2.~ |
     a2.~ |
@@ -285,77 +256,45 @@ tromOneNotes =
     a2.~ |
     a2.~ |
     a4 r r |
-    r d-. cis-. |
+    r d'-. cis-. |
     b-. a-. g-. |
     fis-. e-. d-. |
     cis-. b-. a-. |
 
     % 86
     d4-. r r |
-    R4*3*7 |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2. |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2. |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2. |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2 r4 |
-    r r r |
-    e2.~ |
-    e2.~ |
-    e4 r r |
+    R4*3*39 |
+    c2.~ |
+    c2.~ |
+    c4 r r |
     R4*3 |
 
     % 130
-    d4-. r r |
+    g4-. r r |
+    R4*3*3 |
+    c,2.~ |
+    c2.~ |
+    c4 r r |
+    R4*3 |
+    g'4-. r r |
     R4*3*3 |
     c2.~ |
     c2.~ |
     c4 r r |
     R4*3 |
-    d4-. r r |
+    g4-. r r |
     R4*3*3 |
-    e2.~ |
-    e2.~ |
-    e4 r r |
-    R4*3 |
-    d4-. r r |
-    R4*3*3 |
-    d2.~ |
+    d'2.~ |
     d2. |
-    d4-. r r |
+    g,4-. r r |
     R4*3 |
-    d2.~ |
+    d'2.~ |
     d2. |
-    d4-. r r |
+    g,4-. r r |
 
     % 157
     R4*3*5 |
-    d2.~ |
+    d'2.~ |
     d2.~ |
     d2. |
     d4-. d-. d-. |
@@ -378,31 +317,24 @@ tromOneNotes =
   % 173
   \repeat volta 2
   {
-    g2.~-^ |
-    g2. |
-    g2.~-^ |
-    g2. |
-    g2.-^ |
-    g2.-^ |
-    g2.-^ |
-    g2.-^ |
+    R4*3*8 |
 
     % 181
-    g2.~-^ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g4 r r |
+    c2.-^~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c4-. r r |
     R4*3*2 |
-    r4 r d'-. |
-    d( e-.) e-. |
-    e-. r d-. |
-    d-. r e-. |
-    e-. r r |
+    r4 r g-. |
+    g-. g-. g-. |
+    g-. r g-. |
+    g-. r c-. |
+    c-. r r |
   }
 
   % 197
@@ -412,48 +344,47 @@ tromOneNotes =
 
     % 205
     R4*3*8 |
-    g,2.-^~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2 r4 |
+    c,2.-^~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2 r4 |
     R4*3*9 |
 
     % 229
     R4*3*24 |
 
     % 253
-    g2.-^~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g2 r4 |
+    c2.-^~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2 r4 |
     R4*3*2 |
-    r4 r d'-. |
-    d( e-.) e-. |
-    e-. r d-. |
-    d-. r e-. |
+    r4 r g'-. |
+    g-. g-. g-. |
+    g-. r g-. |
+    g-. r c-. |
   }
   \alternative
   {
     {
-      e-. r r |
+      c-. r r |
     }
     {
-      e-. r r |
+      c-. r r |
     }
   }
 }
 
 
-tromboneOneScore  =                          \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromboneCOneScore = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromboneOneCond   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromboneOneMidi   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromboneOnePart   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneCues    \tromOneDyn >> }
+tromboneThreeScore  = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor \tromThreeDyn >> }
+tromboneCThreeScore = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor \tromThreeDyn >> }
+tromboneThreeCond   = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor \tromThreeMks >> }
+tromboneThreePart   = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeCues \tromThreeDyn >> }

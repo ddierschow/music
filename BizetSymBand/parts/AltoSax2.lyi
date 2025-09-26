@@ -1,17 +1,16 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
-trumpetTwoDyn = 
+altosaxTwoDyn = 
 {
   \time 3/4
   \key g \major
 
-  \partial 4 s4 |
+  \partial 4 s4\f |
   \repeat volta 2
   {
-    s2.*7 |
-    s2.\f |
+    s2.*6 |
+    s2.^\tenuto |
+    s2. |
     s2.*4 |
     s2 s4\ff |
     s2.*2 |
@@ -19,7 +18,7 @@ trumpetTwoDyn =
   \alternative
   {
     {
-      s2. |
+      s2 s4\f |
     }
     {
       s2. |
@@ -28,31 +27,41 @@ trumpetTwoDyn =
 
   \repeat volta 2
   {
-    s2.*12 |
+    s4\pp s s |
+    \crescTextPocoAPocoCresc 
+    s2.\< |
+    s2.*6 |
+    \crescTextMolto 
+    s4\! s\< s |
+    s2.*2 |
+    s4 s s\! |
     \crescHairpin
     s4\f\< s s |
     s s s\! |
     s\ff s s |
-    s2.*5 |
+    s2.*4 |
+    s4 s s\f |
 
     % 38
-    s2.\f |
     s2.*7 |
-    s2.\f |
+    s4 s s\f |
     s2.*3 |
-    s4 s s |
+    s2 s4 |
     s2.*3 |
+    s2 s4 |
 
     % 54
-    s2.*15 |
-    s4 s s\mp |
+    s2.\pp |
+    s2.*4 |
     \crescTextPocoAPocoCrescMolto
     s2.\< |
-    s2.*6 |
+    s2.*17 |
     s2 s4\! |
-    s4\f s s |
-    s2.*6 |
-    s4 s s |
+    s4 s\f s |
+    s2.*3 |
+    \crescTextCrescMolto
+    s2.\< |
+    s2.*3 |
 
     % 86
     s2.\ff |
@@ -77,36 +86,37 @@ trumpetTwoDyn =
     s2.*4 |
 
     % 130
-    s4\ff s s |
-    s2.*3 |
-    s4\f s s |
-    s2.*3 |
-    s4\ff s s |
-    s2.*3 |
-    s4\f s s |
-    s2.*3 |
-    s4\ff s s |
-    s2.*3 |
-    s4\f s s |
-    s2.*3 |
-    s4 s s |
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s2.\ff |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s4 s s\pp |
+    s2.*2 |
+    s4 s s\f |
+    s2.*4 |
+    s2. |
     s2.*2 |
 
     % 157
-    s2.*5 |
+    s2. |
+    s4\f s s\p |
     \crescTextCrescMolto 
-    s2.\p\< |
-    s2. |
-    s2. |
+    s2.\< |
+    s2.*5 |
     \crescHairpin
-    s4\!\f\< s s |
-    s4\ff s s |
+    s2.\!\< |
+    s4\!\ff s s |
   }
   \alternative
   {
     {
       s4-\secco s s |
-      s2.*2 |
+      s2.\pp |
+      s2. |
     }
     {
       s4-\secco s s |
@@ -180,61 +190,43 @@ trumpetTwoDyn =
 }
 
 
-trumpetTwoCues = 
+altosaxTwoMks = {}
+
+
+altosaxTwoCues = {}
+
+
+altosaxTwoScor = {}
+
+
+altosaxTwoNotes = 
 {
   \time 3/4
   \key g \major
 
-  \partial 4 s4 |
-
-  s2.*73 | \break
-  s2.*96 |
-
-  \key c \major
-
-  s2.*96 |
-
-}
-
-
-trumpetTwoNotCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
-
-  s2.*169 |
-
-  \key c \major
-
-  s2.*96 |
-
-}
-
-
-trumpetTwoNotes = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 r4 |
+  \partial 4 d'4 |
   \repeat volta 2
   {
-    R4*3*7 |
-    b'2. |
-    ais |
-    b |
+    g2 b4-. |
+    g-. d-. g-. |
+    a2 c4-. |
+    a-. d,-. a'-. |
+    b( d-.) g,-. |
+    g2 b4-. |
+    e,2. |
+    cis'2. |
+    cis2. |
+    b2. |
     d4-. d-. d-. |
     cis2. |
-    d2 d4 |
+    d2 d,4 |
     d2.~ |
     d2.( |
   }
   \alternative
   {
     {
-      d4) r r |
+      d4) r d-. |
     }
     {
       d4\repeatTie r r |
@@ -243,50 +235,77 @@ trumpetTwoNotes =
 
   \repeat volta 2
   {
-    R4*3*12 |
-    d2. |
-    d4-. d-. d-. |
-    g,4-. r r |
+    d-. d-. d-. |
+    d-. d-. d-. |
+    g-. g-. g-. |
+    g-. g-. g-. |
+    d-. d-. d-. |
+    d-. d-. d-. |
+    g-. g-. g-. |
+    g-. g-. g-. |
+    d-. d-. d-. |
+    d-. d-. d-. |
+    g-. g-. g-. |
+    g-. g-. g-. |
+    d-. d-. d-. |
+    d-. d-. d-. |
+    g-. r r |
     R4*3*5 |
 
     % 38
-    d'2.~ |
-    d4-. d-. d-. |
-    g,4-. r r |
-    R4*3*5 |
-    e'2.~ |
-    e4-. e-. e-. |
-    d4-. r r |
-    R4*3 |
-    e2.~ |
-    e4-. e-. e-. |
-    d4-. r r |
-    R4*3 |
+    a'2 c4-. |
+    a-. d,-. a'-. |
+    b-. g-. d-. |
+    g,-. r r |
+    R4*3*3 |
+    r4 r a-. |
+    e'2 g4-. |
+    e-. a,-. e'-. |
+    fis-. d-. a-. |
+    fis-. r a-. |
+    e'2 g4-. |
+    e-. a,-. e'-. |
+    fis-. d-. a-. |
+    fis-. r r |
 
     % 54
-    R4*3*15 |
-    r2 a4-. |
-    a2.~ |
-    a2 a4-. |
-    a2.~ |
-    a2 a4-. |
-    a2 a4-. |
-    a2 a4-. |
-    a2 a4-. |
-    a2 r4 |
-    r4 b'-. a-. |
+    cis'-. a-. d-. |
+    b-. e-. cis-. |
+    fis-. d-. g-. |
+    e-. a-. fis-. |
+    d-. b-. e-. |
+    cis-. fis-. d-. |
+    g-. e-. a-. |
+    fis-. b-. g-. |
+    e-. cis-. fis-. |
+    d-. g-. e-. |
+    a-. fis-. b-. |
+    g-. cis-. a-. |
+    fis-. d-. g-. |
+    e-. a-. gis-. |
+    b-. g-. cis-. |
+    a-. d-. b-. |
+    e,,-. fis-. g-. |
+    a-. b-. cis-. |
+    fis,-. g-. a-. |
+    b-. cis-. d-. |
+    g,-. a-. b-. |
+    a-. b-. cis-. |
+    b-. cis-. d-. |
+    cis-. d-. dis-. |
+    e-. b'-. a-. |
     g-. fis-. e-. |
     d-. cis-. b-. |
-    a-. g'-. fis-. |
-    e-. d-. cis-. |
+    a-. g-. fis-. |
+    e-. d'-. cis-. |
     b-. a-. g-. |
-    fis-. e-. d-. |
+    fis'-. e-. d-. |
     cis-. b-. a-. |
 
     % 86
     d-. r r |
     R4*3*6 |
-    d'2.( |
+    d2.( |
     fis2.~) |
     fis2.~ |
     fis2.( |
@@ -325,41 +344,52 @@ trumpetTwoNotes =
     e( d-.) c-. |
 
     % 130
-    g'4-. r r |
-    R4*3*3 |
-    c,2.~ |
-    c2.~ |
-    c4 r r |
+    b4-. r b-. |
+    b-. r g-. |
+    g-. r b-. |
+    b-. r e,-. |
+    fis-. r d'( |
+    a'-.) a-. c-. |
+    a-. r r |
     R4*3 |
     g4-. r r |
-    R4*3*3 |
-    c2.~ |
-    c2.~ |
-    c4 r r |
     R4*3 |
-    g'4-. r r |
-    R4*3*3 |
-    d'2.~ |
-    d2. |
-    g,4-. r r |
     R4*3 |
-    d'2.~ |
-    d2. |
-    g,4-. r r |
+    r4 r g, |
+    e'2.~ |
+    e2.~ |
+    e4 e-. e-. |
+    \grace fis8 e4( d-.) c-. |
+    b-. r b-. |
+    b-. r g-. |
+    g-. r b-. |
+    b-. r e,-. |
+    fis-. r d'-. |
+    a'( c-.) a-. |
+    b-. g-. d-. |
+    d,-. r r |
+    fis-. r d'-. |
+    a'( c-.) a-. |
+    b-. g-. d-. |
 
     % 157
-    R4*3*5 |
-    d2.~ |
-    d2.~ |
-    d2. |
-    d4-. d-. d-. |
-    g4-. r r |
+    d,-. r r |
+    fis-. r d-. |
+    a'-. c-. a-. |
+    d,-. a'-. c-. |
+    a-. d,-. a'-. |
+    c-. d-. a'-. |
+    c-. a-. d,-. |
+    a'-. c-. a-. |
+    d,-. a'-. c-. |
+    b-. r r |
   }
   \alternative
   {
     {
       g,4-. r r |
-      R4*3*2 |
+      d'8( e d e d e |
+      d e d e d e) |
     }
     {
       g,4-. r r |
@@ -473,14 +503,13 @@ trumpetTwoNotes =
       c-. r r |
     }
     {
-      c-. r r |
+      c-. r d,-. |
     }
   }
 }
 
 
-trumpetTwoScore    =                            \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
-trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
-trumpetTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
-trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
-trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDyn >> }
+altosaxTwoScore    = \transpose c   \concertKey \relative c' { << \tc \base \altosaxTwoNotes \altosaxTwoScor \altosaxTwoDyn >> }
+altosaxTwoCond     = \transpose c   \concertKey \relative c' { << \tc \base \altosaxTwoNotes \altosaxTwoScor \altosaxTwoMks >> }
+altosaxEesTwoScore = \transpose ees \concertKey \relative c' { << \tc \base \altosaxTwoNotes \altosaxTwoScor                >> }
+altosaxEesTwoPart  = \transpose ees \concertKey \relative c' { << \tc \base \altosaxTwoNotes \altosaxTwoCues \altosaxTwoDyn >> }

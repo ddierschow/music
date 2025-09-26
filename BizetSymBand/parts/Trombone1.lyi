@@ -1,8 +1,6 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
-hornTwoDyn = 
+tromOneDyn = 
 {
   \time 3/4
   \key g \major
@@ -10,9 +8,7 @@ hornTwoDyn =
   \partial 4 s4 |
   \repeat volta 2
   {
-    s2.*7 |
-    s2.\f |
-    s2.*4 |
+    s2.*12 |
     s2 s4\ff |
     s2.*2 |
   }
@@ -35,7 +31,7 @@ hornTwoDyn =
     s2.*2 |
     s4 s s\! |
     \crescHairpin
-    s4\f s\< s |
+    s4\f\< s s |
     s s s\! |
     s\ff s s |
     s2.*5 |
@@ -44,44 +40,39 @@ hornTwoDyn =
     s2.\f |
     s2.*7 |
     s2.\f |
-    s2.*2 |
-    s2 s4 |
     s2.*3 |
-    s2 s4\pp |
+    s4 s s |
+    s2.*3 |
 
     % 54
-    s2.*5 |
+    s2.*7 |
     \crescTextPocoAPocoCrescMolto
-    s2.\< |
-    s2.*17 |
+    s2 s4\p\< |
+    s2.*15 |
     s2 s4\! |
-    s4\f s s |
-    s2.*6 |
-    s4 s s\ff |
+    s2.\f |
+    s2.*3 |
+    \crescTextCrescMolto
+    s2.\< |
+    s2.*3 |
 
     % 86
-    s2.*8 |
-    s4\pp s s |
-    \crescHairpin
-    s4\< s s |
-    s2.*2 |
-    s4\! s s |
-    s4\> s s |
-    s2.*6 |
-    s2.\! |
-    \crescHairpin
-    s2.\pp\< |
-    s4\!\> s s |
-    s4\! s s |
-    s4\< s s |
-    s2.*2 |
-    s4\! s s |
-    s4\> s s |
+    s2.\ff |
     s2.*7 |
-    \crescTextCrescMolto
-    s4\!\< s s |
+    s2.\pp |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*10 |
+    s2.\!\< |
     s2.*3 |
-    s4\!\f s s |
+    s2.\p\> |
+    s2.*9
+    s2.\! |
+    s2. |
+    s4\f s s |
     s2.*3 |
 
     % 130
@@ -101,13 +92,9 @@ hornTwoDyn =
     s2.*2 |
 
     % 157
-    s2. |
-    s4\fp s s |
-    s2. |
+    s2.*5 |
     \crescTextCrescMolto 
-    s2.\< |
-    s2. |
-    s2. |
+    s2.\p\< |
     s2. |
     s2. |
     \crescHairpin
@@ -131,11 +118,18 @@ hornTwoDyn =
   % 173
   \repeat volta 2
   {
-    s2.*8 |
+    s4\f s s |
+    s2.*3 |
+    \dimTextDimMolto
+    s4\> s s |
+    s2.*2 |
+    s2.\! |
 
     % 181
     s4\pp s s |
-    s2.*10 |
+    s2.*7 |
+    s4\pp s s |
+    s2.*2 |
     s4 s s\pp |
     s2.*4 |
   }
@@ -146,23 +140,21 @@ hornTwoDyn =
     s2.*8 |
 
     % 205
-    s2.*8 |
     \crescHairpin
+    s2.*8 |
     s4\pp\< s s |
     s2.*3 |
     s4\!\> s s |
-    s4 s s\! |
-    s2.*10 |
+    s2. |
+    s4 s\! s |
+    s2.*9 |
 
     % 229
-    s2.\pp |
-    s2.*21 |
-    s2.\ppp |
-    s2. |
+    s2.*24 |
 
     % 253
     s2.\p |
-    \crescTextCrescMolto 
+    \crescTextCrescMolto
     s4 s s\< |
     s2.*6 |
     s2.\! |
@@ -182,10 +174,32 @@ hornTwoDyn =
 }
 
 
-hornTwoCues = 
+tromOneMks = {}
+
+
+tromOneCues = 
 {
   \time 3/4
   \key g \major
+  \clef bass
+
+  \partial 4 s4 |
+
+  s2.*60 | \break
+  s2.*109 |
+
+  \key c \major
+
+  s2.*96 |
+
+}
+
+
+tromOneScor = 
+{
+  \time 3/4
+  \key g \major
+  \clef bass
 
   \partial 4 s4 |
 
@@ -194,25 +208,11 @@ hornTwoCues =
   \key c \major
 
   s2.*96 |
+
 }
 
 
-hornTwoNotCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
-
-  s2.*169 |
-
-  \key c \major
-
-  s2.*96 |
-}
-
-
-hornTwoNotes = 
+tromOneNotes = 
 {
   \time 3/4
   \key g \major
@@ -220,13 +220,8 @@ hornTwoNotes =
   \partial 4 r4 |
   \repeat volta 2
   {
-    R4*3*7 |
-    g'2. |
-    fis2. |
-    d2. |
-    b'4-. b-. b-. |
-    a2. |
-    d,2 d4 |
+    R4*3*12 |
+    r2 d,4 |
     d2.~ |
     d2.( |
   }
@@ -244,38 +239,33 @@ hornTwoNotes =
   \repeat volta 2
   {
     R4*3*8 |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2. |
-    d2.~ |
-    d2.~ |
-    d4-. r r |
-    R4*3*5 |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g2-> d'4-. |
+    b-. g-. b-. |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g-. d'-. b-. |
+    g-. r r |
+    R4*3*4 |
 
     % 38
-    a'2.~ |
-    a4-. a-. a-. |
-    b4-. r r |
+    d2.~ |
+    d4-. d-. d-. |
+    g4-. r r |
     R4*3*5 |
-    a2.~ |
-    a4-. a-. a-. |
-    a4-. r r |
-    r r a-. |
-    a2.~ |
-    a4-. a-. a-. |
-    a4-. r r |
-    r r a-. |
+    e2.~ |
+    e4-. e-. e-. |
+    d4-. r r |
+    R4*3 |
+    e2.~ |
+    e4-. e-. e-. |
+    d4-. r r |
+    R4*3 |
 
     % 54
-    a2.~ |
-    a2.~ |
-    a2.~ |
-    a2 a4-. |
-    a2.~ |
-    a2.~ |
-    a2.~ |
-    a2 a4-. |
+    R4*3*7 |
+    r2 a''4-. |
     a2.~ |
     a2.~ |
     a2.~ |
@@ -296,11 +286,13 @@ hornTwoNotes =
     a2.~ |
     a2.~ |
     a4 r r |
-    R4*3*3 |
-    r4 r a-. |
+    r d-. cis-. |
+    b-. a-. g-. |
+    fis-. e-. d-. |
+    cis-. b-. a-. |
 
     % 86
-    d,-. r r |
+    d4-. r r |
     R4*3*7 |
     d2.~ |
     d2.~ |
@@ -314,14 +306,6 @@ hornTwoNotes =
     d2.~ |
     d2.~ |
     d2.~ |
-    d2. |
-    d'2.( |
-    b2. |
-    g2.) |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2.~ |
     d2.~ |
     d2.~ |
     d2.~ |
@@ -329,59 +313,63 @@ hornTwoNotes =
     d2.~ |
     d2.~ |
     d2.~ |
-    d2.( |
-    g2. |
-    d'2. |
-    b2. |
-    g2.) |
-    g2.~ |
-    g2.~ |
-    g4 r r |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2 r4 |
+    r r r |
+    e2.~ |
+    e2.~ |
+    e4 r r |
     R4*3 |
 
     % 130
-    g4-. r r |
+    d4-. r r |
     R4*3*3 |
-    d2.~ |
-    d2.~ |
-    d4 r r |
+    c2.~ |
+    c2.~ |
+    c4 r r |
     R4*3 |
-    g4-. r r |
+    d4-. r r |
     R4*3*3 |
-    g2.~ |
-    g2.~ |
-    g4 r r |
+    e2.~ |
+    e2.~ |
+    e4 r r |
     R4*3 |
-    g4-. r r |
+    d4-. r r |
     R4*3*3 |
     d2.~ |
     d2. |
-    g4-. r r |
+    d4-. r r |
     R4*3 |
     d2.~ |
     d2. |
-    g4-. r r |
+    d4-. r r |
 
     % 157
-    R4*3 |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2. |
+    R4*3*5 |
     d2.~ |
     d2.~ |
     d2. |
     d4-. d-. d-. |
-    g4-. r r |
+    d4-. r r |
   }
   \alternative
   {
     {
-      g4-. r r |
+      g,4-. r r |
       R4*3*2 |
     }
     {
-      g4-. r r |
+      g,4-. r r |
       R4*3*2 |
     }
   }
@@ -391,10 +379,17 @@ hornTwoNotes =
   % 173
   \repeat volta 2
   {
-    R4*3*8 |
+    g2.~-^ |
+    g2. |
+    g2.~-^ |
+    g2. |
+    g2.-^ |
+    g2.-^ |
+    g2.-^ |
+    g2.-^ |
 
     % 181
-    g2.-^~ |
+    g2.~-^ |
     g2.~ |
     g2.~ |
     g2.~ |
@@ -402,13 +397,13 @@ hornTwoNotes =
     g2.~ |
     g2.~ |
     g2.~ |
-    g4-. r r |
+    g4 r r |
     R4*3*2 |
-    r4 r g-. |
-    g-. g-. g-. |
-    g-. r g-. |
-    g-. r g-. |
-    g-. r r |
+    r4 r d'-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r e-. |
+    e-. r r |
   }
 
   % 197
@@ -418,7 +413,7 @@ hornTwoNotes =
 
     % 205
     R4*3*8 |
-    g2.-^~ |
+    g,2.-^~ |
     g2.~ |
     g2.~ |
     g2.~ |
@@ -428,30 +423,7 @@ hornTwoNotes =
     R4*3*9 |
 
     % 229
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2. |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2. |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2.~ |
-    b2 r4 |
-    R4*3 |
+    R4*3*24 |
 
     % 253
     g2.-^~ |
@@ -462,27 +434,26 @@ hornTwoNotes =
     g2.~ |
     g2.~ |
     g2.~ |
-    g4-. r r |
+    g2 r4 |
     R4*3*2 |
-    r4 r g-. |
-    g-. g-. g-. |
-    g-. r g-. |
-    g-. r g-. |
+    r4 r d'-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r e-. |
   }
   \alternative
   {
     {
-      g-. r r |
+      e-. r r |
     }
     {
-      g-. r r |
+      e-. r r |
     }
   }
 }
 
 
-hornTwoScore  =                          \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornTwoCond   = \transpose c \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornTwoMidi   = \transpose c \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornFTwoScore = \transpose f \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornFTwoPart  = \transpose f \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoCues    \hornTwoDyn >> }
+tromboneOneScore  = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneDyn >> }
+tromboneCOneScore = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneDyn >> }
+tromboneOneCond   = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneMks >> }
+tromboneOnePart   = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneCues \tromOneDyn >> }

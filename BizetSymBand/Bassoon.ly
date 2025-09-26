@@ -1,10 +1,10 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "config.lyi" 
-\include "Bassoon.lyi" 
+\include "parts/Bassoon.lyi" 
 
 instrument = "Bassoon"
 
 notes = \bassoonPart
 
-\include "part.lyi"
+\include "single.lyi"

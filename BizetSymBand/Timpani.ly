@@ -1,10 +1,10 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "config.lyi" 
-\include "Timpani.lyi" 
+\include "parts/Timpani.lyi" 
 
 instrument = "Timpani"
 
 notes = \timpaniPart
 
-\include "part.lyi"
+\include "single.lyi"

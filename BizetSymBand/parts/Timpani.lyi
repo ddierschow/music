@@ -1,5 +1,3 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
 timpaniDyn = 
@@ -135,6 +133,9 @@ timpaniDyn =
 }
 
 
+timpaniMks = {}
+
+
 timpaniCues = 
 {
   \time 3/4
@@ -151,7 +152,7 @@ timpaniCues =
 }
 
 
-timpaniNotCues = 
+timpaniScor = 
 {
   \time 3/4
   \key g \major
@@ -330,8 +331,7 @@ timpaniNotes =
 }
 
 
-timpaniScore  =                          \relative c { << \bc \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniCScore = \transpose c \concertKey \relative c { << \bc \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniCond   = \transpose c \concertKey \relative c { << \bc \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniMidi   = \transpose c \concertKey \relative c { << \bc \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniPart   = \transpose c \concertKey \relative c { << \bc \timpaniNotes \timpaniCues    \timpaniDyn >> }
+timpaniScore  = \transpose c \concertKey \relative c { << \bc \base \timpaniNotes \timpaniScor \timpaniDyn >> }
+timpaniCScore = \transpose c \concertKey \relative c { << \bc \base \timpaniNotes \timpaniScor \timpaniDyn >> }
+timpaniCond   = \transpose c \concertKey \relative c { << \bc \base \timpaniNotes \timpaniScor \timpaniMks >> }
+timpaniPart   = \transpose c \concertKey \relative c { << \bc \base \timpaniNotes \timpaniCues \timpaniDyn >> }

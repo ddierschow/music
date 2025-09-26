@@ -1,5 +1,3 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
 bassoonDyn = 
@@ -198,6 +196,9 @@ bassoonDyn =
 }
 
 
+bassoonMks = {}
+
+
 bassoonCues = 
 {
   \time 3/4
@@ -214,7 +215,7 @@ bassoonCues =
 }
 
 
-bassoonNotCues = 
+bassoonScor = 
 {
   \time 3/4
   \key g \major
@@ -348,7 +349,7 @@ bassoonNotes =
       a'-.) a( c |
       a-.) a( d, |
     }
-    d2 r4 |
+    d2) r4 |
     R4*3*3 |
     r4 r g,( |
     e'-.) e-. g-. |
@@ -508,8 +509,7 @@ bassoonNotes =
 }
 
 
-bassoonScore  =                          \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonCScore = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonCond   = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonMidi   = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonPart   = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonCues    \bassoonDyn >> }
+bassoonScore  = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonDyn >> }
+bassoonCScore = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonDyn >> }
+bassoonCond   = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonMks >> }
+bassoonPart   = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonCues \bassoonDyn >> }

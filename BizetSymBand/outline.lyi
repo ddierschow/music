@@ -3,49 +3,47 @@ rehearsalMarks =
   \partial 4 s4 |
   s2.*17 |
 
-  \rMark "18"
+  \rMark \RM_A
   s2.*20 |
 
-  \rMark "38"
+  \rMark \RM_B
   s2.*16 |
 
-  \rMark "54"
+  \rMark \RM_C
   s2.*32 |
 
-  \rMark "86"
+  \rMark \RM_D
   s2.*44 |
 
-  \rMark "130"
+  \rMark \RM_E
   s2.*27 |
 
-  \rMark "157"
+  \rMark \RM_F
   s2.*16 |
 
   % Trio
-  % \rMark "173"
+  % \rMark \RM_G
   s2.*8 |
 
-  \rMark "181"
+  \rMark \RM_H
   s2.*16 |
 
-  \rMark "204"
+  \rMark \RM_I
   s2.*8 |
 
-  \rMark "212"
+  \rMark \RM_J
   s2.*24 |
 
-  \rMark "236"
+  \rMark \RM_K
   s2.*24 |
 
-  \rMark "260"
+  \rMark \RM_L
   s2.*17 |
 }
 
 
 pageMarks =
 {
-  \override Score.PaperColumn #'keep-inside-line = ##t
-  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
   \time 3/4
 
   \partial 4 s4 |

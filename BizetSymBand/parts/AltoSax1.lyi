@@ -1,5 +1,3 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
 altosaxOneDyn = 
@@ -192,10 +190,13 @@ altosaxOneDyn =
 }
 
 
-altosaxOneCues = \measures
+altosaxOneMks = {}
 
 
-altosaxOneNotCues = \measures
+altosaxOneCues = {}
+
+
+altosaxOneScor = {}
 
 
 altosaxOneNotes = 
@@ -507,8 +508,7 @@ altosaxOneNotes =
   }
 }
 
-altosaxOneScore    =                            \relative c' { << \tc \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
-altosaxOneCond     = \transpose c   \concertKey \relative c' { << \tc \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
-altosaxOneMidi     = \transpose c   \concertKey \relative c' { << \tc \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
-altosaxEesOneScore = \transpose ees \concertKey \relative c' { << \tc \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
-altosaxEesOnePart  = \transpose ees \concertKey \relative c' { << \tc \altosaxOneNotes \altosaxOneCues    \altosaxOneDyn >> }
+altosaxOneScore    = \transpose c   \concertKey \relative c' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneDyn >> }
+altosaxOneCond     = \transpose c   \concertKey \relative c' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneMks >> }
+altosaxEesOneScore = \transpose ees \concertKey \relative c' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneDyn >> }
+altosaxEesOnePart  = \transpose ees \concertKey \relative c' { << \tc \base \altosaxOneNotes \altosaxOneCues \altosaxOneDyn >> }

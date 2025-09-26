@@ -1,0 +1,21 @@
+\include "config.lyi"
+
+malletDyn = {}
+
+
+malletMks = {}
+
+
+malletCues = {}
+
+
+malletScor = {}
+
+
+malletNotes = {}
+
+
+malletScore  = \transpose c \concertKey \relative c { << \tc \base \malletNotes \malletScor \malletDyn >> }
+malletCScore = \transpose c \concertKey \relative c { << \tc \base \malletNotes \malletScor \malletDyn >> }
+malletCond   = \transpose c \concertKey \relative c { << \tc \base \malletNotes \malletScor \malletMks >> }
+malletPart   = \transpose c \concertKey \relative c { << \tc \base \malletNotes \malletCues \malletDyn >> }

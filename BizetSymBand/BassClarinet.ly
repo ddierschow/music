@@ -1,10 +1,10 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "config.lyi" 
-\include "BassClarinet.lyi" 
+\include "parts/BassClarinet.lyi" 
 
 instrument = "Bass Clarinet"
 
 notes = \bassclarinetBesPart
 
-\include "part.lyi"
+\include "single.lyi"

@@ -1,10 +1,10 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "config.lyi" 
-\include "Flute2.lyi" 
+\include "parts/Flute2.lyi" 
 
 instrument = "Flute II"
 
 notes = \fluteTwoPart
 
-\include "part.lyi"
+\include "single.lyi"

@@ -1,5 +1,3 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
 clarThreeDyn = 
@@ -173,6 +171,9 @@ clarThreeDyn =
 }
 
 
+clarThreeMks = {}
+
+
 clarThreeCues = 
 {
   \time 3/4
@@ -190,7 +191,7 @@ clarThreeCues =
 }
 
 
-clarThreeNotCues = 
+clarThreeScor = 
 {
   \time 3/4
   \key g \major
@@ -484,8 +485,7 @@ clarThreeNotes =
 }
 
 
-clarinetThreeScore    =                            \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
-clarinetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
-clarinetThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
-clarinetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues               >> }
-clarinetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeCues    \clarThreeDyn >> }
+clarinetThreeScore    = \transpose c   \concertKey \relative c' { << \tc \base \clarThreeNotes \clarThreeScor \clarThreeDyn >> }
+clarinetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \base \clarThreeNotes \clarThreeScor \clarThreeDyn >> }
+clarinetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \base \clarThreeNotes \clarThreeScor \clarThreeDyn >> }
+clarinetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \base \clarThreeNotes \clarThreeCues \clarThreeDyn >> }

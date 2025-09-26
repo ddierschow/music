@@ -1,5 +1,3 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
 tenorsaxDyn = 
@@ -216,6 +214,9 @@ tenorsaxDyn =
 }
 
 
+tenorsaxMks = {}
+
+
 tenorsaxCues = 
 {
   \time 3/4
@@ -225,12 +226,7 @@ tenorsaxCues =
 
   s2.*53 |
 
-    \set countPercentRepeats = ##t
-    \override PercentRepeat #'transparent = ##t
-    \override PercentRepeatCounter #'staff-padding = #2
-    \set repeatCountVisibility = #(every-nth-repeat-count-visible 2)
-
-    \repeat percent 24 { s2. | }
+  \repeat percent 24 { s2. | }
 
   s2.*92 |
 
@@ -240,7 +236,7 @@ tenorsaxCues =
 }
 
 
-tenorsaxNotCues = 
+tenorsaxScor = 
 {
   \time 3/4
   \key g \major
@@ -582,8 +578,7 @@ tenorsaxNotes =
 }
 
 
-tenorsaxScore    =                            \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxCond     = \transpose c   \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxMidi     = \transpose c   \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxBesScore = \transpose bes \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxCues    \tenorsaxDyn >> }
+tenorsaxScore    = \transpose c   \concertKey \relative c' { << \tc \base \tenorsaxNotes \tenorsaxScor \tenorsaxDyn >> }
+tenorsaxCond     = \transpose c   \concertKey \relative c' { << \tc \base \tenorsaxNotes \tenorsaxScor \tenorsaxMks >> }
+tenorsaxBesScore = \transpose bes \concertKey \relative c' { << \tc \base \tenorsaxNotes \tenorsaxScor \tenorsaxDyn >> }
+tenorsaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \base \tenorsaxNotes \tenorsaxCues \tenorsaxDyn >> }

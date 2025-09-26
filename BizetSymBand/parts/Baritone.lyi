@@ -1,0 +1,592 @@
+\include "config.lyi"
+
+baritoneDyn = 
+{
+  \time 3/4
+  \key g \major
+
+  \partial 4 s4 |
+  \repeat volta 2
+  {
+    s2.*7 |
+    s2.\f |
+    s2.*4 |
+    s2 s4\ff |
+    s2.*2 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2. |
+    }
+  }
+
+  \repeat volta 2
+  {
+    s2.*3 |
+    s2 s4\p |
+    \crescTextPocoAPocoCresc 
+    s4\< s s |
+    s2.*3 |
+    \crescTextMolto
+    s4\! s s\< |
+    s2.*2 |
+    s4 s s\! |
+    \crescHairpin
+    s4\f\< s s |
+    s2 s4\! |
+    s\ff s s |
+    s2.*4 |
+    s2 s4\f |
+
+    % 38
+    s2.*7 |
+    s2 s4\f |
+    s2.*3 |
+    s2  s4 |
+    s2.*4 |
+
+    % 54
+    s4\pp s s |
+    s2.*4 |
+    \crescTextPocoAPocoCrescMolto
+    s2.\< |
+    s2.*17 |
+    s2 s4\! |
+    s4 s\f s |
+    s2.*3 |
+    \crescTextCrescMolto
+    s2.\< |
+    s2.*3 |
+
+    % 86
+    s4\ff s\f s |
+    \dimTextDimMolto
+    s2.\>
+    s2.*6 |
+    s4\pp s s |
+    \crescHairpin
+    s4\< s s |
+    s2. |
+    s4 s s\! |
+    s2. |
+    s4\> s s |
+    s2. |
+    s2. |
+    s2. |
+    s2. |
+    s2. |
+    s2. |
+    s2. |
+    s2. |
+    s4\! s s |
+    s4\< s s |
+    s2. |
+    s2. |
+    s2. |
+    s4\! s s |
+    s4\> s s |
+    s2. |
+    s2. |
+    s2. |
+    s2. |
+    s2. |
+    s2. |
+    s2. |
+    s4 s s\! |
+    \crescTextCrescMolto
+    s4\< s s\! |
+    s2. |
+    s2. |
+    s2.\f |
+    s2. |
+    s2. |
+    s2. |
+
+    % 130
+    s4\ff s s |
+    s2.*3 |
+    s4\f s s |
+    s2.*3 |
+    s4\ff s s |
+    s2.*2 |
+    s4 s s |
+    s\f s s |
+    s2.*3 |
+    s4\ff s s |
+    s2.*3 |
+    s4\f s s |
+    s2.*3 |
+    s4 s s |
+    s2.*2 |
+
+    % 157
+    s2. |
+    s4\f s s\p |
+    \crescTextCrescMolto 
+    s2.\< |
+    s2.*4 |
+    s4 s s\! |
+    \crescHairpin
+    s2.\< |
+    s4\!\ff s s |
+  }
+  \alternative
+  {
+    {
+      s4-\secco s s |
+      s2.*2 |
+    }
+    {
+      s4-\secco s s |
+      s2.*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    s4\f s s |
+    s2.*3 |
+    \dimTextDimMolto
+    s4\> s s |
+    s2.*2 |
+    s2.\! |
+
+    % 181
+    s4\pp s s |
+    s2.*7 |
+    s4\pp s s |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*4 |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    s4\f s s |
+    s2.*3 |
+    \dimTextDimMolto
+    s4\> s s |
+    s2.*2 |
+    s4 s s\! |
+
+    % 205
+    \crescHairpin
+    s4\pp\< s s |
+    s2. |
+    s2. |
+    s2. |
+    \dimHairpin
+    s4\!\> s s |
+    s2. |
+    s2.\! |
+    s2. |
+    s4\pp\< s s |
+    s2. |
+    s2. |
+    s2. |
+    s4\!\> s s |
+    s2. |
+    s2.\! |
+    s2. |
+    s4\pp\< s s |
+    s2. |
+    s2. |
+    s2. |
+    s4\!\> s s |
+    s2. |
+    s2.\! |
+    s2. |
+
+    % 229
+    s4\pp s s |
+    s2.*21 |
+    s2.\ppp |
+    s2. |
+
+    % 253
+    s4\p s s |
+    \crescTextCrescMolto 
+    s4 s s\< |
+    s2.*6 |
+    s4\! s s |
+    s2.*2 |
+    s4 s s\pp |
+    s2.*3 |
+  }
+  \alternative
+  {
+    {
+      s2. |
+    }
+    {
+      s2. |
+    }
+  }
+}
+
+
+baritoneMks = {}
+
+
+baritoneCues = 
+{
+  \time 3/4
+  \key g \major
+  \clef bass
+
+  \partial 4 s4 |
+
+  s2.*58 | \break
+  s2.*27 |
+
+  \repeat percent 8 { s2. | }
+
+  s2.*76 |
+
+  \key c \major
+
+  s2.*94 |
+}
+
+
+baritonetcCues = 
+{
+  \time 3/4
+  \key g \major
+  \clef bass
+
+  \partial 4 s4 |
+
+  s2.*58 | \break
+  s2.*27 |
+
+  \repeat percent 8 { s2. | }
+
+  s2.*76 |
+
+  \key c \major
+
+  s2.*94 |
+}
+
+
+baritoneScor = {}
+
+
+baritonetcScor = {}
+
+
+baritoneNotes = 
+{
+  \time 3/4
+  \key g \major
+  \clef bass
+
+  \partial 4 r4 |
+  \repeat volta 2
+  {
+    R4*3*7 |
+    e2. |
+    fis2. |
+    b2. |
+    g4-. fis-. e-. |
+    a,2. |
+    d2 d4 |
+    d2.~ |
+    d2.( |
+  }
+  \alternative
+  {
+    {
+      d4) r r |
+    }
+    {
+      d4\repeatTie r r |
+    }
+  }
+
+  % 18
+  \repeat volta 2
+  {
+    R4*3*3 |
+    r4 r b'-. |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g2-> d4-. |
+    b-. g-. b-. |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g2-> d'4-. |
+    b-. g-. b-. |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g-. d'-. b-. |
+    g-. r r |
+    R4*3*3 |
+    r4 r d'-. |
+
+    % 38
+    a'2 c4-. |
+    a-. d,-. a'-. |
+    b-. g-. d-. |
+    g,-. r r |
+    R4*3*3 |
+    r4 r a-. |
+    e'2 g4-. |
+    e-. a,-. e'-. |
+    fis-. d-. a-. |
+    fis-. r a-. |
+    e'2 g4-. |
+    e-. a,-. e'-. |
+    fis-. d-. a-. |
+    fis-. r r |
+
+    % 54
+    a'-. cis,-. b'-. |
+    d,-. cis'-. e,-. |
+    d'-. fis,-. e'-. |
+    g,-. fis'-. a,-. |
+    b-. d,-. cis'-. |
+    e,-. d'-. fis,-. |
+    e'-. g,-. fis'-. |
+    a,-. g'-. b,-. |
+    cis,-. e,-. d'-. |
+    fis,-. e'-. g,-. |
+    fis'-. a,-. g'-. |
+    b,-. a'-. cis,-. |
+    d-. fis,-. e'-. |
+    g,-. fis'-. a,-. |
+    g'-. b,-. a'-. |
+    cis,-. b'-. d,-. |
+    e-. fis-. g-. |
+    a-. b-. cis-. |
+    fis,-. g-. a-. |
+    b-. cis-. d-. |
+    g,-. a-. b-. |
+    a-. b-. cis-. |
+    b-. cis-. d-. |
+    cis-. d-. dis-. |
+    e-. b-. a-. |
+    g-. fis-. e-. |
+    d-. cis-. b-. |
+    a-. g-. fis-. |
+    e-. d'-. cis-. |
+    b-. a-. g-. |
+    fis-. e-. d-. |
+    cis-. b'-. a-. |
+
+    % 86
+    d,-. d'-. d-. |
+    \repeat unfold 7 { d-. d-. d-. | }
+    a'-. a( c |
+    a-.) a( d, |
+    a'-.) a( c |
+    a-.) a( d, |
+    \repeat unfold 3
+    {
+      g-.) g( b |
+      g-.) g( d |
+      g-.) g( b |
+      g-.) g( d |
+      a'-.) a( c |
+      a-.) a( d, |
+      a'-.) a( c |
+      a-.) a( d, |
+    }
+    g-.) g( b |
+    g-.) g( d |
+    g-.) g( b |
+    g-.) g( d |
+    e2.~) |
+%    <e g>2.~) | #MISSING NOTES
+    e2.~ |
+%    <e g>2.~ | #MISSING NOTES
+    e2 fis4-. |
+%    <e g>2~ <fis a>4-. | #MISSING NOTES
+    e( d-.) c-. |
+%    <e g>( <d fis>-.) <c e>-. | #MISSING NOTES
+
+    % 130
+    g4-. r r |
+    R4*3*3 |
+    d'4-. r d( |
+    a'-.) a-. c-. |
+    a-. r r |
+    R4*3 |
+    g,4-. r r |
+    R4*3*3 |
+    c2.~ |
+    c2.~ |
+    c4 r r |
+    R4*3 |
+    g4-. r r |
+    R4*3*3 |
+    d'4-. r d-. |
+    a'( c-.) a-. |
+    b-. g-. d-. |
+    d,-. r r |
+    d'-. r d-. |
+    a'( c-.) a-. |
+    b-. g-. d-. |
+
+    % 157
+    d,-. r r |
+    d'-. r d-. |
+    a'-. c-. a-. |
+    d,-. a'-. c-. |
+    a-. d,-. a'-. |
+    c-. d,-. a'-. |
+    c-. a-. d,-. |
+    a'-. c-. a-. |
+    d,-. a'-. c-. |
+    g-. r r |
+  }
+  \alternative
+  {
+    {
+      g,-. r r |
+      R4*3*2 |
+    }
+    {
+      g,4-. r r |
+      R4*3*2 |
+    }
+  }
+
+  \key c \major
+
+  % 173
+  \repeat volta 2
+  {
+    g2.~-^ |
+    g2. |
+    g2.~-^ |
+    g2. |
+    g2.-^ |
+    g2.-^ |
+    g2.-^ |
+    g2.-^ |
+
+    % 181
+    g2.~-^ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g4 r r |
+    R4*3*2 |
+    r4 r g'-. |
+    g-. g-. g-. |
+    g-. r g-. |
+    g-. r c,-. |
+    c-. r r |
+  }
+
+  % 197
+  \repeat volta 2
+  {
+    c2.~-^ |
+    c2. |
+    c2.~-^ |
+    c2. |
+    c2.-^ |
+    c2.-^ |
+    c2.-^ |
+    c2.-^ |
+
+    % 205
+    c2.~-^ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2 r4 |
+    R4*3 |
+    g2.~-^ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2 r4 |
+    R4*3 |
+    c2.~-^ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2 r4 |
+    R4*3 |
+
+    % 229
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2. |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2. |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2.~ |
+    b2 r4 |
+    R4*3 |
+
+    % 253
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g4-. r r |
+    R4*3*2 |
+    r4 r g-. |
+    g-. g-. g-. |
+    g-. r g-. |
+    g-. r c-. |
+  }
+  \alternative
+  {
+    {
+      c-. r r |
+    }
+    {
+      c-. r r |
+    }
+  }
+}
+
+
+baritoneCScore  = \transpose c   \concertKey \relative c, { << \bc \base \baritoneNotes \baritoneScor \baritoneDyn >> }
+baritoneScore   = \transpose c   \concertKey \relative c, { << \bc \base \baritoneNotes \baritoneScor \baritoneDyn >> }
+baritoneCond    = \transpose c   \concertKey \relative c, { << \bc \base \baritoneNotes \baritoneScor \baritoneMks >> }
+baritonePart    = \transpose c   \concertKey \relative c, { << \bc \base \baritoneNotes \baritoneCues \baritoneDyn >> }
+baritoneTCPart  = \transpose bes \concertKey \relative c' { << \tc \base \baritoneNotes \baritoneCues \baritoneDyn >> }

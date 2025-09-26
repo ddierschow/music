@@ -1,10 +1,10 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "config.lyi" 
-\include "Percussion2.lyi" 
+\include "parts/Percussion2.lyi" 
 
 instrument = "Percussion II"
 
 notes = \percussionTwoPart
 
-\include "part.lyi"
+\include "single.lyi"

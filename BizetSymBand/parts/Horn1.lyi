@@ -1,5 +1,3 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
 hornOneDyn = 
@@ -183,6 +181,9 @@ hornOneDyn =
 }
 
 
+hornOneMks = {}
+
+
 hornOneCues = 
 {
   \time 3/4
@@ -192,12 +193,8 @@ hornOneCues =
 
   s2.*58 | \break
   s2.*27 |
-    \set countPercentRepeats = ##t
-    \override PercentRepeat #'transparent = ##t
-    \override PercentRepeatCounter #'staff-padding = #2
-    \set repeatCountVisibility = #(every-nth-repeat-count-visible 2)
 
-    \repeat percent 8 { s2. | }
+  \repeat percent 8 { s2. | }
 
   s2.*66 | \break
   s2.*10 |
@@ -209,7 +206,7 @@ hornOneCues =
 }
 
 
-hornOneNotCues = 
+hornOneScor = 
 {
   \time 3/4
   \key g \major
@@ -489,8 +486,7 @@ hornOneNotes =
 }
 
 
-hornOneScore  =                          \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornOneCond   = \transpose c \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornOneMidi   = \transpose c \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornFOneScore = \transpose f \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornFOnePart  = \transpose f \concertKey \relative c' { << \tc \hornOneNotes \hornOneCues    \hornOneDyn >> }
+hornOneScore  = \transpose c \concertKey \relative c' { << \tc \base \hornOneNotes \hornOneScor \hornOneDyn >> }
+hornOneCond   = \transpose c \concertKey \relative c' { << \tc \base \hornOneNotes \hornOneScor \hornOneMks >> }
+hornFOneScore = \transpose f \concertKey \relative c' { << \tc \base \hornOneNotes \hornOneScor \hornOneDyn >> }
+hornFOnePart  = \transpose f \concertKey \relative c' { << \tc \base \hornOneNotes \hornOneCues \hornOneDyn >> }

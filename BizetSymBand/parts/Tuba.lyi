@@ -1,8 +1,6 @@
-\version "2.22.2"
-
 \include "config.lyi"
 
-barisaxDyn = 
+tubaDyn = 
 {
   \time 3/4
   \key g \major
@@ -10,8 +8,7 @@ barisaxDyn =
   \partial 4 s4 |
   \repeat volta 2
   {
-    s2.*6 |
-    s2.^\tenuto |
+    s2.*7 |
     s2.\f |
     s2.*4 |
     s2 s4\ff |
@@ -29,28 +26,24 @@ barisaxDyn =
 
   \repeat volta 2
   {
-    s2.*3 |
-    s2 s4\p |
-    \crescTextPocoAPocoCresc 
+    s2.*7 |
+    s4 s s\p |
+    \crescTextCrescMolto
     s4\< s s |
     s2.*3 |
-    \crescTextMolto
-    s4\! s s\< |
-    s2.*2 |
-    s4 s s\! |
     \crescHairpin
-    s4\f\< s s |
+    s4\!\f\< s s |
     s2 s4\! |
-    s\ff s s |
-    s2.*4 |
-    s2 s4\f |
+    s4\ff s s |
+    s2.*5 |
 
     % 38
+    s4\f s s |
     s2.*7 |
-    s2 s4\f |
+    s4\f s s |
     s2.*3 |
-    s2  s4 |
-    s2.*4 |
+    s4 s s |
+    s2.*3 |
 
     % 54
     s4\pp s s |
@@ -59,10 +52,9 @@ barisaxDyn =
     s2.\< |
     s2.*17 |
     s2 s4\! |
-    s4 s\f s |
-    s2.*3 |
+    s2.*4 |
     \crescTextCrescMolto
-    s2.\< |
+    s4 s\f\< s |
     s2.*3 |
 
     % 86
@@ -113,23 +105,23 @@ barisaxDyn =
     s4\f s s |
     s2.*3 |
     s4\ff s s |
-    s2.*2 |
-    s4 s s |
-    s\f s s |
-    s2.*3 |
-    s4\ff s s |
     s2.*3 |
     s4\f s s |
     s2.*3 |
+    s4\ff s s |
+    s2.*3 |
     s4 s s |
+    s2.*3 |
+    s4\f s s |
     s2.*2 |
 
     % 157
     s2. |
-    s4\f s s\p |
+    s4\f s s |
+    s2.*3 |
     \crescTextCrescMolto 
     s2.\< |
-    s2.*4 |
+    s2. |
     s4 s s\! |
     \crescHairpin
     s2.\< |
@@ -152,18 +144,10 @@ barisaxDyn =
   % 173
   \repeat volta 2
   {
-    s4\f s s |
-    s2.*3 |
-    \dimTextDimMolto
-    s4\> s s |
-    s2.*2 |
-    s2.\! |
+    s2.*8 |
 
     % 181
-    s4\pp s s |
-    s2.*7 |
-    s4\pp s s |
-    s2.*2 |
+    s2.*11 |
     s4 s s\pp |
     s2.*4 |
   }
@@ -234,35 +218,37 @@ barisaxDyn =
 }
 
 
-barisaxCues = 
+tubaMks = {}
+
+
+tubaCues = 
 {
   \time 3/4
   \key g \major
+  \clef bass
 
   \partial 4 s4 |
 
   s2.*53 |
 
-    \set countPercentRepeats = ##t
-    \override PercentRepeat #'transparent = ##t
-    \override PercentRepeatCounter #'staff-padding = #2
-    \set repeatCountVisibility = #(every-nth-repeat-count-visible 2)
+  \repeat percent 24 { s2. | }
 
-    \repeat percent 24 { s2. | }
-
-  s2.*45 | \break
+  s2.*4 | \break
+  s2.*41 | \break
   s2.*47 |
 
   \key c \major
 
-  s2.*94 |
+  s2.*96 |
+
 }
 
 
-barisaxNotCues = 
+tubaScor = 
 {
   \time 3/4
   \key g \major
+  \clef bass
 
   \partial 4 s4 |
 
@@ -270,25 +256,21 @@ barisaxNotCues =
 
   \key c \major
 
-  s2.*94 |
+  s2.*96 |
+
 }
 
 
-barisaxNotes = 
+tubaNotes = 
 {
   \time 3/4
   \key g \major
+  \clef bass
 
-  \partial 4 d'4 |
+  \partial 4 r4 |
   \repeat volta 2
   {
-    g2 b4-. |
-    g-. d-. g-. |
-    a2 c4-. |
-    a-. d,-. a'-. |
-    b( d-.) g,-. |
-    g2 b4-. |
-    e,2. |
+    R4*3*7 |
     e2. |
     fis2. |
     b2. |
@@ -311,12 +293,8 @@ barisaxNotes =
   % 18
   \repeat volta 2
   {
-    R4*3*3 |
+    R4*3*7 |
     r4 r b'-. |
-    c2-> a4-. |
-    fis-. d-. fis-. |
-    g2-> d4-. |
-    b-. g-. b-. |
     c2-> a4-. |
     fis-. d-. fis-. |
     g2-> d'4-. |
@@ -325,42 +303,36 @@ barisaxNotes =
     fis-. d-. fis-. |
     g-. d'-. b-. |
     g-. r r |
-    R4*3*3 |
-    r4 r d'-. |
+    R4*3*4 |
 
     % 38
-    a2 c4-. |
-    a-. d,-. a'-. |
-    b-. g-. d-. |
-    g-. r r |
-    R4*3*3 |
-    r4 r a-. |
-    e'2 g4-. |
-    e-. a,-. e'-. |
-    fis-. d-. a-. |
-    fis-. r a-. |
-    e'2 g4-. |
-    e-. a,-. e'-. |
-    fis-. d-. a-. |
-    fis-. r r |
+    d'2.~ |
+    d2. |
+    g,4-. r r |
+    R4*3*5 |
+    a2.~ |
+    a2.~ |
+    a4-. r4 r |
+    R4*3 |
+    a2.~ |
+    a2.~ |
+    a4-. r4 r |
+    R4*3 |
 
     % 54
-    a-. a-. a-. |
+    a4-. a-. a-. |
     \repeat unfold 23 { a-. a-. a-. | }
-    a-. b'-. a-. |
-    g-. fis-. e-. |
-    d-. cis-. b-. |
-    a-. g-. fis-. |
-    e-. d'-. cis-. |
+    a-. r r |
+    R4*3*3 |
+    r4 d-. cis-. |
     b-. a-. g-. |
-    fis-. e'-. d-. |
+    fis-. e-. d-. |
     cis-. b-. a-. |
 
     % 86
-    d,-. r r |
+    d-. r r |
     R4*3*7 |
-
-    c''4 r r |
+    c'4 r r |
     d, r r |
     c' r r |
     d, r r |
@@ -392,20 +364,17 @@ barisaxNotes =
     d' r r |
     b r r |
     g r r |
-
     c,2.~ |
     c2.~ |
     c2 r4 |
     R4*3 |
 
     % 130
-    g4-. r r |
+    g'4-. r r |
     R4*3*3 |
-    d'4-. r d( |
-    a'-.) a-. c-. |
-    a-. r r |
-    R4*3 |
-    g,4-. r r |
+    d4-. r r |
+    R4*3*3 |
+    g4-. r r |
     R4*3*3 |
     c2.~ |
     c2.~ |
@@ -413,34 +382,32 @@ barisaxNotes =
     R4*3 |
     g4-. r r |
     R4*3*3 |
-    d'4-. r d-. |
-    a'( c-.) a-. |
-    b-. g-. d-. |
-    d-. r r |
-    d-. r d-. |
-    a'( c-.) a-. |
-    b-. g-. d-. |
+    d2.~ |
+    d2. |
+    d4-. r r |
+    R4*3 |
+    d2.~ |
+    d2. |
+    d4-. r r |
 
     % 157
-    d-. r r |
-    d-. r d-. |
-    a'-. c-. a-. |
-    d,-. a'-. c-. |
-    a-. d,-. a'-. |
-    c-. d,-. a'-. |
-    c-. a-. d,-. |
-    a'-. c-. a-. |
-    d,-. a'-. c-. |
+    R4*3 |
+    d4-. r r |
+    R4*3*3 |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d4-. d-. d-. |
     g-. r r |
   }
   \alternative
   {
     {
-      g,-. r r |
+      g-. r r |
       R4*3*2 |
     }
     {
-      g,4-. r r |
+      g4-. r r |
       R4*3*2 |
     }
   }
@@ -450,7 +417,7 @@ barisaxNotes =
   % 173
   \repeat volta 2
   {
-    c2.~-^ |
+    c,2.~-^ |
     c2. |
     c2.~-^ |
     c2. |
@@ -480,7 +447,7 @@ barisaxNotes =
   % 197
   \repeat volta 2
   {
-    f,2.~-^ |
+    f2.~-^ |
     f2. |
     f2.~-^ |
     f2. |
@@ -498,7 +465,7 @@ barisaxNotes =
     f2.~ |
     f2 r4 |
     R4*3 |
-    c'2.~-^ |
+    c2.~-^ |
     c2.~ |
     c2.~ |
     c2.~ |
@@ -569,8 +536,12 @@ barisaxNotes =
 }
 
 
-barisaxScore    =                            \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxCond     = \transpose c   \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxMidi     = \transpose c   \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxEesScore = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxEesPart  = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxCues    \barisaxDyn >> }
+tubaScore        =                          \relative c,, { << \bc \tubaNotes \tubaScor \tubaDyn >> }
+tubaCScore       = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaScor \tubaDyn >> }
+tubaCond         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaScor \tubaMks >> }
+tubaMidi         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaScor \tubaDyn >> }
+tubaPart         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaCues \tubaDyn >> }
+stringbassScore  =                          \relative c,  { << \bc \tubaNotes \tubaScor \tubaDyn >> }
+stringbassCScore =                          \relative c,  { << \bc \tubaNotes \tubaScor \tubaDyn >> }
+stringbassMidi   = \transpose c \concertKey \relative c,  { << \bc \tubaNotes \tubaScor \tubaDyn >> }
+stringbassPart   = \transpose c \concertKey \relative c,  { << \bc \tubaNotes \tubaCues \tubaDyn >> }
