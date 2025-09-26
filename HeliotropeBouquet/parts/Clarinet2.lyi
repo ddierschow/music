@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 clarTwoDyn =
 {
   s2\mf |
@@ -56,10 +54,13 @@ clarTwoDyn =
 }
 
 
-clarTwoCues = \measures
+clarTwoMks = {}
 
 
-clarTwoNotCues = \measures
+clarTwoCues = {}
+
+
+clarTwoScor = {}
 
 
 clarTwoNotes =
@@ -199,8 +200,7 @@ clarTwoNotes =
 }
 
 
-clarTwoScore    =                            \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
-clarTwoCond     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
-clarTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
-clarBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
-clarBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoCues    \clarTwoDyn >> }
+clarTwoScore    = \transpose c   \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoDyn >> }
+clarTwoCond     = \transpose c   \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoMks >> }
+clarBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoDyn >> }
+clarBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoCues \clarTwoDyn >> }

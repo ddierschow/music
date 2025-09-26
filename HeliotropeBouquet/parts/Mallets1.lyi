@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 malletOneDyn =
 {
   s2\mf |
@@ -58,10 +56,13 @@ malletOneDyn =
 }
 
 
-malletOneCues = \measures
+malletOneMks = {}
 
 
-malletOneNotCues = \measures
+malletOneCues = {}
+
+
+malletOneScor = {}
 
 
 malletOneNotes =
@@ -201,8 +202,7 @@ malletOneNotes =
   }
 }
 
-malletOneScore  =                          \relative c { << \tc \malletOneNotes \malletOneNotCues \malletOneDyn >> }
-malletOneCScore = \transpose c \concertKey \relative c { << \tc \malletOneNotes \malletOneNotCues \malletOneDyn >> }
-malletOneCond   = \transpose c \concertKey \relative c { << \tc \malletOneNotes \malletOneNotCues \malletOneDyn >> }
-malletOneMidi   = \transpose c \concertKey \relative c { << \tc \malletOneNotes \malletOneNotCues \malletOneDyn >> }
-malletOnePart   = \transpose c \concertKey \relative c { << \tc \malletOneNotes \malletOneCues    \malletOneDyn >> }
+malletOneScore  = \transpose c \concertKey \relative c { << \tc \base \malletOneNotes \malletOneScor \malletOneDyn >> }
+malletOneCond   = \transpose c \concertKey \relative c { << \tc \base \malletOneNotes \malletOneScor \malletOneMks >> }
+malletCOneScore = \transpose c \concertKey \relative c { << \tc \base \malletOneNotes \malletOneScor \malletOneDyn >> }
+malletCOnePart  = \transpose c \concertKey \relative c { << \tc \base \malletOneNotes \malletOneCues \malletOneDyn >> }

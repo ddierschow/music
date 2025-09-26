@@ -1,0 +1,22 @@
+\include "outline.lyi"
+
+#(set-global-staff-size scoreSize)
+
+\include "allparts.lyi"
+\include "layout.lyi"
+
+scoreLayout =
+\layout
+    {
+      max-systems-per-page = #1
+      systems-per-page = #1
+      %\context { \RemoveEmptyStaffContext }
+    }
+
+scoreCondLayout =
+\layout
+    {
+      max-systems-per-page = #1
+      systems-per-page = #1
+      %\context { \RemoveEmptyStaffContext }
+    }

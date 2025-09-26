@@ -1,6 +1,4 @@
-\include "config.lyi"
-
-percussionTwoDyn =
+percTwoDyn =
 {
   s2*4 |
 
@@ -36,13 +34,16 @@ percussionTwoDyn =
 }
 
 
-percussionTwoCues = \measures
+percTwoMks = {}
 
 
-percussionTwoNotCues = \measures
+percTwoCues = {}
 
 
-percussionTwoNotes =
+percTwoScor = {}
+
+
+percTwoNotes =
 \drummode {
 
   R2*3 |
@@ -133,7 +134,6 @@ percussionTwoNotes =
 }
 
 
-percussionTwoScore = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoCond  = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoMidi  = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoPart  = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }
+percTwoScore = << \pc \base \percTwoNotes \percTwoScor \percTwoDyn >>
+percTwoCond  = << \pc \base \percTwoNotes \percTwoScor \percTwoMks >>
+percTwoPart  = << \pc \base \percTwoNotes \percTwoCues \percTwoDyn >>
