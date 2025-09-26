@@ -71,7 +71,7 @@ fluteTwoCues =
 }
 
 
-fluteTwoNotCues = \measures
+fluteTwoScor = {}
 
 
 fluteTwoNotes =
@@ -212,8 +212,7 @@ fluteTwoNotes =
 }
 
 
-fluteTwoScore  =                          \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteCTwoScore = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoCond   = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoMidi   = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoPart   = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoCues    \fluteTwoDyn >> }
+fluteTwoScore  = \transpose c \concertKey \relative c' { << \tc \base \fluteTwoNotes \fluteTwoScor \fluteTwoDyn >> }
+fluteCTwoScore = \transpose c \concertKey \relative c' { << \tc \base \fluteTwoNotes \fluteTwoScor \fluteTwoDyn >> }
+fluteTwoCond   = \transpose c \concertKey \relative c' { << \tc \base \fluteTwoNotes \fluteTwoScor \fluteTwoDyn >> }
+fluteTwoPart   = \transpose c \concertKey \relative c' { << \tc \base \fluteTwoNotes \fluteTwoCues \fluteTwoDyn >> }

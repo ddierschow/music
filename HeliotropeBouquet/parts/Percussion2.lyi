@@ -36,10 +36,10 @@ percussionTwoDyn =
 }
 
 
-percussionTwoCues = \measures
+percussionTwoCues = {}
 
 
-percussionTwoNotCues = \measures
+percussionTwoScor = {}
 
 
 percussionTwoNotes =
@@ -133,7 +133,6 @@ percussionTwoNotes =
 }
 
 
-percussionTwoScore = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoCond  = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoMidi  = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoPart  = \new DrumVoice { << \pc \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }
+percussionTwoScore = \new DrumVoice { << \pc \base \percussionTwoNotes \percussionTwoScor \percussionTwoDyn >> }
+percussionTwoCond  = \new DrumVoice { << \pc \base \percussionTwoNotes \percussionTwoScor \percussionTwoDyn >> }
+percussionTwoPart  = \new DrumVoice { << \pc \base \percussionTwoNotes \percussionTwoCues \percussionTwoDyn >> }

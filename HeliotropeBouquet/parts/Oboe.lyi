@@ -58,10 +58,10 @@ oboeDyn =
 }
 
 
-oboeCues = \measures
+oboeCues = {}
 
 
-oboeNotCues = \measures
+oboeScor = {}
 
 
 oboeNotes =
@@ -203,8 +203,7 @@ oboeNotes =
 }
 
 
-oboeScore  =                          \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeCScore = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeCond   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeMidi   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
-oboePart   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeCues    \oboeDyn >> }
+oboeScore  = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeScor \oboeDyn >> }
+oboeCScore = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeScor \oboeDyn >> }
+oboeCond   = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeScor \oboeDyn >> }
+oboePart   = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeCues \oboeDyn >> }

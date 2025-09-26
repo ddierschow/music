@@ -1,0 +1,19 @@
+\include "config.lyi"
+\include "BassClarinet.lyi"
+
+bassoonDyn = \bassclarDyn
+
+
+bassoonCues = \bassclarCues
+
+
+bassoonScor = \bassclarScor
+
+
+bassoonNotes = \bassclarNotes
+
+
+bassoonScore  = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonDyn >> }
+bassoonCScore = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonDyn >> }
+bassoonCond   = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonDyn >> }
+bassoonPart   = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonCues \bassoonDyn >> }

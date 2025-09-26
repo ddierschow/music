@@ -1,38 +1,37 @@
 \include "config.lyi"
 
-sopsaxDyn =
+clarTwoDyn =
 {
   s2\mf |
   s2*3 |
 
   % 5
-  s2\mp |
+  s2\mf |
   s2*4 |
   s2\< |
   s2 |
-  s4\!\mf s4\>\! |
+  s4\!\f s4\>\! |
 
   % 13
-  s2\mp |
+  s2\mf |
   s2*7 |
 
   % 21
-  s2*6 |
-  s8 s4.\f |
-  s2 |
+  s2\f |
+  s2*7 |
 
   % 29
-  s2\mf |
+  s2\f |
   s2*8 |
 
   % 38
-  s2*5\mp |
+  s2*5\mf |
   s2\< |
   s2 |
-  s4\!\mf s4\>\! |
+  s4\!\f s4\>\! |
 
   % 46
-  s2\mp |
+  s2\mf |
   s2*7 |
 
   % 54
@@ -57,13 +56,13 @@ sopsaxDyn =
 }
 
 
-sopsaxCues = \measures
+clarTwoCues = {}
 
 
-sopsaxNotCues = \measures
+clarTwoScor = {}
 
 
-sopsaxNotes =
+clarTwoNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
@@ -93,20 +92,31 @@ sopsaxNotes =
   \repeat volta 2
   {
     % 21
-    R2*6 |
-    r8 f( e ees) |
-    d8( cis c) r |
+    fis8 fis~fis16 fis8. |
+    fis8. fis16~fis8~fis16 r16 |
+    b,8 b8~b16 b8. |
+    b16 b b b~b d, e eis |
+    c'8 c16 d c c8 e16 |
+    c16 e c c~c8~c16 r16 |
+    b8-^ r r4 |
+    r4 r8 eis,-^ |
 
     % 29
-    R2*7 |
+    r8 fis'8~fis16 fis8. |
+    fis8. fis16~fis8. r16 |
+    b,8 b~b16 b8. |
+    b16 b b b~b8 \tuplet 3/2 { d16( cis d) } |
+    e8 gis g4 |
+    d8 fis d4 |
+    g4 fis |
   }
   \alternative
   {
     {
-      r2 |
+      d4 eis-> |
     }
     {
-      r4 cis-> |
+      d4 cis-> |
     }
   }
 
@@ -117,7 +127,7 @@ sopsaxNotes =
   g16( b d cis~cis4) |
   e,8.( fis16~fis8) fis8 |
   e8. b'16~b8 d |
-  d8. d16~d8 cis |
+  d'8. d16~d8 cis |
   a4 cis-> |
 
   % 46
@@ -137,12 +147,12 @@ sopsaxNotes =
     r4 r16 c,8. |
     g'8. g16~g16 g fis8 |
     d8 r r4 |
-
-    % 62
     R2*2 |
     dis16 e gis gis~gis e gis8 |
-    e8 b'16 c~c a'( e c) |
+    e8 b16 c~c a'( e c) |
     c'16( a fis dis c a8 aes16) |
+
+    % 62
     g8 a16 c~c d e8 |
     fis,4 g |
   }
@@ -189,8 +199,7 @@ sopsaxNotes =
 }
 
 
-sopsaxScore    =                            \relative c' { << \tc \sopsaxNotes \sopsaxNotCues            >> }
-sopsaxCond     = \transpose c   \concertKey \relative c' { << \tc \sopsaxNotes \sopsaxNotCues            >> }
-sopsaxMidi     = \transpose c   \concertKey \relative c' { << \tc \sopsaxNotes \sopsaxNotCues \sopsaxDyn >> }
-sopsaxBesScore = \transpose bes \concertKey \relative c' { << \tc \sopsaxNotes \sopsaxNotCues            >> }
-sopsaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \sopsaxNotes \sopsaxCues    \sopsaxDyn >> }
+clarTwoScore    = \transpose c   \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoDyn >> }
+clarTwoCond     = \transpose c   \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoScor             >> }
+clarBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoScor             >> }
+clarBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoCues \clarTwoDyn >> }

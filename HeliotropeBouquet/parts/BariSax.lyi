@@ -55,10 +55,10 @@ barisaxDyn =
 }
 
 
-barisaxCues = \measures
+barisaxCues = {}
 
 
-barisaxNotCues = \measures
+barisaxScor = {}
 
 
 barisaxNotes =
@@ -192,8 +192,7 @@ barisaxNotes =
 }
 
 
-barisaxScore    =                            \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxCond     = \transpose c   \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxMidi     = \transpose c   \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxEesScore = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxEesPart  = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxCues    \barisaxDyn >> }
+barisaxScore    = \transpose c   \concertKey \relative c' { << \tc \base \barisaxNotes \barisaxScor \barisaxDyn >> }
+barisaxCond     = \transpose c   \concertKey \relative c' { << \tc \base \barisaxNotes \barisaxScor \barisaxDyn >> }
+barisaxEesScore = \transpose ees \concertKey \relative c' { << \tc \base \barisaxNotes \barisaxScor \barisaxDyn >> }
+barisaxEesPart  = \transpose ees \concertKey \relative c' { << \tc \base \barisaxNotes \barisaxCues \barisaxDyn >> }

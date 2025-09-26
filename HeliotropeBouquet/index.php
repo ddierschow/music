@@ -23,7 +23,7 @@ show_audio('ScoreMidi.mp3');
 show_common_links();
 show_row(['Makefile', 'README.md']);
 show_row(['allparts.lyi', 'config.lyi', '../common/defs.lyi'], 1);
-show_row(['layout.lyi', 'outline.lyi', 'part.lyi']);
+show_row(['layout.lyi', 'outline.lyi', 'single.lyi']);
 show_audio('Heliotrope_Bouquet.mp4');
 echo "</table>\n";
 echo "<ul>\n";
@@ -35,7 +35,7 @@ echo "</ul>\n";
 echo "</td>";
 
 echo "<td valign=top>\n";
-show_parts($parts);
+show_parts($parts, 1, 'parts/');
 echo "</td>\n";
 
 echo "<td valign=top>\n";

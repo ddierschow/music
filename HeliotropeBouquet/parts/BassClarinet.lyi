@@ -1,0 +1,212 @@
+\include "config.lyi"
+
+bassclarDyn =
+{
+  s2*4\mf |
+
+  % 5
+  s2\mf |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
+
+  % 13
+  s2\mf |
+  s2*7 |
+
+  % 21
+  s2\f |
+  s2*6 |
+  s4. s8\f |
+
+  % 29
+  s2*9 |
+
+  % 38
+  s2\mf |
+  s2*4 |
+  s2\< |
+  s2 |
+  s4\!\f s4\>\! |
+
+  % 46
+  s2\mf |
+  s2*7 |
+
+  % 54
+  s4\mp s4 |
+  s2*3 |
+  s2\< |
+  s2 |
+  s2\!\>\! |
+  s2\mp |
+
+  % 62
+  s2*2 |
+  \crescTextPocoAPocoCresc s2\< |
+  s2\! |
+  s2\mf |
+  s2*4 |
+
+  % 71
+  s4\mf s4 |
+  s2*7 |
+
+  % 79
+  s2*9 |
+}
+
+
+bassclarCues = {}
+
+
+bassclarScor = {}
+
+
+bassclarNotes =
+{
+  d16 e fis g~g b a g |
+  d'16 c b a~a b c d |
+  c16 e,8 fis16 g8 e |
+  d8 r bes'4-> |
+
+  % 5
+  e,8. d16~d8 d8 |
+  d8 b'16 bes~bes4 |
+  e,8. d16~d8 d |
+  d8 b'16 bes~bes4 |
+  e,8. d16~d8 dis |
+  e8. b'16~b8 bes |
+  a8. b,16~b8 a |
+  \slashedGrace { d'8( } d,4) bes' |
+
+  % 13
+  e,8. d16~d8 d8 |
+  d8 b'16 bes~bes4 |
+  e,8. d16~d8 d |
+  d4 g4 |
+  f8 f f f |
+  e8 e ees ees |
+  d8 dis16 e~e8 d |
+  g4 gis-> |
+
+  \repeat volta 2
+  {
+    % 21
+    a8 c d, c' |
+    a8 c~c~c16 \tuplet 3/2 { d,32( dis e) } |
+    g8 b d, b' |
+    g8 b d, g16 gis |
+    a8 c d, c' |
+    a8 c d,8~d16 \tuplet 3/2 { d32( e f) } |
+    g8-^ r8 r4 |
+    r4 r8 gis8-^ |
+
+    % 29
+    a8 c d, c' |
+    a8 c~c~c16 \tuplet 3/2 { d,32( dis e) } |
+    g8 b d, b' |
+    g8 b g f |
+    e8 d' a cis |
+    d8 c b b |
+    a8 cis d, c' |
+  }
+  \alternative
+  {
+    {
+      g4 gis-> |
+    }
+    {
+      g4 bes-> |
+    }
+  }
+
+  % 38
+  e8. d16~d8 d |
+  d b16 bes~bes4 |
+  e,8. d16~d8 d |
+  d b'16 bes~bes4 |
+  e,8. d16~d8 dis |
+  e8. b'16~b8 bes |
+  a8. b16~b8 a |
+  \slashedGrace { d8( } d,4) bes'-> |
+
+  % 46
+  e,8. d16~d8 d8 |
+  d8 b'16 bes~bes4 |
+  e,8. d16~d8 d |
+  d4 g |
+  f8 f f f |
+  e8 e ees ees |
+  d8 dis16 e~e8 d |
+  g8 r f'4 |
+
+  \repeat volta 2
+  {
+    % 54
+    c,8 g' f aes |
+    c,8 g' g, g' |
+    c,8 g' f fis |
+    g8 c-> b-> bes-> |
+    a8 a aes aes |
+    g8 g e ees |
+    d8. e16~e8 d |
+    g8 f e d |
+
+    % 62
+    c8 g' f aes |
+    c,8 g' g, g' |
+    e,8 gis' e, gis' |
+    a,8 a' e, a' |
+    fis,16( a c dis fis a8 aes16) |
+    g8 g a, a' |
+    d,8 fis g f |
+  }
+  \alternative
+  {
+    {
+      e8 r g4 |
+    }
+    {
+      e8 dis16-^ e-^ g-^ c-^ b-^ a-^ |
+    }
+  }
+
+  \repeat volta 2
+  {
+    % 71
+    g8 f e d |
+    c8 g' e g |
+    g,8 g' d dis |
+    e8 g g16-^ c-^ b-^ a-^ |
+    g8 f e d |
+    c8 g' a, a' |
+    b,8 g' b, a' |
+    e8 g cis, e |
+
+    % 79
+    d8 f e d |
+    c8 g' e g |
+    g,8 g' d dis |
+    e8 g c, g' |
+    c2 |
+    c2 |
+    d,8 fis g f |
+  }
+  \alternative
+  {
+    {
+      e8 dis16-^ e-^ g-^ c-^ b-^ a-^ |
+    }
+    {
+      e4 c8-^ r |
+    }
+  }
+}
+
+
+bassclarScore    = \transpose c   \concertKey \relative c' { << \tc \base \bassclarNotes \bassclarScor \bassclarDyn >> }
+bassclarCond     = \transpose c   \concertKey \relative c' { << \tc \base \bassclarNotes \bassclarScor \bassclarDyn >> }
+bassclarBesScore = \transpose bes \concertKey \relative c' { << \tc \base \bassclarNotes \bassclarScor \bassclarDyn >> }
+bassclarBesPart  = \transpose bes \concertKey \relative c' { << \tc \base \bassclarNotes \bassclarCues \bassclarDyn >> }

@@ -58,10 +58,10 @@ malletTwoDyn =
 }
 
 
-malletTwoCues = \measures
+malletTwoCues = {}
 
 
-malletTwoNotCues = \measures
+malletTwoScor = {}
 
 
 malletTwoNotes =
@@ -201,8 +201,7 @@ malletTwoNotes =
   }
 }
 
-malletTwoScore  =                          \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
-malletTwoCScore = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
-malletTwoCond   = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
-malletTwoMidi   = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
-malletTwoPart   = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoCues    \malletTwoDyn >> }
+malletTwoScore  = \transpose c \concertKey \relative c { << \tc \base \malletTwoNotes \malletTwoScor \malletTwoDyn >> }
+malletTwoCScore = \transpose c \concertKey \relative c { << \tc \base \malletTwoNotes \malletTwoScor \malletTwoDyn >> }
+malletTwoCond   = \transpose c \concertKey \relative c { << \tc \base \malletTwoNotes \malletTwoScor \malletTwoDyn >> }
+malletTwoPart   = \transpose c \concertKey \relative c { << \tc \base \malletTwoNotes \malletTwoCues \malletTwoDyn >> }

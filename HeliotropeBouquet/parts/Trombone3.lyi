@@ -1,6 +1,6 @@
 \include "config.lyi"
 
-tromTwoDyn =
+tromThreeDyn =
 {
   s2*4\mf |
 
@@ -58,13 +58,13 @@ tromTwoDyn =
 }
 
 
-tromTwoCues = \measures
+tromThreeCues = {}
 
 
-tromTwoNotCues = \measures
+tromThreeScor = {}
 
 
-tromTwoNotes =
+tromThreeNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
@@ -94,23 +94,23 @@ tromTwoNotes =
   \repeat volta 2
   {
     % 21
-    a8 fis d fis |
-    a8 fis~fis~fis16 \tuplet 3/2 { d32( dis e) } |
-    g8 g d g |
-    g8 g d g16 gis |
-    a8 a d, fis |
-    a8 a d,8~d16 \tuplet 3/2 { d32( e f) } |
-    g8 r8 r4 |
+    a8 d, d d |
+    a'8 fis d~d16 \tuplet 3/2 { d32( dis e) } |
+    g8 d d d |
+    g8 d d g16 gis |
+    a8 d, d d |
+    a8 d d8~d16 \tuplet 3/2 { d32( e f) } |
+    g8-^ r8 r4 |
     r4 r8 gis8-^ |
 
     % 29
-    a8 fis d fis |
-    a8 fis~fis~fis16 \tuplet 3/2 { d32( dis e) } |
-    g8 g d g |
-    g8 g g f |
-    e8 gis a a |
-    a8 c b b |
-    a8 a d, a' |
+    a8 d, d d |
+    a'8 fis d~d16 \tuplet 3/2 { d32( dis e) } |
+    g8 d d d |
+    g8 d g f |
+    e8 e a g |
+    fis8 c' b d, |
+    a'8 g d fis |
   }
   \alternative
   {
@@ -206,8 +206,7 @@ tromTwoNotes =
 }
 
 
-tromTwoScore  =                          \relative c, { << \bc \tromTwoNotes \tromTwoNotCues             >> }
-tromCTwoScore = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues             >> }
-tromTwoCond   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues             >> }
-tromTwoMidi   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues \tromTwoDyn >> }
-tromTwoPart   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoCues    \tromTwoDyn >> }
+tromThreeScore  = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor \tromThreeDyn >> }
+tromCThreeScore = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor               >> }
+tromThreeCond   = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor               >> }
+tromThreePart   = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeCues \tromThreeDyn >> }

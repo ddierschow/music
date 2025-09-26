@@ -1,10 +1,10 @@
 \version "2.24.1"
 
 \include "config.lyi"
-\include "Tuba.lyi"
+\include "parts/Tuba.lyi"
 
 instrument = "Tuba"
 
 notes = \tubaPart
 
-\include "part.lyi"
+\include "single.lyi"

@@ -1,6 +1,6 @@
 \include "config.lyi"
 
-fluteOneDyn =
+clarOneDyn =
 {
   s2\mf |
   s2*3 |
@@ -58,13 +58,13 @@ fluteOneDyn =
 }
 
 
-fluteOneCues = \measures
+clarOneCues = {}
 
 
-fluteOneNotCues = \measures
+clarOneScor = {}
 
 
-fluteOneNotes =
+clarOneNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
@@ -89,36 +89,36 @@ fluteOneNotes =
   d8 d16 b d g8 b,16 |
   c8 c16 b c( g a ais) |
   b16 d8 b16~b g a8 |
-  g4 b-> |
+  g4 b'-> |
 
   \repeat volta 2
   {
     % 21
     b8 b16 a b d8 a16 |
-    b16 a b d~d8~d16 \tuplet 3/2 { d32( dis e) } |
+    b16 a b d~d8~d16 \tuplet 3/2 { d,32( dis e) } |
     g8 e16 d e g8 d16 |
     g16 fis g e~e d e eis |
     fis8 fis16 d fis a8 e16 |
     fis16 e fis e~e8~e16 \tuplet 3/2 { d32( e fis) } |
-    g8 r r4 |
+    g8-^ r r4 |
     r4 r8 b,-^ |
 
     % 29
-    r16 a b a b d8 a16 |
-    b16( a b d)~d8~d16 \tuplet 3/2 { d32( dis e) } |
+    r16 a' b a b d8 a16 |
+    b16( a b d)~d8~d16 \tuplet 3/2 { d,32( dis e) } |
     g8 e16 d e g8 d16 |
     g16 fis g e~e8 \tuplet 3/2 { d16( cis d) } |
-    e8 b a16( e'8.) |
+    e8 b' a16( e'8.) |
     d,8 a' g16( d'8.) |
     a16( e'8.) a,16( d8.) |
   }
   \alternative
   {
     {
-      g4 b,-> |
+      g,4 b-> |
     }
     {
-      g'4 fis8->( e) |
+      g4 fis8->( e) |
     }
   }
 
@@ -150,12 +150,11 @@ fluteOneNotes =
     e,16( g d c)~c g'( a ais) |
     b16 c d b~b g a8 |
     g8 r r4 |
-
-    % 62
-    r2 |
-    e8 a16 g~g c, e8 |
+    R2*2 |
     dis16 e gis c~c e, b'8 |
     a8 b16 c~c a( e c) |
+
+    % 62
     c'16( a fis dis c a8 aes16) |
     g8 a16 c~c d e8 |
     a,4 e' |
@@ -163,7 +162,7 @@ fluteOneNotes =
   \alternative
   {
     {
-      c8 g16( a b c d dis) |
+      c8 r r4 |
     }
     {
       c4~c8 r8 |
@@ -173,7 +172,7 @@ fluteOneNotes =
   \repeat volta 2
   {
     % 71
-    g16( b d g)~g( a g f) |
+    g'16( b d g)~g( a g f) |
     e8 g16 c~c8. ais,16 |
     b16 g'8 ais,16 b g'8 b,16 |
     c16( d dis e)~e4 |
@@ -203,8 +202,7 @@ fluteOneNotes =
 }
 
 
-fluteOneScore  =                          \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteCOneScore = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOneCond   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOneMidi   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOnePart   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneCues    \fluteOneDyn >> }
+clarOneScore    = \transpose c   \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneScor \clarOneDyn >> }
+clarOneCond     = \transpose c   \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneScor \clarOneDyn >> }
+clarBesOneScore = \transpose bes \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneScor \clarOneDyn >> }
+clarBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneCues \clarOneDyn >> }

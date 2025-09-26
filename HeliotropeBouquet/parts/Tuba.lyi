@@ -57,10 +57,10 @@ tubaDyn =
 }
 
 
-tubaCues = \measures
+tubaCues = {}
 
 
-tubaNotCues = \measures
+tubaScor = {}
 
 
 tubaNotes =
@@ -205,12 +205,10 @@ tubaNotes =
 }
 
 
-tubaScore        =                          \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaCScore       = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaCond         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaMidi         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaPart         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaCues    \tubaDyn >> }
-stringbassScore  =                          \relative c,  { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-stringbassCScore =                          \relative c,  { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-stringbassMidi   = \transpose c \concertKey \relative c,  { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-stringbassPart   = \transpose c \concertKey \relative c,  { << \bc \tubaNotes \tubaCues    \tubaDyn >> }
+tubaScore        = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaScor \tubaDyn >> }
+tubaCScore       = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaScor \tubaDyn >> }
+tubaCond         = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaScor \tubaDyn >> }
+tubaPart         = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaCues \tubaDyn >> }
+stringbassScore  = \transpose c \concertKey \relative c,  { << \bc \base \tubaNotes \tubaScor \tubaDyn >> }
+stringbassCScore = \transpose c \concertKey \relative c,  { << \bc \base \tubaNotes \tubaScor \tubaDyn >> }
+stringbassPart   = \transpose c \concertKey \relative c,  { << \bc \base \tubaNotes \tubaCues \tubaDyn >> }

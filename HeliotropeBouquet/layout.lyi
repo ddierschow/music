@@ -9,23 +9,24 @@ ScorePaper = \paper {
 }
 
 ScoreHeader = \header {
-  title = \markup{Heliotrope Bouquet}
-  subtitle = "A Slow Drag Two Step"
+  title = \markup { \workTitle }
+  subtitle = \workSubtitle
   opus = ""
-  subsubtitle = "Scott Joplin and Louis Chauvin"
+  subsubtitle = \workComposer
   copyright = ""
   instrument = \instrument
 
-  mutopiatitle = "Heliotrope Bouquet"
-  mutopiacomposer = "Joplin/Chauvin"
+  mutopiatitle = \workTitle
+  mutopiacomposer = \workComposer
   mutopiaopus = ""
-  mutopiainstrument = "Concert Band"
+  mutopiainstrument = \workPerformer
   date = "1907"
   source = ""
   style = "Ragtime"
-  maintainer = ""
-  maintainerEmail = ""
+  maintainer = \workOwner
+  maintainerEmail = \workEmail
   lastupdated = ""
+  copyright = \markup { \teeny \workCopyright }
 
   footer = ""
   tagline = ""
@@ -41,25 +42,25 @@ PartPaper = \paper {
 }
 
 PartHeader = \header {
-  title = \markup { "Heliotrope Bouquet" }
-  subtitle = "A Slow Drag Two Step"
+  title = \markup { \workTitle }
+  subtitle = \workSubtitle
   opus = ""
-  composer = "Scott Joplin and Louis Chauvin"
-  arranger = \markup { \italic "arr. Dean Dierschow" }
+  composer = \workComposer
+  arranger = \markup { \italic \workArranger }
   instrument = \instrument
-  meter = "Slow March Tempo"
+  meter = \workMeter
 
-  mutopiatitle = "Heliotrope Bouquet"
-  mutopiacomposer = "Joplin and Chauvin"
+  mutopiatitle = \workTitle
+  mutopiacomposer = \workComposer
   mutopiaopus = ""
-  mutopiainstrument = "Wind Ensemble"
+  mutopiainstrument = \workPerformer
   date = "1907"
   source = ""
   style = "Ragtime"
-  maintainer = "Dean Dierschow"
-  maintainerEmail = "deandierschow@gmail.com"
+  maintainer = \workOwner
+  maintainerEmail = \workEmail
   lastupdated = ""
 
-  copyright = \markup { \teeny "This arrangement copyright 2023 by Dean Dierschow" }
+  copyright = \markup { \teeny \workCopyright }
   tagline = ""
 }

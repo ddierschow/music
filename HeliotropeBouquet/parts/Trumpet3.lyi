@@ -1,6 +1,6 @@
 \include "config.lyi"
 
-trumpetThreeDyn =
+trumThreeDyn =
 {
   s2\mf |
   s2*3 |
@@ -51,13 +51,13 @@ trumpetThreeDyn =
 }
 
 
-trumpetThreeCues = \measures
+trumThreeCues = {}
 
 
-trumpetThreeNotCues = \measures
+trumThreeScor = {}
 
 
-trumpetThreeNotes =
+trumThreeNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
@@ -169,8 +169,7 @@ trumpetThreeNotes =
 }
 
 
-trumpetThreeScore    =                            \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues                  >> }
-trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues                  >> }
-trumpetThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues \trumpetThreeDyn >> }
-trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeNotCues                  >> }
-trumpetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \trumpetThreeNotes \trumpetThreeCues    \trumpetThreeDyn >> }
+trumpetThreeScore    = \transpose c   \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeDyn >> }
+trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor               >> }
+trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor               >> }
+trumpetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeCues \trumThreeDyn >> }

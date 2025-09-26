@@ -4,7 +4,7 @@
 \include "outline.lyi"
 \include "allparts.lyi"
 
-instrument = "Concert Band (Concert Key)"
+instrument = \workPerformer
 
 \book
 {
@@ -14,33 +14,33 @@ instrument = "Concert Band (Concert Key)"
     <<
       \tempomark
       \new Staff \with { midiInstrument = "flute" }
-        { \new Voice { \relative c << \outline \fluteOneMidi \fluteTwoMidi >> } }
+        { \new Voice { \relative c << \outline \fluteOneScore \fluteTwoScore >> } }
       \new Staff \with { midiInstrument = "oboe" }
-        { \new Voice { \relative c \oboeMidi } }
+        { \new Voice { \relative c \oboeScore } }
       \new Staff \with { midiInstrument = "bassoon" }
-        { \new Voice { \relative c \bassoonMidi } }
+        { \new Voice { \relative c \bassoonScore } }
       \new Staff \with { midiInstrument = "clarinet" }
-        { \new Voice { \relative c << \clarOneMidi \clarTwoMidi \clarThreeMidi >> } }
+        { \new Voice { \relative c << \clarOneScore \clarTwoScore \clarThreeScore >> } }
       \new Staff \with { midiInstrument = "clarinet" }
-        { \new Voice { \relative c, \bassclarMidi } }
+        { \new Voice { \relative c, \bassclarScore } }
       \new Staff \with { midiInstrument = "alto sax" }
-        { \new Voice { \relative c << \sopsaxMidi \altosaxOneMidi \altosaxTwoMidi >> } }
+        { \new Voice { \relative c << \sopsaxScore \altosaxOneScore \altosaxTwoScore >> } }
       \new Staff \with { midiInstrument = "baritone sax" }
-        { \new Voice { \relative c << \tenorsaxMidi \barisaxMidi >> } }
+        { \new Voice { \relative c << \tenorsaxScore \barisaxScore >> } }
       \new Staff \with { midiInstrument = "trumpet" }
-        { \new Voice { \relative c << \trumpetOneMidi \trumpetTwoMidi \trumpetThreeMidi >> } }
+        { \new Voice { \relative c << \trumpetOneScore \trumpetTwoScore \trumpetThreeScore >> } }
       \new Staff \with { midiInstrument = "french horn" }
-        { \new Voice { \relative c << \hornOneMidi \hornTwoMidi >> } }
+        { \new Voice { \relative c << \hornOneScore \hornTwoScore >> } }
       \new Staff \with { midiInstrument = "trombone" }
-        { \new Voice { \relative c << \tromOneMidi \tromTwoMidi \tromThreeMidi \baritoneMidi >> } }
+        { \new Voice { \relative c << \tromOneScore \tromTwoScore \tromThreeScore \baritoneScore >> } }
       \new Staff \with { midiInstrument = "tuba" }
-        { \new Voice { \relative c \tubaMidi } }
+        { \new Voice { \relative c \tubaScore } }
       \new Staff \with { midiInstrument = "contrabass" }
-        { \new Voice { \relative c \stringbassMidi } }
+        { \new Voice { \relative c \stringbassScore } }
       \new DrumStaff
-        { \new DrumVoice { \relative c << \percussionOneMidi \percussionTwoMidi >> } }
+        { \new DrumVoice { \relative c << \percussionOneScore \percussionTwoScore >> } }
       \new Staff \with { midiInstrument = "xylophone" }
-        { \new Voice { \relative c << \malletOneMidi \malletTwoMidi >> } }
+        { \new Voice { \relative c << \malletOneScore \malletTwoScore >> } }
     >>
     \midi
     {

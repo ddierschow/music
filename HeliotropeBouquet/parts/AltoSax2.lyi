@@ -73,7 +73,7 @@ altosaxTwoCues =
 }
 
 
-altosaxTwoNotCues = \measures
+altosaxTwoScor = {}
 
 
 altosaxTwoNotes =
@@ -206,8 +206,7 @@ altosaxTwoNotes =
 }
 
 
-altosaxTwoScore    =                            \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues                >> }
-altosaxTwoCond     = \transpose c   \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues                >> }
-altosaxTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
-altosaxEesTwoScore = \transpose ees \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues                >> }
-altosaxEesTwoPart  = \transpose ees \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoCues    \altosaxTwoDyn >> }
+altosaxTwoScore    = \transpose c   \concertKey \relative c' { << \tc \base \altosaxTwoNotes \altosaxTwoScor \altosaxTwoDyn >> }
+altosaxTwoCond     = \transpose c   \concertKey \relative c' { << \tc \base \altosaxTwoNotes \altosaxTwoScor                >> }
+altosaxEesTwoScore = \transpose ees \concertKey \relative c' { << \tc \base \altosaxTwoNotes \altosaxTwoScor                >> }
+altosaxEesTwoPart  = \transpose ees \concertKey \relative c' { << \tc \base \altosaxTwoNotes \altosaxTwoCues \altosaxTwoDyn >> }

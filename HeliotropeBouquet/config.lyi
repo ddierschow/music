@@ -1,9 +1,28 @@
-\version "2.24.1"
-
 concertKey = bes
 tempomark = { \tempo 8 = 92 }
 
-measures =
+RM_A = "5"
+RM_B = "13"
+RM_C = "21"
+RM_D = "29"
+RM_E = "38"
+RM_F = "46"
+RM_G = "54"
+RM_H = "62"
+RM_I = "71"
+RM_J = "79"
+
+workTitle = "Heliotrope Bouquet"
+workSubtitle = "A Slow Drag Two Step"
+workOwner = "Dean Dierschow"
+workEmail = "deandierschow@gmail.com"
+workPerformer = "Concert Band"
+workComposer = "Scott Joplin and Louis Chauvin"
+workArranger = "arr. Dean Dierschow"
+workCopyright = "This arrangement copyright 2023 by Dean Dierschow"
+workMeter = "Slow March Tempo"
+
+base =
 {
   \override MultiMeasureRest.expand-limit = #2
   \override Score.PaperColumn.keep-inside-line = ##t

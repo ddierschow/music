@@ -52,10 +52,10 @@ hornOneDyn =
 }
 
 
-hornOneCues = \measures
+hornOneCues = {}
 
 
-hornOneNotCues = \measures
+hornOneScor = {}
 
 
 hornOneNotes =
@@ -182,8 +182,7 @@ hornOneNotes =
 }
 
 
-hornOneScore  =                          \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornOneCond   = \transpose c \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornOneMidi   = \transpose c \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornFOneScore = \transpose f \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornFOnePart  = \transpose f \concertKey \relative c' { << \tc \hornOneNotes \hornOneCues    \hornOneDyn >> }
+hornOneScore  = \transpose c \concertKey \relative c' { << \tc \base \hornOneNotes \hornOneScor \hornOneDyn >> }
+hornOneCond   = \transpose c \concertKey \relative c' { << \tc \base \hornOneNotes \hornOneScor \hornOneDyn >> }
+hornFOneScore = \transpose f \concertKey \relative c' { << \tc \base \hornOneNotes \hornOneScor \hornOneDyn >> }
+hornFOnePart  = \transpose f \concertKey \relative c' { << \tc \base \hornOneNotes \hornOneCues \hornOneDyn >> }

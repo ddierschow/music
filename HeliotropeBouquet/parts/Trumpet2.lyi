@@ -50,10 +50,10 @@ trumpetTwoDyn =
 }
 
 
-trumpetTwoCues = \measures
+trumpetTwoCues = {}
 
 
-trumpetTwoNotCues = \measures
+trumpetTwoScor = {}
 
 
 trumpetTwoNotes =
@@ -169,8 +169,7 @@ trumpetTwoNotes =
 }
 
 
-trumpetTwoScore    =                            \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
-trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
-trumpetTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
-trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
-trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDyn >> }
+trumpetTwoScore    = \transpose c   \concertKey \relative c' { << \tc \base \trumpetTwoNotes \trumpetTwoScor \trumpetTwoDyn >> }
+trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \base \trumpetTwoNotes \trumpetTwoScor                >> }
+trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \base \trumpetTwoNotes \trumpetTwoScor                >> }
+trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \base \trumpetTwoNotes \trumpetTwoCues \trumpetTwoDyn >> }
