@@ -1,5 +1,4 @@
-ScorePaper = \paper
-{
+ScorePaper = \paper {
   systems-per-page = #1
   #(set-paper-size "letter")
   ragged-last-bottom = ##f
@@ -9,32 +8,35 @@ ScorePaper = \paper
   bottom-margin = 18\mm
 }
 
-ScoreHeader = \header
-  {
-    title = \markup{Symphony No. 1}
-    subtitle = "Movement III: Minuetto"
-    opus = ""
-    subsubtitle = "Georges Bizet (1838-1875)"
-    copyright = ""
-    instrument = \instrument
+BookHeader = \header {
+  title = \markup { \workTitle }
+  subtitle = "Movement III: Minuetto"
+  opus = ""
+  subsubtitle = "Georges Bizet (1838-1875)"
+  copyright = ""
+  instrument = \instrument
 
-    mutopiatitle = "Symphony No. 1 Movement III"
-    mutopiacomposer = "Bizet"
-    mutopiaopus = ""
-    mutopiainstrument = "Concert Band"
-    date = "1855"
-    source = ""
-    style = "Classical"
-    maintainer = ""
-    maintainerEmail = ""
-    lastupdated = ""
+  mutopiatitle = "Symphony No. 1 Movement III"
+  mutopiacomposer = "Bizet"
+  mutopiaopus = ""
+  mutopiainstrument = "Concert Band"
+  date = "1855"
+  source = ""
+  style = "Classical"
+  maintainer = ""
+  maintainerEmail = ""
+  lastupdated = ""
 
-    footer = ""
-    tagline = ""
-  }
+  footer = ""
+  tagline = ""
+}
 
-PartPaper = \paper
-{
+ScoreHeader = \header {
+  footer = ""
+  tagline = ""
+}
+
+PartPaper = \paper {
   ragged-last-bottom = ##f
   #(set-paper-size "letter")
   top-margin = 15\mm
@@ -43,8 +45,7 @@ PartPaper = \paper
   bottom-margin = 15\mm
 }
 
-PartHeader = \header
-{
+PartHeader = \header {
   title = \markup{Symphony No. 1}
   subtitle = "Movement III: Minuetto"
   opus = ""

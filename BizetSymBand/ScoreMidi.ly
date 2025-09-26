@@ -1,4 +1,4 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "config.lyi"
 \include "outline.lyi"
@@ -6,53 +6,40 @@
 
 instrument = "Concert Band (Concert Key)"
 
+\version "2.24.4"
+
+instrument = "Concert Band"
+
+\include "config.lyi"
+\include "score.lyi"
 
 \book
 {
   \score
   {
     \unfoldRepeats
-    <<
+     <<
       \tempomark
-      \new Staff \with { midiInstrument = "oboe" }
-        { \new Voice { \relative c << \outline \oboeMidi >> } }
-      \new Staff \with { midiInstrument = "flute" }
-        { \new Voice { \relative c << \fluteOneMidi \fluteTwoMidi >> } }
-      \new Staff \with { midiInstrument = "bassoon" }
-        { \new Voice { \relative c << \bassoonMidi >> } }
-      \new Staff \with { midiInstrument = "clarinet" }
-        { \new Voice { \relative c << \clarinetOneMidi \clarinetTwoMidi \clarinetThreeMidi >> } }
-      \new Staff \with { midiInstrument = "clarinet" }
-        { \new Voice { \relative c, << \bassclarinetMidi >> } }
-      \new Staff \with { midiInstrument = "alto sax" }
-        { \new Voice { \relative c << \altosaxOneMidi \altosaxTwoMidi >> } }
-      \new Staff \with { midiInstrument = "tenor sax" }
-        { \new Voice { \relative c << \tenorsaxMidi >> } }
-      \new Staff \with { midiInstrument = "baritone sax" }
-        { \new Voice { \relative c << \barisaxMidi >> } }
-      \new Staff \with { midiInstrument = "trumpet" }
-        { \new Voice { \relative c << \trumpetOneMidi \trumpetTwoMidi \trumpetThreeMidi >> } }
-      \new Staff \with { midiInstrument = "french horn" }
-        { \new Voice { \relative c << \hornOneMidi \hornTwoMidi >> } }
-      \new Staff \with { midiInstrument = "trombone" }
-        { \new Voice { \relative c << \tromboneOneMidi \tromboneTwoMidi \tromboneThreeMidi \baritoneMidi >> } }
-      \new Staff \with { midiInstrument = "tuba" }
-        { \new Voice { \relative c << \tubaMidi >> } }
-      \new Staff \with { midiInstrument = "contrabass" }
-        { \new Voice { \relative c << \stringbassMidi >> } }
-      \new DrumStaff
-        { \new DrumVoice { \relative c << \percussionOneMidi \percussionTwoMidi >> } }
-      \new Staff \with { midiInstrument = "xylophone" }
-        { \new Voice { \relative c << \malletMidi >> } }
-      \new Staff \with { midiInstrument = "timpani" }
-        { \new Voice { \relative c << \timpaniMidi >> } }
+      \midiStaff "flute" << \fluteOneScore \fluteTwoScore >>
+      \midiStaff "oboe" \oboeScore
+      \midiStaff "bassoon" \bassoonScore
+      \midiStaff "clarinet" << \clarOneScore \clarTwoScore \clarThreeScore \bassclarScore >>
+      \midiStaff "alto sax" << \altosaxOneScore \altosaxTwoScore >>
+      \midiStaff "tenor sax" << \tenorsaxScore \barisaxScore >>
+      \midiStaff "trumpet" << \trumpetOneScore \trumpetTwoScore \trumpetThreeScore >>
+      \midiStaff "french horn" << \hornOneScore \hornTwoScore >>
+      \midiStaff "trombone" << \tromOneScore \tromTwoScore \tromThreeScore \baritoneScore >>
+      \midiStaff "tuba" \tubaScore
+      \midiDrumStaff << \percOneScore \percTwoScore >>
+      \midiStaff "glockenspiel" \malletScore
+      \midiStaff "timpani" \timpaniScore
     >>
     \midi
     {
       \context {
         \Score
-        midiMinimumVolume = #0.2
-        midiMaximumVolume = #0.5
+        midiMinimumVolume = #0.1
+        midiMaximumVolume = #0.6
       }
     }
   }

@@ -1,16 +1,39 @@
 concertKey = bes
 tempomark = { \tempo 8 = 92 }
 
-measures =
+RM_A = "18"
+RM_B = "38"
+RM_C = "54"
+RM_D = "86"
+RM_E = "130"
+RM_F = "157"
+RM_G = "173"
+RM_H = "181"
+RM_I = "197"
+RM_J = "205"
+RM_K = "229"
+RM_L = "253"
+
+workTitle = "Symphony No. 1"
+workSubtitle = "Movement III: Minuetto"
+workOwner = "Dean Dierschow"
+workEmail = "deandierschow@gmail.com"
+workPerformer = "Concert Band"
+workComposer = "Georges Bizet (1838-1875)"
+workArranger = "arr. Dean Dierschow"
+workCopyright = "Copyright 2012 by Dean Dierschow"
+workMeter = "Allegro Vivace"
+
+base =
 {
   \override MultiMeasureRest.expand-limit = #2
-  \override Score.PaperColumn #'keep-inside-line = ##t
-  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
+  \override Score.PaperColumn.keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
   \time 3/4
   \key g \major
 
   \partial 4 s4 |
-  s2.*169 |
+  s2.*173 |
 
   % Trio
   \key c \major
@@ -19,5 +42,7 @@ measures =
 }
 
 stafftype = Staff
+partSize = 20
+scoreSize = 14
 
 \include "../common/defs.lyi"

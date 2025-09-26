@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-tubaDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+tubaDyn = {
+  s4 |
   \repeat volta 2
   {
     s2.*7 |
@@ -141,8 +133,6 @@ tubaDyn =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -220,58 +210,35 @@ tubaDyn =
 }
 
 
-tubaCues = 
-{
-  \time 3/4
-  \key g \major
-  \clef bass
+tubaMks = {}
 
-  \partial 4 s4 |
+
+tubaCues = {
+  s4 |
 
   s2.*53 |
 
-    \set countPercentRepeats = ##t
-    \override PercentRepeat #'transparent = ##t
-    \override PercentRepeatCounter #'staff-padding = #2
-    \set repeatCountVisibility = #(every-nth-repeat-count-visible 2)
-
-    \repeat percent 24 { s2. | }
+  \repeat percent 24 { s2. | }
 
   s2.*4 | \break
   s2.*41 | \break
   s2.*47 |
 
-  \key c \major
-
   s2.*96 |
-
 }
 
 
-tubaNotCues = 
-{
-  \time 3/4
-  \key g \major
-  \clef bass
-
-  \partial 4 s4 |
+tubaScor = {
+  s4 |
 
   s2.*169 |
 
-  \key c \major
-
   s2.*96 |
-
 }
 
 
-tubaNotes = 
-{
-  \time 3/4
-  \key g \major
-  \clef bass
-
-  \partial 4 r4 |
+tubaNotes = {
+  r4 |
   \repeat volta 2
   {
     R4*3*7 |
@@ -416,8 +383,6 @@ tubaNotes =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -540,12 +505,11 @@ tubaNotes =
 }
 
 
-tubaScore        =                          \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaCScore       = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaCond         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaMidi         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-tubaPart         = \transpose c \concertKey \relative c,, { << \bc \tubaNotes \tubaCues    \tubaDyn >> }
-stringbassScore  =                          \relative c,  { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-stringbassCScore =                          \relative c,  { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-stringbassMidi   = \transpose c \concertKey \relative c,  { << \bc \tubaNotes \tubaNotCues \tubaDyn >> }
-stringbassPart   = \transpose c \concertKey \relative c,  { << \bc \tubaNotes \tubaCues    \tubaDyn >> }
+tubaScore        = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaScor \tubaDyn >> }
+tubaCond         = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaScor \tubaMks >> }
+tubaCScore       = \tubaScore
+tubaCPart        = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaCues \tubaDyn >> }
+stringbassScore  = \transpose c \concertKey \relative c,  { << \bc \base \tubaNotes \tubaScor \tubaDyn >> }
+stringbassCond   = \transpose c \concertKey \relative c,  { << \bc \base \tubaNotes \tubaScor \tubaMks >> }
+stringbassCScore = \stringbassScore
+stringbassCPart  = \transpose c \concertKey \relative c,  { << \bc \base \tubaNotes \tubaCues \tubaDyn >> }

@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-hornOneDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+hornTwoDyn = {
+  s4 |
   \repeat volta 2
   {
     s2.*7 |
@@ -29,10 +21,7 @@ hornOneDyn =
   % 18
   \repeat volta 2
   {
-    \crescTextPocoAPocoCresc 
-    s4\pp s s\< |
-    s2.*6 |
-    s2.\! |
+    s2.*8 |
     \crescTextCrescMolto 
     s4\p s\< s |
     s2.*2 |
@@ -63,12 +52,15 @@ hornOneDyn =
     s4 s s\ff |
 
     % 86
-    s4 s\f s |
-    \dimTextDimMolto
-    s2.\>
+    s2.*8 |
+    s4\pp s s |
+    \crescHairpin
+    s4\< s s |
+    s2.*2 |
+    s4\! s s |
+    s4\> s s |
     s2.*6 |
-    s2.\pp |
-    s2.*12 |
+    s2.\! |
     \crescHairpin
     s2.\pp\< |
     s4\!\> s s |
@@ -118,16 +110,13 @@ hornOneDyn =
   {
     {
       s4-\secco s s |
-      s2.\pp |
-      s2. |
+      s2.*2 |
     }
     {
       s4-\secco s s |
       s2.*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -183,61 +172,36 @@ hornOneDyn =
 }
 
 
-hornOneCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
-
-  s2.*58 | \break
-  s2.*27 |
-    \set countPercentRepeats = ##t
-    \override PercentRepeat #'transparent = ##t
-    \override PercentRepeatCounter #'staff-padding = #2
-    \set repeatCountVisibility = #(every-nth-repeat-count-visible 2)
-
-    \repeat percent 8 { s2. | }
-
-  s2.*66 | \break
-  s2.*10 |
-
-  \key c \major
-
-  s2.*96 |
-
-}
+hornTwoMks = {}
 
 
-hornOneNotCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+hornTwoCues = {
+  s4 |
 
   s2.*169 |
 
-  \key c \major
-
   s2.*96 |
-
 }
 
 
-hornOneNotes = 
-{
-  \time 3/4
-  \key g \major
+hornTwoScor = {
+  s4 |
 
-  \partial 4 r4 |
+  s2.*169 |
+
+  s2.*96 |
+}
+
+
+hornTwoNotes = {
+  r4 |
   \repeat volta 2
   {
     R4*3*7 |
     g'2. |
     fis2. |
-    b2. |
-    b4-. b-. b-. |
+    d2. |
+    b'4-. b-. b-. |
     a2. |
     d,2 d4 |
     d2.~ |
@@ -256,14 +220,7 @@ hornOneNotes =
   % 18
   \repeat volta 2
   {
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2. |
-    d2.~ |
-    d2.~ |
-    d2.~ |
-    d2. |
+    R4*3*8 |
     d2.~ |
     d2.~ |
     d2.~ |
@@ -320,25 +277,38 @@ hornOneNotes =
     r4 r a-. |
 
     % 86
-    d,4-. d-. d-. |
-    \repeat unfold 7 { d-. d-. d-. | }
-    a'-. a( c |
-    a-.) a( d, |
-    a'-.) a( c |
-    a-.) a( d, |
-    \repeat unfold 3
-    {
-      g-.) g( b |
-      g-.) g( d |
-      g-.) g( b |
-      g-.) g( d |
-      a'-.) a( c |
-      a-.) a( d, |
-      a'-.) a( c |
-      a-.) a( d, |
-    }
-    d2 r4 |
+    d,-. r r |
+    R4*3*7 |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
     d2. |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d'2.( |
+    b2. |
+    g2.) |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.( |
+    g2. |
+    d'2. |
     b2. |
     g2.) |
     g2.~ |
@@ -347,13 +317,13 @@ hornOneNotes =
     R4*3 |
 
     % 130
-    g'4-. r r |
+    g4-. r r |
     R4*3*3 |
-    a2.~ |
-    a2.~ |
-    a4 r r |
+    d2.~ |
+    d2.~ |
+    d4 r r |
     R4*3 |
-    b4-. r r |
+    g4-. r r |
     R4*3*3 |
     g2.~ |
     g2.~ |
@@ -361,40 +331,37 @@ hornOneNotes =
     R4*3 |
     g4-. r r |
     R4*3*3 |
-    a2.~ |
-    a2. |
-    b4-. r r |
+    d2.~ |
+    d2. |
+    g4-. r r |
     R4*3 |
-    a2.~ |
-    a2. |
-    b4-. r r |
+    d2.~ |
+    d2. |
+    g4-. r r |
 
     % 157
     R4*3 |
-    a2.~ |
-    a2.~ |
-    a2.~ |
-    a2. |
-    a2.~ |
-    a2.~ |
-    a2. |
-    a4-. a-. a-. |
-    b4-. r r |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d4-. d-. d-. |
+    g4-. r r |
   }
   \alternative
   {
     {
       g4-. r r |
-      d2.~ |
-      d2. |
+      R4*3*2 |
     }
     {
       g4-. r r |
       R4*3*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -489,8 +456,7 @@ hornOneNotes =
 }
 
 
-hornOneScore  =                          \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornOneCond   = \transpose c \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornOneMidi   = \transpose c \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornFOneScore = \transpose f \concertKey \relative c' { << \tc \hornOneNotes \hornOneNotCues \hornOneDyn >> }
-hornFOnePart  = \transpose f \concertKey \relative c' { << \tc \hornOneNotes \hornOneCues    \hornOneDyn >> }
+hornTwoScore  = \transpose c \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoScor \hornTwoDyn >> }
+hornTwoCond   = \transpose c \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoScor \hornTwoMks >> }
+hornFTwoScore = \transpose f \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoScor \hornTwoDyn >> }
+hornFTwoPart  = \transpose f \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoCues \hornTwoDyn >> }

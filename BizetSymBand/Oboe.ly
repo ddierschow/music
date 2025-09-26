@@ -1,10 +1,10 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "config.lyi" 
-\include "Oboe.lyi" 
+\include "parts/Oboe.lyi" 
 
 instrument = "Oboe"
 
 notes = \oboePart
 
-\include "part.lyi"
+\include "single.lyi"

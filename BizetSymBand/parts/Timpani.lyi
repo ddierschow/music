@@ -1,14 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-timpaniDyn = 
-{
-  \time 3/4
-  \key g \major
-  \clef bass
-
-  \partial 4 s4 |
+timpaniDyn = {
+  s4 |
   \repeat volta 2
   {
     s2.*12 |
@@ -94,8 +85,6 @@ timpaniDyn =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -135,48 +124,34 @@ timpaniDyn =
 }
 
 
-timpaniCues = 
-{
-  \time 3/4
-  \key g \major
+timpaniMks = {}
 
-  \partial 4 s4 |
+
+timpaniCues = {
+  s4 |
 
   s2.*169 |
-
-  \key c \major
 
   s2.*96 |
 
 }
 
 
-timpaniNotCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+timpaniScor = {
+  s4 |
 
   s2.*169 |
 
-  \key c \major
-
   s2.*96 |
-
 }
 
 
-timpaniNotes = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 r4 |
+timpaniNotes = {
+  r4 |
   \repeat volta 2
   {
     R4*3*12 |
-    r2 d'4 |
+    r2 d4 |
     d2.\startTrillSpan |
     d2. |
   }
@@ -284,8 +259,6 @@ timpaniNotes =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -330,8 +303,7 @@ timpaniNotes =
 }
 
 
-timpaniScore  =                          \relative c { << \bc \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniCScore = \transpose c \concertKey \relative c { << \bc \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniCond   = \transpose c \concertKey \relative c { << \bc \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniMidi   = \transpose c \concertKey \relative c { << \bc \timpaniNotes \timpaniNotCues \timpaniDyn >> }
-timpaniPart   = \transpose c \concertKey \relative c { << \bc \timpaniNotes \timpaniCues    \timpaniDyn >> }
+timpaniScore  = \transpose c \concertKey \relative c { << \bc \base \timpaniNotes \timpaniScor \timpaniDyn >> }
+timpaniCScore = \transpose c \concertKey \relative c { << \bc \base \timpaniNotes \timpaniScor \timpaniDyn >> }
+timpaniCond   = \transpose c \concertKey \relative c { << \bc \base \timpaniNotes \timpaniScor \timpaniMks >> }
+timpaniPart   = \transpose c \concertKey \relative c { << \bc \base \timpaniNotes \timpaniCues \timpaniDyn >> }

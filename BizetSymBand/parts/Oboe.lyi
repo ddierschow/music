@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-fluteOneDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4\f |
+oboeDyn = {
+  s4\f |
   \repeat volta 2
   {
     s2.*6 |
@@ -41,23 +33,24 @@ fluteOneDyn =
     s4\f\< s s |
     s s s\! |
     s\ff s s |
-    s-\leggiero s s\p |
+    s^\leggiero s s\p |
     s2.*2 |
-    \crescTextCrescMolto 
-    s4\< s s\! |
-    s2. |
+    \crescTextCrescMolto
+    s2.\< |
+    s2.\! |
 
     % 38
     s2.\f |
     s2.*2 |
     s2 s4\p |
     s2. |
+    \crescTextCrescMolto
     s2 s4\< |
     s2. |
     s2 s4\! |
     s2.\f |
     s2.*2 |
-    s2  s4 |
+    s2 s4 |
     s2.*3 |
     s2 s4\pp |
 
@@ -96,18 +89,15 @@ fluteOneDyn =
 
     % 130
     s4\ff s s |
-    s2.*2 |
-    s4 s s\f |
-    s2.*4 |
-    s4 s s\pp |
-    s2.*2 |
-    s4 s s\f |
-    s s s\ff |
+    s2.*3 |
+    s2.\f |
+    s2.*7 |
+    s4 s s\ff |
     s2.*3 |
     s4 s s |
-    s2.*2 |
-    s4 s s\f |
     s2.*3 |
+    s4\f s s |
+    s2.*2 |
     s4 s s |
     s2.*3 |
 
@@ -135,8 +125,6 @@ fluteOneDyn =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -144,23 +132,36 @@ fluteOneDyn =
 
     % 181
     s2.*11 |
-    s4 s s\pp |
+    s4\pp s s |
     s2.*4 |
   }
 
   % 197
   \repeat volta 2
   {
-    s2.*8 |
+    s2.*7 |
+    s4 s s\p |
 
     % 205
-    s2.*24 |
+    \crescHairpin
+    s2.\< |
+    s2.*3 |
+    s2.\!\> |
+    s2.*3 |
+    \repeat unfold 2
+    {
+      s2.\!\< |
+      s2.*3 |
+      s2.\!\> |
+      s2.*3 |
+    }
 
     % 229
     s2.\pp |
     s2.*21 |
-    s2.\ppp |
-    s4 s s\p |
+    \crescTextCresc
+    s2.\< |
+    s4\! s s\p |
 
     % 253
     s2. |
@@ -184,45 +185,31 @@ fluteOneDyn =
 }
 
 
-fluteOneCues = 
-{
-  \time 3/4
-  \key g \major
+oboeMks = {}
 
-  \partial 4 s4 |
+
+oboeCues = {
+  s4 |
 
   s2.*17 | \break
-  s2.*152 |
-
-  \key c \major
+  s2.*41 | \break
+  s2.*117 |
 
   s2.*96 |
-
 }
 
 
-fluteOneNotCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+oboeScor = {
+  s4 |
 
   s2.*169 |
 
-  \key c \major
-
   s2.*96 |
-
 }
 
 
-fluteOneNotes = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 d4 |
+oboeNotes = {
+  d,4 |
   \repeat volta 2
   {
     g2 b4-. |
@@ -232,22 +219,22 @@ fluteOneNotes =
     b( d-.) g,-. |
     g2 b4-. |
     e,2. |
-    g'' |
-    fis |
-    d |
-    e4-. fis-. g-. |
+    g'2. |
+    fis2. |
+    fis2. |
+    b4-. b-. b-. |
     a2. |
-    fis2 d4 |
+    a2 d,4 |
     d2.~ |
-    d2.~ |
+    d2.( |
   }
   \alternative
   {
     {
-      d4 r d,,-. |
+      d4) r d,-. |
     }
     {
-      d''4\repeatTie r r |
+      d'4\repeatTie r r |
     }
   }
 
@@ -256,40 +243,40 @@ fluteOneNotes =
   {
     \repeat unfold 3
     {
-      a-. a-. a-. |
-      a-. a-. a-. |
-      b-. b-. b-. |
-      b-. b-. b-. |
+      d-. d-. d-. |
+      d-. d-. d-. |
+      g-. g-. g-. |
+      g-. g-. g-. |
     }
-    a-. a-. a-. |
-    a-. a-. a-. |
-    b-. r r |
-    r r g'-. |
-    g-. r fis-. |
-    fis-. r e-. |
-    e-. d-. c-. |
-    b-. a-. g-. |
+    d-. d-. d-. |
+    d-. d-. d-. |
+    g-. r r |
+    r r d-. |
+    d-. r d-. |
+    d-. r b-. |
+    b-. g-. g-. |
+    g-. fis-. g-. |
 
     % 38
-    d'2.~ |
-    d2. |
-    b4-. r r |
-    r r b-. |
-    b-. r a-. |
-    a-. r g-. |
-    g'-. fis-. e-. |
+    fis'2.~ |
+    fis2. |
+    g4-. r r |
+    r r g-. |
+    g-. r fis-. |
+    fis-. r e-. |
+    e-. d-. e-. |
     d-. cis-. b-. |
-    a2.~ |
-    a2. |
+    g'2.~ |
+    g2. |
     fis4-. r r |
     r r a,-. |
-    a'2.~ |
-    a2. |
+    g'2.~ |
+    g2. |
     fis4-. r r |
-    r r a-. |
+    r r a,-. |
 
     % 54
-    a2.~ |
+    a'2.~ |
     a2.~ |
     a2.~ |
     a2 a4-. |
@@ -325,7 +312,7 @@ fluteOneNotes =
     % 86
     d-. r r |
     R4*3*6 |
-    d'2.( |
+    d2.( |
     fis2.~) |
     fis2.~ |
     fis2.( |
@@ -364,43 +351,39 @@ fluteOneNotes =
     g( fis-.) e-. |
 
     % 130
-    g4-. r r |
-    R4*3*2 |
-    r4 r g,-. |
-    d'2.~ |
-    d2.~ |
-    d2 a4-. |
-    \acciaccatura b8 a4( g-.) a-. |
-    b-. r g-. |
-    g-. r d-. |
-    d-. r b-. |
-    b-. r g-. |
-    g-. r g'( |
+    b'4-. r r |
+    R4*3*3 |
+    c,2.~ |
+    c2.~ |
+    c4 r r |
+    R4*3 |
+    g'4-. r r |
+    R4*3*3
+    r4 r g,( |
     e'-.) e-. g-. |
     e-. r r |
     R4*3 |
-    g4-. r r |
-    R4*3*2 |
-    r4 r g,-. |
-    d'2.~ |
-    d2.( |
+    b'4-. r r |
+    R4*3*3 |
+    c,2.~ |
+    c2.( |
     b4-.) r r |
     r4 r g-. |
-    d'2.~ |
-    d2.( |
+    c2.~ |
+    c2.( |
     b4-.) r r |
 
     % 157
     r r g-. |
-    d'2.~ |
-    d2.~ |
-    d2.~ |
-    d2. |
-    fis2.~\startTrillSpan |
-    fis2.~ |
-    fis2.~ |
-    fis2.\stopTrillSpan \grace {e16[( fis]} |
-    g4-.) r r |
+    c2.~ |
+    c2.~ |
+    c2.~ |
+    c2. |
+    a'2.~ |
+    a2.~ |
+    a2.~ |
+    a2. |
+    b4-. r r |
   }
   \alternative
   {
@@ -409,12 +392,10 @@ fluteOneNotes =
       R4*3*2 |
     }
     {
-      g,4-. r r |
+      g4-. r r |
       R4*3*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -423,77 +404,93 @@ fluteOneNotes =
 
     % 181
     R4*3*11 |
-    r4 r d'-. |
-    d( e)-. e-. |
-    e-. r d-. |
-    d-. r c-. |
-    c-. r r |
+    r4 r g'-. |
+    g( g)-. g-. |
+    g-. r g-. |
+    g-. r g-. |
+    g-. r r |
   }
 
   % 197
   \repeat volta 2
   {
-    R4*3*8 |
+    R4*3*7 |
+    r4 r c,4( |
 
     % 205
-    R4*3*24 |
+    f2 a4 |
+    c, f a |
+    g2 bes4 |
+    c, g' bes |
+    a c c, |
+    f a c, |
+    d f c |
+    f a c, |
+    e2 g4 |
+    g, e' g |
+    d2 f4 |
+    g, d' f |
+    c2 g'4 |
+    e g g, |
+    d' f g, |
+    c e c |
+    f2 a4 |
+    c, f a |
+    g2 bes4 |
+    c, g' bes |
+    a c c, |
+    f a c, |
+    d f c |
+    f a c, |
 
     % 229
-    gis2.~( |
-    gis2. |
-    a2.~ |
-    a2. |
-    b2.~ |
-    b2. |
-    a2.~ |
-    a2. |
-    gis2.~ |
-    gis2. |
-    a2.~ |
-    a2. |
-    b2.~ |
-    b2.) |
-    a2.~ |
-    a2. |
-    gis2.~ |
-    gis2.~ |
-    gis2.~ |
-    gis2. |
-    g2.~ |
-    g2.~ |
-    g2.~ |
-    g4 r g( |
+    gis'2 b,4 |
+    e gis e |
+    fis2 b,4 |
+    fis' a fis |
+    gis2 b,4 |
+    gis' b gis |
+    fis2 b,4 |
+    fis' a fis |
+    e2 b4 |
+    e gis e |
+    fis2 b,4 |
+    fis' a fis |
+    gis2 b,4 |
+    gis' b gis |
+    fis2 b,4 |
+    fis' a fis |
+    e2 b4 |
+    e b' gis |
+    e2 b4 |
+    e b' gis |
+    e2 b4 |
+    e b' g |
+    e2 b4 |
+    e b' g) |
 
     % 253
-    c2 e4 |
-    c g c |
-    d2 f4 | 
-    d g, d' |
-    e2 g4 |
-    e g, e' |
-    d2 f4 | 
-    d g, d' |
-    c-.) r r |
+    \repeat unfold 8 { g2.~ | }
+    g4-. r r |
     R4*3*2 |
-    r4 r d-. |
-    d( e-.) e-. |
-    e-. r d-. |
-    d-. r c-. |
+    r4 r g-. |
+    g-. g-. g-. |
+    g-. r g-. |
+    g-. r g-. |
   }
   \alternative
   {
     {
-      c-. r r |
+      g-. r r |
     }
     {
-      c-. r d,,-. |
+      g-. r d,-. |
     }
   }
 }
 
 
-fluteOneScore  =                          \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteCOneScore = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOneCond   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOneMidi   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOnePart   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneCues    \fluteOneDyn >> }
+oboeScore  = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeScor \oboeDyn >> }
+oboeCScore = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeScor \oboeDyn >> }
+oboeCond   = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeScor \oboeMks >> }
+oboePart   = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeCues \oboeDyn >> }

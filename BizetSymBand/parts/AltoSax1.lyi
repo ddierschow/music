@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-altosaxTwoDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4\f |
+altosaxOneDyn = {
+  s4\f |
   \repeat volta 2
   {
     s2.*6 |
@@ -27,6 +19,7 @@ altosaxTwoDyn =
     }
   }
 
+  % 18
   \repeat volta 2
   {
     s4\pp s s |
@@ -48,9 +41,8 @@ altosaxTwoDyn =
     s2.*7 |
     s4 s s\f |
     s2.*3 |
-    s2 s4 |
-    s2.*3 |
-    s2 s4 |
+    s4 s s |
+    s2.*4 |
 
     % 54
     s2.\pp |
@@ -66,7 +58,7 @@ altosaxTwoDyn =
     s2.*3 |
 
     % 86
-    s2.\ff |
+    s2.\!\ff |
     s2.*6 |
     s4\p s_\conmoltoespr s |
     s2. |
@@ -125,8 +117,6 @@ altosaxTwoDyn =
       s2.*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -192,18 +182,17 @@ altosaxTwoDyn =
 }
 
 
-altosaxTwoCues = \measures
+altosaxOneMks = {}
 
 
-altosaxTwoNotCues = \measures
+altosaxOneCues = {}
 
 
-altosaxTwoNotes = 
-{
-  \time 3/4
-  \key g \major
+altosaxOneScor = {}
 
-  \partial 4 d'4 |
+
+altosaxOneNotes = {
+  d'4 |
   \repeat volta 2
   {
     g2 b4-. |
@@ -232,6 +221,7 @@ altosaxTwoNotes =
     }
   }
 
+  % 18
   \repeat volta 2
   {
     d-. d-. d-. |
@@ -246,13 +236,14 @@ altosaxTwoNotes =
     d-. d-. d-. |
     g-. g-. g-. |
     g-. g-. g-. |
-    d-. d-. d-. |
-    d-. d-. d-. |
-    g-. r r |
-    R4*3*5 |
+    a4-. a-. a-. |
+    a-. a-. a-. |
+    b-. r r |
+    R4*3*4 |
+    r4 r d-. |
 
     % 38
-    a'2 c4-. |
+    a2 c4-. |
     a-. d,-. a'-. |
     b-. g-. d-. |
     g,-. r r |
@@ -284,19 +275,19 @@ altosaxTwoNotes =
     e-. a-. gis-. |
     b-. g-. cis-. |
     a-. d-. b-. |
-    e,,-. fis-. g-. |
-    a-. b-. cis-. |
-    fis,-. g-. a-. |
-    b-. cis-. d-. |
-    g,-. a-. b-. |
-    a-. b-. cis-. |
-    b-. cis-. d-. |
-    cis-. d-. dis-. |
-    e-. b'-. a-. |
+    g-. a-. b-. |
+    cis,-. d-. e-. |
+    a,-. b-. cis-. |
+    d-. e-. fis-. |
+    b,-. cis-. d-. |
+    cis-. d-. e-. |
+    d-. e-. f-. |
+    e-. f-. fis-. |
+    g-. b-. a-. |
     g-. fis-. e-. |
     d-. cis-. b-. |
-    a-. g-. fis-. |
-    e-. d'-. cis-. |
+    a-. g'-. fis-. |
+    e-. d-. cis-. |
     b-. a-. g-. |
     fis'-. e-. d-. |
     cis-. b-. a-. |
@@ -337,66 +328,62 @@ altosaxTwoNotes =
     b2.) |
     R4*3 |
     g2. |
-    e'2.~ |
-    e2.~ |
-    e2 fis4-. |
-    e( d-.) c-. |
+    g'2.~ |
+    g2.~ |
+    g2 a4-. |
+    g( fis-.) e-. |
 
     % 130
-    b4-. r b-. |
-    b-. r g-. |
-    g-. r b-. |
-    b-. r e,-. |
-    fis-. r d'( |
+    d4-. r g-. |
+    g-. r b,-. |
+    b-. r d-. |
+    d-. r g,-. |
+    a-. r d( |
     a'-.) a-. c-. |
     a-. r r |
     R4*3 |
-    g4-. r r |
-    R4*3 |
-    R4*3 |
+    b4-. r r |
+    R4*3*2 |
     r4 r g, |
-    e'2.~ |
-    e2.~ |
-    e4 e-. e-. |
-    \grace fis8 e4( d-.) c-. |
-    b-. r b-. |
-    b-. r g-. |
-    g-. r b-. |
-    b-. r e,-. |
-    fis-. r d'-. |
+    g'2.~ |
+    g2.~ |
+    g4( c-.) g-. |
+    \acciaccatura a8 g4( fis-.) e-. |
+    d-. r g-. |
+    g-. r b,-. |
+    b-. r d-. |
+    d-. r g,-. |
+    a-. r d-. |
     a'( c-.) a-. |
     b-. g-. d-. |
     d,-. r r |
-    fis-. r d'-. |
+    a'-. r d-. |
     a'( c-.) a-. |
     b-. g-. d-. |
 
     % 157
     d,-. r r |
-    fis-. r d-. |
-    a'-. c-. a-. |
+    a'-. r d-. |
+    a-. c-. a-. |
     d,-. a'-. c-. |
     a-. d,-. a'-. |
     c-. d-. a'-. |
     c-. a-. d,-. |
     a'-. c-. a-. |
     d,-. a'-. c-. |
-    b-. r r |
+    d-. r r |
   }
   \alternative
   {
     {
       g,4-. r r |
-      d'8( e d e d e |
-      d e d e d e) |
+      R4*3*2 |
     }
     {
       g,4-. r r |
       R4*3*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -412,13 +399,13 @@ altosaxTwoNotes =
     c2. |
     g2.~ |
     g2. |
-    c4)( c-.) c-. |
-    c-. r c-. |
-    c-. r c-. |
-    c-. r b-. |
-    b-. b-. b-. |
-    b-. r b-. |
-    b-. r c-. |
+    c4)( c'-.) c-. |
+    c-. r a-. |
+    a-. r f-. |
+    f-. r d-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r c-. |
     c-. r r |
   }
 
@@ -428,46 +415,46 @@ altosaxTwoNotes =
     R4*3*8 |
 
     % 205
-    c2.~ |
+    c'2.~ |
     c2.~ |
     c2.~ |
     c2.~ |
     c2.( |
-    a'2. |
+    a2. |
     f2. |
     a2. |
-    g,2.~) |
+    g2.~) |
     g2.~ |
     g2.~ |
     g2.~ |
     g2.( |
-    e'2. |
+    e2. |
     d2. |
     c2.) |
-    c2.~ |
+    c'2.~ |
     c2.~ |
     c2.~ |
     c2.~ |
     c2.( |
-    a'2. |
+    a2. |
     f2. |
     a2.) |
 
     % 229
-    b,2.~ |
+    b2.~ |
     b2.~ |
     b2.~ |
     b2.~ |
     b2.( |
-    e2. |
+    e,2. |
     dis2. |
     b2.) |
-    b2.~ |
+    b'2.~ |
     b2.~ |
     b2.~ |
     b2.~ |
     b2.( |
-    e2. |
+    e,2. |
     dis2. |
     b2. |
     e2.~) |
@@ -488,13 +475,13 @@ altosaxTwoNotes =
     c2. |
     g2.~) |
     g2.( |
-    c4) c-. c-. |
-    c-. r c-. |
-    c-. r c-. |
-    c-. r b-. |
-    b-. b-. b-. |
-    b-. r b-. |
-    b-. r c-. |
+    c4)( c'-.) c-. |
+    c-. r a-. |
+    a-. r f-. |
+    f-. r d-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r c-. |
   }
   \alternative
   {
@@ -502,14 +489,12 @@ altosaxTwoNotes =
       c-. r r |
     }
     {
-      c-. r d,-. |
+      c-. r d' |
     }
   }
 }
 
-
-altosaxTwoScore    =                            \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues                >> }
-altosaxTwoCond     = \transpose c   \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues                >> }
-altosaxTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues \altosaxTwoDyn >> }
-altosaxEesTwoScore = \transpose ees \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoNotCues                >> }
-altosaxEesTwoPart  = \transpose ees \concertKey \relative c' { << \tc \altosaxTwoNotes \altosaxTwoCues    \altosaxTwoDyn >> }
+altosaxOneScore    = \transpose c   \concertKey \relative c { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneDyn >> }
+altosaxOneCond     = \transpose c   \concertKey \relative c { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneMks >> }
+altosaxEesOneScore = \transpose ees \concertKey \relative c { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneDyn >> }
+altosaxEesOnePart  = \transpose ees \concertKey \relative c { << \tc \base \altosaxOneNotes \altosaxOneCues \altosaxOneDyn >> }

@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-tromThreeDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+tromOneDyn = {
+  s4 |
   \repeat volta 2
   {
     s2.*12 |
@@ -27,7 +19,11 @@ tromThreeDyn =
   % 18
   \repeat volta 2
   {
-    s2.*12 |
+    s2.*8 |
+    \crescTextCrescMolto 
+    s4\p s\< s |
+    s2.*2 |
+    s4 s s\! |
     \crescHairpin
     s4\f\< s s |
     s s s\! |
@@ -55,8 +51,21 @@ tromThreeDyn =
     s2.*3 |
 
     % 86
-    s4\ff s s |
-    s2.*39 |
+    s2.\ff |
+    s2.*7 |
+    s2.\pp |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*10 |
+    s2.\!\< |
+    s2.*3 |
+    s2.\p\> |
+    s2.*9
+    s2.\! |
+    s2. |
     s4\f s s |
     s2.*3 |
 
@@ -98,16 +107,21 @@ tromThreeDyn =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
-    s2.*8 |
+    s4\f s s |
+    s2.*3 |
+    \dimTextDimMolto
+    s4\> s s |
+    s2.*2 |
+    s2.\! |
 
     % 181
-    s2.\pp |
-    s2.*10 |
+    s4\pp s s |
+    s2.*7 |
+    s4\pp s s |
+    s2.*2 |
     s4 s s\pp |
     s2.*4 |
   }
@@ -118,8 +132,8 @@ tromThreeDyn =
     s2.*8 |
 
     % 205
-    s2.*8 |
     \crescHairpin
+    s2.*8 |
     s4\pp\< s s |
     s2.*3 |
     s4\!\> s s |
@@ -132,7 +146,7 @@ tromThreeDyn =
 
     % 253
     s2.\p |
-    \crescTextCrescMolto 
+    \crescTextCrescMolto
     s4 s s\< |
     s2.*6 |
     s2.\! |
@@ -152,50 +166,34 @@ tromThreeDyn =
 }
 
 
-tromThreeCues = 
-{
-  \time 3/4
-  \key g \major
-  \clef bass
+tromOneMks = {}
 
-  \partial 4 s4 |
 
-  s2.*169 |
+tromOneCues = {
+  s4 |
 
-  \key c \major
+  s2.*60 | \break
+  s2.*109 |
 
   s2.*96 |
-
 }
 
 
-tromThreeNotCues = 
-{
-  \time 3/4
-  \key g \major
-  \clef bass
-
-  \partial 4 s4 |
+tromOneScor = {
+  s4 |
 
   s2.*169 |
 
-  \key c \major
-
   s2.*96 |
-
 }
 
 
-tromThreeNotes = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 r4 |
+tromOneNotes = {
+  r4 |
   \repeat volta 2
   {
     R4*3*12 |
-    r2 d,4 |
+    r2 d4 |
     d2.~ |
     d2.( |
   }
@@ -212,18 +210,23 @@ tromThreeNotes =
   % 18
   \repeat volta 2
   {
-    R4*3*12 |
-    d2. |
-    d4-. d-. d-. |
-    g,4-. r r |
-    R4*3*5 |
+    R4*3*8 |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g2-> d'4-. |
+    b-. g-. b-. |
+    c2-> a4-. |
+    fis-. d-. fis-. |
+    g-. d'-. b-. |
+    g-. r r |
+    R4*3*4 |
 
     % 38
-    d'2.~ |
+    d2.~ |
     d4-. d-. d-. |
-    g,4-. r r |
+    g4-. r r |
     R4*3*5 |
-    e'2.~ |
+    e2.~ |
     e4-. e-. e-. |
     d4-. r r |
     R4*3 |
@@ -234,7 +237,7 @@ tromThreeNotes =
 
     % 54
     R4*3*7 |
-    r2 a4-. |
+    r2 a''4-. |
     a2.~ |
     a2.~ |
     a2.~ |
@@ -255,45 +258,77 @@ tromThreeNotes =
     a2.~ |
     a2.~ |
     a4 r r |
-    r d'-. cis-. |
+    r d-. cis-. |
     b-. a-. g-. |
     fis-. e-. d-. |
     cis-. b-. a-. |
 
     % 86
     d4-. r r |
-    R4*3*39 |
-    c2.~ |
-    c2.~ |
-    c4 r r |
+    R4*3*7 |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2.~ |
+    d2 r4 |
+    r r r |
+    e2.~ |
+    e2.~ |
+    e4 r r |
     R4*3 |
 
     % 130
-    g4-. r r |
-    R4*3*3 |
-    c,2.~ |
-    c2.~ |
-    c4 r r |
-    R4*3 |
-    g'4-. r r |
+    d4-. r r |
     R4*3*3 |
     c2.~ |
     c2.~ |
     c4 r r |
     R4*3 |
-    g4-. r r |
+    d4-. r r |
     R4*3*3 |
-    d'2.~ |
-    d2. |
-    g,4-. r r |
+    e2.~ |
+    e2.~ |
+    e4 r r |
     R4*3 |
-    d'2.~ |
+    d4-. r r |
+    R4*3*3 |
+    d2.~ |
     d2. |
-    g,4-. r r |
+    d4-. r r |
+    R4*3 |
+    d2.~ |
+    d2. |
+    d4-. r r |
 
     % 157
     R4*3*5 |
-    d'2.~ |
+    d2.~ |
     d2.~ |
     d2. |
     d4-. d-. d-. |
@@ -306,34 +341,39 @@ tromThreeNotes =
       R4*3*2 |
     }
     {
-      g,4-. r r |
+      g4-. r r |
       R4*3*2 |
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
-    R4*3*8 |
+    g2.~-^ |
+    g2. |
+    g2.~-^ |
+    g2. |
+    g2.-^ |
+    g2.-^ |
+    g2.-^ |
+    g2.-^ |
 
     % 181
-    c2.-^~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c4-. r r |
+    g2.~-^ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g4 r r |
     R4*3*2 |
-    r4 r g-. |
-    g-. g-. g-. |
-    g-. r g-. |
-    g-. r c-. |
-    c-. r r |
+    r4 r d'-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r e-. |
+    e-. r r |
   }
 
   % 197
@@ -343,48 +383,47 @@ tromThreeNotes =
 
     % 205
     R4*3*8 |
-    c,2.-^~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2 r4 |
+    g,2.-^~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2 r4 |
     R4*3*9 |
 
     % 229
     R4*3*24 |
 
     % 253
-    c2.-^~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2.~ |
-    c2 r4 |
+    g2.-^~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g2 r4 |
     R4*3*2 |
-    r4 r g'-. |
-    g-. g-. g-. |
-    g-. r g-. |
-    g-. r c-. |
+    r4 r d'-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r e-. |
   }
   \alternative
   {
     {
-      c-. r r |
+      e-. r r |
     }
     {
-      c-. r r |
+      e-. r r |
     }
   }
 }
 
 
-tromboneThreeScore  =                          \relative c, { << \bc \tromThreeNotes \tromThreeNotCues               >> }
-tromboneCThreeScore = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues               >> }
-tromboneThreeCond   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues               >> }
-tromboneThreeMidi   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeDyn >> }
-tromboneThreePart   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeCues    \tromThreeDyn >> }
+tromOneScore  = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneDyn >> }
+tromOneCond   = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneMks >> }
+tromCOneScore = \tromOneScore
+tromCOnePart  = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneCues \tromOneDyn >> }

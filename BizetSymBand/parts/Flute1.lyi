@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-fluteTwoDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4\f |
+fluteOneDyn = {
+  s4\f |
   \repeat volta 2
   {
     s2.*6 |
@@ -41,7 +33,7 @@ fluteTwoDyn =
     s4\f\< s s |
     s s s\! |
     s\ff s s |
-    s^\leggiero s s\p |
+    s-\leggiero s s\p |
     s2.*2 |
     \crescTextCrescMolto 
     s4\< s s\! |
@@ -73,7 +65,7 @@ fluteTwoDyn =
     s2.*3 |
 
     % 86
-    s2.\ff |
+    s2.\!\ff |
     s2.*6 |
     s4\p s_\conmoltoespr s |
     s2. |
@@ -120,7 +112,7 @@ fluteTwoDyn =
     s2.*3 |
     s2.\! |
     \crescHairpin
-    s4\< s s |
+    s2.\< |
     s4\!\ff s s |
   }
   \alternative
@@ -134,8 +126,6 @@ fluteTwoDyn =
       s2.*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -160,11 +150,14 @@ fluteTwoDyn =
     s2.\pp |
     s2.*21 |
     s2.\ppp |
-    s4 s s |
+    s4 s s\p |
 
     % 253
-    s2.*8 |
-    s4\f s s |
+    s2. |
+    \crescTextCrescMolto 
+    s4 s s\< |
+    s2.*6 |
+    s4\! s s |
     s2.*2 |
     s4 s s\pp |
     s2.*3 |
@@ -181,45 +174,30 @@ fluteTwoDyn =
 }
 
 
-fluteTwoCues = 
-{
-  \time 3/4
-  \key g \major
+fluteOneMks = {}
 
-  \partial 4 s4 |
+
+fluteOneCues = {
+  s4 |
 
   s2.*17 | \break
   s2.*152 |
 
-  \key c \major
-
   s2.*96 |
-
 }
 
 
-fluteTwoNotCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+fluteOneScor = {
+  s4 |
 
   s2.*169 |
 
-  \key c \major
-
   s2.*96 |
-
 }
 
 
-fluteTwoNotes = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 d4 |
+fluteOneNotes = {
+  d4 |
   \repeat volta 2
   {
     g2 b4-. |
@@ -229,19 +207,19 @@ fluteTwoNotes =
     b( d-.) g,-. |
     g2 b4-. |
     e,2. |
-    b'' |
-    ais |
-    b |
-    d4-. d-. d-. |
-    cis2. |
-    d2 d,4 |
+    g' |
+    fis |
+    d |
+    e4-. fis-. g-. |
+    a2. |
+    fis2 d4 |
     d2.~ |
-    d2.( |
+    d2.~ |
   }
   \alternative
   {
     {
-      d4) r d,-. |
+      d4 r d,-. |
     }
     {
       d'4\repeatTie r r |
@@ -253,7 +231,7 @@ fluteTwoNotes =
   {
     \repeat unfold 3
     {
-      a'-. a-. a-. |
+      a-. a-. a-. |
       a-. a-. a-. |
       b-. b-. b-. |
       b-. b-. b-. |
@@ -261,7 +239,7 @@ fluteTwoNotes =
     a-. a-. a-. |
     a-. a-. a-. |
     b-. r r |
-    r r g-. |
+    r r g'-. |
     g-. r fis-. |
     fis-. r e-. |
     e-. d-. c-. |
@@ -270,20 +248,20 @@ fluteTwoNotes =
     % 38
     d'2.~ |
     d2. |
-    d4-. r r |
-    r r b'-. |
+    b4-. r r |
+    r r b-. |
     b-. r a-. |
     a-. r g-. |
-    g-. fis-. e-. |
+    g'-. fis-. e-. |
     d-. cis-. b-. |
-    cis2.~ |
-    cis2. |
-    d4-. r r |
+    a2.~ |
+    a2. |
+    fis4-. r r |
+    r r a,-. |
+    a'2.~ |
+    a2. |
+    fis4-. r r |
     r r a-. |
-    cis2.~ |
-    cis2. |
-    d4-. r r |
-    r r a'-. |
 
     % 54
     a2.~ |
@@ -322,7 +300,7 @@ fluteTwoNotes =
     % 86
     d-. r r |
     R4*3*6 |
-    d2.( |
+    d'2.( |
     fis2.~) |
     fis2.~ |
     fis2.( |
@@ -355,49 +333,49 @@ fluteTwoNotes =
     b2.) |
     R4*3 |
     g2. |
-    e'2.~ |
-    e2.~ |
-    e2 fis4-. |
-    e( d-.) c-. |
+    g'2.~ |
+    g2.~ |
+    g2 a4-. |
+    g( fis-.) e-. |
 
     % 130
-    d4-. r r |
+    g4-. r r |
     R4*3*2 |
-    r4 r e-. |
-    fis2.~ |
-    fis2.~ |
-    fis2 fis4-. |
-    \acciaccatura g8 fis4( e-.) fis-. |
+    r4 r g,-. |
+    d'2.~ |
+    d2.~ |
+    d2 a4-. |
+    \acciaccatura b8 a4( g-.) a-. |
+    b-. r g-. |
     g-. r d-. |
     d-. r b-. |
     b-. r g-. |
-    g-. r f-. |
-    e-. r g( |
+    g-. r g'( |
     e'-.) e-. g-. |
     e-. r r |
     R4*3 |
-    d4-. r r |
+    g4-. r r |
     R4*3*2 |
-    r4 r e-. |
-    fis2.~ |
-    fis2.( |
-    g4-.) r r |
+    r4 r g,-. |
+    d'2.~ |
+    d2.( |
+    b4-.) r r |
     r4 r g-. |
-    fis2.~ |
-    fis2.( |
-    g4-.) r r |
+    d'2.~ |
+    d2.( |
+    b4-.) r r |
 
     % 157
     r r g-. |
+    d'2.~ |
+    d2.~ |
+    d2.~ |
+    d2. |
+    fis2.~\startTrillSpan |
     fis2.~ |
     fis2.~ |
-    fis2.~ |
-    fis2. |
-    c'2.~ |
-    c2.~ |
-    c2.~ |
-    c2.( |
-    b4-.) r r |
+    fis2.\stopTrillSpan \grace {e16[( fis]} |
+    g4-.) r r |
   }
   \alternative
   {
@@ -411,8 +389,6 @@ fluteTwoNotes =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -420,10 +396,10 @@ fluteTwoNotes =
 
     % 181
     R4*3*11 |
-    r2 b'4-. |
-    b b-. b-. |
-    b-. r b-. |
-    b-. r c-. |
+    r4 r d'-. |
+    d( e)-. e-. |
+    e-. r d-. |
+    d-. r c-. |
     c-. r r |
   }
 
@@ -436,37 +412,46 @@ fluteTwoNotes =
     R4*3*24 |
 
     % 229
-    e,2.~( |
-    e2. |
-    fis2.~ |
-    fis2. |
+    gis2.~( |
+    gis2. |
+    a2.~ |
+    a2. |
+    b2.~ |
+    b2. |
+    a2.~ |
+    a2. |
     gis2.~ |
     gis2. |
-    fis2.~ |
-    fis2. |
-    e2.~ |
-    e2. |
-    fis2.~ |
-    fis2. |
+    a2.~ |
+    a2. |
+    b2.~ |
+    b2.) |
+    a2.~ |
+    a2. |
     gis2.~ |
-    gis2.) |
-    fis2.~ |
-    fis2. |
-    e2.~ |
-    e2.~ |
-    e2.~ |
-    e2. |
-    e2.~ |
-    e2.~ |
-    e2.~ |
-    e4 r r |
+    gis2.~ |
+    gis2.~ |
+    gis2. |
+    g2.~ |
+    g2.~ |
+    g2.~ |
+    g4 r g( |
 
     % 253
-    R4*3*11 |
-    r4 r b'-. |
-    b b-. b-. |
-    b-. r b-. |
-    b-. r c-. |
+    c2 e4 |
+    c g c |
+    d2 f4 | 
+    d g, d' |
+    e2 g4 |
+    e g, e' |
+    d2 f4 | 
+    d g, d' |
+    c-.) r r |
+    R4*3*2 |
+    r4 r d-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r c-. |
   }
   \alternative
   {
@@ -474,14 +459,13 @@ fluteTwoNotes =
       c-. r r |
     }
     {
-      c-. r d,,-. |
+      c-. r d-. |
     }
   }
 }
 
 
-fluteTwoScore  =                          \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteCTwoScore = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoCond   = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoMidi   = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoNotCues \fluteTwoDyn >> }
-fluteTwoPart   = \transpose c \concertKey \relative c' { << \tc \fluteTwoNotes \fluteTwoCues    \fluteTwoDyn >> }
+fluteOneScore  = \transpose c \concertKey \relative c' { << \tc \base \fluteOneNotes \fluteOneScor \fluteOneDyn >> }
+fluteOneCond   = \transpose c \concertKey \relative c' { << \tc \base \fluteOneNotes \fluteOneScor \fluteOneMks >> }
+fluteCOneScore = \fluteOneScore
+fluteCOnePart  = \transpose c \concertKey \relative c' { << \tc \base \fluteOneNotes \fluteOneCues \fluteOneDyn >> }

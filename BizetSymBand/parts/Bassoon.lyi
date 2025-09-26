@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-bassoonDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4\f |
+bassoonDyn = {
+  s4\f |
   \repeat volta 2
   {
     s2.*6 |
@@ -128,8 +120,6 @@ bassoonDyn =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -198,44 +188,30 @@ bassoonDyn =
 }
 
 
-bassoonCues = 
-{
-  \time 3/4
-  \key g \major
+bassoonMks = {}
 
-  \partial 4 s4 |
+
+bassoonCues = {
+  s4 |
 
   s2.*58 | \break
   s2.*111 |
 
-  \key c \major
-
   s2.*96 |
 }
 
 
-bassoonNotCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+bassoonScor = {
+  s4 |
 
   s2.*169 |
 
-  \key c \major
-
   s2.*96 |
 }
 
 
-bassoonNotes = 
-{
-  \time 3/4
-  \key g \major
-  \clef bass
-
-  \partial 4 d4 |
+bassoonNotes = {
+  d4 |
   \repeat volta 2
   {
     g2 b4-. |
@@ -348,7 +324,7 @@ bassoonNotes =
       a'-.) a( c |
       a-.) a( d, |
     }
-    d2 r4 |
+    d2) r4 |
     R4*3*3 |
     r4 r g,( |
     e'-.) e-. g-. |
@@ -403,8 +379,6 @@ bassoonNotes =
       R4*3*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -508,8 +482,7 @@ bassoonNotes =
 }
 
 
-bassoonScore  =                          \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonCScore = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonCond   = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonMidi   = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonPart   = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonCues    \bassoonDyn >> }
+bassoonScore  = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonDyn >> }
+bassoonCond   = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonMks >> }
+bassoonCScore = \bassoonScore
+bassoonCPart  = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonCues \bassoonDyn >> }

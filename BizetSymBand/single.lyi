@@ -1,13 +1,13 @@
-\version "2.22.2"
-
 \include "outline.lyi"
+
+#(set-global-staff-size partSize)
+
 \include "layout.lyi"
 
 \PartPaper
 
 \book
 {
-
   \PartHeader
 
   \score
@@ -20,5 +20,4 @@
       << \keepWithTag #'part \notes \outline >>
     }
   }
-
 }
