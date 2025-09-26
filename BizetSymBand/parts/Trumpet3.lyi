@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-trumpetTwoDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+trumThreeDyn = {
+  s4 |
   \repeat volta 2
   {
     s2.*7 |
@@ -44,15 +36,7 @@ trumpetTwoDyn =
     s2.*3 |
 
     % 54
-    s2.*15 |
-    s4 s s\mp |
-    \crescTextPocoAPocoCrescMolto
-    s2.\< |
-    s2.*6 |
-    s2 s4\! |
-    s4\f s s |
-    s2.*6 |
-    s4 s s |
+    s2.*32 |
 
     % 86
     s2.\ff |
@@ -114,8 +98,6 @@ trumpetTwoDyn =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -139,18 +121,19 @@ trumpetTwoDyn =
     s2.*8 |
 
     % 205
-    s2.\p\< |
+    \crescHairpin
+    s4\pp\< s s |
     s2.*3 |
-    s2.\!\> |
+    s4\!\> s s |
+    s2.*1 |
+    s4 s\! s |
+    s2.*9 |
+    s4\pp\< s s |
     s2.*3 |
-    s2.\!\< |
-    s2.*3 |
-    s2.\!\> |
-    s2.*3 |
-    s2.\!\< |
-    s2.*3 |
-    s2.\!\> |
-    s2.*3 |
+    s4\!\> s s |
+    s2.*1 |
+    s4 s\! s |
+    s2. |
 
     % 229
     s2.\pp |
@@ -180,51 +163,35 @@ trumpetTwoDyn =
 }
 
 
-trumpetTwoCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
-
-  s2.*73 | \break
-  s2.*96 |
-
-  \key c \major
-
-  s2.*96 |
-
-}
+trumThreeMks = {}
 
 
-trumpetTwoNotCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+trumThreeCues = {
+  s4 |
 
   s2.*169 |
 
-  \key c \major
-
   s2.*96 |
-
 }
 
 
-trumpetTwoNotes = 
-{
-  \time 3/4
-  \key g \major
+trumThreeScor = {
+  s4 |
 
-  \partial 4 r4 |
+  s2.*169 |
+
+  s2.*96 |
+}
+
+
+trumThreeNotes = {
+  r4 |
   \repeat volta 2
   {
     R4*3*7 |
-    b'2. |
-    ais |
-    b |
+    cis'2. |
+    cis2. |
+    b2. |
     d4-. d-. d-. |
     cis2. |
     d2 d4 |
@@ -273,12 +240,12 @@ trumpetTwoNotes =
     a2 a4-. |
     a2 a4-. |
     a2 a4-. |
-    a2 r4 |
-    r4 b'-. a-. |
-    g-. fis-. e-. |
-    d-. cis-. b-. |
-    a-. g'-. fis-. |
-    e-. d-. cis-. |
+    a2 a4-. |
+    a2.~ |
+    a2.~ |
+    a2.~ |
+    a4 r4 r |
+    r4 d'-. cis-. |
     b-. a-. g-. |
     fis-. e-. d-. |
     cis-. b-. a-. |
@@ -286,7 +253,7 @@ trumpetTwoNotes =
     % 86
     d-. r r |
     R4*3*6 |
-    d'2.( |
+    d2.( |
     fis2.~) |
     fis2.~ |
     fis2.( |
@@ -339,13 +306,13 @@ trumpetTwoNotes =
     R4*3 |
     g'4-. r r |
     R4*3*3 |
-    d'2.~ |
+    d2.~ |
     d2. |
-    g,4-. r r |
+    g4-. r r |
     R4*3 |
-    d'2.~ |
+    d2.~ |
     d2. |
-    g,4-. r r |
+    g4-. r r |
 
     % 157
     R4*3*5 |
@@ -362,12 +329,10 @@ trumpetTwoNotes =
       R4*3*2 |
     }
     {
-      g,4-. r r |
+      g4-. r r |
       R4*3*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -479,8 +444,7 @@ trumpetTwoNotes =
 }
 
 
-trumpetTwoScore    =                            \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
-trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
-trumpetTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues \trumpetTwoDyn >> }
-trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoNotCues                >> }
-trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \trumpetTwoNotes \trumpetTwoCues    \trumpetTwoDyn >> }
+trumpetThreeScore    = \transpose c   \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeDyn >> }
+trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeMks >> }
+trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeDyn >> }
+trumpetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeCues \trumThreeDyn >> }

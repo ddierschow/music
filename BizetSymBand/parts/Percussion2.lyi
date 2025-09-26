@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-percussionTwoDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4\f |
+percussionTwoDyn = {
+  s4\f |
   \repeat volta 2
   {
     s2.*6 |
@@ -126,8 +118,6 @@ percussionTwoDyn =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -175,44 +165,29 @@ percussionTwoDyn =
 }
 
 
-percussionTwoCues = 
-{
-  \time 3/4
-  \key g \major
-  \clef percussion
+percussionTwoMks = {}
 
-  \partial 4 s4 |
+
+percussionTwoCues = {
+  s4 |
 
   s2.*169 |
-
-  \key c \major
 
   s2.*96 |
 }
 
 
-percussionTwoNotCues = 
-{
-  \time 3/4
-  \key g \major
-  \clef percussion
-
-  \partial 4 s4 |
+percussionTwoScor = {
+  s4 |
 
   s2.*169 |
-
-  \key c \major
 
   s2.*96 |
 }
 
 
-percussionTwoNotes = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 r4 |
+percussionTwoNotes = {
+  r4 |
   \repeat volta 2
   {
     r2. |
@@ -417,8 +392,6 @@ percussionTwoNotes =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -543,7 +516,6 @@ percussionTwoNotes =
 }
 
 
-percussionTwoScore = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoCond  = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoMidi  = \relative c { << \pc \percussionTwoNotes \percussionTwoNotCues \percussionTwoDyn >> }
-percussionTwoPart  = \relative c { << \pc \percussionTwoNotes \percussionTwoCues    \percussionTwoDyn >> }
+percTwoScore = \relative c { << \pc \base \percussionTwoNotes \percussionTwoScor \percussionTwoDyn >> }
+percTwoCond  = \relative c { << \pc \base \percussionTwoNotes \percussionTwoScor \percussionTwoMks >> }
+percTwoPart  = \relative c { << \pc \base \percussionTwoNotes \percussionTwoCues \percussionTwoDyn >> }

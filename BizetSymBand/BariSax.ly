@@ -1,10 +1,10 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "config.lyi" 
-\include "BariSax.lyi" 
+\include "parts/BariSax.lyi" 
 
 instrument = "Baritone Saxophone"
 
 notes = \barisaxEesPart
 
-\include "part.lyi"
+\include "single.lyi"

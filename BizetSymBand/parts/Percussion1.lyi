@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-percussionOneDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4\f |
+percussionOneDyn = {
+  s4\f |
   \repeat volta 2
   {
     s2.*6 |
@@ -126,8 +118,6 @@ percussionOneDyn =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -175,44 +165,29 @@ percussionOneDyn =
 }
 
 
-percussionOneCues = 
-{
-  \time 3/4
-  \key g \major
-  \clef percussion
+percussionOneMks = {}
 
-  \partial 4 s4 |
+
+percussionOneCues = {
+  s4 |
 
   s2.*169 |
-
-  \key c \major
 
   s2.*96 |
 }
 
 
-percussionOneNotCues = 
-{
-  \time 3/4
-  \key g \major
-  \clef percussion
-
-  \partial 4 s4 |
+percussionOneScor = {
+  s4 |
 
   s2.*169 |
-
-  \key c \major
 
   s2.*96 |
 }
 
 
-percussionOneNotes = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 r4 |
+percussionOneNotes = {
+  r4 |
   \repeat volta 2
   {
     r2. |
@@ -417,8 +392,6 @@ percussionOneNotes =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -543,7 +516,6 @@ percussionOneNotes =
 }
 
 
-percussionOneScore = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDyn >> }
-percussionOneCond  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDyn >> }
-percussionOneMidi  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDyn >> }
-percussionOnePart  = \relative c { << \pc \percussionOneNotes \percussionOneCues    \percussionOneDyn >> }
+percOneScore = \relative c { << \pc \base \percussionOneNotes \percussionOneScor \percussionOneDyn >> }
+percOneCond  = \relative c { << \pc \base \percussionOneNotes \percussionOneScor \percussionOneMks >> }
+percOnePart  = \relative c { << \pc \base \percussionOneNotes \percussionOneCues \percussionOneDyn >> }

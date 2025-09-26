@@ -1,12 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-clarTwoDyn = 
-{
-  \time 3/4
-
-  \partial 4 s4\f |
+clarOneDyn = {
+  s4\f |
   \repeat volta 2
   {
     s2.*6 |
@@ -40,14 +33,19 @@ clarTwoDyn =
     s4\f\< s s |
     s s s\! |
     s\ff s s |
-    s2.*4 |
-    s2 s4\f |
+    s2.*5 |
 
     % 38
-    s2.*8 |
     s2.\f |
     s2.*2 |
-    s2 s4 |
+    s2 s4\p |
+    s2. |
+    s2 s4\< |
+    s2. |
+    s2 s4\! |
+    s2.\f |
+    s2.*2 |
+    s2  s4 |
     s2.*3 |
     s2 s4\pp |
 
@@ -126,10 +124,18 @@ clarTwoDyn =
   \repeat volta 2
   {
     s2.*7 |
-    s4 s s\p |
+    s4 s s\pp |
 
     % 181
-    s2.*11 |
+    s2. |
+    \crescHairpin
+    s2.\< |
+    s2.*2 |
+    s2.\! |
+    s2.\> |
+    s2.*2 |
+    s2.\! |
+    s2.*2 |
     s4 s s\pp |
     s2.*4 |
   }
@@ -182,18 +188,17 @@ clarTwoDyn =
 }
 
 
-clarTwoCues = \measures
+clarOneMks = {}
 
 
-clarTwoNotCues = \measures
+clarOneCues = {}
 
 
-clarTwoNotes = 
-{
-  \time 3/4
-  \key g \major
+clarOneScor = {}
 
-  \partial 4 d'4 |
+
+clarOneNotes = {
+  d'4 |
   \repeat volta 2
   {
     g2 b4-. |
@@ -203,12 +208,12 @@ clarTwoNotes =
     b( d-.) g,-. |
     g2 b4-. |
     e,2. |
-    cis'2. |
-    cis2. |
-    b2. |
-    d4-. d-. d-. |
-    cis2. |
-    d2 d4 |
+    b'2. |
+    ais2. |
+    d2. |
+    e4-. fis-. g-. |
+    a2. |
+    fis2 d4 |
     d2.~ |
     d2.( |
   }
@@ -218,34 +223,41 @@ clarTwoNotes =
       d4) r d,-. |
     }
     {
-      d4\repeatTie r r |
+      d'4\repeatTie r r |
     }
   }
 
+  % 18
   \repeat volta 2
   {
     d8( e d e d e |
     \repeat unfold 14 { d e d e d e | }
-    d4) r r |
-    R4*3*3 |
-    r4 r d-.
+    d4) r b-. |
+    b-. r a-. |
+    a-. r g-. |
+    g-. d-. e-. |
+    d-. d-. d-. |
 
     % 38
-    c2.~ |
-    c2. |
-    b4-. r r |
-    R4*3*5 |
-    a2.~ |
+    a'2.~ |
     a2. |
-    a4-. r r |
+    g4-. r r |
+    r r d'-. |
+    d-. r d-. |
+    d-. r b-. |
+    b-. b-. b-. |
+    a-. g-. fis-. |
+    e'2.~ |
+    e2. |
+    d4-. r r |
     r r a-. |
-    a2.~ |
-    a2. |
-    a4-. r r |
-    r r a-. |
+    e'2.~ |
+    e2. |
+    d4-. r r |
+    r r a,-. |
 
     % 54
-    a2.~ |
+    a'2.~ |
     a2.~ |
     a2.~ |
     a2 a4-. |
@@ -273,7 +285,7 @@ clarTwoNotes =
     a2.~ |
     a2.~ |
     a4 r r |
-    r d'-. cis-. |
+    r d-. cis-. |
     b-. a-. g-. |
     fis-. e-. d-. |
     cis-. b-. a-. |
@@ -319,41 +331,43 @@ clarTwoNotes =
     R4*3 |
 
     % 130
-    g4-. r r |
-    R4*3*3 |
-    a,2.~ |
-    a2.~ |
-    a4 r r |
-    R4*3 |
-    g4-. r g-. |
-    g-. r d'-. |
+    d4-. r r |
+    R4*3*2 |
+    r4 r g,-. |
+    d'2.~ |
+    d2.~ |
+    d2 a4-. |
+    \grace b8( a4)( g-.) a-. |
+    b4-. r d-. |
     d-. r b-. |
-    b-. r f'-. |
-    e-. r g,( |
+    b-. r g-. |
+    g-. r g-. |
+    g-. r g( |
     e'-.) e-. g-. |
     e-. r r |
     R4*3 |
-    g4-. r r |
-    R4*3*3 |
-    a,2.~ |
-    a2.( |
-    g4-.) r r |
+    d4-. r r |
+    R4*3*2 |
+    r4 r g,-.
+    d'2.~ |
+    d2.( |
+    b4-.) r r |
     r4 r g-. |
-    a2.~ |
-    a2.( |
-    g4-.) r r |
+    d'2.~ |
+    d2.( |
+    b4-.) r r |
 
     % 157
     r r g-. |
-    a2.~ |
-    a2.~ |
-    a2.~ |
-    a2. |
-    d2.~ |
+    d'2.~ |
     d2.~ |
     d2.~ |
     d2. |
-    d4-. r r |
+    fis2.~\startTrillSpan |
+    fis2.~ |
+    fis2.~ |
+    fis2.\stopTrillSpan \grace {e16[( fis]} |
+    g4-.) r r |
   }
   \alternative
   {
@@ -362,12 +376,10 @@ clarTwoNotes =
       R4*3*2 |
     }
     {
-      g,4-. r r |
+      g4-. r r |
       R4*3*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -386,11 +398,11 @@ clarTwoNotes =
     d g, d' |
     c-.) r r |
     R4*3*2 |
-    r2 f4-. |
-    f-. f-. f-. |
-    f-. r f-. |
-    f-. r e-. |
-    e-. r r |
+    r4 r d-. |
+    d( e)-. e-. |
+    e-. r d-. |
+    d-. r c-. |
+    c-. r r |
   }
 
   % 197
@@ -462,25 +474,24 @@ clarTwoNotes =
     d g, d' |
     c-.) r r |
     R4*3*2 |
-    r4 r f-. |
-    f-. f-. f-. |
-    f-. r f-. |
-    e-. r e-. |
+    r4 r d-. |
+    d( e-.) e-. |
+    e-. r d-. |
+    d-. r c-. |
   }
   \alternative
   {
     {
-      e-. r r |
+      c-. r r |
     }
     {
-      e-. r d,-. |
+      c-. r d,-. |
     }
   }
 }
 
 
-clarinetTwoScore    =                            \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
-clarinetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
-clarinetTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
-clarinetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues             >> }
-clarinetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoCues    \clarTwoDyn >> }
+clarOneScore    = \transpose c   \concertKey \relative c { << \tc \base \clarOneNotes \clarOneScor \clarOneDyn >> }
+clarOneCond     = \transpose c   \concertKey \relative c { << \tc \base \clarOneNotes \clarOneScor \clarOneMks >> }
+clarBesOneScore = \transpose bes \concertKey \relative c { << \tc \base \clarOneNotes \clarOneScor \clarOneDyn >> }
+clarBesOnePart  = \transpose bes \concertKey \relative c { << \tc \base \clarOneNotes \clarOneCues \clarOneDyn >> }

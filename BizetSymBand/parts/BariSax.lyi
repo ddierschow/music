@@ -1,13 +1,5 @@
-\version "2.22.2"
-
-\include "config.lyi"
-
-barisaxDyn = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+barisaxDyn = {
+  s4 |
   \repeat volta 2
   {
     s2.*6 |
@@ -147,8 +139,6 @@ barisaxDyn =
     }
   }
 
-  \key c \major
-
   % 173
   \repeat volta 2
   {
@@ -234,52 +224,34 @@ barisaxDyn =
 }
 
 
-barisaxCues = 
-{
-  \time 3/4
-  \key g \major
+barisaxMks = {}
 
-  \partial 4 s4 |
+
+barisaxCues = {
+  s4 |
 
   s2.*53 |
 
-    \set countPercentRepeats = ##t
-    \override PercentRepeat #'transparent = ##t
-    \override PercentRepeatCounter #'staff-padding = #2
-    \set repeatCountVisibility = #(every-nth-repeat-count-visible 2)
-
-    \repeat percent 24 { s2. | }
+  \repeat percent 24 { s2. | }
 
   s2.*45 | \break
   s2.*47 |
 
-  \key c \major
-
   s2.*94 |
 }
 
 
-barisaxNotCues = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 s4 |
+barisaxScor = {
+  s4 |
 
   s2.*169 |
 
-  \key c \major
-
   s2.*94 |
 }
 
 
-barisaxNotes = 
-{
-  \time 3/4
-  \key g \major
-
-  \partial 4 d'4 |
+barisaxNotes = {
+  d4 |
   \repeat volta 2
   {
     g2 b4-. |
@@ -440,12 +412,10 @@ barisaxNotes =
       R4*3*2 |
     }
     {
-      g,4-. r r |
+      g4-. r r |
       R4*3*2 |
     }
   }
-
-  \key c \major
 
   % 173
   \repeat volta 2
@@ -569,8 +539,7 @@ barisaxNotes =
 }
 
 
-barisaxScore    =                            \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxCond     = \transpose c   \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxMidi     = \transpose c   \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxEesScore = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxNotCues \barisaxDyn >> }
-barisaxEesPart  = \transpose ees \concertKey \relative c' { << \tc \barisaxNotes \barisaxCues    \barisaxDyn >> }
+barisaxScore    = \transpose c   \concertKey \relative c' { << \tc \base \barisaxNotes \barisaxScor \barisaxDyn >> }
+barisaxCond     = \transpose c   \concertKey \relative c' { << \tc \base \barisaxNotes \barisaxScor \barisaxMks >> }
+barisaxEesScore = \transpose ees \concertKey \relative c' { << \tc \base \barisaxNotes \barisaxScor \barisaxDyn >> }
+barisaxEesPart  = \transpose ees \concertKey \relative c' { << \tc \base \barisaxNotes \barisaxCues \barisaxDyn >> }

@@ -1,104 +1,119 @@
+scores := Score ScoreNT
+parts := Flute1 Flute2 Oboe Bassoon Clarinet1 Clarinet2 Clarinet3 BassClarinet AltoSax1 AltoSax2 TenorSax BariSax \
+	 Trumpet1 Trumpet2 Trumpet3 Horn1 Horn2 Trombone1 Trombone2 Trombone3 Baritone Tuba \
+	 Percussion1 Percussion2 Mallets Timpani
+infra := config.lyi layout.lyi outline.lyi ../common/defs.lyi
+
+scorepdfs := $(scores:%=%.pdf) ScoreMidi.midi
+scoresrcs := $(scores:%=%.ly)
+scoreinfra := $(infra) score.lyi allparts.lyi
+partprods := $(parts) BaritoneTC StringBass
+partpdfs := $(partprods:%=%.pdf)
+partincs := $(parts:%=parts/%.lyi)
+partsrcs := $(partprods:%=%.ly)
+partinfra := $(infra) single.lyi
+
 all: scores parts
 
-scores: Score.pdf ScoreNT.pdf ScoreMidi.midi
+scores: $(scorepdfs)
 
-parts: Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf BaritoneTC.pdf StringBass.pdf Tuba.pdf MalletPercussion.pdf Percussion1.pdf Percussion2.pdf Timpani.pdf
+parts: $(partpdfs)
 
 clean:
-	rm -f Flute1.pdf Flute2.pdf Oboe.pdf Bassoon.pdf Clarinet1.pdf Clarinet2.pdf Clarinet3.pdf BassClarinet.pdf AltoSax1.pdf AltoSax2.pdf TenorSax.pdf BariSax.pdf Trumpet1.pdf Trumpet2.pdf Trumpet3.pdf Horn1.pdf Horn2.pdf Trombone1.pdf Trombone2.pdf Trombone3.pdf Baritone.pdf BaritoneTC.pdf StringBass.pdf Tuba.pdf MalletPercussion.pdf Percussion1.pdf Percussion2.pdf Timpani.pdf *~ Score.pdf ScoreCond.pdf ScoreNT.pdf ScoreMidi.midi
+	rm -f *~ parts/*~
 
-Score.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi Score.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi Timpani.lyi
+pristine: clean
+	rm -f $(partpdfs) $(scorepdfs)
+
+Score.pdf: Score.ly $(partincs) $(scoreinfra)
 	lilypond Score.ly
 
-#ScoreCond.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi ScoreNT.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi Timpani.lyi
-#	lilypond ScoreCond.ly
-
-ScoreNT.pdf: config.lyi ../common/defs.lyi outline.lyi layout.lyi ScoreNT.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi Timpani.lyi
+ScoreNT.pdf: ScoreNT.ly $(partincs) $(scoreinfra)
 	lilypond ScoreNT.ly
 
-ScoreMidi.midi: config.lyi ../common/defs.lyi outline.lyi ScoreMidi.ly Flute1.lyi Flute2.lyi Oboe.lyi Bassoon.lyi Clarinet1.lyi Clarinet2.lyi Clarinet3.lyi BassClarinet.lyi AltoSax1.lyi AltoSax2.lyi TenorSax.lyi BariSax.lyi Trumpet1.lyi Trumpet2.lyi Trumpet3.lyi Horn1.lyi Horn2.lyi Trombone1.lyi Trombone2.lyi Trombone3.lyi Baritone.lyi Tuba.lyi MalletPercussion.lyi Percussion1.lyi Percussion2.lyi Timpani.lyi
+ScoreMidi.midi: ScoreMidi.ly $(partincs) $(scoreinfra)
 	lilypond ScoreMidi.ly
 
-Flute1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Flute1.ly Flute1.lyi
+Flute1.pdf: Flute1.ly parts/Flute1.lyi $(partinfra)
 	lilypond Flute1.ly
 
-Flute2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Flute2.ly Flute2.lyi
+Flute2.pdf: Flute2.ly parts/Flute2.lyi $(partinfra)
 	lilypond Flute2.ly
 
-Oboe.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Oboe.ly Oboe.lyi
+Oboe.pdf: Oboe.ly parts/Oboe.lyi $(partinfra)
 	lilypond Oboe.ly
 
-Bassoon.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Bassoon.ly Bassoon.lyi BassClarinet.lyi
+Bassoon.pdf: Bassoon.ly parts/Bassoon.lyi $(partinfra)
 	lilypond Bassoon.ly
 
-Clarinet1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Clarinet1.ly Clarinet1.lyi
+Clarinet1.pdf: Clarinet1.ly parts/Clarinet1.lyi $(partinfra)
 	lilypond Clarinet1.ly
 
-Clarinet2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Clarinet2.ly Clarinet2.lyi
+Clarinet2.pdf: Clarinet2.ly parts/Clarinet2.lyi $(partinfra)
 	lilypond Clarinet2.ly
 
-Clarinet3.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Clarinet3.ly Clarinet3.lyi
+Clarinet3.pdf: Clarinet3.ly parts/Clarinet3.lyi $(partinfra)
 	lilypond Clarinet3.ly
 
-BassClarinet.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi BassClarinet.ly BassClarinet.lyi
+BassClarinet.pdf: BassClarinet.ly parts/BassClarinet.lyi $(partinfra)
 	lilypond BassClarinet.ly
 
-AltoSax1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi AltoSax1.ly AltoSax1.lyi
+AltoSax1.pdf: AltoSax1.ly parts/AltoSax1.lyi $(partinfra)
 	lilypond AltoSax1.ly
 
-AltoSax2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi AltoSax2.ly AltoSax2.lyi
+AltoSax2.pdf: AltoSax2.ly parts/AltoSax2.lyi $(partinfra)
 	lilypond AltoSax2.ly
 
-TenorSax.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi TenorSax.ly TenorSax.lyi
+TenorSax.pdf: TenorSax.ly parts/TenorSax.lyi $(partinfra)
 	lilypond TenorSax.ly
 
-BariSax.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi BariSax.ly BariSax.lyi
+BariSax.pdf: BariSax.ly parts/BariSax.lyi $(partinfra)
 	lilypond BariSax.ly
 
-Trumpet1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trumpet1.ly Trumpet1.lyi
+Trumpet1.pdf: Trumpet1.ly parts/Trumpet1.lyi $(partinfra)
 	lilypond Trumpet1.ly
 
-Trumpet2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trumpet2.ly Trumpet2.lyi
+Trumpet2.pdf: Trumpet2.ly parts/Trumpet2.lyi $(partinfra)
 	lilypond Trumpet2.ly
 
-Trumpet3.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trumpet3.ly Trumpet3.lyi
+Trumpet3.pdf: Trumpet3.ly parts/Trumpet3.lyi $(partinfra)
 	lilypond Trumpet3.ly
 
-Horn1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Horn1.ly Horn1.lyi
+Horn1.pdf: Horn1.ly parts/Horn1.lyi $(partinfra)
 	lilypond Horn1.ly
 
-Horn2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Horn2.ly Horn2.lyi
+Horn2.pdf: Horn2.ly parts/Horn2.lyi $(partinfra)
 	lilypond Horn2.ly
 
-Trombone1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trombone1.ly Trombone1.lyi
+Trombone1.pdf: Trombone1.ly parts/Trombone1.lyi $(partinfra)
 	lilypond Trombone1.ly
 
-Trombone2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trombone2.ly Trombone2.lyi
+Trombone2.pdf: Trombone2.ly parts/Trombone2.lyi $(partinfra)
 	lilypond Trombone2.ly
 
-Trombone3.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Trombone3.ly Trombone3.lyi
+Trombone3.pdf: Trombone3.ly parts/Trombone3.lyi $(partinfra)
 	lilypond Trombone3.ly
 
-Baritone.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Baritone.ly Baritone.lyi
+Baritone.pdf: Baritone.ly parts/Baritone.lyi $(partinfra)
 	lilypond Baritone.ly
 
-BaritoneTC.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi BaritoneTC.ly Baritone.lyi
+BaritoneTC.pdf: BaritoneTC.ly parts/Baritone.lyi $(partinfra)
 	lilypond BaritoneTC.ly
 
-StringBass.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi StringBass.ly Tuba.lyi
+StringBass.pdf: StringBass.ly parts/Tuba.lyi $(partinfra)
 	lilypond StringBass.ly
 
-Tuba.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Tuba.ly Tuba.lyi
+Tuba.pdf: Tuba.ly parts/Tuba.lyi $(partinfra)
 	lilypond Tuba.ly
 
-MalletPercussion.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi MalletPercussion.ly MalletPercussion.lyi
-	lilypond MalletPercussion.ly
+Mallets.pdf: Mallets.ly parts/Mallets.lyi $(partinfra)
+	lilypond Mallets.ly
 
-Percussion1.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Percussion1.ly Percussion1.lyi
+Percussion1.pdf: Percussion1.ly parts/Percussion1.lyi $(partinfra)
 	lilypond Percussion1.ly
 
-Percussion2.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Percussion2.ly Percussion2.lyi
+Percussion2.pdf: Percussion2.ly parts/Percussion2.lyi $(partinfra)
 	lilypond Percussion2.ly
 
-Timpani.pdf: config.lyi ../common/defs.lyi outline.lyi part.lyi layout.lyi Timpani.ly Timpani.lyi
+Timpani.pdf: Timpani.ly parts/Timpani.lyi $(partinfra)
 	lilypond Timpani.ly

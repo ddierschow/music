@@ -1,10 +1,10 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "config.lyi" 
-\include "AltoSax1.lyi" 
+\include "parts/AltoSax1.lyi" 
 
 instrument = "Alto Saxophone I"
 
 notes = \altosaxEesOnePart
 
-\include "part.lyi"
+\include "single.lyi"
