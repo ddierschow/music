@@ -1,0 +1,19 @@
+timpDyn = {}
+
+
+timpMks = {}
+
+
+timpCues = {}
+
+
+timpScor = {}
+
+
+timpNotes = {}
+
+
+timpaniScore  = \transpose c \concertKey \relative c { << \bc \base \timpNotes \timpScor \timpDyn >> }
+timpaniCond   = \transpose c \concertKey \relative c { << \bc \base \timpNotes \timpScor \timpMks >> }
+timpaniCScore = \timpaniScore
+timpaniCPart  = \transpose c \concertKey \relative c { << \bc \base \timpNotes \timpCues \timpDyn >> }

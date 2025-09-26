@@ -1,6 +1,4 @@
-\include "config.lyi"
-
-malletpercDyn = {
+malletDyn = {
   s1\mp_\markup "glockenspiel" |
   s1*7 |
 
@@ -48,10 +46,10 @@ malletpercDyn = {
 }
 
 
-malletpercMarks = \measures
+malletMks = {}
 
 
-malletpercCues = << \measures {
+malletCues = {
   s1*32 |
 
   % 33
@@ -59,13 +57,13 @@ malletpercCues = << \measures {
 
   % 43
   s1*82 |
-} >>
+}
 
 
-malletpercNotCues = \measures
+malletScor = {}
 
 
-malletpercNotes = {
+malletNotes = {
   \set countPercentRepeats = ##t
   \repeat percent 4 { e'2 c | f2 d | }
 
@@ -138,8 +136,7 @@ malletpercNotes = {
 }
 
 
-malletpercScore  =                          \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercDyn >> }
-malletpercCond   = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercMarks >> }
-malletpercMidi   = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercDyn >> }
-malletpercCScore = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercDyn >> }
-malletpercCPart  = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercCues    \malletpercDyn >> }
+malletpercScore  = \transpose c \concertKey \relative c { << \tc \base \malletNotes \malletScor \malletDyn >> }
+malletpercCond   = \transpose c \concertKey \relative c { << \tc \base \malletNotes \malletScor \malletMks >> }
+malletpercCScore = \malletpercScore
+malletpercCPart  = \transpose c \concertKey \relative c { << \tc \base \malletNotes \malletCues \malletDyn >> }

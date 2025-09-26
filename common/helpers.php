@@ -14,13 +14,13 @@ function show_top() {
     echo "<body>\n";
 }
 
-function show_file($fn, $show_pdf=1) {
+function show_file($fn, $show_pdf=1, $show_missing=0) {
     echo '  <td>';
     if ($fn == '')
 	echo "&nbsp;";
     else if (file_exists($fn))
 	echo '<a href="' . $fn . '">' . $fn . "</a>";
-    else if (str_ends_with($fn, '.pdf') && $show_pdf)
+    else if ((str_ends_with($fn, '.pdf') && $show_pdf) || $show_missing)
         echo $fn;
     else
         echo '&nbsp;';
@@ -39,20 +39,22 @@ function show_audio($fn) {
     }
 }
 
-function show_row($arr, $style=0, $show_pdf=1) {
+function show_row($arr, $style=0, $show_pdf=1, $show_missing=0) {
     global $styles;
     echo " <tr class='" . $styles[$style] . "'>\n";
     foreach ($arr as $fn)
-	show_file($fn, $show_pdf);
+	show_file($fn, $show_pdf, $show_missing);
     echo " </tr>\n";
 }
 
-function show_grid($prefs, $suffs, $style=0, $show_pdf=1) {
+function show_grid($prefs, $suffs, $style=0, $show_pdf=1, $dir='') {
     foreach ($prefs as $pref) {
 	$arr = [];
 	foreach ($suffs as $suff)
 	    if ($pref == '' or $suff == '')
 		$arr[] = '';
+	    else if (str_ends_with($suff, '.lyi'))
+		$arr[] = $dir . $pref . $suff;
 	    else
 		$arr[] = $pref . $suff;
         show_row($arr, $style, $show_pdf);
@@ -60,9 +62,9 @@ function show_grid($prefs, $suffs, $style=0, $show_pdf=1) {
     }
 }
 
-function show_parts($parts, $show_pdf=1) {
+function show_parts($parts, $show_pdf=1, $dir='') {
     echo "<table border=1>\n";
-    show_grid($parts, ['.ly', '.lyi', '.pdf'], $show_pdf);
+    show_grid($parts, ['.ly', '.lyi', '.pdf'], 0, $show_pdf, $dir);
     echo "</table>\n";
 }
 
@@ -80,6 +82,7 @@ function show_common_links() {
     show_link("../common/Percussion_Key.pdf", "Percussion_Key.pdf");
     show_link("https://audio.online-convert.com/convert/midi-to-mp3", "Online-Convert MIDI to MP3");
     show_link("https://github.com/kastdeur/lilydrum", "lilydrum");
+    show_link("https://www.all-guitar-chords.com/chords/identifier", "Guitar Chord Identifier");
     echo "</ul>\n";
     echo "</td></tr>\n";
 }

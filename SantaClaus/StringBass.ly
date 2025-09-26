@@ -1,10 +1,10 @@
-\version "2.24.3"
+\version "2.24.4"
 
 \include "config.lyi"
-\include "Tuba.lyi"
+\include "parts/StringBass.lyi"
 
 instrument = "String Bass"
 
 notes = \stringbassCPart
 
-\include "part.lyi"
+\include "single.lyi"
