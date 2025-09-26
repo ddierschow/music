@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 percTwoDyn = {
   s1\mp_\markup "sleigh bells" |
   s1*7 |
@@ -43,13 +41,13 @@ percTwoDyn = {
 }
 
 
-percTwoMarks = \measures
+percTwoMks = {}
 
 
-percTwoCues = \measures
+percTwoCues = {}
 
 
-percTwoNotCues = \measures
+percTwoScor = {}
 
 
 percTwoNotes = \drummode {
@@ -94,8 +92,6 @@ percTwoNotes = \drummode {
 }
 
 
-percTwoScore =                          \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoDyn >> }
-percTwoCond  = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoMarks >> }
-percTwoMidi  = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoDyn >> }
-percTwoScore = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoDyn >> }
-percTwoPart  = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoCues    \percTwoDyn >> }
+percTwoScore = << \pc \base \percTwoNotes \percTwoScor \percTwoDyn >>
+percTwoCond  = << \pc \base \percTwoNotes \percTwoScor \percTwoMks >>
+percTwoPart  = << \pc \base \percTwoNotes \percTwoCues \percTwoDyn >>

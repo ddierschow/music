@@ -1,213 +1,72 @@
-\version "2.24.3"
+\version "2.24.4"
 
 instrument = "Concert Band"
 
 \include "config.lyi"
-\include "outline.lyi"
-\include "allparts.lyi"
-
-#(set-global-staff-size 14)
-
-\include "layout.lyi"
+\include "score.lyi"
 
 \ScorePaper
 
 \book
 {
-  \ScoreHeader
+  \BookHeader
   \pageBreak
 
   \score
   {
+    \ScoreHeader
     <<
-      \new StaffGroup
-      <<
-        \new Staff
-        {
-          \tempomark
-          #(set-accidental-style 'modern)
-          \set Staff.instrumentName = "Flutes 1, 2"
-          \set Staff.shortInstrumentName = "Fl."
-          \new Voice {\keepWithTag #'score \relative c << \outline \partCombine \fluteCOneScore \fluteCTwoScore >> }
-        }
-        \new Staff
-        {
-          #(set-accidental-style 'modern)
-          \set Staff.instrumentName = "Oboe"
-          \set Staff.shortInstrumentName = "Ob."
-          \new Voice {\keepWithTag #'score \relative c \oboeCScore }
-        }
-        \new Staff
-        {
-          #(set-accidental-style 'modern)
-          \set Staff.instrumentName = "Bassoon"
-          \set Staff.shortInstrumentName = "Bsn."
-          \new Voice {\keepWithTag #'score \relative c \bassoonCScore }
-        }
-        \new GrandStaff
-        <<
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Clarinet 1" \line { "in B" \smaller \flat} } }
-            \set Staff.shortInstrumentName = "Cl.1"
-            \new Voice {\keepWithTag #'score \relative c \clarBesOneScore }
-          }
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Clarinet 2, 3" \line { "in B" \smaller \flat} } }
-            \set Staff.shortInstrumentName = \markup { \column { "Cl." \line {"2, 3"} } }
-            \set Staff.soloText = #"2."
-            \set Staff.soloIIText = #"3."
-            \set Staff.aDueText = #"unis."
-            \new Voice {\keepWithTag #'score \relative c << \partCombine \clarBesTwoScore \clarBesThreeScore
-            >> }
-          }
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Bass Clarinet" \line { "in B" \smaller \flat} } }
-            \set Staff.shortInstrumentName = "B.Cl."
-            \new Voice {\keepWithTag #'score \relative c \bassclarBesScore }
-          }
+      \new StaffGroup <<
+        \doubleStaffTempo
+            #(markup "Flute 1, 2") #(markup #:column ("Fl." #:line ("1, 2"))) #"1." #"2." \fluteCOneScore \fluteCTwoScore
+        \singleStaff #(markup "Oboe") #(markup "Ob.") \oboeCScore
+        \singleStaff #(markup "Bassoon") #(markup "Bsn.") \bassoonCScore
+        \new GrandStaff <<
+          \singleStaff #(markup #:column ("Clarinet 1" #:line ("in B" #:smaller #:flat))) #(markup "Cl.1") \clarBesOneScore
+          \doubleStaff
+              #(markup #:column ("Clarinet 2, 3" #:line ("in B" #:smaller #:flat)))
+              #(markup #:column ("Cl." #:line ("2, 3"))) #"2." #"3." \clarBesTwoScore \clarBesThreeScore
+          \singleStaff
+              #(markup #:column ("Bass Clarinet" #:line ("in B" #:smaller #:flat))) #(markup "B.Cl.") \bassclarBesScore
         >>
-        \new GrandStaff
-        <<
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Soprano Saxophone" \line { "in B" \smaller \flat} } }
-            \set Staff.shortInstrumentName = "S.Sx."
-            \new Voice {\keepWithTag #'score \relative c \sopranosaxBesScore }
-          }
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Alto Saxophones 1, 2" \line { "in E" \smaller \flat} } }
-            \set Staff.shortInstrumentName = "A.Sx."
-            \new Voice {\keepWithTag #'score \relative c << \partCombine \altosaxEesOneScore \altosaxEesTwoScore >> }
-          }
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Tenor Saxophone" \line { "in B" \smaller \flat} } }
-            \set Staff.shortInstrumentName = "T.Sx."
-            \new Voice {\keepWithTag #'score \relative c \tenorsaxBesScore }
-          }
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Baritone Saxophone" \line { "in E" \smaller \flat} } }
-            \set Staff.shortInstrumentName = "B.Sx."
-            \new Voice {\keepWithTag #'score \relative c \barisaxEesScore }
-          }
+        \new GrandStaff <<
+          \singleStaff
+              #(markup #:column ("Soprano Saxophone" #:line ("in B" #:smaller #:flat))) #(markup "S.Sx.") \sopsaxBesScore
+          \doubleStaffTempo
+              #(markup #:column ("Alto Saxophone 1, 2" #:line ("in E" #:smaller #:flat)))
+              #(markup #:column ("A.Sx." #:line ("1, 2"))) #"1." #"2." \altosaxEesOneScore \altosaxEesTwoScore
+          \singleStaff
+              #(markup #:column ("Tenor Saxophone" #:line ("in B" #:smaller #:flat))) #(markup "T.Sx.") \tenorsaxBesScore
+          \singleStaff
+              #(markup #:column ("Baritone Saxophone" #:line ("in E" #:smaller #:flat))) #(markup "B.Sx.") \barisaxEesScore
         >>
       >>
-      \new StaffGroup
-      <<
-        \new GrandStaff
-        <<
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Trumpet 1" \line { "in B" \smaller \flat} } }
-            \set Staff.shortInstrumentName = "Tr.1"
-            \new Voice {\voiceOne \keepWithTag #'score \relative c \trumpetBesOneScore }
-          }
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Trumpets 2, 3" \line { "in B" \smaller \flat} } }
-            \set Staff.shortInstrumentName = \markup { \column { "Tr." \line {"2, 3"} } }
-            \set Staff.soloText = #"2."
-            \set Staff.soloIIText = #"3."
-            \set Staff.aDueText = #"unis."
-            \new Voice {\voiceOne \dynamicUp \keepWithTag #'score \relative c <<
-              \partCombine \trumpetBesTwoScore \trumpetBesThreeScore
-            >> }
-          }
+      \new StaffGroup <<
+        \new GrandStaff <<
+          \singleStaff #(markup #:column ("Trumpet 1" #:line ("in B" #:smaller #:flat))) #(markup "Tr.1") \trumpetBesOneScore
+          \doubleStaff
+              #(markup #:column ("Trumpet 2, 3" #:line ("in B" #:smaller #:flat)))
+              #(markup #:column ("Tr." #:line ("2, 3"))) #"2." #"3." \trumpetBesTwoScore \trumpetBesThreeScore
         >>
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup { \column { "Horns 1, 2" \line { "in F" } } }
-            \set Staff.shortInstrumentName = \markup { \column { "Hn." \line { "1, 2" } } }
-            \new Voice {\keepWithTag #'score \relative c << \partCombine \hornFOneScore \hornFTwoScore >> }
-          }
-        \new GrandStaff
-        <<
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup "Trombone 1"
-            \set Staff.shortInstrumentName = "Trm.1"
-            \new Voice {\voiceOne \keepWithTag #'score \tromCOneScore }
-          }
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup "Trombones 2, 3"
-            \set Staff.shortInstrumentName = \markup { \column { "Trm." \line {"2, 3"} } }
-            \set Staff.soloText = #"2."
-            \set Staff.soloIIText = #"3."
-            \set Staff.aDueText = #"unis."
-            \new Voice {\voiceOne \dynamicUp \keepWithTag #'score \relative c << \partCombine \tromCTwoScore \tromCThreeScore >> }
-          }
+        \doubleStaffTempo
+            #(markup "Horn 1, 2") #(markup #:column ("Hn." #:line ("1, 2"))) #"1." #"2." \hornFOneScore \hornFTwoScore
+        \new GrandStaff <<
+          \singleStaff #(markup "Trombone 1") #(markup "Trm.1") \tromCOneScore
+          \doubleStaff
+              #(markup "Trombone 2, 3") #(markup #:column ("Trm." #:line ("2, 3"))) #"2." #"3." \tromCTwoScore \tromCThreeScore
         >>
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup "Baritone"
-            \set Staff.shortInstrumentName = "Bar."
-            \new Voice {\voiceOne \keepWithTag #'score \relative c \baritoneCScore }
-          }
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup "Tuba"
-            \set Staff.shortInstrumentName = "Tuba"
-            \new Voice {\voiceOne \keepWithTag #'score \relative c \tubaCScore }
-          }
-          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = \markup "String Bass"
-            \set Staff.shortInstrumentName = "Bass"
-            \new Voice {\voiceOne \keepWithTag #'score \relative c \stringbassCScore }
-          }
+        \singleStaff #(markup "Baritone") #(markup "Bar.") \baritoneCScore
+        \singleStaff #(markup "Tuba") #(markup "Tuba") \tubaCScore
+        \singleStaff #(markup "String Bass") #(markup "Bass") \stringbassCScore
       >>
-      \new StaffGroup
-      <<
-        \new DrumStaff \with { drumStyleTable = #(alist->hash-table mydrums) }
-        {
-          #(set-accidental-style 'modern)
-          \set Staff.instrumentName = "Percussion 1"
-          \set Staff.shortInstrumentName = "Pe.1"
-          \new DrumVoice {\dynamicDown \keepWithTag #'score \percOneScore }
-        }
-        \new DrumStaff \with { drumStyleTable = #(alist->hash-table mydrums) }
-        {
-          #(set-accidental-style 'modern)
-          \set Staff.instrumentName = "Percussion 2"
-          \set Staff.shortInstrumentName = "Pe.2"
-          \new DrumVoice {\dynamicDown \keepWithTag #'score \percTwoScore }
-        }
-        \new Staff
-        {
-          #(set-accidental-style 'modern)
-          \set Staff.instrumentName = "Mallet Percussion"
-          \set Staff.shortInstrumentName = "Mal.Pe"
-          \new Voice {\dynamicDown \keepWithTag #'score \relative c \malletpercCScore }
-        }
+      \new StaffGroup <<
+        %\drumStaff #(markup "Percussion 1") #(markup "Pe.1") \percOneScore
+        %\drumStaff #(markup "Percussion 2") #(markup "Pe.2") \percTwoScore
+        \singleStaff #(markup "Mallet Percussion") #(markup "Mal.") \malletpercCScore
+        \singleStaff #(markup "Timpani") #(markup "Tim.") \timpaniCScore
       >>
     >>
     % \header { piece = \headerPiece }
-    \layout
-    {
-      max-systems-per-page = #1
-      systems-per-page = #1
-      %\context { \RemoveEmptyStaffContext }
-    }
+    \scoreLayout
   }
 }

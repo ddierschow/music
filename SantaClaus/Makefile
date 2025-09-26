@@ -1,15 +1,17 @@
-scores := Score ScoreNT # ScoreCond
+scores := Score # ScoreNT # ScoreCond
 parts := Flute1 Flute2 Oboe Bassoon Clarinet1 Clarinet2 Clarinet3 BassClarinet SopranoSax AltoSax1 AltoSax2 TenorSax BariSax \
-         Trumpet1 Trumpet2 Trumpet3 Horn1 Horn2 Trombone1 Trombone2 Trombone3 Baritone Tuba \
-         Percussion1 Percussion2 MalletPercussion
-infra := allparts.lyi config.lyi layout.lyi outline.lyi part.lyi
+         Trumpet1 Trumpet2 Trumpet3 Horn1 Horn2 Trombone1 Trombone2 Trombone3 Baritone Tuba StringBass \
+         Percussion1 Percussion2 Mallets Timpani
+infra := config.lyi layout.lyi outline.lyi ../common/defs.lyi
 
 scorepdfs := $(scores:%=%.pdf) ScoreMidi.midi
 scoresrcs := $(scores:%=%.ly)
-partprods := $(parts) BaritoneTC StringBass
+scoreinfra := $(infra) score.lyi allparts.lyi
+partprods := $(parts) BaritoneTC
 partpdfs := $(partprods:%=%.pdf)
-partincs := $(parts:%=%.lyi)
+partincs := $(parts:%=parts/%.lyi)
 partsrcs := $(partprods:%=%.ly)
+partinfra := $(infra) single.lyi
 
 all: scores parts
 
@@ -18,100 +20,106 @@ scores: $(scorepdfs)
 parts: $(partpdfs)
 
 clean:
-	rm -f $(partpdfs) $(scorepdfs) *~
+	rm -f *~ parts/*~
 
-Score.pdf: Score.ly $(infra) $(partincs)
+pristine: clean
+	rm -f $(partpdfs) $(scorepdfs)
+
+Score.pdf: Score.ly $(partincs) $(scoreinfra)
 	lilypond Score.ly
 
-ScoreNT.pdf: ScoreNT.ly $(infra) $(partincs)
+ScoreNT.pdf: ScoreNT.ly $(partincs) $(scoreinfra)
 	lilypond ScoreNT.ly
 
-ScoreCond.pdf: ScoreCond.ly $(infra) $(partincs)
+ScoreCond.pdf: ScoreCond.ly $(partincs) $(scoreinfra)
 	lilypond ScoreCond.ly
 
-ScoreMidi.midi: $(infra) $(partincs)
+ScoreMidi.midi: ScoreMidi.ly $(partincs) $(scoreinfra)
 	lilypond ScoreMidi.ly
 
-Flute1.pdf: Flute1.ly Flute1.lyi $(infra)
+Flute1.pdf: Flute1.ly parts/Flute1.lyi $(partinfra)
 	lilypond Flute1.ly
 
-Flute2.pdf: Flute2.ly Flute2.lyi $(infra)
+Flute2.pdf: Flute2.ly parts/Flute2.lyi $(partinfra)
 	lilypond Flute2.ly
 
-Oboe.pdf: Oboe.ly Oboe.lyi $(infra)
+Oboe.pdf: Oboe.ly parts/Oboe.lyi $(partinfra)
 	lilypond Oboe.ly
 
-Bassoon.pdf: Bassoon.ly Bassoon.lyi $(infra)
+Bassoon.pdf: Bassoon.ly parts/Bassoon.lyi $(partinfra)
 	lilypond Bassoon.ly
 
-Clarinet1.pdf: Clarinet1.ly Clarinet1.lyi $(infra)
+Clarinet1.pdf: Clarinet1.ly parts/Clarinet1.lyi $(partinfra)
 	lilypond Clarinet1.ly
 
-Clarinet2.pdf: Clarinet2.ly Clarinet2.lyi $(infra)
+Clarinet2.pdf: Clarinet2.ly parts/Clarinet2.lyi $(partinfra)
 	lilypond Clarinet2.ly
 
-Clarinet3.pdf: Clarinet3.ly Clarinet3.lyi $(infra)
+Clarinet3.pdf: Clarinet3.ly parts/Clarinet3.lyi $(partinfra)
 	lilypond Clarinet3.ly
 
-BassClarinet.pdf: BassClarinet.ly BassClarinet.lyi $(infra)
+BassClarinet.pdf: BassClarinet.ly parts/BassClarinet.lyi $(partinfra)
 	lilypond BassClarinet.ly
 
-SopranoSax.pdf: SopranoSax.ly SopranoSax.lyi $(infra)
+SopranoSax.pdf: SopranoSax.ly parts/SopranoSax.lyi $(partinfra)
 	lilypond SopranoSax.ly
 
-AltoSax1.pdf: AltoSax1.ly AltoSax1.lyi $(infra)
+AltoSax1.pdf: AltoSax1.ly parts/AltoSax1.lyi $(partinfra)
 	lilypond AltoSax1.ly
 
-AltoSax2.pdf: AltoSax2.ly AltoSax2.lyi $(infra)
+AltoSax2.pdf: AltoSax2.ly parts/AltoSax2.lyi $(partinfra)
 	lilypond AltoSax2.ly
 
-TenorSax.pdf: TenorSax.ly TenorSax.lyi $(infra)
+TenorSax.pdf: TenorSax.ly parts/TenorSax.lyi $(partinfra)
 	lilypond TenorSax.ly
 
-BariSax.pdf: BariSax.ly BariSax.lyi $(infra)
+BariSax.pdf: BariSax.ly parts/BariSax.lyi $(partinfra)
 	lilypond BariSax.ly
 
-Trumpet1.pdf: Trumpet1.ly Trumpet1.lyi $(infra)
+Trumpet1.pdf: Trumpet1.ly parts/Trumpet1.lyi $(partinfra)
 	lilypond Trumpet1.ly
 
-Trumpet2.pdf: Trumpet2.ly Trumpet2.lyi $(infra)
+Trumpet2.pdf: Trumpet2.ly parts/Trumpet2.lyi $(partinfra)
 	lilypond Trumpet2.ly
 
-Trumpet3.pdf: Trumpet3.ly Trumpet3.lyi $(infra)
+Trumpet3.pdf: Trumpet3.ly parts/Trumpet3.lyi $(partinfra)
 	lilypond Trumpet3.ly
 
-Horn1.pdf: Horn1.ly Horn1.lyi $(infra)
+Horn1.pdf: Horn1.ly parts/Horn1.lyi $(partinfra)
 	lilypond Horn1.ly
 
-Horn2.pdf: Horn2.ly Horn2.lyi $(infra)
+Horn2.pdf: Horn2.ly parts/Horn2.lyi $(partinfra)
 	lilypond Horn2.ly
 
-Trombone1.pdf: Trombone1.ly Trombone1.lyi $(infra)
+Trombone1.pdf: Trombone1.ly parts/Trombone1.lyi $(partinfra)
 	lilypond Trombone1.ly
 
-Trombone2.pdf: Trombone2.ly Trombone2.lyi $(infra)
+Trombone2.pdf: Trombone2.ly parts/Trombone2.lyi $(partinfra)
 	lilypond Trombone2.ly
 
-Trombone3.pdf: Trombone3.ly Trombone3.lyi $(infra)
+Trombone3.pdf: Trombone3.ly parts/Trombone3.lyi $(partinfra)
 	lilypond Trombone3.ly
 
-Baritone.pdf: Baritone.ly Baritone.lyi $(infra)
+Baritone.pdf: Baritone.ly parts/Baritone.lyi $(partinfra)
 	lilypond Baritone.ly
 
-BaritoneTC.pdf: BaritoneTC.ly Baritone.lyi $(infra)
+BaritoneTC.pdf: BaritoneTC.ly parts/Baritone.lyi $(partinfra)
 	lilypond BaritoneTC.ly
 
-Tuba.pdf: Tuba.ly Tuba.lyi $(infra)
+Tuba.pdf: Tuba.ly parts/Tuba.lyi $(partinfra)
 	lilypond Tuba.ly
 
-StringBass.pdf: StringBass.ly Tuba.lyi $(infra)
+StringBass.pdf: StringBass.ly parts/StringBass.lyi $(partinfra)
 	lilypond StringBass.ly
 
-Percussion1.pdf: Percussion1.ly Percussion1.lyi $(infra)
+Percussion1.pdf: Percussion1.ly parts/Percussion1.lyi $(partinfra)
 	lilypond Percussion1.ly
 
-Percussion2.pdf: Percussion2.ly Percussion2.lyi $(infra)
+Percussion2.pdf: Percussion2.ly parts/Percussion2.lyi $(partinfra)
 	lilypond Percussion2.ly
 
-MalletPercussion.pdf: MalletPercussion.ly MalletPercussion.lyi $(infra)
-	lilypond MalletPercussion.ly
+Mallets.pdf: Mallets.ly parts/Mallets.lyi $(partinfra)
+	lilypond Mallets.ly
+
+Timpani.pdf: Timpani.ly parts/Timpani.lyi $(partinfra)
+	lilypond Timpani.ly

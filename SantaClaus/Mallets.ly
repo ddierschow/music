@@ -1,10 +1,10 @@
-\version "2.24.3"
+\version "2.24.4"
 
 \include "config.lyi"
-\include "MalletPercussion.lyi"
+\include "parts/Mallets.lyi"
 
 instrument = "Mallet Percussion"
 
 notes = \malletpercCPart
 
-\include "part.lyi"
+\include "single.lyi"

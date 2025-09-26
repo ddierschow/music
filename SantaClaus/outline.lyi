@@ -2,40 +2,40 @@ rehearsalMarks =
 {
   s1*8 |  % intro - clarinets, glock
 
-  \rMark "9"
+  \rMark \RM_A
   s1*12 |  % first verse - trumpet over clarinets
 
-  \rMark "21"
+  \rMark \RM_B
   s1*12 |  % second verse - trumpets over clarients, add bass and perc
 
-  \rMark "33"
+  \rMark \RM_C
   s1*10 |  % bridge - horns
 
-  \rMark "43"
+  \rMark \RM_D
   s1*12 |  % third verse - accel
 
-  \rMark "55"
+  \rMark \RM_E
   s1*12 |  % instrumental verse - saxes
 
-  \rMark "67"
+  \rMark \RM_F
   s1*10 |  % bridge - horns
 
-  \rMark "77"
+  \rMark \RM_G
   s1*10 |  % fourth verse
 
-  \rMark "87"
+  \rMark \RM_H
   s1*8 |  % outro
 
-  \rMark "95"
+  \rMark \RM_I
   s1*8 |  % reprise - start building
 
-  \rMark "103"
+  \rMark \RM_J
   s1*8 |  % build and accel
 
-  \rMark "111"
+  \rMark \RM_K
   s1*8 |  % reprise - all out
 
-  \rMark "119"
+  \rMark \RM_L
   s1*6 |  % finale
 }
 
@@ -93,7 +93,6 @@ pageMarks =
   s1 |
   s1_\stopTextSpan |
   s1*3 |
-
   \bar "|."
 }
 
