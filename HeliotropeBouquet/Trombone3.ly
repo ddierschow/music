@@ -1,10 +1,10 @@
-\version "2.24.1"
+\version "2.24.4"
 
 \include "config.lyi"
-\include "Trombone3.lyi"
+\include "parts/Trombone3.lyi"
 
 instrument = "Trombone III"
 
-notes = \tromThreePart
+notes = \tromCThreePart
 
-\include "part.lyi"
+\include "single.lyi"

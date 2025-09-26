@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 malletTwoDyn =
 {
   s2\mf |
@@ -58,10 +56,13 @@ malletTwoDyn =
 }
 
 
-malletTwoCues = \measures
+malletTwoMks = {}
 
 
-malletTwoNotCues = \measures
+malletTwoCues = {}
+
+
+malletTwoScor = {}
 
 
 malletTwoNotes =
@@ -201,8 +202,7 @@ malletTwoNotes =
   }
 }
 
-malletTwoScore  =                          \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
-malletTwoCScore = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
-malletTwoCond   = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
-malletTwoMidi   = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoNotCues \malletTwoDyn >> }
-malletTwoPart   = \transpose c \concertKey \relative c { << \tc \malletTwoNotes \malletTwoCues    \malletTwoDyn >> }
+malletTwoScore  = \transpose c \concertKey \relative c { << \tc \base \malletTwoNotes \malletTwoScor \malletTwoDyn >> }
+malletTwoCond   = \transpose c \concertKey \relative c { << \tc \base \malletTwoNotes \malletTwoScor \malletTwoMks >> }
+malletCTwoScore = \transpose c \concertKey \relative c { << \tc \base \malletTwoNotes \malletTwoScor \malletTwoDyn >> }
+malletCTwoPart  = \transpose c \concertKey \relative c { << \tc \base \malletTwoNotes \malletTwoCues \malletTwoDyn >> }

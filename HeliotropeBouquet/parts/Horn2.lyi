@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 hornTwoDyn =
 {
   s2\mf |
@@ -52,10 +50,13 @@ hornTwoDyn =
 }
 
 
-hornTwoCues = \measures
+hornTwoMks = {}
 
 
-hornTwoNotCues = \measures
+hornTwoCues = {}
+
+
+hornTwoScor = {}
 
 
 hornTwoNotes =
@@ -182,8 +183,7 @@ hornTwoNotes =
 }
 
 
-hornTwoScore  =                          \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornTwoCond   = \transpose c \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornTwoMidi   = \transpose c \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornFTwoScore = \transpose f \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornFTwoPart  = \transpose f \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoCues    \hornTwoDyn >> }
+hornTwoScore  = \transpose c \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoScor \hornTwoDyn >> }
+hornTwoCond   = \transpose c \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoScor \hornTwoMks >> }
+hornFTwoScore = \transpose f \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoScor \hornTwoDyn >> }
+hornFTwoPart  = \transpose f \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoCues \hornTwoDyn >> }

@@ -2,34 +2,34 @@ rehearsalMarks =
 {
   s2*4 |
 
-  \rMark "5"
+  \rMark \RM_A
   s2*8 |
 
-  \rMark "13"
+  \rMark \RM_B
   s2*8 |
 
-  \rMark "21"
+  \rMark \RM_C
   s2*8 |
 
-  \rMark "29"
+  \rMark \RM_D
   s2*9 |
 
-  \rMark "38"
+  \rMark \RM_E
   s2*8 |
 
-  \rMark "46"
+  \rMark \RM_F
   s2*8 |
 
-  \rMark "54"
+  \rMark \RM_G
   s2*8 |
 
-  \rMark "62"
+  \rMark \RM_H
   s2*9 |
 
-  \rMark "71"
+  \rMark \RM_I
   s2*8 |
 
-  \rMark "79"
+  \rMark \RM_J
   s2*9 |
 }
 

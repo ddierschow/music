@@ -1,6 +1,4 @@
-\include "config.lyi"
-
-oboeDyn =
+clarOneDyn =
 {
   s2\mf |
   s2*3 |
@@ -58,18 +56,21 @@ oboeDyn =
 }
 
 
-oboeCues = \measures
+clarOneMks = {}
 
 
-oboeNotCues = \measures
+clarOneCues = {}
 
 
-oboeNotes =
+clarOneScor = {}
+
+
+clarOneNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r fis->( e) |
+  d8 r fis'->( e) |
 
   % 5
   c16( d e b)~b fis a8 |
@@ -146,16 +147,15 @@ oboeNotes =
   {
     % 54
     R2*4 |
-    f'16( c' d, c)~c d( f c') |
+    f16( c' d, c)~c d( f c') |
     e,16( g d c)~c g'( a ais) |
     b16 c d b~b g a8 |
     g8 r r4 |
-
-    % 62
-    r2 |
-    e8 a16 g~g c, e8 |
+    R2*2 |
     dis16 e gis c~c e, b'8 |
     a8 b16 c~c a( e c) |
+
+    % 62
     c'16( a fis dis c a8 aes16) |
     g8 a16 c~c d e8 |
     a,4 e' |
@@ -163,7 +163,7 @@ oboeNotes =
   \alternative
   {
     {
-      c8 r8 r4 |
+      c8 r r4 |
     }
     {
       c4~c8 r8 |
@@ -173,7 +173,7 @@ oboeNotes =
   \repeat volta 2
   {
     % 71
-    g16( b d g)~g( a g f) |
+    g'16( b d g)~g( a g f) |
     e8 g16 c~c8. ais,16 |
     b16 g'8 ais,16 b g'8 b,16 |
     c16( d dis e)~e4 |
@@ -203,8 +203,7 @@ oboeNotes =
 }
 
 
-oboeScore  =                          \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeCScore = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeCond   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
-oboeMidi   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeNotCues \oboeDyn >> }
-oboePart   = \transpose c \concertKey \relative c' { << \tc \oboeNotes \oboeCues    \oboeDyn >> }
+clarOneScore    = \transpose c   \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneScor \clarOneDyn >> }
+clarOneCond     = \transpose c   \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneScor \clarOneMks >> }
+clarBesOneScore = \transpose bes \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneScor \clarOneDyn >> }
+clarBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneCues \clarOneDyn >> }

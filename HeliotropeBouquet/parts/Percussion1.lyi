@@ -1,6 +1,4 @@
-\include "config.lyi"
-
-percussionOneDyn =
+percOneDyn =
 {
   s2*3 |
   s4 s4\p |
@@ -37,13 +35,16 @@ percussionOneDyn =
 }
 
 
-percussionOneCues = \measures
+percOneMks = {}
 
 
-percussionOneNotCues = \measures
+percOneCues = {}
 
 
-percussionOneNotes =
+percOneScor = {}
+
+
+percOneNotes =
 \drummode {
   R2*3 |
   r4 sn4:32
@@ -143,7 +144,6 @@ percussionOneNotes =
 }
 
 
-percussionOneScore = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDyn >> }
-percussionOneCond  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDyn >> }
-percussionOneMidi  = \relative c { << \pc \percussionOneNotes \percussionOneNotCues \percussionOneDyn >> }
-percussionOnePart  = \relative c { << \pc \percussionOneNotes \percussionOneCues    \percussionOneDyn >> }
+percOneScore = << \pc \base \percOneNotes \percOneScor \percOneDyn >>
+percOneCond  = << \pc \base \percOneNotes \percOneScor \percOneMks >>
+percOnePart  = << \pc \base \percOneNotes \percOneCues \percOneDyn >>

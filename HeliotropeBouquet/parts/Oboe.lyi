@@ -1,6 +1,4 @@
-\include "config.lyi"
-
-fluteOneDyn =
+oboeDyn =
 {
   s2\mf |
   s2*3 |
@@ -58,18 +56,21 @@ fluteOneDyn =
 }
 
 
-fluteOneCues = \measures
+oboeMks = {}
 
 
-fluteOneNotCues = \measures
+oboeCues = {}
 
 
-fluteOneNotes =
+oboeScor = {}
+
+
+oboeNotes =
 {
   d16 e fis g~g b a g |
   d'16 c b a~a b c d |
   c16 e,8 fis16 g8 e |
-  d8 r fis'->( e) |
+  d8 r fis->( e) |
 
   % 5
   c16( d e b)~b fis a8 |
@@ -89,36 +90,36 @@ fluteOneNotes =
   d8 d16 b d g8 b,16 |
   c8 c16 b c( g a ais) |
   b16 d8 b16~b g a8 |
-  g4 b-> |
+  g4 b'-> |
 
   \repeat volta 2
   {
     % 21
     b8 b16 a b d8 a16 |
-    b16 a b d~d8~d16 \tuplet 3/2 { d32( dis e) } |
+    b16 a b d~d8~d16 \tuplet 3/2 { d,32( dis e) } |
     g8 e16 d e g8 d16 |
     g16 fis g e~e d e eis |
     fis8 fis16 d fis a8 e16 |
     fis16 e fis e~e8~e16 \tuplet 3/2 { d32( e fis) } |
-    g8 r r4 |
+    g8-^ r r4 |
     r4 r8 b,-^ |
 
     % 29
-    r16 a b a b d8 a16 |
-    b16( a b d)~d8~d16 \tuplet 3/2 { d32( dis e) } |
+    r16 a' b a b d8 a16 |
+    b16( a b d)~d8~d16 \tuplet 3/2 { d,32( dis e) } |
     g8 e16 d e g8 d16 |
     g16 fis g e~e8 \tuplet 3/2 { d16( cis d) } |
-    e8 b a16( e'8.) |
+    e8 b' a16( e'8.) |
     d,8 a' g16( d'8.) |
     a16( e'8.) a,16( d8.) |
   }
   \alternative
   {
     {
-      g4 b,-> |
+      g,4 b-> |
     }
     {
-      g'4 fis8->( e) |
+      g4 fis8->( e) |
     }
   }
 
@@ -146,7 +147,7 @@ fluteOneNotes =
   {
     % 54
     R2*4 |
-    f16( c' d, c)~c d( f c') |
+    f'16( c' d, c)~c d( f c') |
     e,16( g d c)~c g'( a ais) |
     b16 c d b~b g a8 |
     g8 r r4 |
@@ -163,7 +164,7 @@ fluteOneNotes =
   \alternative
   {
     {
-      c8 g16( a b c d dis) |
+      c8 r8 r4 |
     }
     {
       c4~c8 r8 |
@@ -203,8 +204,7 @@ fluteOneNotes =
 }
 
 
-fluteOneScore  =                          \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteCOneScore = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOneCond   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOneMidi   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneNotCues \fluteOneDyn >> }
-fluteOnePart   = \transpose c \concertKey \relative c' { << \tc \fluteOneNotes \fluteOneCues    \fluteOneDyn >> }
+oboeScore  = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeScor \oboeDyn >> }
+oboeCond   = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeScor \oboeMks >> }
+oboeCScore = \oboeScore
+oboeCPart  = \transpose c \concertKey \relative c' { << \tc \base \oboeNotes \oboeCues \oboeDyn >> }

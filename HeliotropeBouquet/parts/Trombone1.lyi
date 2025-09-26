@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 tromOneDyn =
 {
   s2*4\mf |
@@ -58,10 +56,13 @@ tromOneDyn =
 }
 
 
-tromOneCues = \measures
+tromOneMks = {}
 
 
-tromOneNotCues = \measures
+tromOneCues = {}
+
+
+tromOneScor = {}
 
 
 tromOneNotes =
@@ -206,8 +207,7 @@ tromOneNotes =
 }
 
 
-tromOneScore  =                          \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromCOneScore = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromOneCond   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromOneMidi   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromOnePart   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneCues    \tromOneDyn >> }
+tromOneScore  = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneDyn >> }
+tromOneCond   = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneMks >> }
+tromCOneScore = \tromOneScore
+tromCOnePart  = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneCues \tromOneDyn >> }

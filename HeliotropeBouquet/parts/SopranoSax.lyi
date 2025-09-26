@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 sopsaxDyn =
 {
   s2\mf |
@@ -57,10 +55,13 @@ sopsaxDyn =
 }
 
 
-sopsaxCues = \measures
+sopsaxMks = {}
 
 
-sopsaxNotCues = \measures
+sopsaxCues = {}
+
+
+sopsaxScor = {}
 
 
 sopsaxNotes =
@@ -189,8 +190,7 @@ sopsaxNotes =
 }
 
 
-sopsaxScore    =                            \relative c' { << \tc \sopsaxNotes \sopsaxNotCues            >> }
-sopsaxCond     = \transpose c   \concertKey \relative c' { << \tc \sopsaxNotes \sopsaxNotCues            >> }
-sopsaxMidi     = \transpose c   \concertKey \relative c' { << \tc \sopsaxNotes \sopsaxNotCues \sopsaxDyn >> }
-sopsaxBesScore = \transpose bes \concertKey \relative c' { << \tc \sopsaxNotes \sopsaxNotCues            >> }
-sopsaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \sopsaxNotes \sopsaxCues    \sopsaxDyn >> }
+sopsaxScore    = \transpose c   \concertKey \relative c' { << \tc \base \sopsaxNotes \sopsaxScor \sopsaxDyn >> }
+sopsaxCond     = \transpose c   \concertKey \relative c' { << \tc \base \sopsaxNotes \sopsaxScor \sopsaxMks >> }
+sopsaxBesScore = \transpose bes \concertKey \relative c' { << \tc \base \sopsaxNotes \sopsaxScor \sopsaxDyn >> }
+sopsaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \base \sopsaxNotes \sopsaxCues \sopsaxDyn >> }

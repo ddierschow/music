@@ -1,10 +1,10 @@
-\version "2.24.1"
+\version "2.24.4"
 
 \include "config.lyi"
-\include "Baritone.lyi"
+\include "parts/Baritone.lyi"
 
 instrument = \markup { "Baritone" \smaller \musicglyph #"clefs.F" }
 
-notes = \baritonePart
+notes = \baritoneCPart
 
-\include "part.lyi"
+\include "single.lyi"
