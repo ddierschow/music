@@ -47,13 +47,13 @@ bassclarDyn = {
 }
 
 
-bassclarMarks = \measures
+bassclarMks = {}
 
 
-bassclarCues = \measures
+bassclarCues = {}
 
 
-bassclarNotCues = \measures
+bassclarScor = {}
 
 
 bassclarNotes = {
@@ -126,8 +126,7 @@ bassclarNotes = {
 }
 
 
-bassclarScore    =                            \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
-bassclarCond     = \transpose c   \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarMarks >> }
-bassclarMidi     = \transpose c   \concertKey \relative c  { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
-bassclarBesScore = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarNotCues \bassclarDyn >> }
-bassclarBesPart  = \transpose bes \concertKey \relative c' { << \tc \bassclarNotes \bassclarCues    \bassclarDyn >> }
+bassclarScore    = \transpose c   \concertKey \relative c  { << \tc \base \bassclarNotes \bassclarScor \bassclarDyn >> }
+bassclarCond     = \transpose c   \concertKey \relative c' { << \tc \base \bassclarNotes \bassclarScor \bassclarMks >> }
+bassclarBesScore = \transpose bes \concertKey \relative c' { << \tc \base \bassclarNotes \bassclarScor \bassclarDyn >> }
+bassclarBesPart  = \transpose bes \concertKey \relative c' { << \tc \base \bassclarNotes \bassclarCues \bassclarDyn >> }

@@ -38,7 +38,7 @@ tromTwoDyn = {
 
   % 103
   s1*2 |
-  s4 s2.\ff |
+  s4 s2.\f |
   s1*5 |
 
   % 111
@@ -49,13 +49,13 @@ tromTwoDyn = {
 }
 
 
-tromTwoMarks = \measures
+tromTwoMks = {}
 
 
-tromTwoCues = \measures
+tromTwoCues = {}
 
 
-tromTwoNotCues = \measures
+tromTwoScor = {}
 
 
 tromTwoNotes = {
@@ -81,7 +81,7 @@ tromTwoNotes = {
   r4 e~ e8 e~ e4 |
   f4 e d2 |
   r4 e~ e8 e~ e4 |
-  f4 f d2 |
+  f4 e d2 |
   e2~ e4 c |
   d4 d e2 |
   d4( c)~ c2 |
@@ -138,8 +138,7 @@ tromTwoNotes = {
 }
 
 
-tromTwoScore  =                          \relative c, { << \bc \tromTwoNotes \tromTwoNotCues \tromTwoDyn >> }
-tromTwoCond   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues \tromTwoMarks >> }
-tromTwoMidi   = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues \tromTwoDyn >> }
-tromCTwoScore = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoNotCues \tromTwoDyn >> }
-tromCTwoPart  = \transpose c \concertKey \relative c, { << \bc \tromTwoNotes \tromTwoCues    \tromTwoDyn >> }
+tromTwoScore  = \transpose c \concertKey \relative c, { << \bc \base \tromTwoNotes \tromTwoScor \tromTwoDyn >> }
+tromTwoCond   = \transpose c \concertKey \relative c, { << \bc \base \tromTwoNotes \tromTwoScor \tromTwoMks >> }
+tromCTwoScore = \transpose c \concertKey \relative c, { << \bc \base \tromTwoNotes \tromTwoScor \tromTwoDyn >> }
+tromCTwoPart  = \transpose c \concertKey \relative c, { << \bc \base \tromTwoNotes \tromTwoCues \tromTwoDyn >> }

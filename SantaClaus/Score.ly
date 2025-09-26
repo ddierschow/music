@@ -6,7 +6,7 @@ instrument = "Concert Band"
 \include "outline.lyi"
 \include "allparts.lyi"
 
-#(set-global-staff-size 14)
+#(set-global-staff-size 13)
 
 \include "layout.lyi"
 

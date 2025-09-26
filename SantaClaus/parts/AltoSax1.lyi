@@ -7,11 +7,11 @@ altosaxOneDyn = {
   s1*12 |
 
   % 21
-  s1*12 |
+  s1*11 |
+  s2.. s8\mf |
 
   % 33
-  s1\mp |
-  s1*9 |
+  s1*10 |
 
   % 43
   s1*11 |
@@ -21,7 +21,7 @@ altosaxOneDyn = {
   s1*12 |
 
   % 67
-  s1\mp |
+  s1\mf |
   s1*9 |
 
   % 77
@@ -48,13 +48,13 @@ altosaxOneDyn = {
 }
 
 
-altosaxOneMarks = \measures
+altosaxOneMks = {}
 
 
-altosaxOneCues = \measures
+altosaxOneCues = {}
 
 
-altosaxOneNotCues = \measures
+altosaxOneScor = {}
 
 
 altosaxOneNotes = {
@@ -64,17 +64,19 @@ altosaxOneNotes = {
   R1*12 |
 
   % 21
-  R1*12 |
+  R1*11 |
+  r2 r4 r8 c |
 
   % 33
-  g'1 |
-  f1 |
-  g1 |
-  f1 |
-  fis1 |
-  fis1 |
-  g4-. r r2 |
-  R1*3 |
+  d4( c bes) g |
+  a8 a~ a4 r r8 c |
+  d4( c bes) g |
+  a2 r4 r8 d |
+  d4. d8 d4 d |
+  d4 c8( e)~e4. d8 |
+  e8 e d4 e d |
+  e4 d8( e)~ e2 |
+  R1*2 |
 
   % 43
   R1*11 |
@@ -95,14 +97,15 @@ altosaxOneNotes = {
   c2. r4 |
 
   % 67
-  g1 |
-  f1 |
-  g1 |
-  f1 |
-  fis1 |
-  fis1 |
-  g4-. r r2 |
-  R1*3 |
+  d4( c bes) g |
+  a8 a~ a4 r r8 c |
+  d4( c bes) g |
+  a2 r4 r8 d |
+  d4. d8 d4 d |
+  d4 c8( e)~e4. d8 |
+  e8 e d4 e d |
+  e4 d8( e)~ e2 |
+  R1*2 |
 
   % 77
   R1*10 |
@@ -146,8 +149,8 @@ altosaxOneNotes = {
 }
 
 
-altosaxOneScore    =                            \relative c' { << \tc \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
-altosaxOneCond     = \transpose c   \concertKey \relative c' { << \tc \altosaxOneNotes \altosaxOneNotCues \altosaxOneMarks >> }
-altosaxOneMidi     = \transpose c   \concertKey \relative c' { << \tc \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
-altosaxEesOneScore = \transpose ees \concertKey \relative c' { << \tc \altosaxOneNotes \altosaxOneNotCues \altosaxOneDyn >> }
-altosaxEesOnePart  = \transpose ees \concertKey \relative c' { << \tc \altosaxOneNotes \altosaxOneCues    \altosaxOneDyn >> }
+altosaxOneScore    =                            \relative c' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneDyn >> }
+altosaxOneCond     = \transpose c   \concertKey \relative c' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneMks >> }
+altosaxOneMidi     = \transpose c   \concertKey \relative c' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneDyn >> }
+altosaxEesOneScore = \transpose ees \concertKey \relative c' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneDyn >> }
+altosaxEesOnePart  = \transpose ees \concertKey \relative c' { << \tc \base \altosaxOneNotes \altosaxOneCues \altosaxOneDyn >> }

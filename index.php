@@ -1,7 +1,7 @@
 <?php
 include "common/helpers.php";
 show_top();
-echo "<center>\n<h2>Musical Works</h2>\n<h4>Dean Dierschow</h4>\n</center>\n";
+echo "<div style='background-color: green; color: white; padding: 8px;'><center>\n<h2>Musical Works</h2>\n<h4>Dean Dierschow</h4>\n</center>\n</div>\n";
 
 $dirs = array();
 if (is_dir(getcwd()))
@@ -9,7 +9,7 @@ if (is_dir(getcwd()))
     if ($dh = opendir(getcwd()))
     {
         while (($file = readdir($dh)) !== false)
-	    if ($file != 'old' && !str_starts_with($file, '.') && filetype(getcwd() . '/' . $file) == 'dir')
+	    if ($file[0] < 'a' && !str_starts_with($file, '.') && filetype(getcwd() . '/' . $file) == 'dir')
 		$dirs[] = $file;
         closedir($dh);
     }

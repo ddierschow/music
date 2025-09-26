@@ -49,10 +49,10 @@ tenorsaxDyn = {
 }
 
 
-tenorsaxMarks = \measures
+tenorsaxMks = {}
 
 
-tenorsaxCues = << \measures {
+tenorsaxCues = {
   s1*94 |
 
   % 95
@@ -60,10 +60,10 @@ tenorsaxCues = << \measures {
 
   % 103
   s1*22 |
-} >>
+}
 
 
-tenorsaxNotCues = \measures
+tenorsaxScor = {}
 
 
 tenorsaxNotes = {
@@ -151,8 +151,7 @@ tenorsaxNotes = {
 }
 
 
-tenorsaxScore    =                            \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxCond     = \transpose c   \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxMarks >> }
-tenorsaxMidi     = \transpose c   \concertKey \relative c,  { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxBesScore = \transpose bes \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxNotCues \tenorsaxDyn >> }
-tenorsaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \tenorsaxNotes \tenorsaxCues    \tenorsaxDyn >> }
+tenorsaxScore    = \transpose c   \concertKey \relative c, { << \tc \base \tenorsaxNotes \tenorsaxScor \tenorsaxDyn >> }
+tenorsaxCond     = \transpose c   \concertKey \relative c' { << \tc \base \tenorsaxNotes \tenorsaxScor \tenorsaxMks >> }
+tenorsaxBesScore = \transpose bes \concertKey \relative c' { << \tc \base \tenorsaxNotes \tenorsaxScor \tenorsaxDyn >> }
+tenorsaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \base \tenorsaxNotes \tenorsaxCues \tenorsaxDyn >> }

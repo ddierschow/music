@@ -37,7 +37,7 @@ tromOneDyn = {
   s1*8 |
 
   % 103
-  s4 s2.\ff |
+  s4 s2.\f |
   s1*7 |
 
   % 111
@@ -48,13 +48,13 @@ tromOneDyn = {
 }
 
 
-tromOneMarks = \measures
+tromOneMks = {}
 
 
-tromOneCues = \measures
+tromOneCues = {}
 
 
-tromOneNotCues = \measures
+tromOneScor = {}
 
 
 tromOneNotes = {
@@ -78,7 +78,7 @@ tromOneNotes = {
   g2 g |
   a2 b4 r |
   r4 g~ g8 g~ g4 |
-  g4 g g2 |
+  a4 a g2 |
   r4 g~ g8 g~ g4 |
   a4 a g2 |
   g2~ g4 e |
@@ -138,8 +138,7 @@ tromOneNotes = {
 }
 
 
-tromOneScore  =                          \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromOneCond   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneMarks >> }
-tromOneMidi   = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromCOneScore = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneNotCues \tromOneDyn >> }
-tromCOnePart  = \transpose c \concertKey \relative c, { << \bc \tromOneNotes \tromOneCues    \tromOneDyn >> }
+tromOneScore  = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneDyn >> }
+tromOneCond   = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneMks >> }
+tromCOneScore = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneScor \tromOneDyn >> }
+tromCOnePart  = \transpose c \concertKey \relative c, { << \bc \base \tromOneNotes \tromOneCues \tromOneDyn >> }

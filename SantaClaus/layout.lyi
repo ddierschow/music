@@ -2,29 +2,30 @@ ScorePaper = \paper {
   systems-per-page = #1
   #(set-paper-size "letter")
   ragged-last-bottom = ##f
-  top-margin = 18\mm
-  left-margin = 22\mm
-  right-margin = 22\mm
-  bottom-margin = 18\mm
+  top-margin = 15\mm
+  left-margin = 18\mm
+  right-margin = 18\mm
+  bottom-margin = 15\mm
 }
 
 ScoreHeader = \header {
-  title = \markup{Santa Claus is Comin' to Town}
-  subtitle = "Inspired by Bruce Springsteen"
+  title = \markup { \workTitle }
+  subtitle = \workSubtitle
   opus = ""
-  subsubtitle = "J. Fred Coots"
-  copyright = ""
+  subsubtitle = "J. Fred Coots arr. Dean Dierschow"
+  copyright = \workCopyright
   instrument = \instrument
+  % meter = \workMeter
 
-  mutopiatitle = "Santa Claus is Comin' to Town"
-  mutopiacomposer = "J. Fred Coots"
+  mutopiatitle = \workTitle
+  mutopiacomposer = \workComposer
   mutopiaopus = ""
   mutopiainstrument = \instrument
   date = ""
   source = ""
   style = ""
-  maintainer = "Dean Dierschow"
-  maintainerEmail = "deandierschow@gmail.com"
+  maintainer = \workOwner
+  maintainerEmail = \workEmail
   lastupdated = ""
 
   footer = ""
@@ -41,25 +42,25 @@ PartPaper = \paper {
 }
 
 PartHeader = \header {
-  title = \markup { "Santa Claus is Comin' to Town" }
-  subtitle = "Inspired by Bruce Springsteen"
+  title = \markup { \workTitle }
+  subtitle = \workSubtitle
   opus = ""
-  composer = "J. Fred Coots"
-  arranger = \markup { \italic "arr. Dean Dierschow" }
+  composer = \workComposer
+  arranger = \markup { \italic \workArranger }
   instrument = \instrument
-  meter = "Moderately"
+  meter = \workMeter
 
-  mutopiatitle = "Santa Claus is Comin' to Town"
-  mutopiacomposer = "J. Fred Coots"
+  mutopiatitle = \workTitle
+  mutopiacomposer = \workComposer
   mutopiaopus = ""
-  mutopiainstrument = "Concert Band"
+  mutopiainstrument = \workPerformer
   date = ""
   source = ""
   style = ""
-  maintainer = "Dean Dierschow"
-  maintainerEmail = "deandierschow@gmail.com"
+  maintainer = \workOwner
+  maintainerEmail = \workEmail
   lastupdated = ""
 
-  copyright = \markup { \teeny "This arrangement copyright 2024 by Dean Dierschow" }
+  copyright = \markup { \teeny \workCopyright }
   tagline = ""
 }

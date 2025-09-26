@@ -38,7 +38,7 @@ tromThreeDyn = {
 
   % 103
   s1*4 |
-  s4 s2.\ff |
+  s4 s2.\f |
   s1*3 |
 
   % 111
@@ -49,13 +49,13 @@ tromThreeDyn = {
 }
 
 
-tromThreeMarks = \measures
+tromThreeMks = {}
 
 
-tromThreeCues = \measures
+tromThreeCues = {}
 
 
-tromThreeNotCues = \measures
+tromThreeScor = {}
 
 
 tromThreeNotes = {
@@ -136,8 +136,7 @@ tromThreeNotes = {
 }
 
 
-tromThreeScore  =                          \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeDyn >> }
-tromThreeCond   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeMarks >> }
-tromThreeMidi   = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeDyn >> }
-tromCThreeScore = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeNotCues \tromThreeDyn >> }
-tromCThreePart  = \transpose c \concertKey \relative c, { << \bc \tromThreeNotes \tromThreeCues    \tromThreeDyn >> }
+tromThreeScore  = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor \tromThreeDyn >> }
+tromThreeCond   = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor \tromThreeMks >> }
+tromCThreeScore = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor \tromThreeDyn >> }
+tromCThreePart  = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeCues \tromThreeDyn >> }

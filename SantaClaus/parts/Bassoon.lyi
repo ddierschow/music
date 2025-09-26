@@ -47,10 +47,10 @@ bassoonDyn = {
 }
 
 
-bassoonMarks = \measures
+bassoonMks = {}
 
 
-bassoonCues = << \measures {
+bassoonCues = {
   s1*32 |
 
   % 33
@@ -58,10 +58,10 @@ bassoonCues = << \measures {
 
   % 43
   s1*82 |
-} >>
+}
 
 
-bassoonNotCues = \measures
+bassoonScor = {}
 
 
 bassoonNotes = {
@@ -143,8 +143,7 @@ bassoonNotes = {
 }
 
 
-bassoonScore  =                          \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonCond   = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonMarks >> }
-bassoonMidi   = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonCScore = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonNotCues \bassoonDyn >> }
-bassoonCPart  = \transpose c \concertKey \relative c, { << \bc \bassoonNotes \bassoonCues    \bassoonDyn >> }
+bassoonScore  = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonDyn >> }
+bassoonCond   = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonMks >> }
+bassoonCScore = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonScor \bassoonDyn >> }
+bassoonCPart  = \transpose c \concertKey \relative c, { << \bc \base \bassoonNotes \bassoonCues \bassoonDyn >> }

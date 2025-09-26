@@ -1,4 +1,3 @@
-\include "config.lyi"
 \include "outline.lyi"
 \include "layout.lyi"
 
@@ -10,6 +9,7 @@
 {
   \new \stafftype \with { drumStyleTable = #(alist->hash-table mydrums) }
   {
+    #(set-accidental-style 'modern)
     \set Score.skipBars = ##t
     << \keepWithTag #'part \notes \outline >>
   }

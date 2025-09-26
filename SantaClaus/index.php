@@ -23,7 +23,7 @@ show_audio('ScoreMidi.mp3');
 show_common_links();
 show_row(['Makefile', 'README.md']);
 show_row(['allparts.lyi', 'config.lyi', '../common/defs.lyi'], 1);
-show_row(['layout.lyi', 'outline.lyi', 'part.lyi']);
+show_row(['layout.lyi', 'outline.lyi', 'single.lyi']);
 echo "</table>\n";
 echo "<ul>\n";
 show_link("http://phrogz.net/tmp/Sing/SantaClausisComintoTown.pdf", "original song");
@@ -32,14 +32,12 @@ echo "</ul>\n";
 echo "</td>\n";
 
 echo "<td valign=top>\n";
-show_parts($parts);
+show_parts($parts, 1, 'parts/');
 echo "</td>";
 
 echo "<td valign=top>\n";
 show_image();
 echo "<h4>To do</h4><ul>\n";
-echo "<li>Print it";
-echo "<li>Play it";
 echo "<li>Write a condensed score (someday?)\n";
 echo "</ul>\n";
 

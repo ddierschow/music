@@ -48,10 +48,10 @@ malletpercDyn = {
 }
 
 
-malletpercMarks = \measures
+malletpercMks = {}
 
 
-malletpercCues = << \measures {
+malletpercCues = {
   s1*32 |
 
   % 33
@@ -59,10 +59,10 @@ malletpercCues = << \measures {
 
   % 43
   s1*82 |
-} >>
+}
 
 
-malletpercNotCues = \measures
+malletpercScor = {}
 
 
 malletpercNotes = {
@@ -138,8 +138,7 @@ malletpercNotes = {
 }
 
 
-malletpercScore  =                          \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercDyn >> }
-malletpercCond   = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercMarks >> }
-malletpercMidi   = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercDyn >> }
-malletpercCScore = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercNotCues \malletpercDyn >> }
-malletpercCPart  = \transpose c \concertKey \relative c { << \tc \malletpercNotes \malletpercCues    \malletpercDyn >> }
+malletpercScore  = \transpose c \concertKey \relative c { << \tc \base \malletpercNotes \malletpercScor \malletpercDyn >> }
+malletpercCond   = \transpose c \concertKey \relative c { << \tc \base \malletpercNotes \malletpercScor \malletpercMks >> }
+malletpercCScore = \transpose c \concertKey \relative c { << \tc \base \malletpercNotes \malletpercScor \malletpercDyn >> }
+malletpercCPart  = \transpose c \concertKey \relative c { << \tc \base \malletpercNotes \malletpercCues \malletpercDyn >> }

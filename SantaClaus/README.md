@@ -30,7 +30,7 @@ Marks are only for markups going to the condensed score, so are not currently in
 
 The files with ly extension are rendered into pdf files.  Each part includes ../common/defs.lyi,
 which is my library of useful things, not all of which will be used.  Then each part includes its
-own lyi file, which has the sequences named above.  Finally each part includes part.lyi,
+own lyi file, which has the sequences named above.  Finally each part includes single.lyi,
 which includes outline.lyi, then lays things out on the page.
 
 ## Scores

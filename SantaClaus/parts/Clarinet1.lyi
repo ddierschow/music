@@ -11,7 +11,7 @@ clarOneDyn = {
   s1*12 |
 
   % 33
-  s2. s4\mp |
+  s1\mp |
   s1*9 |
 
   % 43
@@ -21,7 +21,7 @@ clarOneDyn = {
   s1*12 |
 
   % 67
-  s2. s4\mp |
+  s1\mp |
   s1*9 |
 
   % 77
@@ -47,13 +47,13 @@ clarOneDyn = {
 }
 
 
-clarOneMarks = \measures
+clarOneMks = {}
 
 
-clarOneCues = \measures
+clarOneCues = {}
 
 
-clarOneNotCues = \measures
+clarOneScor = {}
 
 
 clarOneNotes = {
@@ -71,13 +71,13 @@ clarOneNotes = {
   R1*12
 
   % 33
-  r2 r4 c'-. |
-  r2 r4 a-. |
-  r2 r4 c-. |
-  r2 r4 a-. |
-  r2 r4 a-. |
-  r2 r4 a-. |
-  r2 r4 b-. |
+  g2. c4-. |
+  f,2. a4-. |
+  g2. c4-. |
+  f,2. a4-. |
+  fis2. a4-. |
+  fis2. a4-. |
+  g4-. r r b-. |
   r2 r4 b-. |
   R1*2 |
 
@@ -88,13 +88,13 @@ clarOneNotes = {
   R1*12 |
 
   % 67
-  r2 r4 c-. |
-  r2 r4 a-. |
-  r2 r4 c-. |
-  r2 r4 a-. |
-  r2 r4 a-. |
-  r2 r4 a-. |
-  r2 r4 b-. |
+  g2. c4-. |
+  f,2. a4-. |
+  g2. c4-. |
+  f,2. a4-. |
+  fis2. a4-. |
+  fis2. a4-. |
+  g4-. r r b-. |
   r2 r4 b-. |
   R1*2 |
 
@@ -126,8 +126,7 @@ clarOneNotes = {
 }
 
 
-clarOneScore    =                            \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
-clarOneCond     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneMarks >> }
-clarOneMidi     = \transpose c   \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
-clarBesOneScore = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneNotCues \clarOneDyn >> }
-clarBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \clarOneNotes \clarOneCues    \clarOneDyn >> }
+clarOneScore    = \transpose c   \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneScor \clarOneDyn >> }
+clarOneCond     = \transpose c   \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneScor \clarOneMks >> }
+clarBesOneScore = \transpose bes \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneScor \clarOneDyn >> }
+clarBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \base \clarOneNotes \clarOneCues \clarOneDyn >> }

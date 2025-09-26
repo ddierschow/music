@@ -1,0 +1,179 @@
+\include "config.lyi"
+
+tubaDyn = {
+  s1*8 |
+
+  % 9
+  s1*11 |
+  s2.. s8\mp |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1\mf |
+  s1*9 |
+
+  % 43
+  s1\mf |
+  s1*11 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1\mf |
+  s1*9 |
+
+  % 77
+  s1\mf |
+  s1*9 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*2 |
+  s1\f |
+  s1*5 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1\mf |
+  s1*5 |
+}
+
+
+tubaMks = {}
+
+
+tubaCues = {
+  s1*94 |
+
+  % 95
+  s1*8 | \break
+
+  % 103
+  s1*22 |
+}
+
+
+tubaScor = {}
+
+
+tubaNotes = {
+  R1*8 |
+
+  % 9
+  R1*11 |
+  r2 r4 g' |
+
+  % 21
+  c,4. c8 c4 r |
+  c4. c8 c4 g' |
+  c,4. c8 c4 r |
+  c4. c8 c g' a c |
+  c4. c,8 c4 r |
+  c4. c8 c g' a c |
+  c4. c,8 c4 r |
+  c4. c8 c g' a c |
+  c4 b a e |
+  d4 a' g d8 g |
+  c,4. c8 c4 r8 g' |
+  c4. bes8~ bes( a g) c |
+
+  % 33
+  g2 c, |
+  f4. c'8 d c a f |
+  g2 c |
+  f,2 a4 c |  
+  d2 d |
+  d2 d |
+  g,4 r4 r2 |
+  r1 |
+  r1 |
+  r4 g g g |
+
+  % 43
+  c,4 e g r |
+  f4 a b a8 b |
+  c,4 e g a |
+  f4 a b a8( b) |
+  c4-. c,~ c g' |
+  f4 a c a8( b) |
+  c4-. c,~ c g' |
+  f4 a c a8( b) |
+  c4 b a e |
+  d4 a' g d |
+  c4 e g a |
+  g4 f e d |
+
+  % 55
+  R1*12 |
+
+  % 67
+  g4 d c g' |
+  f4 c' d8 c a f |
+  g4 g c, c |
+  f4 e f fis |
+  d4 fis a b |
+  a4 fis d d |
+  g4 r4 r2 |
+  r1 |
+  r1 |
+  r4 g g g |
+
+  % 77
+  c,4 c bes bes |
+  a'4 a g g |
+  c,4 c bes bes |
+  a'4 a g g |
+  c,4-. c~ c g' |
+  f4 a, bes b |
+  c4-. c~ c g' |
+  f4 a, bes b |
+  c4 b a e' |
+  d4 a' g d |
+
+  % 87
+  R1*8 |
+
+  % 95
+  R1*8 |
+
+  % 103
+  R1*2 |
+  c2 c |
+  c2 c |
+  c2 c |
+  c2 c |
+  c2 c |
+  c2 c |
+
+  % 111
+  r4 c c2 |
+  c2 c |
+  r4 c c2 |
+  c2 c |
+  r4 c c2 |
+  c2 c |
+  r4 c c2 |
+  c2 c |
+
+  % 119
+  c'2 a |
+  d g, |
+  R1*4 |
+}
+
+
+tubaScore  = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaScor \tubaDyn >> }
+tubaCond   = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaScor \tubaMks >> }
+tubaCScore = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaScor \tubaDyn >> }
+tubaCPart  = \transpose c \concertKey \relative c,, { << \bc \base \tubaNotes \tubaCues \tubaDyn >> }

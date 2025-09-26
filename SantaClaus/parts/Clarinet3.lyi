@@ -47,13 +47,13 @@ clarThreeDyn = {
 }
 
 
-clarThreeMarks = \measures
+clarThreeMks = {}
 
 
-clarThreeCues = \measures
+clarThreeCues = {}
 
 
-clarThreeNotCues = \measures
+clarThreeScor = {}
 
 
 clarThreeNotes = {
@@ -126,8 +126,7 @@ clarThreeNotes = {
 }
 
 
-clarThreeScore    =                            \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
-clarThreeCond     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeMarks >> }
-clarThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
-clarBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeNotCues \clarThreeDyn >> }
-clarBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \clarThreeNotes \clarThreeCues    \clarThreeDyn >> }
+clarThreeScore    = \transpose c   \concertKey \relative c' { << \tc \base \clarThreeNotes \clarThreeScor \clarThreeDyn >> }
+clarThreeCond     = \transpose c   \concertKey \relative c' { << \tc \base \clarThreeNotes \clarThreeScor \clarThreeMks >> }
+clarBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \base \clarThreeNotes \clarThreeScor \clarThreeDyn >> }
+clarBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \base \clarThreeNotes \clarThreeCues \clarThreeDyn >> }

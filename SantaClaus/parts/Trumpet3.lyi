@@ -45,13 +45,13 @@ trumThreeDyn = {
 }
 
 
-trumThreeMarks = \measures
+trumThreeMks = {}
 
 
-trumThreeCues = \measures
+trumThreeCues = {}
 
 
-trumThreeNotCues = \measures
+trumThreeScor = {}
 
 
 trumThreeNotes = {
@@ -136,8 +136,7 @@ trumThreeNotes = {
 }
 
 
-trumpetThreeScore    =                            \relative c' { << \tc \trumThreeNotes \trumThreeNotCues \trumThreeDyn >> }
-trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \trumThreeNotes \trumThreeNotCues \trumThreeMarks >> }
-trumpetThreeMidi     = \transpose c   \concertKey \relative c' { << \tc \trumThreeNotes \trumThreeNotCues \trumThreeDyn >> }
-trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \trumThreeNotes \trumThreeNotCues \trumThreeDyn >> }
-trumpetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \trumThreeNotes \trumThreeCues    \trumThreeDyn >> }
+trumpetThreeScore    = \transpose c   \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeDyn >> }
+trumpetThreeCond     = \transpose c   \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeMks >> }
+trumpetBesThreeScore = \transpose bes \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeScor \trumThreeDyn >> }
+trumpetBesThreePart  = \transpose bes \concertKey \relative c' { << \tc \base \trumThreeNotes \trumThreeCues \trumThreeDyn >> }

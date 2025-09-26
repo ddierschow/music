@@ -47,10 +47,10 @@ baritoneDyn = {
 }
 
 
-baritoneMarks = \measures
+baritoneMks = {}
 
 
-baritoneCues = << \measures {
+baritoneCues = {
   s1*94 |
 
   % 95
@@ -58,10 +58,10 @@ baritoneCues = << \measures {
 
   % 103
   s1*22 |
-} >>
+}
 
 
-baritoneNotCues = \measures
+baritoneScor = {}
 
 
 baritoneNotes = {
@@ -145,10 +145,9 @@ baritoneNotes = {
 }
 
 
-baritoneScore    =                            \relative c, { << \bc \baritoneNotes \baritoneNotCues \baritoneDyn >> }
-baritoneCond     = \transpose c   \concertKey \relative c, { << \bc \baritoneNotes \baritoneNotCues \baritoneMarks >> }
-baritoneMidi     = \transpose c   \concertKey \relative c, { << \bc \baritoneNotes \baritoneNotCues \baritoneDyn >> }
-baritoneCScore   = \transpose c   \concertKey \relative c, { << \bc \baritoneNotes \baritoneNotCues \baritoneDyn >> }
-baritoneCPart    = \transpose c   \concertKey \relative c, { << \bc \baritoneNotes \baritoneCues    \baritoneDyn >> }
-baritoneBesScore = \transpose bes \concertKey \relative c' { << \tc \baritoneNotes \baritoneNotCues \baritoneDyn >> }
-baritoneBesPart  = \transpose bes \concertKey \relative c' { << \tc \baritoneNotes \baritoneCues    \baritoneDyn >> }
+baritoneScore    = \transpose c   \concertKey \relative c, { << \bc \base \baritoneNotes \baritoneScor \baritoneDyn >> }
+baritoneCond     = \transpose c   \concertKey \relative c, { << \bc \base \baritoneNotes \baritoneScor \baritoneMks >> }
+baritoneCScore   = \transpose c   \concertKey \relative c, { << \bc \base \baritoneNotes \baritoneScor \baritoneDyn >> }
+baritoneCPart    = \transpose c   \concertKey \relative c, { << \bc \base \baritoneNotes \baritoneCues \baritoneDyn >> }
+baritoneBesScore = \transpose bes \concertKey \relative c' { << \tc \base \baritoneNotes \baritoneScor \baritoneDyn >> }
+baritoneBesPart  = \transpose bes \concertKey \relative c' { << \tc \base \baritoneNotes \baritoneCues \baritoneDyn >> }

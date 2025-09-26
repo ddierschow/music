@@ -46,10 +46,10 @@ trumOneDyn = {
 }
 
 
-trumOneMarks = \measures
+trumOneMks = {}
 
 
-trumOneCues = << \measures {
+trumOneCues = {
   s1*94 |
 
   % 95
@@ -57,10 +57,10 @@ trumOneCues = << \measures {
 
   % 103
   s1*22 |
-} >>
+}
 
 
-trumOneNotCues = \measures
+trumOneScor = {}
 
 
 trumOneNotes = {
@@ -69,14 +69,14 @@ trumOneNotes = {
 
   % 9
   g8 g g4 g4. g8 |
-  a8( b c4) d r8 c |
-  e8 e e4 e e |
+  a8( b c4) d r8 c( |
+  e8) e e4 e e |
   d8( c) c4 d r |
-  r4 e4~ e8 e d e |
+  r4 e4~ e8 e d( e) |
   d8( c) c4 d r |
-  r4 e4~ e8 e d e |
+  r4 e4~ e8 e d( e) |
   d8( c) c4 d r |
-  e4. d8 d4 d |
+  e4.( d8) d4 d |
   d8 d8~ d2 e4 |
   d4( c)~ c2 |
   r2. e,4 |
@@ -90,7 +90,7 @@ trumOneNotes = {
   d8( c) c4 d r |
   r4 e4~ e8 e d e |
   d8( c) c4 d r |
-  e4. d8 d4 d |
+  e4. d8 d4 c |
   d8 d8~ d2 e4 |
   d4( c~) c2 |
   r1 |
@@ -129,7 +129,7 @@ trumOneNotes = {
   d8( c) c4 d r |
   r4 e4~ e8 e d e |
   d8 c c4 d r |
-  e4. d8 d4 d |
+  e4. d8 d4 c |
   d8 d8~ d2 e4 |
 
   % 87
@@ -137,7 +137,7 @@ trumOneNotes = {
 
   % 95
   R1*7 |
-  r2 r4 r8 r16 fis16( |
+  r2 r4 r8 r16 fis,16( |
 
   % 103
   g8.) fis16( g4)~ g4. d8 |
@@ -150,7 +150,7 @@ trumOneNotes = {
   e4-. r4 r2 |
 
   % 111
-  r4 e4~ e8 e d e |
+  r4 e'4~ e8 e d e |
   d8( c) c4 d2 |
   r4 e4~ e8 e d e |
   d8( c) c4 d2 |
@@ -164,8 +164,7 @@ trumOneNotes = {
 }
 
 
-trumpetOneScore    =                            \relative c' { << \tc \trumOneNotes \trumOneNotCues \trumOneDyn >> }
-trumpetOneCond     = \transpose c   \concertKey \relative c' { << \tc \trumOneNotes \trumOneNotCues \trumOneMarks >> }
-trumpetOneMidi     = \transpose c   \concertKey \relative c' { << \tc \trumOneNotes \trumOneNotCues \trumOneDyn >> }
-trumpetBesOneScore = \transpose bes \concertKey \relative c' { << \tc \trumOneNotes \trumOneNotCues \trumOneDyn >> }
-trumpetBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \trumOneNotes \trumOneCues    \trumOneDyn >> }
+trumpetOneScore    = \transpose c   \concertKey \relative c' { << \tc \base \trumOneNotes \trumOneScor \trumOneDyn >> }
+trumpetOneCond     = \transpose c   \concertKey \relative c' { << \tc \base \trumOneNotes \trumOneScor \trumOneMks >> }
+trumpetBesOneScore = \transpose bes \concertKey \relative c' { << \tc \base \trumOneNotes \trumOneScor \trumOneDyn >> }
+trumpetBesOnePart  = \transpose bes \concertKey \relative c' { << \tc \base \trumOneNotes \trumOneCues \trumOneDyn >> }

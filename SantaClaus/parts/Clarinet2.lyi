@@ -11,7 +11,7 @@ clarTwoDyn = {
   s1*12 |
 
   % 33
-  s2. s4\mp |
+  s1\mp |
   s1*9 |
 
   % 43
@@ -21,7 +21,7 @@ clarTwoDyn = {
   s1*12 |
 
   % 67
-  s2. s4\mp |
+  s1\mp |
   s1*9 |
 
   % 77
@@ -47,13 +47,13 @@ clarTwoDyn = {
 }
 
 
-clarTwoMarks = \measures
+clarTwoMks = {}
 
 
-clarTwoCues = \measures
+clarTwoCues = {}
 
 
-clarTwoNotCues = \measures
+clarTwoScor = {}
 
 
 clarTwoNotes = {
@@ -71,13 +71,13 @@ clarTwoNotes = {
   R1*12 |
 
   % 33
-  r2 r4 g-. |
-  r2 r4 f-. |
-  r2 r4 g-. |
-  r2 r4 f-. |
-  r2 r4 fis-. |
-  r2 r4 fis-. |
-  r2 r4 g-. |
+  e2. g4-. |
+  c,2. f4-. |
+  e2. g4-. |
+  c,2. f4-. |
+  d2. fis4-. |
+  d2. fis4-. |
+  d4 r r g-. |
   r2 r4 g-. |
   R1*2 |
 
@@ -88,13 +88,13 @@ clarTwoNotes = {
   R1*12 |
 
   % 67
-  r2 r4 g-. |
-  r2 r4 f-. |
-  r2 r4 g-. |
-  r2 r4 f-. |
-  r2 r4 fis-. |
-  r2 r4 fis-. |
-  r2 r4 g-. |
+  e2. g4-. |
+  c,2. f4-. |
+  e2. g4-. |
+  c,2. f4-. |
+  d2. fis4-. |
+  d2. fis4-. |
+  d4 r r g-. |
   r2 r4 g-. |
   R1*2 |
 
@@ -126,8 +126,7 @@ clarTwoNotes = {
 }
 
 
-clarTwoScore    =                            \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
-clarTwoCond     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoMarks >> }
-clarTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
-clarBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoNotCues \clarTwoDyn >> }
-clarBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \clarTwoNotes \clarTwoCues    \clarTwoDyn >> }
+clarTwoScore    = \transpose c   \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoDyn >> }
+clarTwoCond     = \transpose c   \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoMks >> }
+clarBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoDyn >> }
+clarBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \base \clarTwoNotes \clarTwoCues \clarTwoDyn >> }

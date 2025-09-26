@@ -31,8 +31,12 @@ percOneDyn = {
 
   % 95
   s1 |
-  s2 s8 s4.\f |
-  s1*6 |
+  \override TextSpanner.bound-details.left.text =
+    \markup { "improvise similar" }
+  \override TextSpanner.style = #'dashed-line
+  s2 s8 \startTextSpan s4.\f |
+  s1*5 |
+  s2 s4 s8 s8\stopTextSpan |
 
   % 103
   s4\mp \crescTextPocoAPocoCresc s4\< s2 |
@@ -47,13 +51,13 @@ percOneDyn = {
 }
 
 
-percOneMarks = \measures
+percOneMks = {}
 
 
-percOneCues = \measures
+percOneCues = {}
 
 
-percOneNotCues = \measures
+percOneScor = {}
 
 
 percOneNotes = \drummode {
@@ -84,8 +88,8 @@ percOneNotes = \drummode {
   bd4 sn bd sn |
   bd4 sn bd sn |
   bd4 sn8 sn8 bd bd sn4 |
-  bd4 sn8 sn8 bd bd sn4 |
-  bd4 sn8 sn8 bd bd sn4 |
+  bd8 bd sn sn r8 bd sn4 |
+  bd8 bd sn8 sn8 bd bd sn4 |
   \repeat unfold 4 \tuplet 3/2 { <<bd8 sn>> sn sn } |
 
   % 43
@@ -145,7 +149,7 @@ percOneNotes = \drummode {
 
   % 95
   r1 |
-  r2 r8 r16 tommh16-^ r8. tommh16-^ |
+  r2 r8 tommh16-^ tommh16-^ r8. tommh16-^ |
   tommh4-^ r r2 |
   r2 r8 r16 tommh16-^ r8. tommh16-^ |
   tommh4-^ r r2 |
@@ -178,7 +182,6 @@ percOneNotes = \drummode {
 }
 
 
-percOneScore = \relative c { << \pc \percOneNotes \percOneNotCues \percOneDyn >> }
-percOneCond  = \relative c { << \pc \percOneNotes \percOneNotCues \percOneMarks >> }
-percOneMidi  = \relative c { << \pc \percOneNotes \percOneNotCues \percOneDyn >> }
-percOnePart  = \relative c { << \pc \percOneNotes \percOneCues    \percOneDyn >> }
+percOneScore = \relative c { << \pc \base \percOneNotes \percOneScor \percOneDyn >> }
+percOneCond  = \relative c { << \pc \base \percOneNotes \percOneScor \percOneMks >> }
+percOnePart  = \relative c { << \pc \base \percOneNotes \percOneCues \percOneDyn >> }

@@ -47,13 +47,13 @@ hornTwoDyn = {
 }
 
 
-hornTwoMarks = \measures
+hornTwoMks = {}
 
 
-hornTwoCues = \measures
+hornTwoCues = {}
 
 
-hornTwoNotCues = \measures
+hornTwoScor = {}
 
 
 hornTwoNotes = {
@@ -78,7 +78,7 @@ hornTwoNotes = {
   R1*2 |
 
   % 43
-  r4 e'-. r e-. |
+  r4 e-. r e-. |
   r4 f-. r g-. |
   r4 e-. r e-. |
   r4 f-. r e-. |
@@ -93,7 +93,7 @@ hornTwoNotes = {
 
   % 55
   R1*11 |
-  r2 r4 r8 c |
+  r2 r4 r8 c' |
 
   % 67
   bes4( a g) e |
@@ -107,7 +107,7 @@ hornTwoNotes = {
   R1*2 |
 
   % 77
-  r4 e'-. r e-. |
+  r4 e-. r e-. |
   r4 f-. r g-. |
   r4 e-. r e-. |
   r4 f-. r e-. |
@@ -150,8 +150,7 @@ hornTwoNotes = {
 }
 
 
-hornTwoScore  =                          \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornTwoCond   = \transpose c \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoMarks >> }
-hornTwoMidi   = \transpose c \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornFTwoScore = \transpose f \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoNotCues \hornTwoDyn >> }
-hornFTwoPart  = \transpose f \concertKey \relative c' { << \tc \hornTwoNotes \hornTwoCues    \hornTwoDyn >> }
+hornTwoScore  = \transpose c \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoScor \hornTwoDyn >> }
+hornTwoCond   = \transpose c \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoScor \hornTwoMks >> }
+hornFTwoScore = \transpose f \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoScor \hornTwoDyn >> }
+hornFTwoPart  = \transpose f \concertKey \relative c' { << \tc \base \hornTwoNotes \hornTwoCues \hornTwoDyn >> }

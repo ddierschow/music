@@ -10,7 +10,7 @@ sopranosaxDyn = {
   s1*12 |
 
   % 33
-  s1\mp |
+  s1\mf |
   s1*9 |
 
   % 43
@@ -22,7 +22,7 @@ sopranosaxDyn = {
   s1*10 |
 
   % 67
-  s1\mp |
+  s1\mf |
   s1*9 |
 
   % 77
@@ -50,10 +50,10 @@ sopranosaxDyn = {
 }
 
 
-sopranosaxMarks = \measures
+sopranosaxMks = {}
 
 
-sopranosaxCues = << \measures {
+sopranosaxCues = {
   s1*94 |
 
   % 95
@@ -61,10 +61,10 @@ sopranosaxCues = << \measures {
 
   % 103
   s1*22 |
-} >>
+}
 
 
-sopranosaxNotCues = \measures
+sopranosaxScor = {}
 
 
 sopranosaxNotes = {
@@ -152,8 +152,7 @@ sopranosaxNotes = {
 }
 
 
-sopranosaxScore    =                            \relative c' { << \tc \sopranosaxNotes \sopranosaxNotCues \sopranosaxDyn >> }
-sopranosaxCond     = \transpose c   \concertKey \relative c' { << \tc \sopranosaxNotes \sopranosaxNotCues \sopranosaxMarks >> }
-sopranosaxMidi     = \transpose c   \concertKey \relative c' { << \tc \sopranosaxNotes \sopranosaxNotCues \sopranosaxDyn >> }
-sopranosaxBesScore = \transpose bes \concertKey \relative c' { << \tc \sopranosaxNotes \sopranosaxNotCues \sopranosaxDyn >> }
-sopranosaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \sopranosaxNotes \sopranosaxCues    \sopranosaxDyn >> }
+sopranosaxScore    = \transpose c   \concertKey \relative c' { << \tc \base \sopranosaxNotes \sopranosaxScor \sopranosaxDyn >> }
+sopranosaxCond     = \transpose c   \concertKey \relative c' { << \tc \base \sopranosaxNotes \sopranosaxScor \sopranosaxMks >> }
+sopranosaxBesScore = \transpose bes \concertKey \relative c' { << \tc \base \sopranosaxNotes \sopranosaxScor \sopranosaxDyn >> }
+sopranosaxBesPart  = \transpose bes \concertKey \relative c' { << \tc \base \sopranosaxNotes \sopranosaxCues \sopranosaxDyn >> }

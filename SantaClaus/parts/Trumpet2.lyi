@@ -47,13 +47,13 @@ trumTwoDyn = {
 }
 
 
-trumTwoMarks = \measures
+trumTwoMks = {}
 
 
-trumTwoCues = \measures
+trumTwoCues = {}
 
 
-trumTwoNotCues = \measures
+trumTwoScor = {}
 
 
 trumTwoNotes = {
@@ -72,9 +72,9 @@ trumTwoNotes = {
   a8 a a4 b r |
   r4 c4~ c8 c a c |
   a8 a a4 b r |
-  c4. b8 b4 b |
+  c4. b8 b4 a |
   b8 b8~ b2 c4 |
-  b4( g~) g2 |
+  a4( g~) g2 |
   r1 |
 
   % 33
@@ -122,14 +122,14 @@ trumTwoNotes = {
 
   % 103
   R1*3
-  r2 r4 r8 r16 dis16(
+  r2 r4 r8 r16 dis,16(
   e8.) dis16( e4)~ e4. b8 |
   c4-. r4 r r8 r16 dis16( |
   e8.) dis16( e4)~ e4. b8 |
   c4-. r4 r2 |
 
   % 111
-  r4 c4~ c8 c b c |
+  r4 c'4~ c8 c b c |
   a8 a a4 b2 |
   r4 c4~ c8 c b c |
   a8 a a4 b2 |
@@ -143,8 +143,7 @@ trumTwoNotes = {
 }
 
 
-trumpetTwoScore    =                            \relative c' { << \tc \trumTwoNotes \trumTwoNotCues \trumTwoDyn >> }
-trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \trumTwoNotes \trumTwoNotCues \trumTwoMarks >> }
-trumpetTwoMidi     = \transpose c   \concertKey \relative c' { << \tc \trumTwoNotes \trumTwoNotCues \trumTwoDyn >> }
-trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \trumTwoNotes \trumTwoNotCues \trumTwoDyn >> }
-trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \trumTwoNotes \trumTwoCues    \trumTwoDyn >> }
+trumpetTwoScore    = \transpose c   \concertKey \relative c' { << \tc \base \trumTwoNotes \trumTwoScor \trumTwoDyn >> }
+trumpetTwoCond     = \transpose c   \concertKey \relative c' { << \tc \base \trumTwoNotes \trumTwoScor \trumTwoMks >> }
+trumpetBesTwoScore = \transpose bes \concertKey \relative c' { << \tc \base \trumTwoNotes \trumTwoScor \trumTwoDyn >> }
+trumpetBesTwoPart  = \transpose bes \concertKey \relative c' { << \tc \base \trumTwoNotes \trumTwoCues \trumTwoDyn >> }

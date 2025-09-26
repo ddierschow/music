@@ -2,7 +2,30 @@ concertKey = c'
 tempomark = { \tempo 4 = 120 }
 tempomarkfast = { \tempo 4 = 136 }
 
-measures =
+RM_A = "9"
+RM_B = "21"
+RM_C = "33"
+RM_D = "43"
+RM_E = "55"
+RM_F = "67"
+RM_G = "77"
+RM_H = "87"
+RM_I = "95"
+RM_J = "103"
+RM_K = "111"
+RM_L = "119"
+
+workTitle = "Santa Claus is Comin' to Town"
+workSubtitle = "Inspired by Bruce Springsteen"
+workOwner = "Dean Dierschow"
+workEmail = "deandierschow@gmail.com"
+workPerformer = "Concert Band"
+workComposer = "J. Fred Coots"
+workArranger = "arr. Dean Dierschow"
+workCopyright = "This arrangement copyright 2024 by Dean Dierschow"
+workMeter = Allegro
+
+base =
 {
   #(set-accidental-style 'modern)
   \override MultiMeasureRest.expand-limit = #2
@@ -11,43 +34,7 @@ measures =
   \time 4/4
   \key c \major
 
-  s1*8 |
-
-  % 9
-  s1*12 |
-
-  % 21
-  s1*12 |
-
-  % 33
-  s1*10 |
-
-  % 43
-  s1*10 |
-
-  % 55
-  s1*12 |
-
-  % 67
-  s1*10 |
-
-  % 77
-  s1*10 |
-
-  % 87
-  s1*8 |
-
-  % 95
-  s1*8 |
-
-  % 103
-  s1*8 |
-
-  % 111
-  s1*8 |
-
-  % 119
-  s1*6 |
+  s1*124 |
 }
 
 stafftype = Staff

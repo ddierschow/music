@@ -43,13 +43,13 @@ percTwoDyn = {
 }
 
 
-percTwoMarks = \measures
+percTwoMks = {}
 
 
-percTwoCues = \measures
+percTwoCues = {}
 
 
-percTwoNotCues = \measures
+percTwoScor = {}
 
 
 percTwoNotes = \drummode {
@@ -94,8 +94,7 @@ percTwoNotes = \drummode {
 }
 
 
-percTwoScore =                          \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoDyn >> }
-percTwoCond  = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoMarks >> }
-percTwoMidi  = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoDyn >> }
-percTwoScore = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoNotCues \percTwoDyn >> }
-percTwoPart  = \transpose c \concertKey \relative c' { << \pc \percTwoNotes \percTwoCues    \percTwoDyn >> }
+percTwoScore = \transpose c \concertKey \relative c' { << \pc \base \percTwoNotes \percTwoScor \percTwoDyn >> }
+percTwoCond  = \transpose c \concertKey \relative c' { << \pc \base \percTwoNotes \percTwoScor \percTwoMks >> }
+percTwoScore = \transpose c \concertKey \relative c' { << \pc \base \percTwoNotes \percTwoScor \percTwoDyn >> }
+percTwoPart  = \transpose c \concertKey \relative c' { << \pc \base \percTwoNotes \percTwoCues \percTwoDyn >> }
