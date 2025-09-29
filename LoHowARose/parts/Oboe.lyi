@@ -1,0 +1,71 @@
+\include "config.lyi"
+
+oboeDyn = {
+
+  s1*3 |
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1\mp |
+  s1*3 |
+}
+
+
+oboeMks = {}
+
+
+oboeCues = {}
+
+
+oboeScor = {}
+
+
+oboeNotes = {
+
+  R1*3
+
+  % 4 s
+  c2 c4 c |
+  d4 c c2 |
+  a2 bes |
+  a4 g2 f4~ |
+  f4 e f2 |
+  R1*7 |
+  r4 c' c c |
+  d4 c c2 |
+  a2 bes |
+  a4 g2 f4~ |
+  f4 e f2 |
+
+  % 21
+  R1*5 |
+  c'2 c4 c |
+  d4 c c2 |
+  a2 bes |
+  a4 g2 f4~ |
+  f4 e f2 |
+  R1*4 |
+  r2 bes |
+  a4 g2 f4~ |
+  f4 e f f |
+  a4 c |
+
+  % 39
+  ees2 d |
+  bes2 g |
+  f1 |
+  r1 |
+}
+
+
+oboeScore  = \transpose c \concertKey \relative c'' { << \tc \base \oboeNotes \oboeScor \oboeDyn >> }
+oboeCond   = \transpose c \concertKey \relative c'' { << \tc \base \oboeNotes \oboeScor \oboeMks >> }
+oboeCScore = \oboeScore
+oboeCPart  = \transpose c \concertKey \relative c'' { << \tc \base \oboeNotes \oboeCues \oboeDyn >> }

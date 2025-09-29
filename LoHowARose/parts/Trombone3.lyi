@@ -1,0 +1,78 @@
+\include "config.lyi"
+
+tromThreeDyn = {
+
+  s1\mp |
+  s1*2 |
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1\mp |
+  s1*2 |
+  s4\>s2 s4\! |
+}
+
+
+tromThreeMks = {}
+
+
+tromThreeCues = {}
+
+
+tromThreeScor = {}
+
+
+tromThreeNotes = {
+
+  c'1 |
+  f1 |
+  c1 |
+
+  % 4 t
+  c2 c4 a |
+  bes4 a' g2 |
+  f2 f |
+  a,4 c bes a~ |
+  a4 g a2 |
+  R1*5 |
+  r4 c bes a |
+  a4 g e8 f g4 |
+  R1*2 |
+  r2 g |
+  c4 bes a2 |
+  g2 a |
+
+  % 21
+  R1*5 |
+  c2 c4 a |
+  bes4 a' g2 |
+  f2 f |
+  a,4 c bes a~ |
+  a4 g a2 |
+  R1*2 |
+  r4 g' g a |
+  bes,4 a g2 |
+  fis2 g |
+  c4 bes a2 |
+  g2 a4 f |
+  f'4 f |
+
+  % 39
+  f2 bes |
+  f2 ees |
+  a1 |
+  f1 |
+}
+
+
+tromThreeScore  = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor \tromThreeDyn >> }
+tromThreeCond   = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeScor \tromThreeMks >> }
+tromCThreeScore = \tromThreeScore
+tromCThreePart  = \transpose c \concertKey \relative c, { << \bc \base \tromThreeNotes \tromThreeCues \tromThreeDyn >> }

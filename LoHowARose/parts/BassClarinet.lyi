@@ -1,0 +1,75 @@
+\include "config.lyi"
+
+bassclarDyn = {
+
+  s1*3 |
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1\mp |
+  s1*3 |
+}
+
+
+bassclarMks = {}
+
+
+bassclarCues = {}
+
+
+bassclarScor = {}
+
+
+bassclarNotes = {
+
+  R1*3 |
+
+  % 4 b
+  f2 f4 f |
+  bes4 f c2 |
+  d2 bes |
+  f'4 e d2 |
+  c2 f |
+  R1*7 |
+  r4 c e f |
+  bes,4 f' c2 |
+  d2 g, |
+  a4 bes c2 |
+  c2 f, |
+
+  % 21
+  R1*5 |
+  f'2 f4 f |
+  bes4 f c2 |
+  d2 bes |
+  f'4 e d2 |
+  c2 f |
+  R1*4 |
+  r2 g |
+  a4 bes c2 |
+  c2 f,4 f |
+  f4 c |
+
+  % 39
+  aes2 bes |
+  d2 ees |
+  f1 |
+  f1 |
+}
+
+
+bassclarScore    = \transpose c   \concertKey \relative c'' { << \tc \base \bassclarNotes \bassclarScor \bassclarDyn >> }
+bassclarCond     = \transpose c   \concertKey \relative c'' { << \tc \base \bassclarNotes \bassclarScor \bassclarMks >> }
+bassclarBesScore = \transpose bes \concertKey \relative c'' { << \tc \base \bassclarNotes \bassclarScor \bassclarDyn >> }
+bassclarBesPart  = \transpose bes \concertKey \relative c'' { << \tc \base \bassclarNotes \bassclarCues \bassclarDyn >> }
+bassoonScore     = \transpose c   \concertKey \relative c   { << \bc \base \bassclarNotes \bassclarScor \bassclarDyn >> }
+bassoonCond      = \transpose c   \concertKey \relative c   { << \bc \base \bassclarNotes \bassclarScor \bassclarMks >> }
+bassoonCScore    = \bassoonScore
+bassoonCPart     = \transpose c   \concertKey \relative c   { << \bc \base \bassclarNotes \bassclarCues \bassclarDyn >> }

@@ -1,0 +1,77 @@
+\include "config.lyi"
+
+barisaxDyn = {
+
+  s1*3
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1\mp |
+  s1*3 |
+}
+
+
+barisaxMks = {}
+
+
+barisaxCues = {}
+
+
+barisaxScor = {}
+
+
+barisaxNotes = {
+
+  R1*3
+
+  % 4 b
+  f2 f4 f |
+  bes4 f c2 |
+  d2 bes |
+  f'4 e d2 |
+  c2 f |
+  f2 f4 f |
+  bes4 f c2 |
+  d2 bes |
+  f'4 e d2 |
+  c2 f |
+  R1*4 |
+  r2 g, |
+  a4 bes c2 |
+  c2 f |
+
+  % 21
+  R1*5 |
+  f2 f4 f |
+  bes4 f c2 |
+  d2 bes |
+  f'4 e d2 |
+  c2 f |
+  r4 f g a |
+  f4 g, c8 d e4 |
+  R1*2 |
+  r2 g, |
+  a4 bes c2 |
+  c2 f4 f |
+  f4 c |
+
+  % 39
+  aes2 bes |
+  d2 ees |
+  f1 |
+  f1 |
+
+}
+
+
+barisaxScore    = \transpose c   \concertKey \relative c'' { << \tc \base \barisaxNotes \barisaxScor \barisaxDyn >> }
+barisaxCond     = \transpose c   \concertKey \relative c'' { << \tc \base \barisaxNotes \barisaxScor \barisaxMks >> }
+barisaxEesScore = \transpose ees \concertKey \relative c'' { << \tc \base \barisaxNotes \barisaxScor \barisaxDyn >> }
+barisaxEesPart  = \transpose ees \concertKey \relative c'' { << \tc \base \barisaxNotes \barisaxCues \barisaxDyn >> }

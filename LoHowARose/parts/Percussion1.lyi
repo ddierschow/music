@@ -1,0 +1,49 @@
+\include "config.lyi"
+
+percOneDyn = {
+
+  s1*3 |
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1\mp |
+  s1*3 |
+}
+
+
+percOneMks = {}
+
+
+percOneCues = {}
+
+
+percOneScor = {}
+
+
+percOneNotes = \drummode {
+
+  R1*3
+
+  % 4
+  R1*17
+
+  % 21
+  R1*17
+  R2
+
+  % 38
+  R1*3
+  r1 |
+}
+
+
+percOneScore = << \pc \base \percOneNotes \percOneScor \percOneDyn >>
+percOneCond  = << \pc \base \percOneNotes \percOneScor \percOneMks >>
+percOnePart  = << \pc \base \percOneNotes \percOneCues \percOneDyn >>

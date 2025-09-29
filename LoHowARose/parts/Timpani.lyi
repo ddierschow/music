@@ -1,0 +1,87 @@
+\include "config.lyi"
+
+timpDyn = {
+
+  s1\mp |
+  s1*2 |
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1\mp |
+  s1*3 |
+}
+
+
+timpMks = {}
+
+
+timpCues = {}
+
+
+timpScor = {}
+
+
+timpNotes = {
+
+  c1 |
+  c1 |
+  c1 |
+
+  % 4 b
+  f2:16 f4 f |
+  f4 f c2 |
+  f2 f:16 |
+  f4 c c2:16 |
+  c2 f |
+  f2:16 f4 f |
+  f4 f c2 |
+  f2 f:16 |
+  f4 c f2:16 |
+  c2 f |
+  r4 f c f |
+  f4 c c8 f c4 |
+  r4 c c f |
+  f4 f c2:16 |
+  f2 c:16 |
+  c4 f c2:16 |
+  c2:16 f |
+
+  % 21
+  f2:16 f4 f |
+  f4 f c2 |
+  f2 f:16 |
+  f4 c f2:16 |
+  c2 f |
+  f2:16 f4 f |
+  f4 f c2 |
+  f2 f:16 |
+  f4 c f2:16 |
+  c2 f |
+  r4 f c f |
+  f4 c c8 f c4 |
+  r4 c c f |
+  f4 f c2:16 |
+  f2 c:16 |
+  c4 f c2:16 |
+  c2:16 f4 f |
+  f4 c |
+
+  % 39
+  c2 f |
+  f2 c |
+  f1:16 |
+  f1 |
+}
+
+
+timpaniScore  = \transpose c \concertKey \relative c { << \bc \base \timpNotes \timpScor \timpDyn >> }
+timpaniCond   = \transpose c \concertKey \relative c { << \bc \base \timpNotes \timpScor \timpMks >> }
+timpaniCScore = \timpaniScore
+timpaniCPart  = \transpose c \concertKey \relative c { << \bc \base \timpNotes \timpCues \timpDyn >> }

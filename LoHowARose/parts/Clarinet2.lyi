@@ -1,0 +1,71 @@
+\include "config.lyi"
+
+clarTwoDyn = {
+
+  s1*3 |
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 38
+  s1\mp |
+  s1*3 |
+}
+
+
+clarTwoMks = {}
+
+
+clarTwoCues = {}
+
+
+clarTwoScor = {}
+
+
+clarTwoNotes = {
+
+  R1*3 |
+
+  % 4 a
+  a2 a4 f |
+  f4 f e2 |
+  d2 d |
+  c4 c d4. a8 |
+  c4 c c2 |
+  R1*7 |
+  r4 e g f |
+  f4 f e2 |
+  d2 d |
+  f4 d e f~ |
+  f4 c c2 |
+
+  % 21
+  R1*5 |
+  a'2 a4 f |
+  f4 f e2 |
+  d2 d |
+  c4 c d4. a8 |
+  c4 c c2 |
+  R1*4 |
+  r2 d |
+  f4 d e f~ |
+  f4 c f f |
+  a4 a |
+
+  % 39
+  c2 f |
+  d2 bes |
+  c1 |
+  r1 |
+}
+
+
+clarTwoScore    = \transpose c   \concertKey \relative c''' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoDyn >> }
+clarTwoCond     = \transpose c   \concertKey \relative c''' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoMks >> }
+clarBesTwoScore = \transpose bes \concertKey \relative c''' { << \tc \base \clarTwoNotes \clarTwoScor \clarTwoDyn >> }
+clarBesTwoPart  = \transpose bes \concertKey \relative c''' { << \tc \base \clarTwoNotes \clarTwoCues \clarTwoDyn >> }
