@@ -1,0 +1,49 @@
+\include "config.lyi"
+
+percTwoDyn = {
+
+  s1*3 |
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1\mp |
+  s1*3 |
+}
+
+
+percTwoMks = {}
+
+
+percTwoCues = {}
+
+
+percTwoScor = {}
+
+
+percTwoNotes = {
+
+  R1*3
+
+  % 4
+  R1*17
+
+  % 21
+  R1*17
+  R2
+
+  % 38
+  R1*3
+  r1 |
+}
+
+
+percTwoScore = << \pc \base \percTwoNotes \percTwoScor \percTwoDyn >>
+percTwoCond  = << \pc \base \percTwoNotes \percTwoScor \percTwoMks >>
+percTwoPart  = << \pc \base \percTwoNotes \percTwoCues \percTwoDyn >>

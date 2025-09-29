@@ -1,0 +1,76 @@
+\include "config.lyi"
+
+tenorsaxDyn = {
+
+  s1*3 |
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1\mp |
+  s1*3 |
+}
+
+
+tenorsaxMks = {}
+
+
+tenorsaxCues = {}
+
+
+tenorsaxScor = {}
+
+
+tenorsaxNotes = {
+
+  R1*3
+
+  % 4 t
+  c2 c4 a |
+  bes4 a' g2 |
+  f2 f |
+  a,4 c bes a~ |
+  a4 g a2 |
+  c2 c4 a |
+  bes4 a' g2 |
+  f2 f |
+  a,4 c bes a~ |
+  a4 g a2 |
+  R1*4 |
+  r2 g |
+  c4 bes a2 |
+  g2 a |
+
+  % 21
+  R1*5 |
+  c2 c4 a |
+  bes4 a' g2 |
+  f2 f |
+  a,4 c bes a~ |
+  a4 g a2 |
+  r4 c bes a |
+  a4 g e8 f g4 |
+  R1*2 |
+  r2 g |
+  c4 bes a2 |
+  g2 a4 f |
+  f4 f |
+
+  % 39
+  f2 bes |
+  f2 ees |
+  a1 |
+  f1 |
+}
+
+
+tenorsaxScore    = \transpose c   \concertKey \relative c''' { << \tc \base \tenorsaxNotes \tenorsaxScor \tenorsaxDyn >> }
+tenorsaxCond     = \transpose c   \concertKey \relative c''' { << \tc \base \tenorsaxNotes \tenorsaxScor \tenorsaxMks >> }
+tenorsaxBesScore = \transpose bes \concertKey \relative c''' { << \tc \base \tenorsaxNotes \tenorsaxScor \tenorsaxDyn >> }
+tenorsaxBesPart  = \transpose bes \concertKey \relative c''' { << \tc \base \tenorsaxNotes \tenorsaxCues \tenorsaxDyn >> }

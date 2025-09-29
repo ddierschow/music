@@ -1,0 +1,76 @@
+\include "config.lyi"
+
+altosaxOneDyn = {
+
+  s1*3
+
+  % 4
+  s1\mf |
+  s1*16 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1\mp |
+  s1*3 |
+}
+
+
+altosaxOneMks = {}
+
+
+altosaxOneCues = {}
+
+
+altosaxOneScor = {}
+
+
+altosaxOneNotes = {
+
+  R1*3
+
+  % 4 s
+  c2 c4 c |
+  d4 c c2 |
+  a2 bes |
+  a4 g2 f4~ |
+  f4 e f2 |
+  c'2 c4 c |
+  d4 c c2 |
+  a2 bes |
+  a4 g2 f4~ |
+  f4 e f2 |
+  R1*4 |
+  r2 bes |
+  a4 g2 f4~ |
+  f4 e f2 |
+
+  % 21
+  R1*5 |
+  c'2 c4 c |
+  d4 c c2 |
+  a2 bes |
+  a4 g2 f4~ |
+  f4 e f2 |
+  r4 a g e |
+  f4 d c2 |
+  R1*2 |
+  r2 bes' |
+  a4 g2 f4~ |
+  f4 e f f |
+  a4 c |
+
+  % 39
+  ees2 d |
+  bes2 g |
+  f1 |
+  r1 |
+}
+
+
+altosaxOneScore    = \transpose c   \concertKey \relative c''' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneDyn >> }
+altosaxOneCond     = \transpose c   \concertKey \relative c''' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneMks >> }
+altosaxEesOneScore = \transpose ees \concertKey \relative c''' { << \tc \base \altosaxOneNotes \altosaxOneScor \altosaxOneDyn >> }
+altosaxEesOnePart  = \transpose ees \concertKey \relative c''' { << \tc \base \altosaxOneNotes \altosaxOneCues \altosaxOneDyn >> }

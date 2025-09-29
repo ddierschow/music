@@ -1,0 +1,37 @@
+concertKey = c
+tempomark = { \tempo 4 = 88 }
+
+RM_A = "4"
+RM_B = "21"
+RM_C = "39"
+
+workTitle = "Lo How A Rose E'er Blooming"
+workSubtitle = "Es Ist Ein Ros"
+workOwner = "Dean Dierschow"
+workEmail = "deandierschow@gmail.com"
+workPerformer = "Concert Band"
+workComposer = "Traditional"
+workArranger = "arr. Dean Dierschow"
+workCopyright = "Copyright 2025 by Dean Dierschow"
+workMeter = Andante
+
+base =
+{
+  \override MultiMeasureRest.expand-limit = #2
+  \override Score.PaperColumn.keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
+  \time 4/4
+  \key f \major
+  s1*3 |
+  \caesura
+  s1*34 |
+  \time 2/4
+  s2 |
+  \time 4/4
+  s1*3 |
+  s1\fermata
+}
+
+stafftype = Staff
+
+\include "../common/defs.lyi"

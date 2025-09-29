@@ -1,0 +1,23 @@
+\include "outline.lyi"
+
+#(set-global-staff-size 24)
+
+\include "layout.lyi"
+
+\PartPaper
+
+\book
+{
+  \PartHeader
+
+  \score
+  {
+    \new \stafftype \with { drumStyleTable = #(alist->hash-table mydrums) }
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      \tempomark
+      << \keepWithTag #'part \notes \outline >>
+    }
+  }
+}

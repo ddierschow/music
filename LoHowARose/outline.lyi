@@ -1,0 +1,35 @@
+rehearsalMarks =
+{
+  s1*3 |
+
+  \rMark \RM_A
+  s1*17 |
+
+  \rMark \RM_B
+  s1*17 |
+  s2 |
+
+  \rMark \RM_C
+  s1*4 |
+}
+
+pageMarks =
+{
+  \time 4/4
+
+  s1*3 |
+
+  % 4
+  s1*17 |
+
+  % 21
+  s1*17 |
+  s2 |
+
+  % 39
+  s1*4 |
+
+  \bar "|."
+}
+
+outline = << \rehearsalMarks \pageMarks >>

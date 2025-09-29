@@ -1,4 +1,4 @@
-\version "2.22.2"
+\version "2.24.4"
 
 \include "../../lilydrum/lib/layout_tweaks.ily"
 \include "../../lilydrum/lib/musical_functions.ily"
@@ -69,8 +69,8 @@ dimTextDimMolto = {
 
 tempoMark = #(define-music-function (parser location markp) (string?)
 #{
-  \once \override Score . RehearsalMark #'self-alignment-X = #left
-  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \once \override Score.RehearsalMark.self-alignment-X = #left
+  \once \override Score.RehearsalMark.extra-spacing-width = #'(+inf.0 . -inf.0)
   \mark \markup { \smaller \bold $markp }
 #})
 
