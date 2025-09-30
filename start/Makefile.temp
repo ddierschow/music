@@ -1,0 +1,33 @@
+scores := Score ScoreNT
+parts := @partlist@
+infra := config.lyi layout.lyi outline.lyi ../common/defs.lyi
+
+scorepdfs := $(scores:%=%.pdf) ScoreMidi.midi
+scoresrcs := $(scores:%=%.ly)
+partprods := $(parts)
+partpdfs := $(partprods:%=%.pdf)
+partincs := $(parts:%=parts/%.lyi)
+partsrcs := $(partprods:%=%.ly)
+
+all: scores parts
+
+scores: $(scorepdfs)
+
+parts: $(partpdfs)
+
+clean:
+	rm -f *~ parts/*~
+
+pristine: clean
+	rm -f $(partpdfs) $(scorepdfs)
+
+Score.pdf: Score.ly $(infra) $(partincs) score.lyi
+	lilypond Score.ly
+
+ScoreNT.pdf: ScoreNT.ly $(infra) $(partincs) score.lyi
+	lilypond ScoreNT.ly
+
+ScoreMidi.midi: ScoreMidi.ly $(infra) $(partincs) score.lyi
+	lilypond ScoreMidi.ly
+
+@blob@

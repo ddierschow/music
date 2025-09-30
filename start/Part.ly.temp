@@ -1,0 +1,10 @@
+\version "@version@"
+
+\include "config.lyi"
+\include "parts/@filename@.lyi"
+
+instrument = @formalname@
+
+notes = \@part_t_part@
+
+\include "single.lyi"

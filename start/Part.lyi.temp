@@ -1,0 +1,19 @@
+@part@@text@Dyn = {}
+
+
+@part@@text@Mks = {}
+
+
+@part@@text@Cues = {}
+
+
+@part@@text@Scor = {}
+
+
+@part@@text@Notes = {}
+
+
+@part_nt_score@ =@transp_nt@ { << \@mclef@ \base \@part@@text@Notes \@part@@text@Scor \@part@@text@Dyn >> }
+@part_nt_cond@ =@transp_nt@ { << \@mclef@ \base \@part@@text@Notes \@part@@text@Scor \@part@@text@Mks >> }
+@part_t_score@ =@transp_t@ { << \@mclef@ \base \@part@@text@Notes \@part@@text@Scor \@part@@text@Dyn >> }
+@part_t_part@ =@transp_t@ { << \@mclef@ \base \@part@@text@Notes \@part@@text@Cues \@part@@text@Dyn >> }

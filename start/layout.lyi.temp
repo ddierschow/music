@@ -1,0 +1,72 @@
+ScorePaper = \paper {
+  systems-per-page = #1
+  #(set-paper-size "letter")
+  ragged-last-bottom = ##f
+  top-margin = 15\mm
+  left-margin = 18\mm
+  right-margin = 18\mm
+  bottom-margin = 15\mm
+}
+
+BookHeader = \header {
+  title = \markup { \workTitle }
+  subtitle = \workSubtitle
+  opus = ""
+  subsubtitle = \markup { \workComposer \workArranger }
+  instrument = \markup { "Score for" \instrument }
+  meter = \workMeter
+
+  mutopiatitle = \workTitle
+  mutopiacomposer = \workComposer
+  mutopiaopus = ""
+  mutopiainstrument = \workPerformer
+  date = ""
+  source = ""
+  style = ""
+  maintainer = \workOwner
+  maintainerEmail = \workEmail
+
+  footer = ""
+  tagline = ##f
+  date = \markup { "- generated" #(strftime "%Y-%m-%d" (localtime (current-time))) }
+  copyright = \markup { \teeny \workCopyright \teeny \italic \date }
+}
+
+ScoreHeader = \header {
+  footer = ""
+  tagline = ##f
+}
+
+PartPaper = \paper {
+  ragged-last-bottom = ##f
+  #(set-paper-size "letter")
+  top-margin = 15\mm
+  left-margin = 18\mm
+  right-margin = 18\mm
+  bottom-margin = 15\mm
+}
+
+PartHeader = \header {
+  title = \markup { \workTitle }
+  subtitle = \workSubtitle
+  opus = ""
+  composer = \workComposer
+  arranger = \markup { \italic \workArranger }
+  instrument = \instrument
+  meter = \workMeter
+
+  mutopiatitle = \workTitle
+  mutopiacomposer = \workComposer
+  mutopiaopus = ""
+  mutopiainstrument = \workPerformer
+  date = ""
+  source = ""
+  style = ""
+  maintainer = \workOwner
+  maintainerEmail = \workEmail
+  lastupdated = ""
+
+  tagline = ##f
+  date = \markup { "- generated" #(strftime "%Y-%m-%d" (localtime (current-time))) }
+  copyright = \markup { \teeny \workCopyright \teeny \italic \date }
+}

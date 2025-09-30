@@ -1,4 +1,7 @@
 \include "outline.lyi"
+
+#(set-global-staff-size partSize)
+
 \include "layout.lyi"
 
 \PartPaper

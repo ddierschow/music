@@ -7,38 +7,34 @@ give you a starting point quickly.
 The most difficult line to write is the first one.  This handles that.
 '''
 
+# add partcombine support and doublestaffs
+
 import argparse
+import datetime
+import os
+import shutil
 
 import data
 
 dirname = 'start'
 
-# todo: Makefile index.php
+score_double_snippet = r'''          \doubleStaffTempo
+            #(markup "Flute 1, 2") #(markup #:column ("Fl." #:line ("1, 2"))) #"1." #"2." \flCOneScore \flCTwoScore
+'''  # not yet in use
 
-
-score_snippet = r'''          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = @formalname@
-            \set Staff.shortInstrumentName = "@shortname@"
-            \new Voice {\keepWithTag #'score \relative c \@part@@ckey@@text@Score }
-          }
+score_snippet = r'''          \singleStaff @formalname@ "@shortname@" \@part_t_score@
 '''
 
-scorent_snippet = r'''          \new Staff
-          {
-            #(set-accidental-style 'modern)
-            \set Staff.instrumentName = @formalname@
-            \set Staff.shortInstrumentName = "@shortname@"
-            \new Voice {\keepWithTag #'score \@part@@text@Score }
-          }
+scorent_snippet = r'''          \singleStaff @formalname@ "@shortname@" \@part_nt_score@
 '''
 
-scoremidi_snippet = r'''      \new Staff \with { midiInstrument = "@midi@" }
-        { \new Voice { \relative c \@part@@text@Midi } }
+scoremidi_snippet = r'''      \midiStaff "@midi@" << \@part_nt_score@ >>
 '''
 
-makefile_part_snippet = '''@filename@.pdf: $(infra) @filename@.ly @filename@.lyi
+scoremididrums_snippet = r'''      \midiDrumStaff << \@part_nt_score@ >>
+'''
+
+makefile_part_snippet = '''@filename@.pdf: @filename@.ly parts/@filename@.lyi $(infra) single.lyi
 \tlilypond @filename@.ly
 
 '''
@@ -58,7 +54,7 @@ def command_line_args():
 def main():
     args = command_line_args()
 
-    if args.part:
+    if args.part:  # not really actively supporting this right now
         config = read_config(args.file)
         for part in args.part:
             render_part(config, config_instrument(part), part)
@@ -71,6 +67,7 @@ def config_instrument(arg):
     # comma-delimited should be coupled on score
     # equal-delimited should map to the same lyi file
     base_inst = None
+    retval = []
     for inst in arg.split(','):
         same_as = None
         if '=' in inst:
@@ -84,24 +81,34 @@ def config_instrument(arg):
         formalname = settings['name']
         key = settings['key'][0].upper()
         if num:
-            formalname = ' ' + nums['roman']
+            formalname += ' ' + nums['roman']
         if settings.get('key', '').endswith('es'):
-            formalname = r'\markup { "' + formalname + ' in ' + key + r'" \smaller \flat }'
+            formalname += ' in ' + key + r'" \smaller \flat'
         elif settings.get('key', '').endswith('is'):
-            formalname = r'\markup { "' + formalname + ' in ' + key + r' \smaller \sharp }'
+            formalname += ' in ' + key + r'" \smaller \sharp'
         elif settings.get('key', '') not in ['c', '']:
-            formalname = f'"{formalname} in {key}"'
+            formalname += f' in {key}"'
         else:
-            formalname = f'"{formalname}"'
-        return([{
+            formalname += '"'
+        formalname = r'\markup { "' + formalname + ' }'
+        ckey = settings.get('key', '').title()
+        part_nt = settings['part'] + nums['text']
+        part_t = settings['part'] + ckey + nums['text']
+        transp_nt = r' \transpose c \concertKey \relative c' + settings['octave']
+        transp_t = r' \transpose ' + settings.get('key', 'c') + r' \concertKey \relative c' + settings['octave']
+        if settings['part'] == 'perc':
+            part_t = part_nt
+            transp_nt = ''
+            transp_t = ''
+        retval.append({
             'filename': inst,
             'formalname': formalname,
             'name': settings['name'],
             'shortname': settings['shortname'] + nums['num'],
             'part': settings['part'],
             'key': settings.get('key', 'c'),
-            'ckey': settings.get('key', '').title(),
-            'clef': settings['clef'],
+            'ckey': ckey,
+            'clef': '' if settings['clef'] == 'percussion' else settings['clef'],
             'octave': settings['octave'],
             'mclef': 'pc' if settings['clef'] == 'percussion' else 'bc' if settings['clef'] == 'bass' else 'tc',
             'midi': settings.get('midi', ''),
@@ -111,11 +118,19 @@ def config_instrument(arg):
             'textkey': data.keys.get(settings.get('key', ''), ''),
             'base': base_inst,
             'same_as': same_as,
-        }])
-        
+            'part_nt_score': part_nt + 'Score',
+            'part_nt_cond': part_nt + 'Cond',
+            'part_t_score': part_t + 'Score',
+            'part_t_part': part_t + 'Part',
+            'transp_nt': transp_nt,
+            'transp_t': transp_t,
+        })
+    return retval
+
 
 def read_config(config_file):
     config = {
+        'year': str(datetime.date.today().year),
         'inst': [],
         'concertkey': 'c',
         'tempomark': '4 = 100',
@@ -125,8 +140,9 @@ def read_config(config_file):
     }
     for ln in open(config_file).readlines():
         cmd, arg = ln.strip().split('|', 1)
-        if cmd == 'inst':
-            config['inst'].extend(config_instrument(arg))
+        if cmd == 'instruments':
+            for inst in open(f'../start/{arg}.inst'):
+                config['inst'].extend(config_instrument(inst.strip()))
         else:
             config[cmd] = arg
     return config
@@ -165,27 +181,35 @@ def render_makefile(config, infilename, outfilename):
 
 
 def render_part(inst, config, part):
-    render_file(inst, config, 'Part.ly', part + '.ly')
-    render_file(inst, config, 'Part.lyi', part + '.lyi')
+    render_file(inst, config, 'Part.ly.temp', f'{part}.ly')
+    render_file(inst, config, 'Part.lyi.temp', f'parts/{part}.lyi')
 
 
 def start_from_scratch(config_file, version):
+    if os.path.exists('config.lyi'):
+        print("directory is not clean!")
+        return
     config = read_config(config_file)
 
-    render_file({}, config, 'ix.php', 'index.php', blob=
-        ', '.join([f'''"{x['filename']}"''' for x in config['inst']]))
+    render_file({}, config, 'index.php.temp', 'index.php',
+                blob=', '.join([f'''"{x['filename']}"''' for x in config['inst']]))
     open('allparts.lyi', 'wt').write(''.join([
-        f'''\\include "{x['filename']}.lyi"\n''' for x in config['inst']]))
-    render_file({}, config, 'config.lyi', 'config.lyi')
-    render_file({}, config, 'layout.lyi', 'layout.lyi')
-    render_file({}, config, 'outline.lyi', 'outline.lyi')
-    render_file({}, config, 'part.lyi', 'part.lyi')
-    render_file({}, config, 'Score.ly', 'Score.ly', make_score_blob(config, score_snippet))
-    render_file({}, config, 'ScoreNT.ly', 'ScoreNT.ly', make_score_blob(config, scorent_snippet))
-    render_file({}, config, 'ScoreMidi.ly', 'ScoreMidi.ly', make_score_blob(config, scoremidi_snippet))
+        f'''\\include "parts/{x['filename']}.lyi"\n''' for x in config['inst']]))
+    render_file({}, config, 'config.lyi.temp', 'config.lyi')
+    render_file({}, config, 'layout.lyi.temp', 'layout.lyi')
+    render_file({}, config, 'outline.lyi.temp', 'outline.lyi')
+    render_file({}, config, 'score.lyi.temp', 'score.lyi')
+    render_file({}, config, 'single.lyi.temp', 'single.lyi')
+    render_file({}, config, 'Score.ly.temp', 'Score.ly', make_score_blob(config, score_snippet))
+    render_file({}, config, 'ScoreNT.ly.temp', 'ScoreNT.ly', make_score_blob(config, scorent_snippet))
+    render_file({}, config, 'ScoreMidi.ly.temp', 'ScoreMidi.ly', make_score_blob(config, scoremidi_snippet))
+    render_file({}, config, 'description.txt.temp', 'description.txt')
+    os.makedirs('parts', exist_ok=True)
     for inst in config['inst']:
         render_part(inst, config, inst['filename'])
-    render_makefile(config, 'Makefile', 'Makefile')
+    render_makefile(config, 'Makefile.temp', 'Makefile')
+    print('cp', '../image.png', 'image.png')
+    shutil.copyfile('../image.png', 'image.png')
 
 
 if __name__ == '__main__':
