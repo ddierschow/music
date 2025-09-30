@@ -1,0 +1,392 @@
+\include "layout.lyi"
+
+tempomark = { \tempo 4 = 80 }
+
+SongHeader = \header {
+  title = "Drink Up the River"
+  composer = "Words and music by Kathy Mar"
+  arranger = \markup { \italic "arr. Dean Dierschow" }
+  copyright = \markup { \teeny "Words and music (c) 1988 by Kathy Mar.  Arrangement (c) 2024 by Dean Dierschow" }
+  instrument = \instrument
+  meter = "Moderately"
+  footer = ""
+  tagline = ""
+}
+
+scoreConfig = {
+  #(set-accidental-style 'modern)
+  \override MultiMeasureRest.expand-limit = #2
+  \override Score.PaperColumn.keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
+  \time 4/4
+  \key d \major
+}
+
+pageMarks = {
+  s1*4 |
+
+  \repeat volta 4 {
+    \mark \markup \bold "Verse"
+    s1*16 |
+
+    \mark \markup \bold "Chorus"
+    s1*7 |
+  }
+  \alternative {
+    {
+      s1*2 |
+      \time 2/4
+      s2 |
+      \time 4/4
+    }
+    {
+      s1*9 |
+    }
+  }
+
+  s1*2 |
+  \bar "|."
+}
+
+chordsNotes = \chordmode {
+d1 |
+d1 |
+d1 |
+d1 |
+
+% Verse
+d1 | g2 d2 |
+g2 d2 | a2:sus4 a2 |
+d1 | g2 d2 |
+g2 d | a4:sus4 a d2 |
+c1 | a1 |
+c1 | a1 |
+d1 | g2 d |
+g2 d | a4:sus4 a d2 |
+
+% Chorus
+d1 |
+g2 d2 |
+g2 d2 | a2:sus4 a2 |
+d1 |
+g2 d2 |
+g2 d2 | a2:sus4 a2 | d1 |
+d2 |
+
+d1 |
+d1 |
+g2 d2 |
+g2 d2 | a2:sus4 a2 |
+d1 |
+g2 d2 |
+g2 d2 | a2:sus4 a2 |
+d1 |
+d1 |
+}
+
+sopranoDyn = {
+  s1*4 |
+
+  % Verse
+  s1*16 |
+
+  % Chorus
+  s1*7 |
+
+  s1*2 |
+  s2 |
+
+  s1*9 |
+
+  s1*2 |
+}
+
+
+sopranoNotes = {
+  \tempomark
+
+  R1*3 |
+  r2. fis8 e |
+
+  \repeat volta 4 {
+    % Verse
+    d8 d fis e d a4 fis'16 fis |
+    g8 g b b a a b cis |
+    d8 d d b b a fis d |
+    e8 d e fis e4 fis16 fis e8 |
+    d8 d fis e d e d d |
+    g8 g b b a a b cis |
+    d8 d d b b a fis d |
+    fis8 e d e d4 d8 d |
+
+    e8 e e d e c4 e8 |
+    fis8 fis fis e d4 d8 d |
+    d8 e e e d e e d |
+    d8 e e d e4 cis'16 cis cis8 |
+    d8 d d b a fis e d |
+    g8 g b b a4 a16 b cis8 |
+    d4 d8 b a fis e d |
+    fis4 e d fis16 fis e8 |
+
+    % Chorus
+    R1*7 |
+  }
+  \alternative {
+    {
+      R1 |
+      R1 |
+      \time 2/4
+      R2 |
+      \time 4/4
+    }
+    {
+      R1 |
+      R1*8 |
+    }
+  }
+
+  R1*2 |
+  \bar "|."
+}
+
+altoDyn = {
+  s1*4 |
+
+  % Verse
+  s1*16 |
+
+  % Chorus
+  s1*7 |
+
+  s1*2 |
+  s2 |
+
+  s1*9 |
+
+  s1*2 |
+}
+
+altoNotes = {
+  R1*4 |
+
+  \repeat volta 4 {
+    % Verse
+    R1*16 |
+
+    % Chorus
+    R1*7 |
+  }
+  \alternative {
+    {
+      R1 |
+      R1 |
+      \time 2/4
+      R2 |
+      \time 4/4
+    }
+    {
+      R1 |
+      R1*8 |
+    }
+  }
+
+  R1*2 |
+  \bar "|."
+}
+
+tenorDyn = {
+  s1*4 |
+
+  % Verse
+  s1*16 |
+
+  % Chorus
+  s1*7 |
+
+  s1*2 |
+  s2 |
+
+  s1*9 |
+
+  s1*2 |
+}
+
+tenorNotes = {
+  R1*4 |
+
+  \repeat volta 4 {
+    % Verse
+    R1*16 |
+
+    % Chorus
+    R1*7 |
+  }
+  \alternative {
+    {
+      R1 |
+      R1 |
+      \time 2/4
+      R2 |
+      \time 4/4
+    }
+    {
+      R1 |
+      R1*8 |
+    }
+  }
+
+  R1*2 |
+  \bar "|."
+}
+
+bassDyn = {
+  s1*4 |
+
+  % Verse
+  s1*16 |
+
+  % Chorus
+  s1*7 |
+
+  s1*2 |
+  s2 |
+
+  s1*9 |
+
+  s1*2 |
+}
+
+bassNotes = {
+  R1*4 |
+
+  \repeat volta 4 {
+    % Verse
+    R1*16 |
+
+    % Chorus
+    R1*7 |
+  }
+  \alternative {
+    {
+      R1 |
+      R1 |
+      \time 2/4
+      R2 |
+      \time 4/4
+    }
+    {
+      R1 |
+      R1*8 |
+    }
+  }
+
+  R1*2 |
+  \bar "|."
+}
+
+stanzaFirst = \lyricmode {
+  \small \skip1*3 |
+
+  \set stanza = "1. "
+  \skip2.  I8 was |
+  sit-8 ting by a riv- er when the | thought8 oc- curred to me
+  There are a | hun-8 dred thou- sand riv- ers that we | ne-8 ver e- ven see
+  They are the | bound-8 a- ries of all we know of | truth8 and right and wrong
+  And I have | writ-8 ten some ex- am- ples for you | here8 with- in my song4
+  Some8 are | bridged8 and some are for- ded some are | swol-8 len from the rains
+  Some are the | ul-8 ti- mate re- sult of all our | joy8 and all our pains
+  But when the | riv-8 ers of your life are full and | star-8 ting to wash down4
+  You've8 got16 to | drink4 up8 the riv-4 er8 be- | fore4 you drown
+
+  % Chorus
+  You've8 got16 to | drink4 up8 the riv- er
+  You've8 got16 to | drink4 up8 the riv- er
+  You've8 got16 to | drink4 up8 the riv-4 er8 be- | fore4 you drown
+  You've8 got16 to | drink4 up8 the riv- er
+  You've8 got16 to | drink4 up8 the riv- er
+  You've8 got16 to | drink4 up8 the riv-4 er8 be- | fore4 you drown2
+  \skip1 |
+  \time 2/4
+  \set stanza = "2. "
+  And4 all |
+  \time 4/4
+
+  \set stanza = "4. "
+  fore4 you drown
+  You've8 got16 to | drink4 up8 the riv- er
+  You've8 got16 to | drink4 up8 the riv- er
+  You've8 got16 to | drink4 up8 the riv-4 er8 be- | fore4 you drown
+  You've8 got16 to | drink4 up8 the riv- er
+  You've8 got16 to | drink4 up8 the riv- er
+  You've8 got16 to | drink4 up8 the riv-4 er8 be- | fore2 you2 | drown1
+}
+
+stanzaOthers = \markup {
+  \fill-line {
+    \hspace #0.1
+    \column {
+      \line { \bold "2."
+        \column {
+          "And all through our nation's history her times of peace and war"
+          "An overwhelming wave of misery has washed up on our shore"
+          "They did not ask for any fortune, just a corner and a plate"
+          "And how they shone with pride and honor as they made our country great"
+          "But migrants now are deportees and more are turned away"
+          "We've forgotten it's the immigrants who made our fame today"
+          "Our salvation is that flood white, yellow, red,& black & brown"
+          "We've got to drink up that river before we drown"
+        }
+      }
+      \vspace #1.0
+      \line { \bold "3."
+        \column {
+          "We are surrounded by technology a flood that's rising still"
+          "And we are praying we'll survive it or we're sure we never will"
+          "And all our speed and skill and reach will soon be taking us to space"
+          "It's a great day in the morning for our funny human race"
+          "But we're frightened of our future and we're scared to move along"
+          "So we scream that our technology is dangerous and wrong"
+          "Back-to-nature cannot save us but the stars could be our crown"
+          "If we can drink up this river before we drown"
+        }
+      }
+      \vspace #1.0
+      \line { \bold "4."
+        \column {
+          "There's a river of humanity that's passing through your life"
+          "There is a sea of heavy sorrows and a stream of pain and strife"
+          "There is a river of tomorrow that will carry you away"
+          "And there's an ocean full of endless love to fill each passing day"
+          "There are rivers all around you in the life you have to live"
+          "All the rivers you've been given and the ones you have to give"
+          "So sing out this final message to the people all around"
+          "You've got to drink up the river before you drown"
+        }
+      }
+    }
+  }
+}
+
+
+% final assembly for the scores to use
+
+outline     = \pageMarks
+chordsPart  = \relative c    { << \scoreConfig \chordsNotes >> }
+sopranoPart = \relative c''  { << \scoreConfig \sopranoNotes \sopranoDyn >> }
+sopranoMidi = \relative c''  { << \scoreConfig \sopranoNotes \sopranoDyn >> }
+altoPart    = \relative c''' { << \scoreConfig \altoNotes \altoDyn >> }
+altoMidi    = \relative c''  { << \scoreConfig \altoNotes \altoDyn >> }
+tenorPart   = \relative c''  { << \scoreConfig \tenorNotes \tenorDyn >> }
+tenorMidi   = \relative c'   { << \scoreConfig \tenorNotes \tenorDyn >> }
+bassPart    = \relative c''  { << \scoreConfig \bassNotes \bassDyn >> }
+bassMidi    = \relative c'   { << \scoreConfig \bassNotes \bassDyn >> }
+lyricPart   = \stanzaFirst
+stanzaPart  = \stanzaOthers
+rightPart   = << \clef treble \outline \partCombine \sopranoPart \altoPart >>
+leftPart    = << \clef bass \partCombine \tenorPart \bassPart >>
+concertKey  = c
+keyCB       = c,,
+keyCT       = c
+keyFT       = f
+keyBT       = bes,
+keyET       = ees

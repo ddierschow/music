@@ -1,0 +1,369 @@
+\include "layout.lyi"
+
+tempomark = { \tempo 4 = 80 }
+
+SongHeader = \header {
+  title = "Starship and Haiku"
+  composer = "Words and music by Kathy Mar"
+  arranger = \markup { \italic "arr. Dean Dierschow" }
+  copyright = \markup { \teeny "Words and music (c) 1984 by Kathy Mar.  Arrangement (c) 2024 by Dean Dierschow" }
+  instrument = \instrument
+  meter = "Andante"
+  footer = ""
+  tagline = ""
+}
+
+scoreConfig = {
+  #(set-accidental-style 'modern)
+  \override MultiMeasureRest.expand-limit = #2
+  \override Score.PaperColumn.keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
+  \time 6/8
+  \key g \major
+}
+
+pageMarks = {
+  s2.*4 |
+
+  \repeat volta 3 {
+    \mark \markup \bold "Verse"
+    s2.*20 |
+
+    \mark \markup \bold "Chorus"
+    s2.*13 |
+  }
+
+  s2.*2 |
+  \bar "|."
+}
+
+chordsNotes = \chordmode {
+  g4. c4.:9 | g4. c4.:9 | g4. c4.:9 | g4. g4. |
+
+  \repeat volta 3 {
+    d2.:7sus4 | d2.:7sus4 | g4. c4.:9 | g2. |
+    d2.:7sus4 | d2.:7sus4 | g4. c4.:9 | g2. |
+    a2.:m | d2. | e2.:m | e2.:m |
+    d2.:7sus4 | g2. | d2.:7sus4 | g2. |
+    c2.:9 | g2. | d2.:7sus4 | g2. |
+
+    a2.:m | d2. | e2.:m | c2. |
+    a2.:m | d2. | e2.:m | d2.:7sus4 |
+    g4. c4.:9 | g4. c4.:9 | g4. c4.:9 | g2. | g2. |
+  }
+}
+
+sopranoDyn = {
+  s2.\mp |
+  s2.*3 |
+
+  s2.\mp |
+  s2.*19 |
+
+  s2.\mf |
+  s2.*12 |
+
+  s2.*2 |
+}
+
+sopranoNotes = {
+  \tempomark
+
+  R2.*4 |
+
+  \repeat volta 3 {
+    % verse
+    a8 a8. a16 a8 a b |
+    c8 b a b a g |
+    d2.~ |
+    d4. r4 d8 |
+    d'8 d d d c b |
+    c8 b a b a g |
+    b8 d4( \grace e8 d4. |
+    \grace e8 d8 \grace e8 d4) r4. |
+    a8 a a a a a |
+    a8 a a a g fis |
+    e2.~ |
+    e4. r4. |
+    a8 a a a g a |
+    b8 d d d4. |
+    a8 a a a g a |
+    b8 d d d4. |
+    a8 a a a g a |
+    b8 a g d b c |
+    d2.~ |
+    d4. r4. |
+
+    % chorus
+    a'8 a g a e4 |
+    fis8 e16 fis8 e16 fis8 e16 fis8. |
+    g4 fis8 e4 d8 |
+    e2. |
+    a8 a g a e e8 |
+    fis8. fis8 e16 fis8 e16 fis8. |
+    g4 g8 g4 a8 |
+    a2.( |
+    g2.)~ |
+    g2.~ |
+    g2.~ |
+    g2. |
+    r2. |
+  }
+
+  % coda
+  R2. |
+}
+
+altoDyn = {
+  s2.\mp |
+  s2.*3 |
+
+  s2.\mp |
+  s2.*19 |
+
+  s2.\mf |
+  s2.*12 |
+
+  s2.*2 |
+}
+
+altoNotes = {
+  r8 b d r c e |
+  r8 b d r c e |
+  r8 b d r c e |
+  r8 b d r b d |
+
+  \repeat volta 3 {
+    % verse
+    g,8 g8. g16 g8 g g |
+    a8 g fis g fis e |
+    b4. g4. |
+    b4. r4 b8 |
+    a'8 a a a a g |
+    a8 g fis g fis d |
+    g8 b4~ b4.~ |
+    b4. r4. |
+    e,8 e e e e e |
+    fis8 fis fis fis e d |
+    b2.~ |
+    b4. r4. |
+    g'8 g g g e fis |
+    g8 b b b4. |
+    g8 g g g e fis |
+    g8 b b b4. |
+    e,8 e e e d fis |
+    g8 fis e b g a |
+    a2. |
+    g4. r4. |
+
+    % chorus
+    e'8 e e e c4 |
+    d8 c16 d8 c16 d8 c16 d8. |
+    e4 d8 c4 b8 |
+    c2. |
+    e8 e e e c c8 |
+    d8. d8 c16 d8 c16 d8. |
+    e4 e8 e4 fis8 |
+    fis2.( |
+    d4.)~ d4.~ |
+    d4.~ d4.~ |
+    d4.~ d4.~ |
+    d2. |
+    r2. |
+  }
+
+  % coda
+  R2. |
+}
+
+tenorDyn = {
+  s2.\mp |
+  s2.*3 |
+
+  s2.\mp |
+  s2.*19 |
+
+  s2.\mf |
+  s2.*12 |
+
+  s2.*2 |
+}
+
+tenorNotes = {
+  r8 g' b r g c |
+  r8 g b r g c |
+  r8 g b r g c |
+  r8 g b r g b |
+
+  \repeat volta 3 {
+    % verse
+    c,8 c8. c16 c8 c e |
+    fis8 e c e c b |
+    g4. e4. |
+    g4. r4 g8 |
+    g'8 g g g g fis |
+    d8 d c d c b |
+    d8 g4~ g4.~ |
+    g4. r4. |
+    c,8 c c c c c |
+    d8 d d d c b |
+    g2.~ |
+    g4. r4. |
+    c8 c c c b c |
+    d8 g g g4. |
+    c,8 c c c b c |
+    d8 g g g4. |
+    c,8 c c c b c |
+    d8 c b g e g |
+    g2. |
+    g4. r4. |
+
+    % chorus
+    c8 c b c a4 |
+    a8 g16 a8 g16 a8 g16 a8. |
+    b4 b8 a4 a8 |
+    a2. |
+    c8 c c c a a8 |
+    a8. a8 g16 a8 g16 a8. |
+    b4 b8 b4 c8 |
+    d2.( |
+    b4.) c4. |
+    b4. c4. |
+    b4. c4. |
+    b2. |
+    r2. |
+  }
+
+  R2.*2 |
+}
+
+bassDyn = {
+  s2.\mp |
+  s2.*3 |
+
+  s2.\mp |
+  s2.*19 |
+
+  s2.\mf |
+  s2.*12 |
+
+  s2.*2 |
+}
+
+bassNotes = {
+  g4. c |
+  g4. c |
+  g4. c |
+  g4. g |
+
+  \repeat volta 3 {
+    % verse
+    d'4. d |
+    d4. d |
+    g,4. c |
+    g4. g |
+    d'4. d |
+    d4. d |
+    g,4. c |
+    g4. d' |
+    a4. a |
+    d4. d |
+    e,4. e' |
+    b4. e, |
+    d'4. d |
+    d4. d |
+    d4. d |
+    d4. d |
+    d4. d |
+    d4. d |
+    a4. d |
+    g,4. g |
+
+    % chorus
+    a4. e' |
+    d4. a |
+    e4. e' |
+    c4. c |
+    a4. e' |
+    d4. d |
+    e,4. e' |
+    d4. d |
+    g,4. c |
+    g4. c |
+    g4. c |
+    g4. g |
+    g4. g |
+  }
+
+  % coda
+  g2.~ |
+  g2. |
+}
+
+stanzaFirst = \lyricmode {
+  \skip2.*4 |
+
+  \set stanza = "1. "
+  I8 am the flaw in the | tea- bowl I will not dance | death2. | \skip2. |
+  I8 will not lie down here | in peace And re- lease my | last breath2 \skip8 | \skip2. |
+  All8 of our hopes have been | cast on the reefs and are | gone2. | \skip2. |
+  Still8 my salt blood rea- ches | out for the sky4. | Still8 my warm song tou- ches | notes clear and high4. |
+  Out-8 ward I go and I | know I will fly a new | dawn2. | \skip2. |
+
+  Star-8 ship and Hai- ku4 |
+  Dy-8 ing16 hate8 and16 li-8 ving16 love8. |
+  Reach4 be-8 yond4 our8 | sin2. |
+  Star-8 ship and Hai- ku One |
+  last8 flawed8 re-8 min- der of |
+  All4 we8 might4 have8 | been2. | \skip2.*5 |
+}
+
+stanzaOthers = \markup {
+  \fill-line {
+    \hspace #0.1
+    \column {
+      \line { \bold "2."
+        \column {
+          "I am a discord in deathsong I cannot be still"
+          "I am an infinite paean a permanent trill"
+          "I am a leap to the stars I am song to the sky"
+          "Always I shun the bleak burial grounds"
+          "Always I listen for life's vibrant sounds"
+          "Always my hollow-reed heartbeat resounds with its cry"
+        }
+      }
+      \vspace #1.0
+      \line { \bold "3."
+        \column {
+          "(Repeat first verse)"
+        }
+      }
+      \vspace #1.5
+      "Note:  If you happen to have any whales handy, encourage them introduce the song and join in throughout the performance."
+    }
+  }
+}
+
+
+% final assembly for the scores to use
+
+outline     = \pageMarks
+chordsPart  = \relative c    { << \scoreConfig \chordsNotes >> }
+sopranoPart = \relative c''' { << \scoreConfig \sopranoNotes \sopranoDyn >> }
+sopranoMidi = \relative c''  { << \scoreConfig \sopranoNotes \sopranoDyn >> }
+altoPart    = \relative c''' { << \scoreConfig \altoNotes \altoDyn >> }
+altoMidi    = \relative c''  { << \scoreConfig \altoNotes \altoDyn >> }
+tenorPart   = \relative c''  { << \scoreConfig \tenorNotes \tenorDyn >> }
+tenorMidi   = \relative c'   { << \scoreConfig \tenorNotes \tenorDyn >> }
+bassPart    = \relative c''  { << \scoreConfig \bassNotes \bassDyn >> }
+bassMidi    = \relative c'   { << \scoreConfig \bassNotes \bassDyn >> }
+lyricPart   = \stanzaFirst
+stanzaPart  = \stanzaOthers
+rightPart   = << \clef treble \outline \partCombine \sopranoPart \altoPart >>
+leftPart    = << \clef bass \partCombine \tenorPart \bassPart >>
+concertKey  = c
+keyCB       = c,,
+keyCT       = c
+keyFT       = f,
+keyBT       = bes,
+keyET       = ees

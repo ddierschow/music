@@ -1,0 +1,1 @@
+magick -density 600 title-$2.pdf Cathedrals-$1-$2.pdf Edward-$1-$2.pdf StarshipAndHaiku-$1-$2.pdf Velveteen-$1-$2.pdf Songbook-$1-$2.pdf

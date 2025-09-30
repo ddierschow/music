@@ -1,0 +1,37 @@
+#(set-global-staff-size 16)    % default
+
+BookHeader = \header {
+  title = \markup { "Songs of Kathy Mar" }
+  subtitle = ""
+  opus = ""
+  composer = "Words and music by Kathy Mar"
+  arranger = \markup { \italic "Arranged by Dean Dierschow" }
+  subsubtitle = ""
+  copyright = ""
+  copyright = \markup { \teeny "These arrangements copyright 2024 by Dean Dierschow" }
+  instrument = \instrument
+
+  mutopiatitle = "Songs of Kathy Mar"
+  mutopiacomposer = ""
+  mutopiaopus = ""
+  mutopiainstrument = \instrument
+  date = ""
+  source = ""
+  style = ""
+  maintainer = "Dean Dierschow"
+  maintainerEmail = "deandierschow@gmail.com"
+  lastupdated = ""
+
+  footer = ""
+  tagline = ""
+}
+
+ScorePaper = \paper {
+  print-page-number = ##f
+  #(set-paper-size "letter")
+  ragged-last-bottom = ##t
+  top-margin = 10\mm
+  left-margin = 13\mm
+  right-margin = 13\mm
+  bottom-margin = 10\mm
+}

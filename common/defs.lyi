@@ -173,3 +173,14 @@ midiDrumStaff =
       \new DrumStaff
         { \new DrumVoice { $notes } }
    #})
+
+songbookStaff =
+#(define-music-function (longname shortname notes) (scheme? scheme? ly:music?)
+   #{
+      \new Staff {
+        #(set-accidental-style 'modern)
+        \set Staff.instrumentName = $longname
+        \set Staff.shortInstrumentName = $shortname
+        \new Voice {\keepWithTag #'score \transpose \concertKey \ikey << \clef \iclf $notes >> }
+      }
+   #})

@@ -1,0 +1,444 @@
+\include "layout.lyi"
+
+tempomark = { \tempo 4 = 64 }
+
+SongHeader = \header {
+  title = "Velveteen"
+  composer = "Words and music by Kathy Mar"
+  arranger = \markup { \italic "arr. Dean Dierschow" }
+  copyright = \markup { \teeny "Words and music (c) 1988 by Kathy Mar.  Arrangement (c) 2024 by Dean Dierschow" }
+  instrument = \instrument
+  meter = "Moderately"
+  footer = ""
+  tagline = ""
+}
+
+scoreConfig = {
+  #(set-accidental-style 'modern)
+  \override MultiMeasureRest.expand-limit = #2
+  \override Score.PaperColumn.keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
+  \time 4/4
+  \key c \major
+}
+
+pageMarks = {
+  % intro
+  s1*2 |
+
+  \repeat volta 4 {
+    \mark \markup \bold "Verse"
+    s1*12 |
+  }
+  \alternative {
+    {
+      s1*2 |
+    }
+    {
+      \time 2/4
+      s2 |
+      \time 4/4
+      s1*4 |
+    }
+  }
+  s1*3 |
+
+  \bar "|."
+}
+
+chordsNotes = \chordmode {
+  c2 c2 |
+  c2 c2 |
+
+  \repeat volta 4 {
+    % verse
+    c2 f2:maj7 |
+    g2 e2:7 |
+    a2:m d2:m |
+    d2:sus4 g2 |
+    c2 d2:m |
+    e2:7 a2:m |
+    d2:m c2 |
+    g2 c2 |
+    c2 d2:m |
+    c2 e2:7 |
+    a2:m f2 |
+    c2 g2 |
+  }
+  \alternative {
+    {
+      c2 c2 |
+      c2 c2 |
+    }
+    {
+      \time 2/4
+      c2 |
+      \time 4/4
+      c2 d2:m |
+      c2 e2:7 |
+      a2:m f2 |
+      c2 g2 |
+    }
+  }
+
+  c1 |
+  c1 |
+  c1 |
+}
+
+sopranoDyn = {
+  \tempomark
+  s1\mp |
+  s2.. s8\mf |
+
+  \repeat volta 4 {
+    % verse
+    s1*12 |
+  }
+  \alternative {
+    {
+      s1*2 |
+    }
+    {
+      \time 2/4
+      s2
+      \time 4/4
+      s1*4 |
+    }
+  }
+
+  s1*3 |
+}
+
+sopranoNotes = {
+  e16 c g g' e c g8 e'16 c g g' e4 |
+  e16 c g g' e c g8 e'16 c g g' e16 r e8 |
+
+  \repeat volta 4 {
+    % verse
+    e8. e16 e8 e e16 d8. c8. e16 |
+    d16 e8. d8 c b4. b8 |
+    c16 c8. c8 c c8. d16 e8( d) |
+    c16 d8. d8 c d4. g8 |
+    g8. f16 e8 g f8. e16 d8 c |
+    e8 b e8. d16 c4. b8 |
+    a8 c c d c g c8. e16 |
+    e8. d16 c8 b c2~ | 
+    c4 e8 g a8. a16 a4 |
+    g8 e4 e8 e8. b16 e8 d |
+    c4. b8 a c8 c16 d8. |
+    c16 g8. c8 e e d c b |
+  }
+  \alternative {
+    {
+      c1 |
+      r2 r4 r8 e |
+    }
+    {
+      \time 2/4
+      c2~ |
+      \time 4/4
+      c4 e8 g a8. a16 a8 a |
+      g8 e4 e8 e8. b16 e8 d |
+      c4. b8 a c8 c16 d8. |
+      c16 g8. c8 e e d c b |
+    }
+  }
+
+  c1~ |
+  c1~ |
+  c1 |
+}
+
+altoDyn = {
+  s1\mp |
+  s2.. s8\mf |
+
+  \repeat volta 4 {
+    % verse
+    s1*12 |
+  }
+  \alternative {
+    {
+      s1*2 |
+    }
+    {
+      \time 2/4
+      s2
+      \time 4/4
+      s1*4 |
+    }
+  }
+
+  s1*3 |
+}
+
+altoNotes = {
+  g'1 |
+  a2. r8 c |
+
+  \repeat volta 4 {
+    % verse
+    c8. c16 c8 c c16 b8. a8. c16 |
+    b16 c8. b8 a gis4. gis8 |
+    a16 a8. a8 a a8. b16 c8( b) |
+    a16 b8. b8 a b4. d8 |
+    e8. d16 c8 e d8. c16 b8 g |
+    b8 fis b8. b16 a4. g8 |
+    f8 a a b g e g8. c16 |
+    b8. b16 a8 g g2~ | 
+    g4 c8 e f8. f16 f4 |
+    e8 c4 c8 b8. gis16 b8 b |
+    a4. g8 f a8 a16 b8. |
+    g16 e8. g8 c b b a g |
+  }
+  \alternative {
+    {
+      g1 |
+      r2 r4 r8 c |
+    }
+    {
+      \time 2/4
+      g2~ |
+      \time 4/4
+      g4 c8 e f8. f16 f8 f |
+      e8 c4 c8 b8. gis16 b8 b |
+      a4. g8 f a8 a16 b8. |
+      g16 e8. g8 c b b a g |
+    }
+  }
+
+  g1~ |
+  g1~ |
+  g1 |
+}
+
+tenorDyn = {
+  s1\mp |
+  s2.. s8\mf |
+
+  \repeat volta 4 {
+    % verse
+    s1*12 |
+  }
+  \alternative {
+    {
+      s1*2 |
+    }
+    {
+      \time 2/4
+      s2
+      \time 4/4
+      s1*4 |
+    }
+  }
+
+  s1*3 |
+}
+
+tenorNotes = {
+  e,1 |
+  f2. r8 g |
+
+  \repeat volta 4 {
+    % verse
+    g8. g16 g8 g a16 f8. f8. a16 |
+    g16 g8. g8 e e4. e8 |
+    e16 e8. e8 e f8. f16 f8( f) |
+    f16 f8. f8 f g4. b8 |
+    c8. g16 g8 c a8. a16 f8 e |
+    gis8 d gis8. gis16 e4. e8 |
+    c8 f f g e c e8. g16 |
+    g8. g16 f8 f e2~ | 
+    e4 g8 c d8. d16 d4 |
+    c8 g4 g8 gis8. e16 gis8 gis |
+    e4. e8 c f8 f16 g8. |
+    e16 c8. e8 g g g f d |
+  }
+  \alternative {
+    {
+      e1 |
+      r2 r4 r8 g |
+    }
+    {
+      \time 2/4
+      e2~ |
+      \time 4/4
+      e4 g8 c d8. d16 d8 d |
+      c8 g4 g8 gis8. e16 gis8 gis |
+      e4. e8 c f8 f16 g8. |
+      e16 c8. e8 g g g f d |
+    }
+  }
+
+  e1~ |
+  e1~ |
+  e1 |
+}
+
+bassDyn = {
+  s1\mp |
+  s1 |
+
+  \repeat volta 4 {
+    % verse
+    s1\mf |
+    s1*11 |
+  }
+  \alternative {
+    {
+      s1*2 |
+    }
+    {
+      \time 2/4
+      s2
+      \time 4/4
+      s1*4 |
+    }
+  }
+
+  s1*3 |
+}
+
+bassNotes = {
+  c2 c2 |
+  c2 c2 |
+  \repeat volta 4 {
+    c'2 c2 |
+    d2 e,2 |
+    a2 d,2 |
+    d2 g2 |
+    c2 d2 |
+    e,2 a2 |
+    f2 c'2 |
+    g2 c2 |
+    c2 d2 |
+    c2 e,2 |
+    a2 f2 |
+    g2 g2 |
+  }
+  \alternative {
+    {
+      c2 c2 |
+      c2 c2 |
+    }
+    {
+      \time 2/4
+      c2 |
+      \time 4/4
+      c2 d2 |
+      c2 e,2 |
+      a2 f2 |
+      g2 g2 |
+    }
+  }
+  c2 c2 |
+  c1~ |
+  c1 |
+}
+
+stanzaFirst = \lyricmode {
+  \skip1 |
+  \skip2..
+  \set stanza = "1. "
+  When8 |
+
+  % 5
+  \repeat volta 4 {
+    I8 was born and ta- ken home all | snug-8 gled close and warm4. I8 |
+    did-8 n't know at all that there were | de-8 fects in my form4. The8 |
+    years8 and all they brought to me have | left8 their marks be- hind4. But8 |
+    if8 some- one can love me still I'm | sure8 that I won't mind2 |
+    \skip4 I8 can on- ly wish4 | some-8 one4 will8 know just how I |
+    feel4. And8 love me when I'm | shab-8 by quite e- nough to make me |
+  }
+  \alternative {
+    {
+      real1 |
+      \skip2..
+      \set stanza = "2. "
+      I've8
+    }
+    {
+      \time 2/4
+      \skip2 |
+      \time 4/4
+      \set stanza = "4. "
+      \skip4 I8 can on- ly hope that | some-8 one4 will8 know just how you |
+      feel4. And8 love you though you're | shab-8 by quite e- nough to make you |
+    }
+  }
+  real1 |
+  \skip1*2 |
+}
+
+stanzaOthers = \markup {
+\fontsize #-0.5
+  \fill-line {
+    \hspace #0.1
+    \column {
+      \line { \bold "2."
+        \column {
+          "I've often heard the stories of the ones that love made real"
+          "And often I have thought that I would someday learn to feel"
+          "I sit here only watching at the borders of my life"
+          "And the fear of never being loved has pierced me like a knife"
+          "I can only wish someone will know just how I feel"
+          "And love me when I'm shabby quite enough to make me real"
+        }
+      }
+      \vspace #1.0
+      \line { \bold "3."
+        \column {
+          "Now someone special in my life has made my wish occur"
+          "In spite of my misshapen form and shabby worn-out fur"
+          "I know that I am loved each time I see that someone's eyes"
+          "They tell me I am real in ways that nothing can disguise"
+          "And I have got my wish for someone who knows just how I feel"
+          "He's loved me though I'm shabby quite enough to make me real"
+        }
+      }
+      \vspace #1.0
+    }
+    \hspace #0.1
+    \column {
+      \line { \bold "4."
+        \column {
+          "Now all you ladies worried 'cause your shape is not quite true"
+          "And all you men with loved-off fur and scalp that's showing through"
+          "And all you minds with failing seams and fear where all can see"
+          "Take heart from this true lesson from a worn-out shabby me"
+          "And I can only hope that someone will know just how you feel"
+          "And love you though you're shabby quite enough to make you real"
+          "I can only hope that someone will know just how you feel"
+          "And love you though you're shabby quite enough to make you real"
+        }
+      }
+    }
+    \hspace #0.1
+  }
+}
+
+
+% final assembly for the scores to use
+
+outline     = \pageMarks
+chordsPart  = \relative c   { << \scoreConfig \chordsNotes >> }
+sopranoPart = \relative c'' { << \scoreConfig \sopranoNotes \sopranoDyn >> }
+sopranoMidi = \relative c'' { << \scoreConfig \sopranoNotes \sopranoDyn >> }
+altoPart    = \relative c'  { << \scoreConfig \altoNotes \altoDyn >> }
+altoMidi    = \relative c'  { << \scoreConfig \altoNotes \altoDyn >> }
+tenorPart   = \relative c'' { << \scoreConfig \tenorNotes \tenorDyn >> }
+tenorMidi   = \relative c   { << \scoreConfig \tenorNotes \tenorDyn >> }
+bassPart    = \relative c'  { << \scoreConfig \bassNotes \bassDyn >> }
+bassMidi    = \relative c,  { << \scoreConfig \bassNotes \bassDyn >> }
+lyricPart   = \stanzaFirst
+stanzaPart  = \stanzaOthers
+rightPart   = << \clef treble \outline \partCombine \sopranoPart \altoPart >>
+leftPart    = << \clef bass \partCombine \tenorPart \bassPart >>
+concertKey  = c
+keyCB       = c,,
+keyCT       = c
+keyFT       = f
+keyBT       = bes,
+keyET       = ees
