@@ -1,0 +1,26 @@
+\book {
+  \bookpart {
+    \bookOutputSuffix #(string-append "MHB-" tkey)
+    \ScorePaper
+    \SongHeader
+
+    \score
+    {
+      <<
+        \new StaffGroup
+        <<
+          \new ChordNames { \transpose \concertKey \ikey \chordsPart }
+          \songbookStaff #(markup "Melody") #(markup "M.") \sopranoPart
+          \new Lyrics { \lyricPart }
+          \songbookStaff #(markup "Harmony") #(markup "H.") << \altoPart \tenorPart >>
+          \songbookStaff #(markup "Bass") #(markup "B.") \bassPart
+        >>
+      >>
+      % \header { piece = \headerPiece }
+      \layout
+      {
+      }
+    }
+    \stanzaPart
+  }
+}

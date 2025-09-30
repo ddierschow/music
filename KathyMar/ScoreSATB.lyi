@@ -1,0 +1,26 @@
+\book {
+  \bookpart {
+    \bookOutputSuffix #(string-append "SATB-" tkey)
+    \ScorePaper
+    \SongHeader
+
+    \score
+    {
+      <<
+        \new StaffGroup
+        <<
+          \new ChordNames { \transpose \concertKey \ikey \chordsPart }
+          \songbookStaff #(markup "Soprano") #(markup "S.") \sopranoPart
+          \new Lyrics { \lyricPart }
+          \songbookStaff #(markup "Alto") #(markup "A.") \altoPart
+          \songbookStaff #(markup "Tenor") #(markup "T.") \tenorPart
+          \songbookStaff #(markup "Bass") #(markup "B.") \bassPart
+        >>
+      >>
+      \layout
+      {
+      }
+    }
+    \stanzaPart
+  }
+}

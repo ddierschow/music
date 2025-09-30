@@ -1,0 +1,24 @@
+\score
+{
+  \unfoldRepeats
+  <<
+    \new Staff \with { midiInstrument = "clarinet" }
+      { \new Voice << \outline \sopranoMidi >> }
+    \new Staff \with { midiInstrument = "alto sax" }
+      { \new Voice \altoMidi }
+    \new Staff \with { midiInstrument = "trombone" }
+      { \new Voice \tenorMidi }
+    \new Staff \with { midiInstrument = "tuba" }
+      { \new Voice \bassMidi }
+%    \new DrumStaff
+%      { \new DrumVoice { \relative c \percussionPart } }
+  >>
+  \midi
+  {
+    \context {
+      \Score
+      midiMinimumVolume = #0.1
+      midiMaximumVolume = #0.6
+    }
+  }
+}

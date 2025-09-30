@@ -1,0 +1,40 @@
+\book {
+  \bookpart {
+    \bookOutputSuffix "GS"
+
+    \ScorePaper
+    \SongHeader
+
+    \score
+    {
+      <<
+        \new StaffGroup
+        <<
+          \new ChordNames { \transpose \concertKey \ikey \chordsPart }
+          \new Staff
+          {
+            #(set-accidental-style 'modern)
+            \set Staff.soloText = ""
+            \set Staff.soloIIText = ""
+            \set Staff.aDueText = ""
+            \new Voice { \keepWithTag #'score \transpose \concertKey \keyCT \rightPart }
+          }
+          \new Lyrics { \lyricPart }
+          \new Staff
+          {
+            #(set-accidental-style 'modern)
+            \set Staff.soloText = ""
+            \set Staff.soloIIText = ""
+            \set Staff.aDueText = ""
+            \new Voice { \keepWithTag #'score \transpose \concertKey \keyCB \leftPart }
+          }
+        >>
+      >>
+      % \header { piece = \headerPiece }
+      \layout
+      {
+      }
+    }
+    \stanzaPart
+  }
+}

@@ -1,0 +1,575 @@
+\include "layout.lyi"
+
+#(set-global-staff-size 15)
+tempomark = { \tempo 4 = 160 }
+
+SongHeader = \header {
+  title = "Cathedrals"
+  composer = "Words and music by Kathy Mar"
+  arranger = \markup { \italic "arr. Dean Dierschow" }
+  copyright = \markup { \teeny "Words and music (c) 2002 by Kathy Mar.  Arrangement (c) 2024 by Dean Dierschow" }
+  instrument = \instrument
+  meter = "Vivace"
+  footer = ""
+  tagline = ""
+}
+
+scoreConfig = {
+  #(set-accidental-style 'modern)
+  \override MultiMeasureRest.expand-limit = #2
+  \override Score.PaperColumn.keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
+  \time 3/4
+  \key e \minor
+}
+
+pageMarks = {
+  % intro
+  s2.*4 |
+
+  \textMark "Verse"
+  \repeat volta 5 {
+    s2.*20 |
+  }
+  \alternative {
+    {
+      s2.*18 |
+    }
+    {
+      s2.*7 |
+    }
+  }
+
+  s2.*21 |
+  \bar "|."
+}
+
+chordsNotes = \chordmode {
+  \repeat unfold 4 { e2.:m | }
+
+  % verse
+  \repeat volta 5 {
+    e2.:m | d2. | c2. | e2.:m |
+    c2. | d2. | c2. | d2. |
+    e2.:m | d2. | c2. | e2.:m |
+    c2. | d2. | c2. | d2. |
+    g2. | g2. | d2. | d2. |
+  }
+  \alternative {
+    {
+      e2.:m | d2. |
+      c2. | b2.:7 |
+      e2.:m | d2. | c2. | e2.:m |
+      c2. | d2. | e2.:m | s2. |
+      s2.*6 |
+    }
+    {
+      e2.:m | d2. |
+      c2. | b2.:7 |
+      b2.:7 | b2.:7 | b2.:7 |
+    }
+  }
+  e2.:m | d2. |
+  c2. | e2.:m |
+  c2. | d2. | e2.:m | e2.:m |
+  e2.:m | d2. |
+  c2. | e2.:m |
+  c2. | d2. | e2.:m | e2.:m |
+  s2.*7 |
+}
+
+sopranoDyn = {
+  \tempomark
+  s2.*4 |
+
+  % verse
+  \repeat volta 5 {
+    s2.*20 |
+  }
+  \alternative {
+    {
+      s2.*18 |
+    }
+    {
+      s2.*7 |
+    }
+  }
+  s2.*21 |
+}
+
+sopranoNotes = {
+  R2.*3 |
+  r2 b4 |
+
+  % verse
+  \repeat volta 5 {
+    e4. b'4. |
+    a4. g8 fis4 |
+    e4. d8 c4 |
+    b2 a8 b |
+    c8 d e2 |
+    d4 c d |
+    g2( b4) |
+    a2 b,8 b |
+    e4. b'4. |
+    a2 g8 fis |
+    e4 d4. c8 |
+    b4 r a8 b |
+    c8 d e2 |
+    d4 c d |
+    g4. a8 b4 |
+    a4 r g8 a |
+    b4. c |
+    d4 c b |
+    a4 b a |
+    fis2 e8 fis |
+  }
+  \alternative {
+    {
+      g4 a b |
+      a4 g fis |
+      e2. |
+      fis2 b,8 b |
+      e4 e b' |
+      a2 g8 fis |
+      e2 d8 c |
+      b2 a8 b |
+      c8 d e2 |
+      d4 e fis |
+      e2.~ |
+      e2. |
+      R2.*6 |
+    }
+    {
+      g4 a b |
+      a4 g fis |
+      e2. |
+      fis2.( |
+      fis2. |
+      fis2. |
+      fis2) b,8 b |
+    }
+  }
+
+  e4 e b' |
+  a2 g8 fis |
+  e2 d8 c |
+  b2 a8 b |
+  c8 d e2 |
+  d4 e fis |
+  e2.( |
+  e2) b4 |
+  e4 e b' |
+  a2 g8 fis |
+  e2 d8 c |
+  b2 a8 b |
+  c8 d e2 |
+  d4 e fis |
+  e2.~ |
+  e2.~ |
+  e2.~ |
+  e2. |
+  R2.*3 |
+}
+
+altoDyn = {
+  \tempomark
+  s2.*4 |
+
+  % verse
+  \repeat volta 5 {
+    s2.*20 |
+  }
+  \alternative {
+    {
+      s2.*18 |
+    }
+    {
+      s2.*7 |
+    }
+  }
+  s2.*21 |
+}
+
+altoNotes = {
+  R2.*3 |
+  r2 g'4 |
+
+  % verse
+  \repeat volta 5 {
+    b4. g'4. |
+    fis4. e8 d4 |
+    c4. b8 a4 |
+    g2 fis8 g |
+    a8 b c2 |
+    a4 a a |
+    e'2( g4) |
+    fis2 fis,8 fis |
+    b4. g'4. |
+    fis2 e8 d |
+    c4 b4. a8 |
+    g4 r fis8 g |
+    a8 b c2 |
+    a4 a a |
+    e'4. fis8 g4 |
+    fis4 r d8 fis |
+    g4. a |
+    b4 a g |
+    fis4 g fis |
+    d2 c8 d |
+  }
+  \alternative {
+    {
+      e4 fis g |
+      fis4 e d |
+      c2. |
+      b2 g8 g |
+      b4 b g' |
+      fis2 e8 d |
+      c2 b8 a |
+      g2 fis8 g |
+      g8 a c2 |
+      a4 c d |
+      b2.~ |
+      b2. |
+      R2.*6 |
+    }
+    {
+      e4 fis g |
+      fis4 e d |
+      c2. |
+      dis2.~ |
+      dis2.~ |
+      dis2.~ |
+      dis2 g,8 g |
+    }
+  }
+
+  b4 b g' |
+  fis2 e8 d |
+  c2 b8 a |
+  g2 fis8 g |
+  a8 b c2 |
+  b4 c d |
+  b2.~ |
+  b2 g4 |
+  b4 b g' |
+  fis2 e8 d |
+  c2 b8 a |
+  g2 fis8 g |
+  a8 b c2 |
+  b4 c d |
+  b2.~ |
+  b2.~ |
+  b2.~ |
+  b2. |
+  R2.*3 |
+}
+
+tenorDyn = {
+  \tempomark
+  s2.*4 |
+
+  % verse
+  \repeat volta 5 {
+    s2.*20 |
+  }
+  \alternative {
+    {
+      s2.*18 |
+    }
+    {
+      s2.*7 |
+    }
+  }
+  s2.*21 |
+}
+
+tenorNotes = {
+  r2. |
+  r2. |
+  r2. |
+  r2 e,4 |
+
+  \repeat volta 5 {
+    g4. e4. |
+    d2. |
+    g2. |
+    e2. |
+    fis8 g g2 |
+    fis2. |
+    c2. |
+    d2. |
+    g4. e4. |
+    d2. |
+    g2. |
+    e2. |
+    fis8 g g2 |
+    fis2. |
+    c2. |
+    d4 r d8 d |
+    d2. |
+    g2. |
+    a2. |
+    a2. |
+  }
+  \alternative {
+    {
+      c4 d e |
+      d2. |
+      g,2. |
+      dis2. |
+      g2. |
+      d2. |
+      e2. |
+      e2. |
+      g8 g g2 |
+      fis2. |
+      g2.~ |
+      g2. |
+      R2.*6 |
+    }
+    {
+      b2. |
+      d4 b a |
+      g2. |
+      b2.~ |
+      b2.~ |
+      b2.~ |
+      b2 e8 e |
+    }
+  }
+  g2. |
+  d2. |
+  e2. |
+  e2. |
+  g8 g g2 |
+  fis2. |
+  g2.~ |
+  g2. |
+  g2. |
+  d2. |
+  e2. |
+  e2. |
+  g8 g g2 |
+  fis2. |
+  g2.~ |
+  g2.~ |
+  g2.~ |
+  g2. |
+  R2.*3 |
+}
+
+bassDyn = {
+  \tempomark
+  s2.*4 |
+
+  % verse
+  \repeat volta 5 {
+    s2.*20 |
+  }
+  \alternative {
+    {
+      s2.*18 |
+    }
+    {
+      s2.*7 |
+    }
+  }
+  s2.*21 |
+}
+
+bassNotes = {
+  e2. |
+  e'2. |
+  b2. |
+  e,2. |
+
+  \repeat volta 5 {
+    e2. |
+    d'2. |
+    c2. |
+    b2. |
+    c2. |
+    d2. |
+    c2. |
+    d2. |
+    e,2. |
+    d'2. |
+    c2. |
+    b2. |
+    c2. |
+    d2. |
+    c2. |
+    d2. |
+    g,2. |
+    g2. |
+    d'2. |
+    d2. |
+  }
+  \alternative {
+    {
+      c2. |
+      b2. |
+      c2. |
+      b2. |
+      e,2. |
+      d'2. |
+      c2. |
+      b2. |
+      c2. |
+      d2. |
+      e,2. |
+      e'2. |
+      b2. |
+      e,2. |
+      e'2. |
+      b2. |
+      e,2. |
+      e'2. |
+    }
+    {
+      e2. |
+      c2. |
+      c2. |
+      b2. |
+      b2. |
+      b2. |
+      b2. |
+    }
+  }
+  e,2. |
+  d'2. |
+  c2. |
+  b2. |
+  c2. |
+  d2. |
+  e,2. |
+  e'2. |
+  b2. |
+  d2. |
+  c2. |
+  b2. |
+  a2. |
+  d2. |
+  e,2. |
+  e'2. |
+  b2. |
+  e,2. |
+  e'2. |
+  b2. |
+  e,2. |
+}
+
+stanzaFirst = \lyricmode {
+  \skip2.*3 |
+  \set stanza = "1. "
+  \skip2 I4 |
+
+  % 5
+  went4 down2 | to4 the Ca- | the- dral of | War As the |
+  gen-4 er- "als'" | ser- vice was | en-2. | ding4 And I |
+  asked2 a4 | gen- er- al | "\"What" is the | "point?\"" 'Cause it |
+  looked4 like a | game of pre- | ten-2. | ding4 And he |
+  frowned2 and4 | sput- tered and | stamp- ing his | foot Said, "\"Young" |
+  wo-4 man, it's | no game at | all2. | \skip4 And4 his |
+  words4 were all | dag- gers and | knives And the | look in his |
+  eyes4 was a | ter- ri- ble | wall2. | \skip2. |
+  \skip2.*6 |
+
+  heart4 will lie | emp-4 ty and | cold2. | \skip2. | \skip2. | \skip2. |
+  \skip2 But8 the | love4 that I | give4 will live | on4 Like the |
+  light4 of a | dawn4 made of | amb-4 er and | gold2. |
+  \skip2 The4 | love4 that I | give4 will live | on4 Like the |
+  light4 of a | dawn4 made of | amb-4 er and | gold2. |
+  \skip2.*6 |
+}
+
+stanzaOthers = \markup {
+  \fill-line {
+    \hspace #0.1
+    \column {
+      \line { \bold "2."
+        \column {
+          "I went down to the Cathedral of Time"
+          "To pray for a better tomorrow"
+          "And I lit a candle to burn at both ends"
+          "Just to light up my chasm of sorrow"
+          "And the minutes and seconds were scattered about"
+          "But they kept slipping right through my hands"
+          "And the tide washed them into the past"
+          "Flowing out of a castle of hourglass sands"
+        }
+      }
+      \vspace #1.0
+      \line { \bold "3."
+        \column {
+          "I went down to the Cathedral of Song"
+          "To polish the trumpets of treason"
+          "And I stood in the aisle and answered the call"
+          "Of a songbird who sang out of season"
+          "And I shouted of honor and beauty and truth"
+          "In the eyes of each woman and man"
+          "And I spoke of the gifts we are blind to in youth"
+          "Which we find at the heart of the Plan"
+        }
+      }
+    }
+    \hspace #0.1
+    \column {
+      \line { \bold "4."
+        \column {
+          "I went down to the Cathedral of Death"
+          "But the Well of the Souls had run dry"
+          "And I knelt with the penitents praying and pale"
+          "And I stood with the ghost of a sigh"
+          "And the carousel horses and caravan gypsies"
+          "Were dancing away out the door"
+          "And the honey of hope fell in strings"
+          "From the tips of my fingers and dropped on the floor"
+        }
+      }
+      \vspace #1.0
+      \line { \bold "5."
+        \column {
+          "I never go to Cathedrals at all"
+          "Or at least any more than I must"
+          "And I know when my moment of dancing is done"
+          "I'll dissolve into starlight and dust"
+          "And the lessons I've learned"
+          "Will be lost in the night"
+          "And my heart will lie empty and cold"
+          "But the love that I give will live on"
+          "Like the light of a dawn made of amber and gold"
+          "The love that I give will live on"
+          "Like the light of a dawn made of amber and gold"
+        }
+      }
+    }
+    \hspace #0.1
+  }
+}
+
+
+% final assembly for the scores to use
+
+outline     = \pageMarks
+chordsPart  = \relative c   { << \scoreConfig \chordsNotes >> }
+sopranoPart = \relative c'  { << \scoreConfig \sopranoNotes \sopranoDyn >> }
+sopranoMidi = \relative c'' { << \scoreConfig \sopranoNotes \sopranoDyn >> }
+altoPart    = \relative c'  { << \scoreConfig \altoNotes \altoDyn >> }
+altoMidi    = \relative c'  { << \scoreConfig \altoNotes \altoDyn >> }
+tenorPart   = \relative c'' { << \scoreConfig \tenorNotes \tenorDyn >> }
+tenorMidi   = \relative c   { << \scoreConfig \tenorNotes \tenorDyn >> }
+bassPart    = \relative c'  { << \scoreConfig \bassNotes \bassDyn >> }
+bassMidi    = \relative c,  { << \scoreConfig \bassNotes \bassDyn >> }
+lyricPart   = \stanzaFirst
+stanzaPart  = \stanzaOthers
+rightPart   = << \clef treble \outline \partCombine \sopranoPart \altoPart >>
+leftPart    = << \clef bass \partCombine \tenorPart \bassPart >>
+concertKey  = c
+keyCB       = c,,
+keyCT       = c
+keyFT       = f
+keyBT       = bes,
+keyET       = ees
