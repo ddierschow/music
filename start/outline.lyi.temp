@@ -2,7 +2,7 @@ rehearsalMarks =
 {
   s2*8 |
 
-  \rMark "9"
+  \rMark \RM_A
   s2*8 |
 }
 
@@ -10,10 +10,10 @@ pageMarks =
 {
   \time @time@
 
-  s2*8
+  s2*8 |
 
   % 9
-  s2*8
+  s2*8 |
 
   \bar "|."
 }

@@ -1,10 +1,9 @@
 \version "@version@"
 
-\include "config.lyi"
-\include "outline.lyi"
-\include "allparts.lyi"
-
 instrument = "@ensemble@"
+
+\include "config.lyi"
+\include "score.lyi"
 
 \book
 {

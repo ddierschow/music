@@ -1,16 +1,31 @@
 concertKey = @concertkey@
 tempomark = { \tempo @tempomark@ }
 
-measures =
+RM_A = "9"
+
+workTitle = "Work Title"
+workSubtitle = ""
+workOwner = "Dean Dierschow"
+workEmail = "deandierschow@gmail.com"
+workPerformer = "@ensemble@"
+workComposer = ""
+workArranger = "arr. Dean Dierschow"
+workCopyright = "Copyright @year@ by Dean Dierschow"
+workMeter = Allegro
+
+base =
 {
   \override MultiMeasureRest.expand-limit = #2
   \override Score.PaperColumn.keep-inside-line = ##t
   \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
   \time @time@
   \key @key@
+
   s1*16 |
 }
 
 stafftype = Staff
+partSize = 20
+scoreSize = 14
 
 \include "../common/defs.lyi"

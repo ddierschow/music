@@ -1,0 +1,29 @@
+<?php
+include "../common/helpers.php";
+
+show_top();
+
+$parts = [
+@blob@
+];
+
+echo "<table><tr>\n";
+
+echo "<td>\n";
+show_left_box("work title", ['Score', 'ScoreNT'], ['ScoreMidi.mp3']);
+echo "</td>\n";
+
+echo "<td>\n";
+show_parts($parts, 1, 'parts/');
+echo "</td>";
+
+echo "<td>\n";
+show_image();
+echo "<h4>To do</h4><ul>\n";
+echo "<li>everything";
+echo "</ul>\n";
+
+echo "</td></tr></table>\n";
+
+show_bottom();
+?>

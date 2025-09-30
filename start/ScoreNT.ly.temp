@@ -1,0 +1,23 @@
+\version "@version@"
+
+instrument = "@ensemble@ (Concert Key)"
+
+\include "config.lyi"
+\include "score.lyi"
+
+\ScorePaper
+
+\book
+{
+  \BookHeader
+
+  \score
+  {
+    \ScoreHeader <<
+      \new StaffGroup <<
+@blob@
+      >>
+    >>
+    \scoreLayout
+  }
+}

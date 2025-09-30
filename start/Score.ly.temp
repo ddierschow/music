@@ -1,0 +1,25 @@
+\version "@version@"
+
+instrument = "@ensemble@"
+
+\include "config.lyi"
+\include "score.lyi"
+
+\ScorePaper
+
+\book
+{
+  \BookHeader
+  \pageBreak
+
+  \score
+  {
+    \ScoreHeader <<
+      \new StaffGroup <<
+@blob@
+      >>
+    >>
+    % \header { piece = \headerPiece }
+    \scoreLayout
+  }
+}

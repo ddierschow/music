@@ -8,8 +8,8 @@ numbers = {
 }
 
 keys = {
-    'bes': '"in B" \smaller \flat',
-    'ees': '"in E" \smaller \flat',
+    'bes': r'"in B" \smaller \flat',
+    'ees': r'"in E" \smaller \flat',
     'f': '"in F"',
 }
 
@@ -17,7 +17,7 @@ instruments = {
     'AltoSax':
         {
             'name': 'Alto Saxophone',
-	    'shortname': "A.Sx.",
+            'shortname': "A.Sx.",
             'part': 'altosax',
             'key': 'ees',
             'clef': 'treble',
@@ -27,7 +27,7 @@ instruments = {
     'BariSax':
         {
             'name': 'Baritone Saxophone',
-	    'shortname': "B.Sx.",
+            'shortname': "B.Sx.",
             'part': 'barisax',
             'key': 'ees',
             'clef': 'treble',
@@ -37,7 +37,7 @@ instruments = {
     'Baritone':
         {
             'name': 'Baritone (Bass Clef)',
-	    'shortname': "Bar.",
+            'shortname': "Bar.",
             'part': 'baritone',
             'key': 'c',
             'clef': 'bass',
@@ -47,7 +47,7 @@ instruments = {
     'BaritoneTC':
         {
             'name': 'Baritone (Treble Clef)',
-	    'shortname': "Bar.",
+            'shortname': "Bar.",
             'part': 'baritone',
             'key': 'bes',
             'clef': 'treble',
@@ -57,7 +57,7 @@ instruments = {
     'BassClarinet':
         {
             'name': 'Bass Clarinet',
-	    'shortname': "B.Cl.",
+            'shortname': "B.Cl.",
             'part': 'bassclar',
             'key': 'bes',
             'clef': 'treble',
@@ -66,7 +66,7 @@ instruments = {
         },
     'Bassoon':
         {
-            'name': 'Bassooon',
+            'name': 'Bassoon',
             'shortname': "Bsn.",
             'part': 'bassoon',
             'key': 'c',
@@ -87,7 +87,7 @@ instruments = {
     'Clarinet':
         {
             'name': 'Clarinet',
-	    'shortname': "Cl.",
+            'shortname': "Cl.",
             'part': 'clar',
             'key': 'bes',
             'clef': 'treble',
@@ -103,6 +103,16 @@ instruments = {
             'clef': 'treble',
             'octave': "'",
             'midi': "flute",
+        },
+    'Guitar':
+        {
+            'name': 'Guitar',
+            'shortname': "Gui.",
+            'part': 'guitar',
+            'key': 'c',
+            'clef': 'treble',
+            'octave': "'",
+            'midi': "electic guitar (jazz)",
         },
     'Horn':
         {
@@ -143,10 +153,20 @@ instruments = {
             'clef': 'percussion',
             'octave': "'",
         },
+    'Piano':
+        {
+            'name': 'Piano',
+            'shortname': "Pi.",
+            'part': 'piano',
+            'key': 'c',
+            'clef': 'both',
+            'octave': "'",
+            'midi': "piano",
+        },
     'SopranoSax':
         {
             'name': 'Soprano Sax',
-	    'shortname': "S.Sx.",
+            'shortname': "S.Sx.",
             'part': 'sopranosax',
             'key': 'bes',
             'clef': 'treble',
@@ -156,7 +176,7 @@ instruments = {
     'StringBass':
         {
             'name': 'String Bass',
-	    'shortname': "Bass",
+            'shortname': "Bass",
             'part': 'stringbass',
             'key': 'c',
             'clef': 'bass',
@@ -166,7 +186,7 @@ instruments = {
     'TenorSax':
         {
             'name': 'Tenor Sax',
-	    'shortname': "T.Sx.",
+            'shortname': "T.Sx.",
             'part': 'tenorsax',
             'key': 'bes',
             'clef': 'treble',
@@ -176,16 +196,17 @@ instruments = {
     'Timpani':
         {
             'name': 'Timpani',
-	    'shortname': "Tim.",
+            'shortname': "Tim.",
             'part': 'timpani',
             'key': 'c',
             'clef': 'bass',
             'octave': "'",
+            'midi': "timpani",
         },
     'Trombone':
         {
             'name': 'Trombone',
-	    'shortname': "Trm.",
+            'shortname': "Trm.",
             'part': 'trom',
             'key': 'c',
             'clef': 'bass',
@@ -195,7 +216,7 @@ instruments = {
     'Trumpet':
         {
             'name': 'Trumpet',
-	    'shortname': "Tr.",
+            'shortname': "Tr.",
             'part': 'trumpet',
             'key': 'bes',
             'clef': 'treble',
@@ -205,7 +226,7 @@ instruments = {
     'Tuba':
         {
             'name': 'Tuba',
-	    'shortname': "Tuba",
+            'shortname': "Tuba",
             'part': 'tuba',
             'key': 'c',
             'clef': 'bass',
@@ -233,4 +254,3 @@ instruments = {
             'midi': "violin",
         },
 }
-
