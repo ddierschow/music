@@ -3,15 +3,46 @@
 function show_top() {
     echo "<html><head>\n";
     echo "<style>\n";
-    echo ".this { background-color:#ffffff; }\n";
-    echo ".that { background-color:#eeffee; }\n";
-    echo "a:link {color: #0000FF; text-decoration: none;}\n";
-    echo "a:visited {color: #000099; text-decoration: none;}\n";
-    echo "a:active {color: #009900; text-decoration: none;}\n";
-    echo "a:hover {color: #000099; text-decoration: underline;}\n";
+    echo "body {background-color:#eee;}\n";
+    echo "td {vertical-align: top;}\n";
+    echo ".table {background-color:#eee; border: 1px solid black;}\n";
+    echo ".table td {border: 1px solid gray;}\n";
+    echo ".here {background-color:green; color:white; padding:8px;}\n";
+    echo ".this {background-color:#fff;}\n";
+    echo ".that {background-color:#efe;}\n";
+    echo ".theother {background-color:#ffd;}\n";
+    echo "a:link {color: #00f; text-decoration: none;}\n";
+    echo "a:visited {color: #009; text-decoration: none;}\n";
+    echo "a:active {color: #090; text-decoration: none;}\n";
+    echo "a:hover {color: #009; text-decoration: underline;}\n";
     echo "</style>\n";
     echo "</head>\n";
-    echo "<body>\n";
+    echo "<body>\n\n";
+}
+
+function show_left_box($title, $scores, $mp3s, $links=[], $extras=[]) {
+    echo "<table class='table'>\n";
+    show_title($title);
+    show_description_cell();
+    show_grid($scores, ['.ly', '.', '.pdf']);
+    show_grid(['ScoreMidi'], ['.ly', '.midi', '.mp3'], count($scores) % 2);
+    $style = 1 - (count($scores) % 2);
+    foreach ($mp3s as $mp3) {
+        show_audio($mp3, $style);
+        $style = 1 - $style;
+    }
+    show_common_links($links);
+    show_row(['Makefile', 'README.md', '../common/defs.lyi']);
+    show_row(['allparts.lyi', 'config.lyi', 'layout.lyi'], 1);
+    show_row(['outline.lyi', 'score.lyi', 'single.lyi']);
+    echo "</table>\n";
+    if ($extras) {
+        echo "<ul>\n";
+        foreach ($extras as $extra) {
+            show_link($extra[0], $extra[1]);
+        }
+        echo "</ul>\n";
+    }
 }
 
 function show_file($fn, $show_pdf=1, $show_missing=0) {
@@ -27,23 +58,27 @@ function show_file($fn, $show_pdf=1, $show_missing=0) {
     echo "</td>\n";
 }
 
-function show_audio($fn) {
+function show_audio($fn, $style=0) {
     if (file_exists($fn)) {
         $ft = 'audio/mp3';
         if (str_ends_with($fn, '.mp4'))
             $ft = 'video/mp4';
-        echo " <tr><td colspan=3>\n";
+        echo " <tr><td colspan=3 class='" . style_class($style) . "'>\n";
         echo $fn . "<br>\n";
         echo '<audio controls><source src="' . $fn . '" type="' . $ft . '"></audio><br>' . "\n";
         echo " </td></tr>\n";
     }
 }
 
-function show_row($arr, $style=0, $show_pdf=1, $show_missing=0) {
-    global $styles;
-    echo " <tr class='" . $styles[$style] . "'>\n";
+function style_class($style=0) {
+    $styles = [0 => 'this', 1 => 'that'];
+    return $styles[$style];
+}
+
+function show_row($arr, $style=0, $show_pdf=1, $show_missing=0, $prefix='') {
+    echo " <tr class='" . style_class($style) . "'>\n";
     foreach ($arr as $fn)
-	show_file($fn, $show_pdf, $show_missing);
+	show_file($prefix . $fn, $show_pdf, $show_missing);
     echo " </tr>\n";
 }
 
@@ -63,7 +98,7 @@ function show_grid($prefs, $suffs, $style=0, $show_pdf=1, $dir='') {
 }
 
 function show_parts($parts, $show_pdf=1, $dir='') {
-    echo "<table border=1>\n";
+    echo "<table class='table'>\n";
     show_grid($parts, ['.ly', '.lyi', '.pdf'], 0, $show_pdf, $dir);
     echo "</table>\n";
 }
@@ -72,17 +107,13 @@ function show_link($link, $name) {
     echo '<li><a href="' . $link . '">' . $name . "</a>\n";
 }
 
-function show_common_links() {
-    echo "<tr><td colspan=3>\n";
+function show_common_links($links=[]) {
+    echo "<tr><td colspan=3 class='theother'>\n";
     echo "<p><center><h3>References</h3></center><ul>\n";
-    show_link("http://lilypond.org/doc/v2.22/Documentation/notation-big-page.html", "LilyPond_--_Notation_Reference");
-    show_link("https://silverclefmusic.com/about-scores-for-band/", "Scores_for_Band");
-    show_link("https://www.orchestralibrary.com/reftables/rang.html", "Range_of_Instruments");
-    show_link("https://web.mit.edu/merolish/Public/drums.pdf", "Drum_and_Percussion_Notation");
-    show_link("../common/Percussion_Key.pdf", "Percussion_Key.pdf");
-    show_link("https://audio.online-convert.com/convert/midi-to-mp3", "Online-Convert MIDI to MP3");
-    show_link("https://github.com/kastdeur/lilydrum", "lilydrum");
-    show_link("https://www.all-guitar-chords.com/chords/identifier", "Guitar Chord Identifier");
+    show_link("../common/reference.php", "My References");
+    foreach ($links as $link) {
+        show_link($link[0], $link[1]);
+    }
     echo "</ul>\n";
     echo "</td></tr>\n";
 }
@@ -93,7 +124,7 @@ function show_bottom() {
 }
 
 function show_title($title, $link="") {
-    echo "<tr><td colspan=3><center><h2>\n";
+    echo "<tr><td colspan=3 class='here'><center><h2>\n";
     if ($link)
         echo '<a href="' . $link .  '">' . $title . "</a>\n";
     else
@@ -112,7 +143,7 @@ function show_description($fn='description.txt') {
 }
 
 function show_description_cell($fn='description.txt') {
-    echo "<tr><td colspan=3>\n";
+    echo "<tr><td colspan=3 class='theother'>\n";
     show_description();
     echo "</td></tr>\n";
 }

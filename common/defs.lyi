@@ -1,5 +1,3 @@
-\version "2.24.4"
-
 \include "../../lilydrum/lib/layout_tweaks.ily"
 \include "../../lilydrum/lib/musical_functions.ily"
 \include "../../lilydrum/lib/embellishments.ily"
@@ -93,3 +91,85 @@ rMarkWithTempo = #(define-music-function (parser location markp tempo) (string? 
         (lowoodblock    triangle  #f    1)
         (jing           default #f  0)
 ))
+
+singleStaff =
+#(define-music-function (longname shortname notes) (scheme? scheme? ly:music?)
+   #{
+      \new Staff
+      {
+        #(set-accidental-style 'modern)
+        \set Staff.instrumentName = $longname
+        \set Staff.shortInstrumentName = $shortname
+        \new Voice { \keepWithTag #'score $notes }
+      }
+   #})
+
+singleStaffTempo =
+#(define-music-function (longname shortname notes) (scheme? scheme? ly:music?)
+   #{
+      \new Staff
+      {
+        \tempomark
+        #(set-accidental-style 'modern)
+        \set Staff.instrumentName = $longname
+        \set Staff.shortInstrumentName = $shortname
+        \new Voice { \keepWithTag #'score $notes }
+      }
+   #})
+
+doubleStaff =
+#(define-music-function (longname shortname textOne textTwo notesOne notesTwo) (scheme? scheme? string? string? ly:music? ly:music?)
+   #{
+      \new Staff
+      {
+        #(set-accidental-style 'modern)
+        \set Staff.instrumentName = $longname
+        \set Staff.shortInstrumentName = $shortname
+        \set Staff.soloText = $textOne
+        \set Staff.soloIIText = $textTwo
+        \set Staff.aDueText = #"unis."
+        \new Voice { \keepWithTag #'score << \partCombine $notesOne $notesTwo >> }
+      }
+   #})
+
+doubleStaffTempo =
+#(define-music-function (longname shortname textOne textTwo notesOne notesTwo) (scheme? scheme? string? string? ly:music? ly:music?)
+   #{
+      \new Staff
+      {
+        \tempomark
+        #(set-accidental-style 'modern)
+        \set Staff.instrumentName = $longname
+        \set Staff.shortInstrumentName = $shortname
+        \set Staff.soloText = $textOne
+        \set Staff.soloIIText = $textTwo
+        \set Staff.aDueText = #"unis."
+        \new Voice { \keepWithTag #'score << \partCombine $notesOne $notesTwo >> }
+      }
+   #})
+
+drumStaff =
+#(define-music-function (longname shortname notes) (scheme? scheme? ly:music?)
+   #{
+      \new DrumStaff \with { drumStyleTable = #(alist->hash-table mydrums) }
+      {
+        #(set-accidental-style 'modern)
+        \set Staff.instrumentName = $longname
+        \set Staff.shortInstrumentName = $shortname
+        \new DrumVoice { \keepWithTag #'score $notes }
+      }
+   #})
+
+midiStaff =
+#(define-music-function (instrument notes) (string? ly:music?)
+   #{
+      \new Staff \with { midiInstrument = $instrument }
+        { \new Voice { $notes } }
+   #})
+
+midiDrumStaff =
+#(define-music-function (notes) (ly:music?)
+   #{
+      \new DrumStaff
+        { \new DrumVoice { $notes } }
+   #})
