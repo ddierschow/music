@@ -94,6 +94,16 @@ instruments = {
             'octave': "'",
             'midi': "clarinet",
         },
+    'EnglishHorn':
+        {
+            'name': 'English Horn',
+            'shortname': "E.Hn.",
+            'part': 'enghorn',
+            'key': 'f',
+            'clef': 'treble',
+            'octave': "",
+            'midi': "english horn",
+        },
     'Flute':
         {
             'name': 'Flute',
@@ -162,6 +172,16 @@ instruments = {
             'clef': 'both',
             'octave': "'",
             'midi': "piano",
+        },
+    'Piccolo':
+        {
+            'name': 'Piccolo',
+            'shortname': "Pic.",
+            'part': 'piccolo',
+            'key': 'c',
+            'clef': 'treble',
+            'octave': "''",
+            'midi': "piccolo",
         },
     'SopranoSax':
         {
