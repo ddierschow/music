@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 clarThreeDyn = {
 
   s1*3 |

@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 trumTwoDyn = {
 
   s1*3 |
@@ -59,7 +57,7 @@ trumTwoNotes = {
   a4 a |
 
   % 39
-  c2 f |
+  c2 f, |
   d2 bes |
   c1 |
   r1 |

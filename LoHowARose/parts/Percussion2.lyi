@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 percTwoDyn = {
 
   s1*3 |

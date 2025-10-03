@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 oboeDyn = {
 
   s1*3 |

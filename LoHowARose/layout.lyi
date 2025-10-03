@@ -12,7 +12,7 @@ BookHeader = \header {
   title = \markup { \workTitle }
   subtitle = \workSubtitle
   opus = ""
-  subsubtitle = ""
+  subsubtitle = \markup { \workComposer \workArranger }
   instrument = \markup { "Score for" \instrument }
 
   mutopiatitle = \workTitle
