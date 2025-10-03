@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 tenorsaxDyn = {
 
   s1*3 |

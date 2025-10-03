@@ -33,5 +33,7 @@ base =
 }
 
 stafftype = Staff
+partSize = 24
+scoreSize = 14
 
 \include "../common/defs.lyi"

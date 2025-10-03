@@ -1,5 +1,3 @@
-\include "config.lyi"
-
 malletDyn = {
 
   s1*3 |
