@@ -14,6 +14,7 @@ BookHeader = \header {
   opus = ""
   subsubtitle = \markup { \workComposer \workArranger }
   instrument = \markup { "Score for" \instrument }
+  meter = \workMeter
 
   mutopiatitle = \workTitle
   mutopiacomposer = \workComposer
@@ -34,6 +35,18 @@ BookHeader = \header {
 ScoreHeader = \header {
   footer = ""
   tagline = ##f
+}
+
+ScoreLayout = \layout {
+  max-systems-per-page = #1
+  systems-per-page = #1
+  %\context { \RemoveEmptyStaffContext }
+}
+
+ScoreCondLayout = \layout {
+  max-systems-per-page = #3
+  systems-per-page = #3
+  %\context { \RemoveEmptyStaffContext }
 }
 
 PartPaper = \paper {

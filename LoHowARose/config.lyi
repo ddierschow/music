@@ -15,8 +15,7 @@ workArranger = "arr. Dean Dierschow"
 workCopyright = "Copyright 2025 by Dean Dierschow"
 workMeter = Andante
 
-base =
-{
+base = {
   \override MultiMeasureRest.expand-limit = #2
   \override Score.PaperColumn.keep-inside-line = ##t
   \override Score.NonMusicalPaperColumn.keep-inside-line = ##t
@@ -32,8 +31,12 @@ base =
   s1\fermata
 }
 
+partbase = {
+  s1*34 | \break
+}
+
 stafftype = Staff
-partSize = 24
+partSize = 23
 scoreSize = 14
 
 \include "../common/defs.lyi"

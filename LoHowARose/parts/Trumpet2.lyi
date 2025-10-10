@@ -4,15 +4,24 @@ trumTwoDyn = {
 
   % 4
   s1\mf |
-  s1*16 |
+  s1*13 |
+  s2 s2\> |
+  s1 |
+  s2 s2\!\mp |
 
   % 21
-  s1*17 |
+  s1\mf |
+  s1*13 |
+  s2 s4\> s4 |
+  s1 |
+  s2 s4\!\mp s4\< |
   s2 |
 
   % 39
-  s1\mp |
-  s1*3 |
+  s1\!\f\> |
+  s1 |
+  s1\!\mp |
+  s1 |
 }
 
 
@@ -33,31 +42,31 @@ trumTwoNotes = {
   a2 a4 f |
   f4 f e2 |
   d2 d |
-  c4 c d4. a8 |
-  c4 c c2 |
+  c4 c d4.( a8 |
+  c4) c c2 |
   R1*7 |
   r4 e g f |
   f4 f e2 |
   d2 d |
-  f4 d e f~ |
-  f4 c c2 |
+  f4 d( e) f( |
+  g4) c, c2 |
 
   % 21
   a'2 a4 f |
   f4 f e2 |
   d2 d |
-  c4 c d4. a8 |
-  c4 c c2 |
+  c4 c d4.( a8 |
+  c4) c c2 |
   R1*7 |
   r4 e g f |
   f4 f e2 |
   d2 d |
-  f4 d e f~ |
-  f4 c f f |
+  f4 d( e) f( |
+  g4) c, f f |
   a4 a |
 
   % 39
-  c2 f, |
+  c2 f |
   d2 bes |
   c1 |
   r1 |

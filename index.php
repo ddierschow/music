@@ -1,10 +1,7 @@
 <?php
 include "common/helpers.php";
 show_top();
-echo "<div class='here'>\n";
-echo "<img src='image.png' style='float: left; width: 96px;'>\n";
-echo "<img src='image.png' style='float: right; width: 96px;'>\n";
-echo "<center><h2>Musical Works</h2>\n<h4>Dean Dierschow</h4>\n</center>\n</div>\n";
+show_main_top("<h2>Musical Works</h2>\n<h4>Dean Dierschow</h4>");
 
 $dirs = array();
 if (is_dir(getcwd()))
