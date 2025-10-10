@@ -4,15 +4,25 @@ tenorsaxDyn = {
 
   % 4
   s1\mf |
-  s1*16 |
+  s1*13 |
+  s2 s2\> |
+  s1 |
+  s2 s2\!\mp |
 
   % 21
-  s1*17 |
+  s1*5 |
+  s1\mf |
+  s1*8 |
+  s2 s4\> s4 |
+  s1 |
+  s2 s4\!\mp s4\< |
   s2 |
 
   % 39
-  s1\mp |
-  s1*3 |
+  s1\!\f\> |
+  s1 |
+  s1\!\mp |
+  s1 |
 }
 
 
@@ -33,12 +43,12 @@ tenorsaxNotes = {
   c2 c4 a |
   bes4 a' g2 |
   f2 f |
-  a,4 c bes a~ |
+  a,4 c bes( a)~ |
   a4 g a2 |
   c2 c4 a |
   bes4 a' g2 |
   f2 f |
-  a,4 c bes a~ |
+  a,4 c bes( a)~ |
   a4 g a2 |
   R1*4 |
   r2 g |
@@ -50,10 +60,10 @@ tenorsaxNotes = {
   c2 c4 a |
   bes4 a' g2 |
   f2 f |
-  a,4 c bes a~ |
+  a,4 c bes( a)~ |
   a4 g a2 |
   r4 c bes a |
-  a4 g e8 f g4 |
+  a4 g e8( f g4) |
   R1*2 |
   r2 g |
   c4 bes a2 |

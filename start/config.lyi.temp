@@ -24,6 +24,8 @@ base =
   s1*16 |
 }
 
+partbase = {}
+
 stafftype = Staff
 partSize = 20
 scoreSize = 14

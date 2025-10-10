@@ -3,14 +3,14 @@
 function show_top() {
     echo "<html><head>\n";
     echo "<style>\n";
-    echo "body {background-color:#eee;}\n";
+    echo "body {background-color: #eee;}\n";
     echo "td {vertical-align: top;}\n";
     echo ".table {background-color:#eee; border: 1px solid black;}\n";
-    echo ".table td {border: 1px solid gray;}\n";
-    echo ".here {background-color:green; color:white; padding:8px;}\n";
-    echo ".this {background-color:#fff;}\n";
-    echo ".that {background-color:#efe;}\n";
-    echo ".theother {background-color:#ffd;}\n";
+    echo ".table td {border: 1px solid gray; padding: 1px 3px 1px 3px;}\n";
+    echo ".here {background-color: green; color: white; padding: 8px; text-align: center;}\n";
+    echo ".this {background-color: #fff;}\n";
+    echo ".that {background-color: #efe;}\n";
+    echo ".theother {background-color: #ffd;}\n";
     echo "a:link {color: #00f; text-decoration: none;}\n";
     echo "a:visited {color: #009; text-decoration: none;}\n";
     echo "a:active {color: #090; text-decoration: none;}\n";
@@ -124,12 +124,12 @@ function show_bottom() {
 }
 
 function show_title($title, $link="") {
-    echo "<tr><td colspan=3 class='here'><center><h2>\n";
+    echo "<tr><td colspan=3 class='here'><p><h2>\n";
     if ($link)
         echo '<a href="' . $link .  '">' . $title . "</a>\n";
     else
         echo $title . "\n";
-    echo "</h2></center></td></tr>\n";
+    echo "<p></h2></td></tr>\n";
 }
 
 function show_image($img='image.png', $width='360') {
@@ -146,6 +146,13 @@ function show_description_cell($fn='description.txt') {
     echo "<tr><td colspan=3 class='theother'>\n";
     show_description();
     echo "</td></tr>\n";
+}
+
+function show_main_top($contents, $image='image.png') {
+    echo "<div class='here'>\n";
+    echo "<img src=$image style='float: left; width: 96px;'>\n";
+    echo "<img src=$image style='float: right; width: 96px;'>\n";
+    echo $contents . "\n</div>\n";
 }
 
 $styles = [0 => 'this', 1 => 'that'];

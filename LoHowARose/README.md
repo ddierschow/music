@@ -1,5 +1,6 @@
 # Lo, How A Rose E'er Blooming
 
+German traditional song.
 
 ## Parts
 
@@ -17,32 +18,10 @@
 - Baritone (bass clef and treble clef)
 - Tuba
 - String Bass
-- Percussion 1, 2, Mallet, and Timpani
+- Mallet Percussion and Timpani
 
-The source for all parts is written in the same key to allow for easily switching passages
-to different instruments.  The transposition is done at the bottom of each file.
+See [the Construction page for this repository](http://xocolatl.com/~dean/ly/common/construction.php).
 
-Each part has sequences for Notes, Dynamics, and Cues or NotCues ("Scor"), and Marks; and these are put together at the same
-point the transposition is done, to produce a mixed seqence for the part and another for the score.
-In some cases, markups might be moved from Notes to Cues to avoid problems with combining parts for the score.
-Marks are only for markups going to the condensed score, so are not currently in use.
+TODO: 
 
-The files with ly extension are rendered into pdf files.  Each part includes ../common/defs.lyi,
-which is my library of useful things, not all of which will be used.  Then each part includes its
-own lyi file, which has the sequences named above.  Finally each part includes single.lyi,
-which includes outline.lyi, then lays things out on the page.
-
-## Scores
-
-The Score.ly file includes all the part lyi files, then lays out the full score.
-
-There is also a ScoreNT.ly file to combine all the parts without transposing them.  This is just
-for me to help understand how things fit together.
-
-The ScoreMidi.ly file is there just to create the midi file, as the voltas (if any) have to be unfolded
-to make it come out right, and the parts have to be combined differently.
-This should play in right about two minutes even.
-
-TODO: Condensed score.  Someday?
-
-Uses https://github.com/kastdeur/lilydrum
+- Condensed score.  Someday?

@@ -1,18 +1,28 @@
 malletDyn = {
 
-  s1*3 |
+  s1^\markup "vibraphone"
+  s1*2 |
 
   % 4
   s1\mf |
-  s1*16 |
+  s1*13 |
+  s2 s2\> |
+  s1 |
+  s2 s2\!\mp |
 
   % 21
-  s1*17 |
+  s1\mf |
+  s1*13 |
+  s2 s4\> s4 |
+  s1 |
+  s2 s4\!\mp s4\< |
   s2 |
 
   % 39
-  s1\mp |
-  s1*3 |
+  s1\!\f\> |
+  s1 |
+  s1\!\mp |
+  s1 |
 }
 
 
@@ -40,8 +50,7 @@ malletNotes = {
   a2 bes |
   a4 g2 f4~ |
   f4 e f2 |
-  r4 a g e |
-  f4 d c2 |
+  R1*2 |
   r4 c' c c |
   d4 c c2 |
   a2 bes |
@@ -61,9 +70,8 @@ malletNotes = {
   f4 e f2 |
   r4 a g e |
   f4 d c2 |
-  r4 c' c c |
-  d4 c c2 |
-  a2 bes |
+  R1*2 |
+  r2 bes' |
   a4 g2 f4~ |
   f4 e f f |
   a4 c |

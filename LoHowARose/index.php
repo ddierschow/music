@@ -8,20 +8,21 @@ $parts = [
     "AltoSax1", "AltoSax2", "TenorSax", "BariSax",
     "Trumpet1", "Trumpet2", "Trumpet3", "Horn1", "Horn2",
     "Trombone1", "Trombone2", "Trombone3", "Baritone", "BaritoneTC", "Tuba",
-    "StringBass", "Percussion1", "Percussion2", "MalletPercussion", "Timpani"
+    "StringBass", "Mallets", "Timpani"
 ];
 
 echo "<table><tr>\n";
 
 echo "<td>\n";
-show_left_box("lo how a rose e'er blooming", ['Score', 'ScoreNT'], ['ScoreMidi.mp3', 'First_Reading.mp3']);
+show_left_box("lo how a rose e'er blooming", ['Score', 'ScoreNT', 'ScoreSATB'],
+              ['ScoreMidi.mp3', 'First_Reading.mp3', 'Second_Read.mp3']);
 echo "</td>\n";
 
-echo "<td valign=top>\n";
+echo "<td>\n";
 show_parts($parts, 1, 'parts/');
 echo "</td>";
 
-echo "<td valign=top>\n";
+echo "<td>\n";
 show_image();
 echo "<h4>To do</h4><ul>\n";
 echo "<li>write a condensed score (someday?)";

@@ -143,6 +143,8 @@ def read_config(config_file):
         if cmd == 'instruments':
             for inst in open(f'../start/{arg}.inst'):
                 config['inst'].extend(config_instrument(inst.strip()))
+        elif cmd == 'instrument':
+            config['inst'].extend(config_instrument(arg))
         else:
             config[cmd] = arg
     return config
