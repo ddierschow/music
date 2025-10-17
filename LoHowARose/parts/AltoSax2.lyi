@@ -64,8 +64,9 @@ altosaxTwoNotes = {
   c4) c c2 |
   r4 f d c |
   c4 b c2 |
-  R1*2 |
-  r2 d |
+  r4 e g f |
+  f4 f e2 |
+  d2 d |
   f4 d( e) f( |
   g4) c, f f |
   a4 a |
@@ -74,7 +75,7 @@ altosaxTwoNotes = {
   c2 f, |
   d2 bes |
   c1 |
-  r1 |
+  c1 |
 }
 
 
