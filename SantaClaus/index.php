@@ -15,7 +15,7 @@ show_whole_page("santa claus is comin' to town", ['Score', 'ScoreCond', 'ScoreNT
               [["https://en.wikipedia.org/wiki/Santa_Claus_Is_Comin%27_to_Town", "Wiki page"],
                ["http://phrogz.net/tmp/Sing/SantaClausisComintoTown.pdf", "original song"],
                ["https://www.youtube.com/watch?v=qrNMYDPYY0E", "Springsteen's version"]], [],
-              ['write a timpani part', 'write a condensed score (someday?)']);
+              ['write a condensed score (someday?)']);
 
 show_bottom();
 ?>

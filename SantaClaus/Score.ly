@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 
 instrument = "Concert Band"
 
@@ -18,7 +18,7 @@ instrument = "Concert Band"
     <<
       \new StaffGroup <<
         \doubleStaffTempo
-            #(markup "Flute 1, 2") #(markup #:column ("Fl." #:line ("1, 2"))) #"1." #"2." \fluteCOneScore \fluteCTwoScore
+              #(markup "Flute 1, 2") #(markup #:column ("Fl." #:line ("1, 2"))) #"1." #"2." \fluteCOneScore \fluteCTwoScore
         \singleStaff #(markup "Oboe") #(markup "Ob.") \oboeCScore
         \singleStaff #(markup "Bassoon") #(markup "Bsn.") \bassoonCScore
         \new GrandStaff <<
@@ -60,8 +60,8 @@ instrument = "Concert Band"
         \singleStaff #(markup "String Bass") #(markup "Bass") \stringbassCScore
       >>
       \new StaffGroup <<
-        %\drumStaff #(markup "Percussion 1") #(markup "Pe.1") \percOneScore
-        %\drumStaff #(markup "Percussion 2") #(markup "Pe.2") \percTwoScore
+        \drumStaff #(markup "Percussion 1") #(markup "Pe.1") \percOneScore
+        \drumStaff #(markup "Percussion 2") #(markup "Pe.2") \percTwoScore
         \singleStaff #(markup "Mallet Percussion") #(markup "Mal.") \malletpercCScore
         \singleStaff #(markup "Timpani") #(markup "Tim.") \timpaniCScore
       >>

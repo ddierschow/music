@@ -1,19 +1,169 @@
-timpDyn = {}
+\version "2.26.0"
+timpDyn = {
+  s1*8 |
+
+  % 9
+  s1*11 |
+  s2.. s8\mp |
+
+  % 21
+  s1*12 |
+
+  % 33
+  s1\mf |
+  s1*9 |
+
+  % 43
+  s1\mf |
+  s1*11 |
+
+  % 55
+  s1*12 |
+
+  % 67
+  s1\mf |
+  s1*9 |
+
+  % 77
+  s1\mf |
+  s1*9 |
+
+  % 87
+  s1*8 |
+
+  % 95
+  s1*8 |
+
+  % 103
+  s1*2 |
+  s1\f |
+  s1*5 |
+
+  % 111
+  s4 s2.\ff |
+  s1*7 |
+
+  % 119
+  s1*6 |
+}
 
 
-timpMks = {}
+timpMks = {
+}
 
 
-timpCues = {}
+timpCues = {
+  s1^\markup "G, C" |
+}
 
 
-timpScor = {}
+timpScor = {
+}
 
 
-timpNotes = {}
+timpNotes = {
+  R1*8 |
+
+  % 9
+  R1*12 |
+
+  % 21
+  c2 c |
+  c2 g' |
+  c,2 c |
+  c2 g' |
+  c,4. g'8 c,2 |
+  c2 g' |
+  c,4. g'8 c,2 |
+  c2 g' |
+  g2 g |
+  g2 g |
+  c,4. g'8 c,2 |
+  c2 g' |
+
+  % 33
+  c,2 c |
+  c2 c |
+  c2 c |
+  c2 c |
+  R1*2 |
+  c2 c |
+  c2 c |
+  g'2 g |
+  g2 g |
+
+  % 43
+  c,2 c |
+  r2 g' |
+  c,2 c |
+  r2 g' |
+  c,4-^ c r c |
+  r2 g'2 |
+  c,4-^ c r c |
+  r2 g'2 |
+  c,2 c2 |
+  g'2 g2 |
+  c,2 g'2 |
+  g1:16 |
+
+  % 55
+  R1*12 |
+
+  % 67
+  c,2 c2 |
+  c2 c2 |
+  c2 c2 |
+  c2 c2 |
+  R1*2 |
+  c2 c2 |
+  c2 c2 |
+  c2 c2 |
+  c2 c2 |
+
+  % 77
+  c,2 c |
+  r2 g' |
+  c,2 c |
+  r2 g' |
+  c,4-^ c r c |
+  r2 g'2 |
+  c,4-^ c r c |
+  r2 g'2 |
+  c,2 c2 |
+  g'2 g2 |
+
+  % 87
+  R1*8 |
+
+  % 95
+  R1*8 |
+
+  % 103
+  c,2 g' |
+  g2 g |
+  c,2 g' |
+  g2 g |
+  c,2 g' |
+  g2 g |
+  c,2 g' |
+  g2 g |
+
+  % 111
+  c,2:8 g':8 |
+  g1:8 |
+  c,2:8 g':8 |
+  g1:8 |
+  c,2:8 g':8 |
+  g1:8 |
+  c,2:8 g':8 |
+  g1:8 |
+
+  % 119
+  R1*6 |
+}
 
 
-timpaniScore  = \transpose c \concertKey \relative c { << \bc \base \timpNotes \timpScor \timpDyn >> }
-timpaniCond   = \transpose c \concertKey \relative c { << \bc \base \timpNotes \timpScor \timpMks >> }
+timpaniScore  = \transpose c \concertKey \relative c, { << \bc \base \timpNotes \timpScor \timpDyn >> }
+timpaniCond   = \transpose c \concertKey \relative c, { << \bc \base \timpNotes \timpScor \timpMks >> }
 timpaniCScore = \timpaniScore
-timpaniCPart  = \transpose c \concertKey \relative c { << \bc \base \timpNotes \timpCues \timpDyn >> }
+timpaniCPart  = \transpose c \concertKey \relative c, { << \bc \base \timpNotes \timpCues \timpDyn >> }

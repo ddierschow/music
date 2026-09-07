@@ -1,3 +1,4 @@
+\version "2.26.0"
 trumThreeDyn = {
   s1*8 |
 

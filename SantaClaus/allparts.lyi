@@ -1,3 +1,4 @@
+\version "2.26.0"
 \include "parts/Flute1.lyi"
 \include "parts/Flute2.lyi"
 \include "parts/Oboe.lyi"

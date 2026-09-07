@@ -1,3 +1,4 @@
+\version "2.26.0"
 bassclarDyn = {
   s1\p |
   s1*7 |

@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 
 \include "config.lyi"
 \include "parts/Horn1.lyi"

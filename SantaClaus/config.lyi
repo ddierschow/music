@@ -1,3 +1,4 @@
+\version "2.26.0"
 concertKey = c'
 tempomark = { \tempo 4 = 120 }
 tempomarkfast = { \tempo 4 = 136 }

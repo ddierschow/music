@@ -1,3 +1,4 @@
+\version "2.26.0"
 trumOneDyn = {
   s1*7 |
   s2 s8 s4.\mf |

@@ -1,3 +1,4 @@
+\version "2.26.0"
 malletDyn = {
   s1\mp_\markup "glockenspiel" |
   s1*7 |

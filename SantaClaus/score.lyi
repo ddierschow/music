@@ -1,3 +1,4 @@
+\version "2.26.0"
 \include "outline.lyi"
 
 #(set-global-staff-size scoreSize)

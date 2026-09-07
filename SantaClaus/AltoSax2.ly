@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 
 \include "config.lyi"
 \include "parts/AltoSax2.lyi"

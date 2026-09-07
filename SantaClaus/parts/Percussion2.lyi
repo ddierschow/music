@@ -1,3 +1,4 @@
+\version "2.26.0"
 percTwoDyn = {
   s1\mp_\markup "sleigh bells" |
   s1*7 |
