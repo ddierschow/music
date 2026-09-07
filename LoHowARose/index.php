@@ -12,7 +12,7 @@ $parts = [
 ];
 
 show_whole_page("lo how a rose e'er blooming", ['Score', 'ScoreNT', 'ScoreSATB'], $parts,
-                ['ScoreMidi.mp3', 'First_Reading.mp3', 'Second_Reading.mp3', 'Third_Reading.mp3'],
+                ['ScoreMidi.mp3', 'First_Reading.mp3', 'Second_Reading.mp3', 'Third_Reading.mp3', 'Fourth_Reading.mp3'],
                 [['https://en.wikipedia.org/wiki/Es_ist_ein_Ros_entsprungen', 'Wiki page'],
                  ['https://www.vandagriff.org/wp-content/uploads/2018/08/lo-how-a-rose.jpg', 'Hymnal 1'],
                  ['https://hymnary.org/page/fetch/WAR2003/205/low/190', 'Hymnal 2']], [],
