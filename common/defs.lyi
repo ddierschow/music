@@ -1,10 +1,11 @@
-\include "../../lilydrum/lib/layout_tweaks.ily"
-\include "../../lilydrum/lib/musical_functions.ily"
-\include "../../lilydrum/lib/embellishments.ily"
-\include "../../lilydrum/lib/flourishing.ily"
-\include "../../lilydrum/lib/special_sticking.ily"
-\include "../../lilydrum/lib/rehearsal_marks.ily"
-\include "../../lilydrum/lib/midi.ily"
+\version "2.26.0"
+%\include "../../lilydrum/lilydrum/layout_tweaks.ily"
+%\include "../../lilydrum/lilydrum/musical_functions.ily"
+%\include "../../lilydrum/lilydrum/embellishments.ily"
+%\include "../../lilydrum/lilydrum/flourishing.ily"
+%\include "../../lilydrum/lilydrum/special_sticking.ily"
+%\include "../../lilydrum/lilydrum/rehearsal_marks.ily"
+%\include "../../lilydrum/lilydrum/midi.ily"
 
 tc = { \clef treble }
 bc = { \clef bass }
@@ -128,7 +129,7 @@ doubleStaff =
         \set Staff.soloText = $textOne
         \set Staff.soloIIText = $textTwo
         \set Staff.aDueText = #"unis."
-        \new Voice { \keepWithTag #'score << \partCombine $notesOne $notesTwo >> }
+        \new Voice { \keepWithTag #'score << \outline \partCombine $notesOne $notesTwo >> }
       }
    #})
 
@@ -144,7 +145,7 @@ doubleStaffTempo =
         \set Staff.soloText = $textOne
         \set Staff.soloIIText = $textTwo
         \set Staff.aDueText = #"unis."
-        \new Voice { \keepWithTag #'score << \partCombine $notesOne $notesTwo >> }
+        \new Voice { \keepWithTag #'score << \outline \partCombine $notesOne $notesTwo >> }
       }
    #})
 
