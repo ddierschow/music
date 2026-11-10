@@ -130,10 +130,10 @@ oboeNotes = {
 
   % 119
   R1*2 |
-  e4 e e2 |
-  e4 e e2 |
-  e4 g c, d |
-  e1 |
+  <e c>4 <e c> <e c>2 |
+  <e c>4 <e c> <e c>2 |
+  <e c>4 <g e> <c, e,> <d g,> |
+  <e c>1 |
 }
 
 
